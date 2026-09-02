@@ -1,0 +1,35 @@
+{
+  "id": "YYC-COST-001",
+  "gates": {
+    "demand": true,
+    "distinct_task": true,
+    "business_value": true,
+    "information_advantage": true,
+    "technical_feasibility": true,
+    "maintainability": true,
+    "measurement": true,
+    "compliance": true
+  },
+  "scores": {
+    "demand_confidence": 4,
+    "business_fit": 5,
+    "task_value": 5,
+    "information_advantage": 4,
+    "conversion_value": 4,
+    "attainability": 3,
+    "existing_signal": 2,
+    "reuse_potential": 4,
+    "learning_value": 5
+  },
+  "costs": {
+    "production_effort": 4,
+    "technical_risk": 2,
+    "maintenance_burden": 3,
+    "time_to_learning": 3,
+    "opportunity_cost": 2
+  },
+  "confidence": {
+    "evidence": 0.8,
+    "measurement": 0.85
+  }
+}

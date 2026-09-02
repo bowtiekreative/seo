@@ -1,0 +1,198 @@
+LAKA SEO GRAMMAR — QUICK REFERENCE
+===================================
+
+CORE SENTENCE
+-------------
+FOR [AUDIENCE]
+UNDER [CONDITIONS]
+SEEKING [TASK]
+WITH [INTENT]
+ABOUT [CONCEPT / ENTITY]
+USING [QUERY CLUSTER]
+SERVED BY [ONE CANONICAL ASSET]
+IN [TASK-NATIVE FORMAT]
+SUPPORTED BY [EVIDENCE]
+CONNECTED BY [INTERNAL GRAPH]
+LEADING TO [NEXT ACTION]
+MEASURED BY [PRIMARY OUTCOME]
+GUARDED BY [CONSTRAINTS]
+
+CORE EQUATION
+-------------
+SEO BUSINESS VALUE =
+VALUABLE DEMAND
+x TECHNICAL ELIGIBILITY
+x INTENT FIT
+x INFORMATION ADVANTAGE
+x DISCOVERABILITY
+x PROMINENCE
+x SEARCH-RESULT RESPONSE
+x CONVERSION EFFICIENCY
+x CONTRIBUTION MARGIN
+x LEARNING VELOCITY
+
+OPERATORS
+---------
+IF       condition
+THEN     true action
+ELSE     false action
+AND      all must pass
+OR       valid alternatives
+NOT      exclude
+XOR      exactly one
+FOR EACH controlled expansion
+UNTIL    bounded loop
+AT LEAST minimum
+EXACTLY ONE unique owner/decision
+
+ONE-PAGE RULE
+-------------
+IF same sense
+AND same task
+AND compatible answer structure
+AND compatible result class
+AND compatible next action
+THEN same cluster and one canonical owner
+ELSE split or test.
+
+PUBLICATION GATES
+-----------------
+DEMAND
+AND DISTINCT TASK
+AND BUSINESS VALUE
+AND INFORMATION ADVANTAGE
+AND TECHNICAL FEASIBILITY
+AND MAINTAINABILITY
+AND MEASUREMENT
+AND COMPLIANCE
+
+LAKA LEVELS
+-----------
+BASELINE   observe, classify, measure
+MINOR      title, snippet, intro, link, CTA, small fix
+MAJOR      rewrite, evidence, video, table, calculator
+STRUCTURAL merge, template, graph, canonicals, data pipeline
+PARADIGM   new information product, dataset, diagnostic, agent
+
+INTERNAL VARIABLES
+------------------
+Object
+Conditions
+Actions
+Tools
+Resources
+Outcomes
+Feedback
+Constraints
+Value
+Failure Mode
+
+CHANGE VARIABLES
+----------------
+Magnitude
+Rate
+Direction
+Scope
+Depth
+Duration
+Frequency
+Acceleration
+Variability
+Detectability
+Reversibility
+Propagation
+Amplification
+Accumulation
+
+TECHNICAL STATES
+----------------
+DISCOVERED
+-> FETCHED
+-> RENDERED
+-> CANONICALIZED
+-> INDEXED
+-> RETRIEVED
+-> DISPLAYED
+-> VISITED
+-> COMPLETED
+-> CONVERTED
+
+TASK -> FORMAT
+--------------
+define       definition + boundaries + examples
+learn        guide + demonstration
+compare      table/matrix + trade-offs
+calculate    calculator/formula + examples
+diagnose     symptom/cause/test/remedy tree
+locate       verified map/directory/location page
+verify       claim/evidence/source/limitation
+plan         roadmap/template/checklist
+implement    SOP/code/configuration
+choose       criteria/options/recommendation
+buy          offer/proof/scope/process/action
+maintain     monitoring/checklist/dashboard
+
+PRIORITY
+--------
+measurement blocker
+> technical eligibility blocker
+> canonical conflict
+> existing high-value opportunity
+> information/format gap
+> authority gap
+> new asset
+> paradigm experiment
+
+PRIMARY KPIs
+------------
+1. Incremental organic contribution margin
+2. Qualified organic conversions
+3. Value-weighted non-brand clicks
+4. Value-weighted target-cluster visibility
+5. Eligible canonical coverage
+
+EXPERIMENT
+----------
+IF [intervention]
+is applied to [object]
+under [conditions],
+THEN [primary metric]
+changes [direction]
+because [mechanism],
+while [guardrails] pass.
+
+REVIEW DECISIONS
+----------------
+CONTINUE
+EXPAND
+REVISE
+REVERSE
+ESCALATE
+RETIRE
+MONITOR
+
+PSEUDO-COMMANDS
+---------------
+/seo
+/expand
+/cluster
+/gate
+/laka
+/experiment
+/audit-technical
+/audit-canonical
+/page
+/review
+
+SAFE SCALE
+----------
+Generate broadly.
+Normalize.
+Cluster by task.
+Assign one canonical owner.
+Apply all hard gates.
+Score by value / cost.
+Stage publication.
+Measure.
+Update the generator.
+Never publish the Cartesian product.

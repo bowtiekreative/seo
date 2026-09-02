@@ -1,0 +1,351 @@
+{
+  "title": "Measurement and experiment system",
+  "philosophy": [
+    "SEO is a partially observed causal system. Search engines do not expose every internal variable, so the measurement model separates:",
+    "Never infer success from a proxy without checking the downstream outcome it is supposed to influence."
+  ],
+  "primary_kpis": [
+    "Incremental organic contribution margin",
+    "Qualified organic conversions",
+    "Value-weighted non-brand clicks",
+    "Value-weighted target-cluster visibility",
+    "Eligible canonical coverage"
+  ],
+  "outcome_levels": [
+    {
+      "level": 1,
+      "name": "Business outcomes",
+      "measures": [
+        "qualified leads",
+        "sales",
+        "subscription starts",
+        "retained customers",
+        "expansion revenue",
+        "support value",
+        "contribution margin",
+        "customer lifetime value"
+      ],
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Level 1 — Business outcomes"
+      }
+    },
+    {
+      "level": 2,
+      "name": "Journey outcomes",
+      "measures": [
+        "task completion",
+        "next-step action",
+        "assessment completion",
+        "demo request",
+        "quote request",
+        "trial start",
+        "qualified form",
+        "return visit",
+        "renewal action",
+        "referral/review"
+      ],
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Level 2 — Journey outcomes"
+      }
+    },
+    {
+      "level": 3,
+      "name": "Search outcomes",
+      "measures": [
+        "impressions",
+        "search appearances",
+        "average position / rank distribution",
+        "clicks",
+        "CTR",
+        "landing sessions",
+        "branded demand",
+        "non-branded demand"
+      ],
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Level 3 — Search outcomes"
+      }
+    },
+    {
+      "level": 4,
+      "name": "Asset and graph diagnostics",
+      "measures": [
+        "query-cluster coverage",
+        "canonical ownership",
+        "internal in-links",
+        "click depth",
+        "orphan state",
+        "qualified referring domains",
+        "content/evidence completeness",
+        "freshness"
+      ],
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Level 4 — Asset and graph diagnostics"
+      }
+    },
+    {
+      "level": 5,
+      "name": "Technical states",
+      "measures": [
+        "discoverable",
+        "crawlable",
+        "renderable",
+        "canonicalized",
+        "indexable",
+        "indexed",
+        "retrievable",
+        "valid structured data",
+        "field performance"
+      ],
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Level 5 — Technical states"
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "id": "actual-organic-contribution-margin",
+      "name": "Actual organic contribution margin",
+      "expression": "ACTUAL ORGANIC CONTRIBUTION\n=\nΣ(\n  attributed organic conversions\n  × contribution margin per conversion\n)\n− attributable SEO operating cost",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.1 Actual organic contribution margin"
+      }
+    },
+    {
+      "id": "incremental-lift",
+      "name": "Incremental lift",
+      "expression": "INCREMENTAL LIFT\n=\n(Post_treatment − Pre_treatment)\n−\n(Post_control − Pre_control)",
+      "notes": [
+        "When a reasonable comparison group exists:",
+        "Apply separately to:",
+        "- impressions;",
+        "- clicks;",
+        "- qualified conversions;",
+        "- revenue;",
+        "- contribution margin;",
+        "- retention."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.2 Incremental lift"
+      }
+    },
+    {
+      "id": "expected-value",
+      "name": "Expected value",
+      "expression": "EXPECTED VALUE\n=\nΣ(\n  demand estimate\n  × probability of eligibility\n  × probability of useful visibility\n  × expected CTR\n  × expected qualified conversion rate\n  × contribution margin\n)\n− expected cost",
+      "notes": [
+        "Every estimated input must be labeled and later replaced with observed data."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.3 Expected value"
+      }
+    },
+    {
+      "id": "value-weighted-visibility",
+      "name": "Value-weighted visibility",
+      "expression": "VALUE-WEIGHTED VISIBILITY\n=\nΣ(\n  query opportunity value\n  × observed visibility weight\n)\n/\nΣ(query opportunity value)",
+      "notes": [
+        "Visibility weight may be based on impression share, rank distribution, or a calibrated CTR curve."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.4 Value-weighted visibility"
+      }
+    },
+    {
+      "id": "ctr-residual",
+      "name": "CTR residual",
+      "expression": "CTR RESIDUAL\n=\nObserved CTR\n− Expected CTR(\n    position,\n    device,\n    country,\n    brand class,\n    query class,\n    search appearance\n  )",
+      "notes": [
+        "This is more useful than a universal “good CTR” threshold."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.5 CTR residual"
+      }
+    },
+    {
+      "id": "qualified-conversion-value",
+      "name": "Qualified conversion value",
+      "expression": "QUALIFIED ORGANIC VALUE\n=\norganic value events\n× qualification probability\n× contribution margin",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.6 Qualified conversion value"
+      }
+    },
+    {
+      "id": "opportunity-score",
+      "name": "Opportunity score",
+      "expression": "OPPORTUNITY SCORE\n=\n(\n  demand confidence\n  × business fit\n  × task value\n  × information advantage\n  × attainable response gap\n  × conversion value\n  × evidence confidence\n)\n/\n(\n  effort\n  × risk\n  × maintenance burden\n  × time to learning\n)",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.7 Opportunity score"
+      }
+    },
+    {
+      "id": "eligible-canonical-coverage",
+      "name": "Eligible canonical coverage",
+      "expression": "ELIGIBLE CANONICAL COVERAGE\n=\npriority canonical URLs that are eligible and indexed\n/\nall priority canonical URLs intended for indexing",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.8 Eligible canonical coverage"
+      }
+    },
+    {
+      "id": "canonical-agreement",
+      "name": "Canonical agreement",
+      "expression": "CANONICAL AGREEMENT\n=\nURLs where intended/declarative canonical agrees with observed selected canonical\n/\nevaluated duplicate or canonical URLs",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.9 Canonical agreement"
+      }
+    },
+    {
+      "id": "cannibalization-indicators",
+      "name": "Cannibalization indicators",
+      "expression": "DOMINANT URL SHARE\n=\nlargest URL impression share for cluster\n/\ntotal cluster impressions",
+      "notes": [
+        "High entropy is a diagnostic, not automatic failure. Confirm same-intent duplication, instability, divided links, or value loss."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.10 Cannibalization indicators"
+      }
+    },
+    {
+      "id": "internal-graph-diagnostics",
+      "name": "Internal graph diagnostics",
+      "expression": "PRIORITY ORPHAN RATE\n=\npriority pages with no useful crawlable internal in-link\n/\nall priority pages",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.11 Internal graph diagnostics"
+      }
+    },
+    {
+      "id": "authority-diagnostics",
+      "name": "Authority diagnostics",
+      "expression": "QUALIFIED LINK RATE\n=\nretained relevant editorial referring domains\n/\nall acquired referring domains",
+      "notes": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.12 Authority diagnostics"
+      }
+    }
+  ],
+  "data_grain": null,
+  "event_dictionary": {
+    "headers": [
+      "Event",
+      "Definition",
+      "Required properties"
+    ],
+    "rows": [
+      [
+        "`organic_landing`",
+        "Session begins on an organic search landing page",
+        "landing URL, cluster, query class"
+      ],
+      [
+        "`task_start`",
+        "User initiates the primary page task",
+        "task ID"
+      ],
+      [
+        "`task_complete`",
+        "User reaches a valid completion condition",
+        "task ID, method"
+      ],
+      [
+        "`next_action`",
+        "User takes the intended adjacent step",
+        "action ID"
+      ],
+      [
+        "`qualified_form`",
+        "Form meets qualification rules",
+        "offer, segment, qualification"
+      ],
+      [
+        "`sales_accept`",
+        "Sales accepts the lead",
+        "CRM status"
+      ],
+      [
+        "`closed_value`",
+        "Revenue or margin is confirmed",
+        "value, margin, offer"
+      ],
+      [
+        "`retention_value`",
+        "Renewal, expansion, or support outcome",
+        "customer, event value"
+      ],
+      [
+        "`evidence_interaction`",
+        "User opens data, sources, demo, comparison, or case proof",
+        "evidence ID"
+      ],
+      [
+        "`internal_path`",
+        "User follows a meaningful graph edge",
+        "edge type, target"
+      ],
+      [
+        "`calculator_complete`",
+        "Tool returns a valid result",
+        "inputs band, result band"
+      ],
+      [
+        "`download_use`",
+        "User downloads or uses a template",
+        "asset ID"
+      ]
+    ]
+  },
+  "baseline_protocol": [
+    {
+      "lang": "text",
+      "code": "1. Verify data collection.\n2. Define treatment object and exposure.\n3. Record at least the available stable pre-period.\n4. Record query mix, device, country, brand class, and seasonality.\n5. Record technical eligibility.\n6. Record current page and graph state.\n7. Record current business value.\n8. Assign change ID.\n9. Predefine primary metric and guardrails.\n10. State minimum exposure and review rule."
+    }
+  ],
+  "source": {
+    "document": "05",
+    "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+    "heading": "whole document"
+  }
+}

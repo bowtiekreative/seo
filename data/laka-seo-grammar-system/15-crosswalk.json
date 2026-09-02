@@ -1,0 +1,321 @@
+{
+  "title": "Course crosswalk and sources",
+  "translation": [
+    {
+      "heading": "1. Course-to-grammar translation",
+      "headers": [
+        "Course concept",
+        "Grammar translation",
+        "Operational meaning"
+      ],
+      "rows": [
+        [
+          "Target persona",
+          "Audience + conditions",
+          "Segment whose task, context, and value can be measured"
+        ],
+        [
+          "Sales funnel",
+          "Journey-state graph",
+          "Awareness, evaluation, decision, use, retention, and return paths"
+        ],
+        [
+          "Search framework",
+          "Audience–task–asset–surface–transition sentence",
+          "Who needs what, where it is served, and what happens next"
+        ],
+        [
+          "Core keyword",
+          "Representative query",
+          "Human-readable label for one dominant intent cluster"
+        ],
+        [
+          "Secondary keywords",
+          "Same-intent variants",
+          "Closely equivalent queries that one canonical asset can satisfy"
+        ],
+        [
+          "Accessory keywords",
+          "Adjacent task clusters",
+          "Related but independently useful information needs"
+        ],
+        [
+          "Keyword variations",
+          "Lexical normalization",
+          "Synonyms, spelling, word order, pluralization, abbreviations, stems"
+        ],
+        [
+          "LSI keywords",
+          "Contextual terms, entities, relations, attributes",
+          "Replace the “LSI” bucket with explicit semantic roles"
+        ],
+        [
+          "One keyword = one page",
+          "One dominant intent cluster = one canonical owner",
+          "Prevent conflicting page ownership without making a page per wording"
+        ],
+        [
+          "Intent bucketing",
+          "Task-based query clustering",
+          "Group queries according to one completion condition"
+        ],
+        [
+          "Revenue estimates",
+          "Probabilistic demand-to-value forecast",
+          "Separate assumptions from actual contribution margin"
+        ],
+        [
+          "SEO timeline estimate",
+          "Time-to-event forecast",
+          "Track crawl, index, impression, value, and uncertainty separately"
+        ],
+        [
+          "Reverse-engineering competitors",
+          "Competitive retrieval and information-gap analysis",
+          "Identify result forms, gaps, authority, and unmet tasks"
+        ],
+        [
+          "Document relevancy",
+          "Query–document task fit",
+          "Make the asset understandable and useful for the intended task"
+        ],
+        [
+          "On-page optimization",
+          "Document and search-appearance intervention",
+          "Improve relevance, response, evidence, and task completion"
+        ],
+        [
+          "Pages vs domains",
+          "URL-level intent ownership",
+          "Assign work and measurement to canonical assets"
+        ],
+        [
+          "Site architecture",
+          "Directed information graph",
+          "Paths, depth, hubs, communities, and canonical nodes"
+        ],
+        [
+          "SEO silos",
+          "Topical link communities",
+          "Useful internal relationships, not ritual folder structures"
+        ],
+        [
+          "UX signals",
+          "User-outcome telemetry",
+          "Task completion, progression, conversion, and experience measures"
+        ],
+        [
+          "Link building",
+          "Independent citation acquisition",
+          "Relevant, credible, editorial evidence and prominence"
+        ],
+        [
+          "Authority metrics",
+          "Vendor model outputs",
+          "Diagnostic proxies that require calibration to direct outcomes"
+        ],
+        [
+          "Technical optimization",
+          "Retrieval-eligibility engineering",
+          "Discover, fetch, render, canonicalize, index, retrieve, display"
+        ],
+        [
+          "Indexation",
+          "One technical state",
+          "Inclusion in an index, separated from discovery and display"
+        ],
+        [
+          "Canonical tags",
+          "Preferred representative signal",
+          "One signal in a coherent canonical system"
+        ],
+        [
+          "Keyword cannibalization",
+          "Query-to-URL ownership instability",
+          "Confirm same-intent competition and business loss before fixing"
+        ],
+        [
+          "Site speed",
+          "Real-user performance system",
+          "Improve field experience and value, not a perfect lab score"
+        ],
+        [
+          "Structured data",
+          "Machine-readable eligibility signal",
+          "Use supported markup that matches visible content"
+        ],
+        [
+          "Analytics and tracking",
+          "Outcome and intervention model",
+          "Connect search exposure to qualified value and learning"
+        ]
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "1. Course-to-grammar translation"
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "id": "lsi-keywords",
+      "term": "LSI keywords",
+      "correction": "The course uses “LSI” as a broad label for terms that co-occur around a topic. The grammar replaces this with: These elements should be included because they complete the task, not because a tool produced a term list.",
+      "blocks": [
+        {
+          "lang": "text",
+          "code": "entities\nrelations\nattributes\nvalues\ncollocations\nquestions\nevidence"
+        }
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "“LSI keywords”"
+      }
+    },
+    {
+      "id": "one-keyword-equals-one-page",
+      "term": "One keyword equals one page",
+      "correction": "Use: A page can be relevant to many query variants. Different words do not automatically require different pages.",
+      "blocks": [
+        {
+          "lang": "text",
+          "code": "one dominant intent cluster\n=\none intended canonical owner"
+        }
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "“One keyword equals one page”"
+      }
+    },
+    {
+      "id": "ranking-factors",
+      "term": "Ranking factors",
+      "correction": "Treat lists of factors as hypotheses and diagnostics. The system requires each intervention to state a mechanism and measured outcome.",
+      "blocks": [],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "“Ranking factors”"
+      }
+    },
+    {
+      "id": "ux-signals",
+      "term": "UX signals",
+      "correction": "Do not claim that any analytics metric perfectly reveals a search engine’s internal behavior. Use user behavior as task and business telemetry.",
+      "blocks": [],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "“UX signals”"
+      }
+    },
+    {
+      "id": "pagerank-no-longer-exists",
+      "term": "PageRank no longer exists",
+      "correction": "The public toolbar metric disappeared. Link-based systems and link signals remain conceptually relevant. Do not optimize for an obsolete public score.",
+      "blocks": [],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "“PageRank no longer exists”"
+      }
+    },
+    {
+      "id": "eat",
+      "term": "EAT",
+      "correction": "Use the current E-E-A-T framing cautiously as a quality-evaluation concept, not a single numeric ranking factor. The operational system measures evidence, experience, authorship, sources, transparency, review, and correction practices.",
+      "blocks": [],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "“EAT”"
+      }
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "google-search-fundamentals",
+      "name": "Google Search fundamentals",
+      "points": [
+        "SEO Starter Guide",
+        "Search Essentials",
+        "Spam policies",
+        "Creating helpful, reliable, people-first content"
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "Google Search fundamentals"
+      }
+    },
+    {
+      "id": "crawling-indexing-and-links",
+      "name": "Crawling, indexing, and links",
+      "points": [
+        "Crawling and indexing overview",
+        "Link best practices",
+        "Canonicalization",
+        "Sitemaps",
+        "JavaScript SEO",
+        "Robots.txt introduction"
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "Crawling, indexing, and links"
+      }
+    },
+    {
+      "id": "search-appearance-and-experience",
+      "name": "Search appearance and experience",
+      "points": [
+        "Structured data introduction",
+        "Core Web Vitals and Search",
+        "Web Vitals"
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "Search appearance and experience"
+      }
+    },
+    {
+      "id": "generative-search",
+      "name": "Generative search",
+      "points": [
+        "Optimizing for generative AI features on Google Search"
+      ],
+      "source": {
+        "document": "10",
+        "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+        "heading": "Generative search"
+      }
+    }
+  ],
+  "evidence_classification": {
+    "blocks": [
+      {
+        "lang": "text",
+        "code": "OBSERVATION\ndirectly measured or inspected.\n\nSOURCE FACT\nsupported by a cited primary source.\n\nINFERENCE\na reasoned interpretation of observations.\n\nFORECAST\nan estimated future value with assumptions.\n\nHYPOTHESIS\na testable proposed mechanism.\n\nDECISION\nan action chosen under constraints.\n\nUNKNOWN\ninformation still required."
+      }
+    ],
+    "table": null,
+    "source": {
+      "document": "10",
+      "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+      "heading": "5. Evidence classification"
+    }
+  },
+  "versioning": [
+    "The rule library and source guidance should be reviewed when:",
+    "Record:"
+  ],
+  "source": {
+    "document": "10",
+    "file": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+    "heading": "whole document"
+  }
+}

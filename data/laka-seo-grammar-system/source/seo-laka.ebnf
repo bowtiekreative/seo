@@ -1,0 +1,232 @@
+(* LAKA SEO Grammar — EBNF v1.0 *)
+
+seo_program          = program_header,
+                       business_clause,
+                       audience_clause,
+                       demand_clause,
+                       asset_clause,
+                       graph_clause,
+                       outcome_clause,
+                       constraint_clause,
+                       change_clause,
+                       decision_clause ;
+
+program_header       = "SEO", identifier, version ;
+
+business_clause      = "GOAL", goal,
+                       "FOR", business,
+                       [ "OFFER", offer ],
+                       "VALUED_BY", value_event ;
+
+audience_clause      = "AUDIENCE", audience,
+                       "UNDER", condition_list,
+                       "IN_STATE", journey_state ;
+
+demand_clause        = "SEEKING", task,
+                       "WITH_INTENT", intent,
+                       "ABOUT", semantic_subject,
+                       "USING", query_cluster,
+                       [ "EXCLUDING", exclusion_list ] ;
+
+asset_clause         = "SERVED_BY", canonical_asset,
+                       "AS", page_type,
+                       "IN_FORMAT", format_choice,
+                       "SUPPORTED_BY", evidence_choice,
+                       "LEADING_TO", next_action ;
+
+graph_clause         = "CONNECTED_BY", graph_spec ;
+
+outcome_clause       = "MEASURED_BY", primary_metric,
+                       [ "SECONDARY", metric_list ],
+                       [ "GUARDED_BY", guardrail_list ] ;
+
+constraint_clause    = "CONSTRAINED_BY", constraint_list ;
+
+change_clause        = "LAKA", laka_level,
+                       "CHANGE", change_spec,
+                       "DESCRIBED_BY", change_signature ;
+
+decision_clause      = if_expression,
+                       "UNTIL", stop_condition ;
+
+if_expression        = "IF", boolean_expression,
+                       "THEN", action,
+                       [ "ELSE", alternative_action ] ;
+
+boolean_expression   = boolean_term,
+                       { boolean_operator, boolean_term } ;
+
+boolean_term         = predicate
+                     | "NOT", predicate
+                     | "(", boolean_expression, ")" ;
+
+boolean_operator     = "AND" | "OR" | "XOR" ;
+
+predicate            = identifier, comparison_operator, value
+                     | function_call ;
+
+comparison_operator  = "=" | "!=" | ">" | ">=" | "<" | "<="
+                     | "IN" | "MATCHES" | "EXISTS" ;
+
+function_call        = identifier, "(", [ argument_list ], ")" ;
+argument_list        = value, { ",", value } ;
+
+change_spec          = "OBJECT", object,
+                       "CONDITIONS", condition_list,
+                       "ACTIONS", action_list,
+                       "TOOLS", tool_list,
+                       "RESOURCES", resource_list,
+                       "OUTCOMES", outcome_list,
+                       "FEEDBACK", feedback_list,
+                       "CONSTRAINTS", constraint_list,
+                       "VALUE", value_statement,
+                       "FAILURE_MODE", failure_mode_list ;
+
+change_signature     = "MAGNITUDE", magnitude,
+                       "RATE", rate,
+                       "DIRECTION", direction,
+                       "SCOPE", scope,
+                       "DEPTH", depth,
+                       "DURATION", duration,
+                       "FREQUENCY", frequency,
+                       "ACCELERATION", acceleration,
+                       "VARIABILITY", variability,
+                       "DETECTABILITY", detectability,
+                       "REVERSIBILITY", reversibility,
+                       "PROPAGATION", propagation,
+                       "AMPLIFICATION", amplification,
+                       "ACCUMULATION", accumulation ;
+
+semantic_subject     = concept | entity | relation_expression ;
+relation_expression  = semantic_node, relation, semantic_node ;
+semantic_node        = concept | entity | attribute | attribute_value ;
+
+query_cluster        = "CLUSTER", identifier,
+                       "{", representative_query,
+                       { ",", query_variant },
+                       "}" ;
+
+canonical_asset      = "CANONICAL", url,
+                       [ "SUPPORT", "{", url, { ",", url }, "}" ] ;
+
+format_choice        = format, { "OR", format } ;
+evidence_choice      = evidence, { "OR", evidence } ;
+
+graph_spec           = "{", graph_edge, { ",", graph_edge }, "}" ;
+graph_edge           = url, edge_type, anchor_text, url ;
+
+condition_list       = condition, { "AND", condition } ;
+exclusion_list       = exclusion, { "AND", exclusion } ;
+metric_list          = metric, { ",", metric } ;
+guardrail_list       = guardrail, { ",", guardrail } ;
+constraint_list      = constraint, { ",", constraint } ;
+action_list          = action, { ",", action } ;
+tool_list            = tool, { ",", tool } ;
+resource_list        = resource, { ",", resource } ;
+outcome_list         = outcome, { ",", outcome } ;
+feedback_list        = feedback, { ",", feedback } ;
+failure_mode_list    = failure_mode, { ",", failure_mode } ;
+
+goal                  = string ;
+business              = string ;
+offer                 = string ;
+value_event           = string ;
+audience              = string ;
+condition             = string ;
+task                  = task_verb, task_object ;
+task_verb             = "DEFINE" | "LEARN" | "DISCOVER" | "DIAGNOSE"
+                      | "COMPARE" | "CALCULATE" | "LOCATE" | "VERIFY"
+                      | "PLAN" | "IMPLEMENT" | "TROUBLESHOOT" | "BUY"
+                      | "USE" | "MAINTAIN" | "RENEW" | "REFER" ;
+task_object           = string ;
+
+intent                = "INFORMATIONAL" | "COMPARATIVE"
+                      | "COMMERCIAL_INVESTIGATION" | "TRANSACTIONAL"
+                      | "NAVIGATIONAL" | "LOCAL" | "SUPPORT"
+                      | "RETENTION" | "REPUTATION" ;
+
+journey_state         = "UNAWARE" | "PROBLEM_AWARE" | "SOLUTION_AWARE"
+                      | "OPTION_EVALUATION" | "DECISION"
+                      | "IMPLEMENTATION" | "USE" | "RETENTION"
+                      | "ADVOCACY" ;
+
+page_type             = "SERVICE_PAGE" | "PRODUCT_PAGE" | "CATEGORY"
+                      | "GUIDE" | "COMPARISON" | "CALCULATOR"
+                      | "DIAGNOSTIC" | "TEMPLATE" | "CHECKLIST"
+                      | "DIRECTORY" | "LOCATION_PAGE" | "CASE_STUDY"
+                      | "DATASET" | "BENCHMARK" | "GLOSSARY" | "FAQ"
+                      | "VIDEO" | "INTERACTIVE" | "API" ;
+
+format                = "TEXT" | "TABLE" | "IMAGE" | "VIDEO" | "AUDIO"
+                      | "MAP" | "FORM" | "CALCULATOR" | "DECISION_TREE"
+                      | "DATASET" | "DOWNLOAD" | "INTERACTIVE" ;
+
+evidence              = "FIRSTHAND_EXPERIENCE" | "ORIGINAL_DATA"
+                      | "REPRODUCIBLE_TEST" | "PRIMARY_SOURCE"
+                      | "EXPERT_REVIEW" | "CASE_STUDY"
+                      | "DEMONSTRATION" | "METHODOLOGY"
+                      | "LIMITATIONS" ;
+
+edge_type             = "DEFINITION_OF" | "PREREQUISITE_OF"
+                      | "EXAMPLE_OF" | "EVIDENCE_FOR" | "COMPARISON_TO"
+                      | "ALTERNATIVE_TO" | "STEP_BEFORE" | "STEP_AFTER"
+                      | "SUPPORTS" | "CONVERTS_TO"
+                      | "LOCATION_VARIANT_OF" | "SERVICE_VARIANT_OF" ;
+
+laka_level            = "BASELINE" | "MINOR" | "MAJOR"
+                      | "STRUCTURAL" | "PARADIGM" ;
+
+magnitude             = "NEGLIGIBLE" | "SMALL" | "MEDIUM"
+                      | "LARGE" | "TRANSFORMATIONAL" ;
+rate                  = "IMMEDIATE" | "FAST" | "GRADUAL" | "SLOW" | "UNKNOWN" ;
+direction             = "POSITIVE" | "NEGATIVE" | "MIXED" | "NEUTRAL" ;
+scope                 = "ELEMENT" | "PAGE" | "CLUSTER" | "TEMPLATE"
+                      | "SITE" | "MARKET" ;
+depth                 = "COPY" | "BEHAVIOR" | "DOCUMENT"
+                      | "ARCHITECTURE" | "BUSINESS_MODEL" ;
+duration              = "TRANSIENT" | "CAMPAIGN" | "PERSISTENT" | "PERMANENT" ;
+frequency             = "ONCE" | "PERIODIC" | "EVENT_DRIVEN" | "CONTINUOUS" ;
+acceleration          = "DECAYING" | "LINEAR" | "COMPOUNDING" | "VOLATILE" ;
+variability           = "LOW" | "MODERATE" | "HIGH" | "UNKNOWN" ;
+detectability         = "DIRECT" | "PROXY" | "MODELED" | "LATENT" ;
+reversibility         = "EASY" | "MODERATE" | "DIFFICULT" | "IRREVERSIBLE" ;
+propagation           = "ISOLATED" | "LINKED" | "TEMPLATE_WIDE"
+                      | "SITE_WIDE" | "ECOSYSTEM" ;
+amplification         = "NONE" | "INTERNAL_GRAPH" | "EXTERNAL_CITATIONS"
+                      | "BRAND" | "NETWORK" ;
+accumulation          = "NONE" | "EPISODIC" | "STOCK_BUILDING" | "COMPOUNDING" ;
+
+object                = string ;
+action                = string ;
+alternative_action    = string ;
+tool                  = string ;
+resource              = string ;
+outcome               = string ;
+feedback              = string ;
+constraint            = string ;
+value_statement       = string ;
+failure_mode          = string ;
+stop_condition        = string ;
+primary_metric        = metric ;
+metric                = string ;
+guardrail             = string ;
+next_action           = string ;
+exclusion             = string ;
+concept               = string ;
+entity                = string ;
+attribute             = string ;
+attribute_value       = string ;
+relation              = string ;
+representative_query  = string ;
+query_variant         = string ;
+anchor_text           = string ;
+url                   = string ;
+identifier            = letter, { letter | digit | "_" | "-" } ;
+version               = digit, ".", digit ;
+value                 = string | number | boolean ;
+boolean               = "true" | "false" ;
+number                = digit, { digit }, [ ".", digit, { digit } ] ;
+string                = '"', { character - '"' }, '"' ;
+letter                = "A"…"Z" | "a"…"z" ;
+digit                 = "0"…"9" ;
+character             = ? any Unicode character ? ;

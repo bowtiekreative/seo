@@ -1,0 +1,595 @@
+{
+  "title": "Page and cluster templates",
+  "count": 24,
+  "templates": [
+    {
+      "id": "TPL-A",
+      "letter": "A",
+      "name": "Business and value model",
+      "body": "# Business Value Model\n\nBusiness:\nOffer:\nAudience:\nGeography:\nPrimary business goal:\nQualified value event:\nQualification rule:\nAverage revenue per event:\nAverage contribution margin per event:\nCapacity constraint:\nSales-cycle length:\nRetention/expansion value:\nPrimary guardrails:\nData sources:\nKnown limitations:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Business Value Model\n\nBusiness:\nOffer:\nAudience:\nGeography:\nPrimary business goal:\nQualified value event:\nQualification rule:\nAverage revenue per event:\nAverage contribution margin per event:\nCapacity constraint:\nSales-cycle length:\nRetention/expansion value:\nPrimary guardrails:\nData sources:\nKnown limitations:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template A — Business and value model"
+      }
+    },
+    {
+      "id": "TPL-B",
+      "letter": "B",
+      "name": "Audience–task card",
+      "body": "# Audience–Task Card\n\nAudience ID:\nSegment:\nRole:\nIndustry:\nExperience:\nProblem awareness:\nSolution awareness:\nUrgency:\nBudget/risk:\nGeography:\nLanguage:\nDevice/context:\nAccessibility conditions:\n\nProblem or desire:\nTask verb:\nTask object:\nCompletion condition:\nIntent:\nJourney state:\nCommon language:\nObjections:\nWrong-audience exclusions:\nDesired next state:\nBusiness value event:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Audience–Task Card\n\nAudience ID:\nSegment:\nRole:\nIndustry:\nExperience:\nProblem awareness:\nSolution awareness:\nUrgency:\nBudget/risk:\nGeography:\nLanguage:\nDevice/context:\nAccessibility conditions:\n\nProblem or desire:\nTask verb:\nTask object:\nCompletion condition:\nIntent:\nJourney state:\nCommon language:\nObjections:\nWrong-audience exclusions:\nDesired next state:\nBusiness value event:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template B — Audience–task card"
+      }
+    },
+    {
+      "id": "TPL-C",
+      "letter": "C",
+      "name": "Semantic demand inventory",
+      "body": "",
+      "blocks": [],
+      "tables": [
+        {
+          "headers": [
+            "Candidate ID",
+            "Parent",
+            "Concept/entity",
+            "Relation",
+            "Attribute",
+            "Value",
+            "Audience",
+            "Task",
+            "Intent",
+            "Modifier",
+            "Query evidence",
+            "Exclusions",
+            "Confidence"
+          ],
+          "rows": []
+        }
+      ],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template C — Semantic demand inventory"
+      }
+    },
+    {
+      "id": "TPL-D",
+      "letter": "D",
+      "name": "Intent-cluster brief",
+      "body": "# Intent Cluster\n\nCluster ID:\nWorking name:\nParent concept:\nDominant task:\nCompletion condition:\nIntent:\nJourney state:\nAudience:\nConditions:\n\nRepresentative query:\nSame-intent variants:\nEntities:\nRelations:\nAttributes:\nQuestions:\nAdjacent intents:\nExclusions:\n\nDemand evidence:\nBusiness value:\nExpected result forms:\nCurrent competing result forms:\nInformation gap:\nInformation advantage:\nCluster confidence:\n\nIntended canonical URL:\nExisting URLs:\nSupporting assets:\nNext action:\nPrimary metric:\nGuardrails:\nOwner:\nStatus:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Intent Cluster\n\nCluster ID:\nWorking name:\nParent concept:\nDominant task:\nCompletion condition:\nIntent:\nJourney state:\nAudience:\nConditions:\n\nRepresentative query:\nSame-intent variants:\nEntities:\nRelations:\nAttributes:\nQuestions:\nAdjacent intents:\nExclusions:\n\nDemand evidence:\nBusiness value:\nExpected result forms:\nCurrent competing result forms:\nInformation gap:\nInformation advantage:\nCluster confidence:\n\nIntended canonical URL:\nExisting URLs:\nSupporting assets:\nNext action:\nPrimary metric:\nGuardrails:\nOwner:\nStatus:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template D — Intent-cluster brief"
+      }
+    },
+    {
+      "id": "TPL-E",
+      "letter": "E",
+      "name": "Same-page / separate-page decision",
+      "body": "# Cluster Boundary Test\n\nCandidate A:\nCandidate B:\n\nSame sense? yes/no/uncertain\nSame dominant task? yes/no/uncertain\nSame completion condition? yes/no/uncertain\nCompatible answer structure? yes/no/uncertain\nCompatible result class? yes/no/uncertain\nCompatible audience state? yes/no/uncertain\nCompatible next action? yes/no/uncertain\nSubstantial current result overlap? yes/no/uncertain\nIndependent user value if separated? high/medium/low\nMaintenance cost if separated? high/medium/low\n\nDecision:\n- Merge\n- Split\n- Keep provisional\n- Test\n\nReason:\nCanonical owner:\nUncertainty:\nReview trigger:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Cluster Boundary Test\n\nCandidate A:\nCandidate B:\n\nSame sense? yes/no/uncertain\nSame dominant task? yes/no/uncertain\nSame completion condition? yes/no/uncertain\nCompatible answer structure? yes/no/uncertain\nCompatible result class? yes/no/uncertain\nCompatible audience state? yes/no/uncertain\nCompatible next action? yes/no/uncertain\nSubstantial current result overlap? yes/no/uncertain\nIndependent user value if separated? high/medium/low\nMaintenance cost if separated? high/medium/low\n\nDecision:\n- Merge\n- Split\n- Keep provisional\n- Test\n\nReason:\nCanonical owner:\nUncertainty:\nReview trigger:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template E — Same-page / separate-page decision"
+      }
+    },
+    {
+      "id": "TPL-F",
+      "letter": "F",
+      "name": "Canonical registry",
+      "body": "",
+      "blocks": [],
+      "tables": [
+        {
+          "headers": [
+            "Cluster ID",
+            "Dominant task",
+            "Intended canonical",
+            "Existing competing URLs",
+            "Decision",
+            "Redirect/canonical action",
+            "Internal-link action",
+            "Status"
+          ],
+          "rows": []
+        }
+      ],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template F — Canonical registry"
+      }
+    },
+    {
+      "id": "TPL-G",
+      "letter": "G",
+      "name": "Page specification",
+      "body": "# Page Specification\n\nPage ID:\nCluster ID:\nCanonical URL:\nPage type:\nOwner:\nStatus:\n\n## Audience and task\nAudience:\nConditions:\nDominant task:\nCompletion condition:\nIntent:\nJourney state:\nNext logical action:\n\n## Search language\nRepresentative query:\nSame-intent variants:\nExclusions:\nExpected search appearances:\nCompeting result forms:\n\n## Promise and answer\nTitle proposition:\nDirect answer:\nCore promise:\nUser success condition:\n\n## Information architecture\nRequired sections:\nRequired entities:\nRequired relations:\nRequired attributes:\nRequired comparisons:\nRequired edge cases:\nRequired FAQs:\n\n## Format\nPrimary format:\nSupporting media:\nInteractive element:\nDownloadable:\nAccessibility requirements:\n\n## Evidence\nFirsthand evidence:\nOriginal data:\nPrimary sources:\nExpert review:\nCase proof:\nMethodology:\nLimitations:\nFreshness date:\nRefresh trigger:\n\n## Graph\nParent/hub:\nPrerequisite links:\nSupporting links:\nComparison links:\nCommercial/next-step links:\nRequired links into page:\nRequired links out:\n\n## Technical\nIntended index state:\nStatus:\nCanonical:\nSitemap:\nStructured data:\nRendering requirements:\nPerformance risks:\nLocale/device notes:\n\n## Measurement\nPrimary metric:\nSecondary metrics:\nGuardrails:\nBaseline:\nChange ID:\nMinimum exposure:\nDecision rule:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Page Specification\n\nPage ID:\nCluster ID:\nCanonical URL:\nPage type:\nOwner:\nStatus:\n\n## Audience and task\nAudience:\nConditions:\nDominant task:\nCompletion condition:\nIntent:\nJourney state:\nNext logical action:\n\n## Search language\nRepresentative query:\nSame-intent variants:\nExclusions:\nExpected search appearances:\nCompeting result forms:\n\n## Promise and answer\nTitle proposition:\nDirect answer:\nCore promise:\nUser success condition:\n\n## Information architecture\nRequired sections:\nRequired entities:\nRequired relations:\nRequired attributes:\nRequired comparisons:\nRequired edge cases:\nRequired FAQs:\n\n## Format\nPrimary format:\nSupporting media:\nInteractive element:\nDownloadable:\nAccessibility requirements:\n\n## Evidence\nFirsthand evidence:\nOriginal data:\nPrimary sources:\nExpert review:\nCase proof:\nMethodology:\nLimitations:\nFreshness date:\nRefresh trigger:\n\n## Graph\nParent/hub:\nPrerequisite links:\nSupporting links:\nComparison links:\nCommercial/next-step links:\nRequired links into page:\nRequired links out:\n\n## Technical\nIntended index state:\nStatus:\nCanonical:\nSitemap:\nStructured data:\nRendering requirements:\nPerformance risks:\nLocale/device notes:\n\n## Measurement\nPrimary metric:\nSecondary metrics:\nGuardrails:\nBaseline:\nChange ID:\nMinimum exposure:\nDecision rule:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template G — Page specification"
+      }
+    },
+    {
+      "id": "TPL-H",
+      "letter": "H",
+      "name": "LAKA 50-cell change matrix",
+      "body": "",
+      "blocks": [],
+      "tables": [
+        {
+          "headers": [
+            "Internal variable",
+            "Baseline",
+            "Minor change",
+            "Major change",
+            "Structural change",
+            "Paradigm change"
+          ],
+          "rows": [
+            [
+              "Object",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Conditions",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Actions",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Tools",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Resources",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Outcomes",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Feedback",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Constraints",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Value",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Failure mode",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "prose": [
+        "Attach the fourteen descriptors to every shortlisted change."
+      ],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template H — LAKA 50-cell change matrix"
+      }
+    },
+    {
+      "id": "TPL-I",
+      "letter": "I",
+      "name": "Fourteen-variable change descriptor",
+      "body": "Change ID:\nLAKA level:\n\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "Change ID:\nLAKA level:\n\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template I — Fourteen-variable change descriptor"
+      }
+    },
+    {
+      "id": "TPL-J",
+      "letter": "J",
+      "name": "Experiment card",
+      "body": "# SEO Experiment\n\nExperiment ID:\nDate:\nOwner:\nObject:\nLAKA level:\n\nHypothesis:\nMechanism:\nTreatment:\nTreatment scope:\nComparison/control:\nBaseline:\nMinimum exposure:\nMaximum review date:\n\nPrimary metric:\nExpected direction:\nExpected minimum useful effect:\nSecondary metrics:\nGuardrails:\nRollback:\n\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:\n\nDecision:\n- Continue\n- Expand\n- Revise\n- Reverse\n- Escalate\n- Retire\n- Monitor\n\nResult:\nUncertainty:\nLearning:\nRule-weight update:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# SEO Experiment\n\nExperiment ID:\nDate:\nOwner:\nObject:\nLAKA level:\n\nHypothesis:\nMechanism:\nTreatment:\nTreatment scope:\nComparison/control:\nBaseline:\nMinimum exposure:\nMaximum review date:\n\nPrimary metric:\nExpected direction:\nExpected minimum useful effect:\nSecondary metrics:\nGuardrails:\nRollback:\n\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:\n\nDecision:\n- Continue\n- Expand\n- Revise\n- Reverse\n- Escalate\n- Retire\n- Monitor\n\nResult:\nUncertainty:\nLearning:\nRule-weight update:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template J — Experiment card"
+      }
+    },
+    {
+      "id": "TPL-K",
+      "letter": "K",
+      "name": "Opportunity scorecard",
+      "body": "Adjusted priority\n=\nvalue factors\n/\ncost factors\n× evidence confidence\n× measurement confidence",
+      "blocks": [
+        {
+          "lang": "text",
+          "code": "Adjusted priority\n=\nvalue factors\n/\ncost factors\n× evidence confidence\n× measurement confidence"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Factor",
+            "0–5 score",
+            "Evidence",
+            "Confidence"
+          ],
+          "rows": [
+            [
+              "Demand confidence",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Business fit",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Task value",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Information advantage",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Conversion value",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Attainability",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Existing signal",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Reuse potential",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Learning value",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Production effort",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Technical risk",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Maintenance burden",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Time to learning",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template K — Opportunity scorecard"
+      }
+    },
+    {
+      "id": "TPL-L",
+      "letter": "L",
+      "name": "Technical state record",
+      "body": "",
+      "blocks": [],
+      "tables": [
+        {
+          "headers": [
+            "URL",
+            "Intended state",
+            "Accessible",
+            "Status",
+            "Rendered",
+            "Robots",
+            "Index directive",
+            "Declared canonical",
+            "Selected canonical",
+            "Indexed",
+            "Sitemap",
+            "In-links",
+            "Depth",
+            "CWV",
+            "Structured data",
+            "Priority"
+          ],
+          "rows": []
+        }
+      ],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template L — Technical state record"
+      }
+    },
+    {
+      "id": "TPL-M",
+      "letter": "M",
+      "name": "Internal graph map",
+      "body": "definition_of\nprerequisite_of\nexample_of\nevidence_for\ncomparison_to\nalternative_to\nstep_before\nstep_after\nsupports\nconverts_to\nlocation_variant_of\nservice_variant_of",
+      "blocks": [
+        {
+          "lang": "text",
+          "code": "definition_of\nprerequisite_of\nexample_of\nevidence_for\ncomparison_to\nalternative_to\nstep_before\nstep_after\nsupports\nconverts_to\nlocation_variant_of\nservice_variant_of"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Source URL",
+            "Edge type",
+            "Anchor/context",
+            "Target URL",
+            "User reason",
+            "Crawlable",
+            "Priority",
+            "Change ID"
+          ],
+          "rows": []
+        }
+      ],
+      "prose": [
+        "Allowed edge types:"
+      ],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template M — Internal graph map"
+      }
+    },
+    {
+      "id": "TPL-N",
+      "letter": "N",
+      "name": "Authority campaign",
+      "body": "# Authority Campaign\n\nCampaign ID:\nTarget cluster:\nTarget URL:\nBusiness outcome:\nDiagnosed gap:\n\nLinkable reason:\nEvidence asset:\nRelevant audiences:\nPublisher/prospect classes:\nOutreach propositions:\nDisclosures:\nPlacement requirements:\nRejected placement conditions:\n\nPrimary metric:\nQualified-domain definition:\nTarget-page metric:\nBrand-demand metric:\nConversion metric:\nRetention check:\nOwner:\nRefresh/compound plan:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Authority Campaign\n\nCampaign ID:\nTarget cluster:\nTarget URL:\nBusiness outcome:\nDiagnosed gap:\n\nLinkable reason:\nEvidence asset:\nRelevant audiences:\nPublisher/prospect classes:\nOutreach propositions:\nDisclosures:\nPlacement requirements:\nRejected placement conditions:\n\nPrimary metric:\nQualified-domain definition:\nTarget-page metric:\nBrand-demand metric:\nConversion metric:\nRetention check:\nOwner:\nRefresh/compound plan:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template N — Authority campaign"
+      }
+    },
+    {
+      "id": "TPL-O",
+      "letter": "O",
+      "name": "Content refresh / merge / retirement decision",
+      "body": "URL:\nCluster:\nDistinct task still valid?:\nDemand:\nBusiness value:\nLinks/evidence:\nConversions:\nFreshness:\nAccuracy:\nMaintenance burden:\nCompeting owned URLs:\nDependencies:\n\nDecision:\n- Preserve\n- Refresh\n- Reposition\n- Merge\n- Redirect\n- Noindex\n- Archive\n- Remove\n\nReason:\nMigration steps:\nGuardrails:\nObservation plan:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "URL:\nCluster:\nDistinct task still valid?:\nDemand:\nBusiness value:\nLinks/evidence:\nConversions:\nFreshness:\nAccuracy:\nMaintenance burden:\nCompeting owned URLs:\nDependencies:\n\nDecision:\n- Preserve\n- Refresh\n- Reposition\n- Merge\n- Redirect\n- Noindex\n- Archive\n- Remove\n\nReason:\nMigration steps:\nGuardrails:\nObservation plan:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template O — Content refresh / merge / retirement decision"
+      }
+    },
+    {
+      "id": "TPL-P",
+      "letter": "P",
+      "name": "Monthly portfolio review",
+      "body": "# Monthly SEO Portfolio Review\n\nPeriod:\nOwner:\n\n## Business\nContribution margin:\nQualified conversions:\nLead quality:\nCapacity:\n\n## Demand\nGrowing clusters:\nDeclining clusters:\nNew queries:\nBrand/non-brand movement:\n\n## Canonical ownership\nConflicts:\nMerges needed:\nMissing assets:\nUncertain clusters:\n\n## Technical\nHighest-value blockers:\nCanonical agreement:\nEligible coverage:\nOrphans/depth:\nField performance:\n\n## Information products\nBest task-completion assets:\nWeak assets:\nEvidence gaps:\nRefreshes:\n\n## Authority\nQualified new/lost domains:\nTarget lift:\nResearch/assets to compound:\n\n## Experiments\nWon:\nLost:\nUncertain:\nEscalated:\nRetired:\n\n## Allocation decisions\nContinue:\nExpand:\nRevise:\nReverse:\nEscalate:\nRetire:\nMonitor:\n\n## Generator updates\nWeights increased:\nWeights decreased:\nNew gates:\nRemoved assumptions:",
+      "blocks": [
+        {
+          "lang": "markdown",
+          "code": "# Monthly SEO Portfolio Review\n\nPeriod:\nOwner:\n\n## Business\nContribution margin:\nQualified conversions:\nLead quality:\nCapacity:\n\n## Demand\nGrowing clusters:\nDeclining clusters:\nNew queries:\nBrand/non-brand movement:\n\n## Canonical ownership\nConflicts:\nMerges needed:\nMissing assets:\nUncertain clusters:\n\n## Technical\nHighest-value blockers:\nCanonical agreement:\nEligible coverage:\nOrphans/depth:\nField performance:\n\n## Information products\nBest task-completion assets:\nWeak assets:\nEvidence gaps:\nRefreshes:\n\n## Authority\nQualified new/lost domains:\nTarget lift:\nResearch/assets to compound:\n\n## Experiments\nWon:\nLost:\nUncertain:\nEscalated:\nRetired:\n\n## Allocation decisions\nContinue:\nExpand:\nRevise:\nReverse:\nEscalate:\nRetire:\nMonitor:\n\n## Generator updates\nWeights increased:\nWeights decreased:\nNew gates:\nRemoved assumptions:"
+        }
+      ],
+      "tables": [],
+      "prose": [],
+      "source": {
+        "document": "07",
+        "file": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+        "heading": "Template P — Monthly portfolio review"
+      }
+    }
+  ],
+  "files": [
+    {
+      "id": "FILE-authority-campaign",
+      "name": "Earned Evidence and Authority Campaign",
+      "filename": "templates/authority-campaign.md",
+      "body": "# Earned Evidence and Authority Campaign\n\nCampaign ID:\nTarget cluster:\nTarget canonical URL:\nBusiness outcome:\nDiagnosed evidence/authority gap:\n\n## Linkable reason\nOriginal data:\nTool/utility:\nMethodology:\nVisual asset:\nExpert collaboration:\nCase evidence:\nNews/change:\nCorrection/replacement value:\n\n## Audiences\nWho benefits:\nPublisher/prospect classes:\nReason each class should care:\nRejected prospect conditions:\n\n## Outreach\nProposition:\nEvidence package:\nDisclosure:\nFollow-up rule:\nStop rule:\n\n## Measurement\nQualified-domain definition:\nPlacement type:\nRetained link/mention:\nReferral:\nBranded demand:\nTarget-cluster visibility:\nAssisted conversion:\nContribution value:\nRefresh/compound plan:\n"
+    },
+    {
+      "id": "FILE-canonical-registry",
+      "name": "Canonical Intent Registry",
+      "filename": "templates/canonical-registry.md",
+      "body": "# Canonical Intent Registry\n\n| Cluster ID | Dominant task | Representative query | Intended canonical URL | Existing competing URLs | Status | Confidence | Merge/split decision | Redirect/canonical action | Internal-link action | Owner |\n|---|---|---|---|---|---|---:|---|---|---|---|\n\n## Ownership rule\n\n```text\nFOR EACH dominant intent cluster:\n    EXACTLY ONE intended canonical owner.\n```\n\n## Conflict review\n\nCluster:\nObserved ranking URLs:\nDominant URL share:\nURL entropy:\nValue by URL:\nSame task?:\nWrong landing page?:\nDivided links?:\nDecision:\n"
+    },
+    {
+      "id": "FILE-intent-cluster-brief",
+      "name": "Intent Cluster Brief",
+      "filename": "templates/intent-cluster-brief.md",
+      "body": "# Intent Cluster Brief\n\nCluster ID:\nWorking name:\nStatus: research / provisional / approved / implemented / monitor / merge / retire / rejected\n\n## Audience and task\nAudience:\nConditions:\nProblem/desire:\nTask verb:\nTask object:\nCompletion condition:\nIntent:\nJourney state:\nNext desired state:\n\n## Semantics\nParent concept:\nRepresentative query:\nSame-intent variants:\nEntities:\nRelations:\nAttributes:\nAttribute values:\nSupporting questions:\nAdjacent intents:\nHomonyms/wrong senses:\nExclusions:\n\n## Evidence\nSearch Console:\nCustomer language:\nSales/support:\nResult-set evidence:\nCompetitor evidence:\nMarket evidence:\nConfidence:\n\n## Canonical ownership\nIntended canonical URL:\nExisting URLs:\nPotential conflicts:\nMerge/split decision:\nSupporting assets:\n\n## Value\nQualified event:\nExpected business role:\nInformation advantage:\nMaintenance burden:\nOpportunity score:\nPrimary metric:\nGuardrails:\nOwner:\nReview trigger:\n"
+    },
+    {
+      "id": "FILE-laka-change-matrix",
+      "name": "LAKA SEO Change Matrix",
+      "filename": "templates/laka-change-matrix.md",
+      "body": "# LAKA SEO Change Matrix\n\nTarget object:\nBusiness goal:\nDiagnosed failure:\nPrimary metric:\n\n| Internal variable | Baseline | Minor Change | Major Change | Structural Change | Paradigm Change |\n|---|---|---|---|---|---|\n| Object | | | | | |\n| Conditions | | | | | |\n| Actions | | | | | |\n| Tools | | | | | |\n| Resources | | | | | |\n| Outcomes | | | | | |\n| Feedback | | | | | |\n| Constraints | | | | | |\n| Value | | | | | |\n| Failure mode | | | | | |\n\n## Shortlisted change signature\n\nChange ID:\nSelected LAKA level:\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:\n\n## Boolean decision\n\n```text\nIF\nAND\nOR\nNOT\nTHEN\nELSE\nUNTIL\n```\n"
+    },
+    {
+      "id": "FILE-monthly-portfolio-review",
+      "name": "Monthly SEO Portfolio Review",
+      "filename": "templates/monthly-portfolio-review.md",
+      "body": "# Monthly SEO Portfolio Review\n\nPeriod:\nOwner:\n\n## Executive metrics\nIncremental organic contribution margin:\nQualified organic conversions:\nValue-weighted non-brand clicks:\nValue-weighted target-cluster visibility:\nEligible canonical coverage:\n\n## Business and capacity\nLead quality:\nClose/margin:\nCapacity:\nGuardrails:\n\n## Demand\nGrowing clusters:\nDeclining clusters:\nEmerging tasks:\nWrong-audience demand:\nBranded/non-branded changes:\n\n## Canonical ownership\nConflicts:\nMerges:\nRepositions:\nRetirements:\nMissing owners:\n\n## Assets and experience\nBest task completion:\nWeak formats:\nEvidence gaps:\nFreshness:\nConversion discontinuities:\n\n## Technical\nP0 blockers:\nCanonical agreement:\nOrphans/depth:\nDuplicate/facet volume:\nField performance:\n\n## Authority\nQualified new/lost evidence:\nTarget lift:\nAssets to compound:\n\n## Experiments\nContinue:\nExpand:\nRevise:\nReverse:\nEscalate:\nRetire:\nMonitor:\n\n## Generator update\nIncrease weights:\nDecrease weights:\nNew hard gates:\nChanged assumptions:\nNext portfolio:\n"
+    },
+    {
+      "id": "FILE-page-specification",
+      "name": "SEO Page Specification",
+      "filename": "templates/page-specification.md",
+      "body": "# SEO Page Specification\n\nPage ID:\nCluster ID:\nCanonical URL:\nPage type:\nOwner:\nStatus:\n\n## Governing sentence\nGoal:\nAudience:\nConditions:\nTask:\nIntent:\nQuery cluster:\nFormat:\nEvidence:\nGraph role:\nNext action:\nPrimary metric:\nConstraints:\n\n## Search language\nRepresentative query:\nSame-intent variants:\nExclusions:\nExpected search appearances:\nCurrent competing result forms:\n\n## Promise\nTitle proposition:\nDirect answer:\nCore promise:\nTask completion condition:\n\n## Information architecture\nRequired sections:\nRequired entities:\nRequired relations:\nRequired attributes:\nRequired comparison/decision support:\nEdge cases:\nFAQs:\n\n## Experience\nPrimary format:\nSupporting media:\nInteractive element:\nAccessibility:\nMobile conditions:\nPerformance risks:\n\n## Evidence\nFirsthand experience:\nOriginal data:\nPrimary sources:\nExpert review:\nCase evidence:\nMethodology:\nLimitations:\nLast verified:\nRefresh trigger:\n\n## Internal graph\nParent/hub:\nPrerequisites:\nSupporting pages:\nComparisons:\nAlternatives:\nEvidence pages:\nNext-step pages:\nRequired inbound links:\nRequired outbound links:\n\n## Technical\nIntended index state:\nExpected status:\nDeclared canonical:\nSitemap:\nRendering:\nStructured data:\nLocale/international:\nMigration notes:\n\n## Measurement\nChange ID:\nBaseline:\nPrimary metric:\nSecondary metrics:\nGuardrails:\nMinimum exposure:\nDecision rule:\nRollback:\n"
+    },
+    {
+      "id": "FILE-seo-experiment-card",
+      "name": "SEO Experiment Card",
+      "filename": "templates/seo-experiment-card.md",
+      "body": "# SEO Experiment Card\n\nExperiment ID:\nOwner:\nStart date:\nObject:\nCluster:\nLAKA level:\n\n## Hypothesis\nIF:\nTHEN:\nBECAUSE:\nWHILE:\n\n## Treatment\nAction:\nScope:\nComparison/control:\nChange package or single variable:\nRollback:\n\n## Baseline\nSearch state:\nTask outcome:\nBusiness outcome:\nTechnical state:\nContext/seasonality:\n\n## Measurement\nPrimary metric:\nExpected direction:\nMinimum useful effect:\nSecondary metrics:\nGuardrails:\nMinimum crawl/index exposure:\nMinimum impression/session/conversion exposure:\nMaximum review point:\n\n## LAKA descriptors\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:\n\n## Decision\nContinue / Expand / Revise / Reverse / Escalate / Retire / Monitor\n\nResult:\nUncertainty:\nLearning:\nRule update:\n"
+    },
+    {
+      "id": "FILE-technical-state-audit",
+      "name": "Technical State Audit",
+      "filename": "templates/technical-state-audit.md",
+      "body": "# Technical State Audit\n\nSite:\nScope:\nDate:\nOwner:\n\n| URL | Priority/value | Intended index state | Accessible | Status | Rendered | Robots | Index directive | Declared canonical | Selected canonical | Indexed | Sitemap | In-links | Depth | Field LCP | Field INP | Field CLS | Structured data | Decision |\n|---|---:|---|---|---:|---|---|---|---|---|---|---|---:|---:|---:|---:|---:|---|---|\n\n## Value-ranked issues\n\n| Issue | Affected priority URLs | Affected demand/value | Probability of impact | Effort | Risk | Priority | LAKA level |\n|---|---:|---:|---:|---:|---:|---:|---|\n\n## Decision logic\n\n```text\nIF issue blocks measurement or eligibility\nTHEN P0.\n\nELSE IF issue affects a high-value canonical cohort\nTHEN score by incremental value / effort.\n\nELSE monitor or batch with maintenance.\n```\n"
+    }
+  ]
+}

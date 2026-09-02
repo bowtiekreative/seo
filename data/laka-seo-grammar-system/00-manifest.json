@@ -1,0 +1,157 @@
+{
+  "title": "LAKA SEO Grammar System",
+  "version": "1.0",
+  "purpose": "Convert SEO from a loose checklist into a formal, measurable, volumetric operating language.",
+  "course_basis": "ClickMinded SEO course transcript archive, translated into a LAKA decision and measurement system",
+  "source_created": "2026-09-02",
+  "generated_at": "2026-09-02T13:20:48.457Z",
+  "inventory": {
+    "rules": 144,
+    "areas": 12,
+    "laka_levels": 5,
+    "internal_variables": 10,
+    "change_variables": 14,
+    "publication_gates": 8,
+    "dimension_families": 12,
+    "dimension_values": 156,
+    "sops": 14,
+    "templates": 24,
+    "phases": 11,
+    "commands": 10,
+    "formulas": 12,
+    "glossary_terms": 90,
+    "documents": 10
+  },
+  "start_here": [
+    "Read the governing sentence and the governing equation: GET /v1/grammar",
+    "Read the eight hard publication gates: GET /v1/gates",
+    "Browse the 144 decision rules: GET /v1/rules",
+    "Evaluate a candidate against the gates: POST /v1/evaluate",
+    "Size a volumetric space without enumerating it: POST /v1/volume"
+  ],
+  "usage_note": "This is a decision and measurement system, not a ranking guarantee. Priority bands are transparent heuristics, not search-engine scores.",
+  "copyright_note": "Original synthesis of the ClickMinded SEO course into a LAKA decision and measurement system. Source course material remains the property of its authors.",
+  "files": [
+    {
+      "name": "01-grammar.json",
+      "bytes": 3683,
+      "sha256": "3352503e3a1fe48f688de9c5400d7d88aead1714e24a1e86b6b2af32d891570f"
+    },
+    {
+      "name": "02-laka-model.json",
+      "bytes": 6018,
+      "sha256": "e3c113de01e9b5dd110d2029250b8150ee79f0047691e92f57a86d2f98a43245"
+    },
+    {
+      "name": "03-operators.json",
+      "bytes": 6078,
+      "sha256": "7bbd330b44052ecbce60c60c740cdd5529a1aa81666d2ed603b0db9df54c4a0c"
+    },
+    {
+      "name": "04-object-classes.json",
+      "bytes": 11509,
+      "sha256": "a2c59f5523ac69c5aba726e70953c5c820e331816310e53084bdc315c4e693d5"
+    },
+    {
+      "name": "05-dimensions.json",
+      "bytes": 7558,
+      "sha256": "4a5b6db75ed19d04dd0caeaf3d5553bf4c273f0571b0e0ff4fe847d9596f1a5a"
+    },
+    {
+      "name": "06-gates.json",
+      "bytes": 8772,
+      "sha256": "7f1fc8560cb3d8f261bea179dcf78f22f0c2f20cab622593f7a80150d713bc46"
+    },
+    {
+      "name": "07-formats.json",
+      "bytes": 2167,
+      "sha256": "877f6bd7cd8b45dd23404f78a4a40a3d647a62b3b19980e0b5e8fc74fd64ed96"
+    },
+    {
+      "name": "08-rules.json",
+      "bytes": 146286,
+      "sha256": "02589d463cb6cf164c231c4300a344fff9a58e9536a2f3cd6b6675302fc80524"
+    },
+    {
+      "name": "09-measurement.json",
+      "bytes": 11289,
+      "sha256": "0cf216ecdb20ff5b67d9e381caf92eb60ad531b650207725cc4156404b568408"
+    },
+    {
+      "name": "10-experiments.json",
+      "bytes": 6222,
+      "sha256": "f38a6762c59473259f29f99acb073c76b82763eb42d5343c7ab94b994d16d176"
+    },
+    {
+      "name": "11-sops.json",
+      "bytes": 27073,
+      "sha256": "62dee5d1116985ccb2d6d6539bee535ada500549d6eb7018794d5e4e3722afa6"
+    },
+    {
+      "name": "12-templates.json",
+      "bytes": 32299,
+      "sha256": "310051c30d974aedf1ac480da48f3b129f9aebcdd1c4e16b32aa0092f374fa4b"
+    },
+    {
+      "name": "13-backlog.json",
+      "bytes": 22740,
+      "sha256": "8ca41cd5bbf927741db484f47c7d4bf86418019a5f950922a1080db9e4e8701b"
+    },
+    {
+      "name": "14-commands.json",
+      "bytes": 13020,
+      "sha256": "988a57bb1c6da5e4dac8317db9c1fc278514a976618790f1203b5229d6830c16"
+    },
+    {
+      "name": "15-crosswalk.json",
+      "bytes": 10494,
+      "sha256": "83f91076ef9fbf437f8bc904355c11d8322a20944dabf34ac159ee07dbf5b7ba"
+    },
+    {
+      "name": "16-agent-prompt.json",
+      "bytes": 13725,
+      "sha256": "d3a2e285ccbb63800edd724d3c1182be25d75eb7df7b571ed5ceaf1c55ed4965"
+    },
+    {
+      "name": "17-glossary.json",
+      "bytes": 26110,
+      "sha256": "d8a8886b19b072d5a0967333ad901cf1d90efe70c348c8853b9d31541d6be4f2"
+    },
+    {
+      "name": "18-documents.json",
+      "bytes": 492254,
+      "sha256": "f37707856ee43d22021b5616c9e1fc4a71d26429d173dd7eb9a475e8341a807a"
+    },
+    {
+      "name": "19-project-schema.json",
+      "bytes": 27676,
+      "sha256": "857b1e7e335167b888f0e9765f749efd9b6f2513b02b31de86558c9252d6c39d"
+    },
+    {
+      "name": "20-examples.json",
+      "bytes": 26060,
+      "sha256": "74f0982add717aa0b8cc1ebbe478853adb6a2db0b1f512381bd667c5a7b1724a"
+    }
+  ],
+  "verbatim_sources": [
+    "01-SEO-LAKA-GRAMMAR.md",
+    "02-LAKA-SEO-STRATEGY-GUIDE.md",
+    "03-VOLUMETRIC-SEO-ENGINE.md",
+    "04-IF-ELSE-AND-OR-RULEBOOK.md",
+    "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+    "06-AUDIT-AND-EXECUTION-SOPS.md",
+    "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+    "08-AGENT-OPERATING-PROMPT.md",
+    "09-IMPLEMENTATION-BACKLOG.md",
+    "10-COURSE-CROSSWALK-AND-SOURCES.md",
+    "README.md",
+    "QUICK-REFERENCE.txt",
+    "SEO-LAKA-COMPLETE-GUIDE.md",
+    "clickminded-seo-technical-ontology-and-measurement.md",
+    "seo-laka.ebnf",
+    "seo-laka-commands.md",
+    "seo-laka-rules.yaml",
+    "seo-laka-project.schema.json",
+    "webdevcalgary-example.md"
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "title": "Audit and execution SOPs",
+  "count": 14,
+  "sops": [
+    {
+      "id": "SOP-01",
+      "number": 1,
+      "name": "Establish the SEO measurement foundation",
+      "goal": "Create a trustworthy chain from search visibility to contribution margin.",
+      "sections": [
+        {
+          "heading": "Goal",
+          "prose": [
+            "Create a trustworthy chain from search visibility to contribution margin."
+          ],
+          "bullets": [],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. List offers, audiences, and qualified value events.",
+            "2. Define contribution margin or provisional value bands.",
+            "3. Verify Search Console and analytics access.",
+            "4. Define organic landing and task events.",
+            "5. connect leads/sales to CRM or commerce records where possible.",
+            "6. classify branded and non-branded demand.",
+            "7. create a change ledger.",
+            "8. record data limitations.",
+            "9. build the five-metric executive dashboard.",
+            "10. run a test transaction and verify the complete chain."
+          ],
+          "bullets": [
+            "List offers, audiences, and qualified value events.",
+            "Define contribution margin or provisional value bands.",
+            "Verify Search Console and analytics access.",
+            "Define organic landing and task events.",
+            "connect leads/sales to CRM or commerce records where possible.",
+            "classify branded and non-branded demand.",
+            "create a change ledger.",
+            "record data limitations.",
+            "build the five-metric executive dashboard.",
+            "run a test transaction and verify the complete chain."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Pass rule",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "PASS\nIF search exposure\nAND landing\nAND task event\nAND qualified outcome\nAND value\ncan be connected at an acceptable confidence level."
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 1 — Establish the SEO measurement foundation"
+      }
+    },
+    {
+      "id": "SOP-02",
+      "number": 2,
+      "name": "Build the semantic demand graph",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Inputs",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "offers\ncustomer interviews/calls\nsales objections\nsupport questions\nsite search\nSearch Console\npaid-search terms\ncompetitor visibility\nindustry entities"
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. Define the parent concept and business boundary.",
+            "2. Generate subtypes, entities, attributes, relations, problems, causes, solutions, comparisons, and questions.",
+            "3. Attach audience and journey states.",
+            "4. collect observed query language.",
+            "5. normalize synonyms and variants.",
+            "6. mark homonyms and exclusions.",
+            "7. attach demand evidence and source confidence.",
+            "8. attach possible task formats.",
+            "9. export candidates for clustering."
+          ],
+          "bullets": [
+            "Define the parent concept and business boundary.",
+            "Generate subtypes, entities, attributes, relations, problems, causes, solutions, comparisons, and questions.",
+            "Attach audience and journey states.",
+            "collect observed query language.",
+            "normalize synonyms and variants.",
+            "mark homonyms and exclusions.",
+            "attach demand evidence and source confidence.",
+            "attach possible task formats.",
+            "export candidates for clustering."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`semantic-demand-inventory`"
+          ],
+          "bullets": [],
+          "blocks": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 2 — Build the semantic demand graph"
+      }
+    },
+    {
+      "id": "SOP-03",
+      "number": 3,
+      "name": "Cluster queries and assign canonical ownership",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. Group same-sense lexical variants.",
+            "2. identify the dominant task for each query.",
+            "3. compare answer structure and result class.",
+            "4. inspect current result overlap as supporting evidence.",
+            "5. merge same-task queries.",
+            "6. split different completion conditions.",
+            "7. assign one intended canonical URL.",
+            "8. map existing URLs to clusters.",
+            "9. flag missing pages, duplicate owners, and uncertain boundaries.",
+            "10. record exclusions and supporting questions."
+          ],
+          "bullets": [
+            "Group same-sense lexical variants.",
+            "identify the dominant task for each query.",
+            "compare answer structure and result class.",
+            "inspect current result overlap as supporting evidence.",
+            "merge same-task queries.",
+            "split different completion conditions.",
+            "assign one intended canonical URL.",
+            "map existing URLs to clusters.",
+            "flag missing pages, duplicate owners, and uncertain boundaries.",
+            "record exclusions and supporting questions."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Decision",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "same sense\nAND same task\nAND compatible answer\nAND compatible next action\n→ same cluster\n\ndifferent task\nOR different sense\nOR different necessary format\n→ separate cluster"
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 3 — Cluster queries and assign canonical ownership"
+      }
+    },
+    {
+      "id": "SOP-04",
+      "number": 4,
+      "name": "Find high-value existing opportunities",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. Export query-page data.",
+            "2. join business value and conversion data.",
+            "3. calculate cluster-level impressions, clicks, CTR residual, and value.",
+            "4. identify positions or visibility below potential.",
+            "5. identify pages with links/authority but weak intent alignment.",
+            "6. identify ranking pages with poor conversion.",
+            "7. identify converting pages with low visibility.",
+            "8. identify high-value pages with technical eligibility problems.",
+            "9. score opportunities by incremental value per effort.",
+            "10. select a bounded treatment portfolio."
+          ],
+          "bullets": [
+            "Export query-page data.",
+            "join business value and conversion data.",
+            "calculate cluster-level impressions, clicks, CTR residual, and value.",
+            "identify positions or visibility below potential.",
+            "identify pages with links/authority but weak intent alignment.",
+            "identify ranking pages with poor conversion.",
+            "identify converting pages with low visibility.",
+            "identify high-value pages with technical eligibility problems.",
+            "score opportunities by incremental value per effort.",
+            "select a bounded treatment portfolio."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Priority logic",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "measurement block\n> eligibility block\n> canonical conflict\n> existing high-value response gap\n> content/format gap\n> authority gap\n> new asset"
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 4 — Find high-value existing opportunities"
+      }
+    },
+    {
+      "id": "SOP-05",
+      "number": 5,
+      "name": "Create a page specification",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. Copy the page brief template.",
+            "2. state one dominant task.",
+            "3. define audience, condition, intent, and journey state.",
+            "4. list same-intent queries and exclusions.",
+            "5. choose canonical URL and page type.",
+            "6. define the direct answer.",
+            "7. map required entities, attributes, and relations.",
+            "8. choose the task-appropriate format.",
+            "9. define evidence and media.",
+            "10. define links in and out.",
+            "11. define next action.",
+            "12. define primary metric, guardrails, refresh trigger, and owner."
+          ],
+          "bullets": [
+            "Copy the page brief template.",
+            "state one dominant task.",
+            "define audience, condition, intent, and journey state.",
+            "list same-intent queries and exclusions.",
+            "choose canonical URL and page type.",
+            "define the direct answer.",
+            "map required entities, attributes, and relations.",
+            "choose the task-appropriate format.",
+            "define evidence and media.",
+            "define links in and out.",
+            "define next action.",
+            "define primary metric, guardrails, refresh trigger, and owner."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Gate",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "IF any required field is unknown\nTHEN mark it as a research question\nAND do not silently invent it."
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 5 — Create a page specification"
+      }
+    },
+    {
+      "id": "SOP-06",
+      "number": 6,
+      "name": "Optimize an existing page with LAKA",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Baseline",
+          "prose": [
+            "- record query mix;",
+            "- verify canonical/index state;",
+            "- measure current CTR, task completion, conversion, and value;",
+            "- inspect current result classes and competitors;",
+            "- map content/evidence gaps;",
+            "- map internal and external graph position."
+          ],
+          "bullets": [
+            "record query mix;",
+            "verify canonical/index state;",
+            "measure current CTR, task completion, conversion, and value;",
+            "inspect current result classes and competitors;",
+            "map content/evidence gaps;",
+            "map internal and external graph position."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Minor candidates",
+          "prose": [
+            "- title;",
+            "- snippet;",
+            "- direct answer;",
+            "- heading;",
+            "- anchor;",
+            "- CTA;",
+            "- image optimization."
+          ],
+          "bullets": [
+            "title;",
+            "snippet;",
+            "direct answer;",
+            "heading;",
+            "anchor;",
+            "CTA;",
+            "image optimization."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Major candidates",
+          "prose": [
+            "- rewrite;",
+            "- new evidence;",
+            "- comparison;",
+            "- calculator;",
+            "- video;",
+            "- decision tree;",
+            "- accessibility improvement."
+          ],
+          "bullets": [
+            "rewrite;",
+            "new evidence;",
+            "comparison;",
+            "calculator;",
+            "video;",
+            "decision tree;",
+            "accessibility improvement."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Structural candidates",
+          "prose": [
+            "- merge/split;",
+            "- template;",
+            "- hub;",
+            "- internal graph;",
+            "- canonical/facet repair;",
+            "- conversion data pipeline."
+          ],
+          "bullets": [
+            "merge/split;",
+            "template;",
+            "hub;",
+            "internal graph;",
+            "canonical/facet repair;",
+            "conversion data pipeline."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Paradigm candidates",
+          "prose": [
+            "- new information product;",
+            "- proprietary benchmark;",
+            "- free diagnostic;",
+            "- verified directory;",
+            "- agent-operable workflow."
+          ],
+          "bullets": [
+            "new information product;",
+            "proprietary benchmark;",
+            "free diagnostic;",
+            "verified directory;",
+            "agent-operable workflow."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Selection",
+          "prose": [
+            "Choose the lowest LAKA level capable of affecting the diagnosed failure."
+          ],
+          "bullets": [],
+          "blocks": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 6 — Optimize an existing page with LAKA"
+      }
+    },
+    {
+      "id": "SOP-07",
+      "number": 7,
+      "name": "Resolve cannibalization",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Detection",
+          "prose": [
+            "Flag clusters with:"
+          ],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "multiple ranking URLs\nAND unstable dominant URL\nOR divided links\nOR wrong landing page\nOR lower conversion from the winning URL"
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Options",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "MERGE\nif task and answer substantially overlap.\n\nREPOSITION\nif the weaker page has a valid adjacent task.\n\nKEEP BOTH\nif tasks are distinct and behavior is healthy.\n\nRETIRE\nif the weak page has no value, dependencies, or equity."
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Migration steps",
+          "prose": [
+            "1. choose canonical winner;",
+            "2. combine unique useful information;",
+            "3. preserve required evidence and media;",
+            "4. redirect when the old URL should disappear;",
+            "5. update internal links;",
+            "6. update sitemap and canonical signals;",
+            "7. observe impressions, dominant share, links, and value;",
+            "8. rollback or refine if material loss occurs."
+          ],
+          "bullets": [
+            "choose canonical winner;",
+            "combine unique useful information;",
+            "preserve required evidence and media;",
+            "redirect when the old URL should disappear;",
+            "update internal links;",
+            "update sitemap and canonical signals;",
+            "observe impressions, dominant share, links, and value;",
+            "rollback or refine if material loss occurs."
+          ],
+          "blocks": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 7 — Resolve cannibalization"
+      }
+    },
+    {
+      "id": "SOP-08",
+      "number": 8,
+      "name": "Build a useful internal graph",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. list priority canonical pages.",
+            "2. calculate orphan state and click depth.",
+            "3. classify page relationships.",
+            "4. create understanding, choice, journey, and authority edges.",
+            "5. use crawlable links and descriptive anchors.",
+            "6. add hubs only where path selection is useful.",
+            "7. link strong pages to high-value targets where contextually appropriate.",
+            "8. remove irrelevant or repetitive link clutter.",
+            "9. update links after migrations.",
+            "10. measure discovery, path use, visibility, and conversion."
+          ],
+          "bullets": [
+            "list priority canonical pages.",
+            "calculate orphan state and click depth.",
+            "classify page relationships.",
+            "create understanding, choice, journey, and authority edges.",
+            "use crawlable links and descriptive anchors.",
+            "add hubs only where path selection is useful.",
+            "link strong pages to high-value targets where contextually appropriate.",
+            "remove irrelevant or repetitive link clutter.",
+            "update links after migrations.",
+            "measure discovery, path use, visibility, and conversion."
+          ],
+          "blocks": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 8 — Build a useful internal graph"
+      }
+    },
+    {
+      "id": "SOP-09",
+      "number": 9,
+      "name": "Technical eligibility audit",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Ordered checks",
+          "prose": [
+            "1. intended search state;",
+            "2. public accessibility;",
+            "3. HTTP status;",
+            "4. rendered main content and links;",
+            "5. robots and index directives;",
+            "6. declared and selected canonical;",
+            "7. duplicate/facet behavior;",
+            "8. internal discovery and depth;",
+            "9. sitemap correctness;",
+            "10. mobile/content parity;",
+            "11. field performance;",
+            "12. structured data eligibility;",
+            "13. international/local signals;",
+            "14. security/manual-action issues."
+          ],
+          "bullets": [
+            "intended search state;",
+            "public accessibility;",
+            "HTTP status;",
+            "rendered main content and links;",
+            "robots and index directives;",
+            "declared and selected canonical;",
+            "duplicate/facet behavior;",
+            "internal discovery and depth;",
+            "sitemap correctness;",
+            "mobile/content parity;",
+            "field performance;",
+            "structured data eligibility;",
+            "international/local signals;",
+            "security/manual-action issues."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Value ranking",
+          "prose": [
+            "For every issue:",
+            "Fix business-blocking defects before generic audit-score improvements."
+          ],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "Affected priority URLs\n× affected demand/value\n× probability of blocking or degrading visibility\n÷ repair effort and risk"
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 9 — Technical eligibility audit"
+      }
+    },
+    {
+      "id": "SOP-10",
+      "number": 10,
+      "name": "Authority and earned-evidence campaign",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Steps",
+          "prose": [
+            "1. choose a target cluster and business goal.",
+            "2. diagnose the authority/evidence gap.",
+            "3. define a linkable reason.",
+            "4. select or build the evidence asset.",
+            "5. identify relevant audiences and publishers.",
+            "6. segment prospects by reason to care.",
+            "7. create truthful outreach.",
+            "8. record placement type and destination.",
+            "9. monitor retained links, brand demand, target visibility, and value.",
+            "10. refresh or compound successful evidence assets."
+          ],
+          "bullets": [
+            "choose a target cluster and business goal.",
+            "diagnose the authority/evidence gap.",
+            "define a linkable reason.",
+            "select or build the evidence asset.",
+            "identify relevant audiences and publishers.",
+            "segment prospects by reason to care.",
+            "create truthful outreach.",
+            "record placement type and destination.",
+            "monitor retained links, brand demand, target visibility, and value.",
+            "refresh or compound successful evidence assets."
+          ],
+          "blocks": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 10 — Authority and earned-evidence campaign"
+      }
+    },
+    {
+      "id": "SOP-11",
+      "number": 11,
+      "name": "Volumetric page-generation audit",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Use before programmatic publishing",
+          "prose": [
+            "For every proposed template row, verify:"
+          ],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "distinct task\nAND unique accurate data\nAND real user utility\nAND one canonical role\nAND local/product eligibility\nAND internal path\nAND quality ownership\nAND refresh mechanism\nAND measurable value"
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Sampling",
+          "prose": [
+            "1. inspect random rows;",
+            "2. inspect highest- and lowest-data rows;",
+            "3. inspect duplicate-risk rows;",
+            "4. inspect missing-data behavior;",
+            "5. inspect stale-data behavior;",
+            "6. inspect generated titles/descriptions;",
+            "7. inspect canonical and facet behavior;",
+            "8. inspect mobile/accessibility;",
+            "9. inspect conversion continuity;",
+            "10. inspect index and maintenance capacity."
+          ],
+          "bullets": [
+            "inspect random rows;",
+            "inspect highest- and lowest-data rows;",
+            "inspect duplicate-risk rows;",
+            "inspect missing-data behavior;",
+            "inspect stale-data behavior;",
+            "inspect generated titles/descriptions;",
+            "inspect canonical and facet behavior;",
+            "inspect mobile/accessibility;",
+            "inspect conversion continuity;",
+            "inspect index and maintenance capacity."
+          ],
+          "blocks": [],
+          "tables": []
+        },
+        {
+          "heading": "Launch",
+          "prose": [
+            "Use staged cohorts. Do not release the full theoretical volume at once."
+          ],
+          "bullets": [],
+          "blocks": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 11 — Volumetric page-generation audit"
+      }
+    },
+    {
+      "id": "SOP-12",
+      "number": 12,
+      "name": "Monthly portfolio review",
+      "goal": "",
+      "sections": [],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 12 — Monthly portfolio review"
+      }
+    },
+    {
+      "id": "SOP-13",
+      "number": 13,
+      "name": "Content refresh or retirement",
+      "goal": "",
+      "sections": [
+        {
+          "heading": "Refresh",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "IF demand remains valuable\nAND facts/format/evidence are stale\nAND improvement value exceeds cost\nTHEN refresh."
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Consolidate",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "IF several assets overlap\nAND one stronger canonical can cover the task\nTHEN merge and migrate."
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Retire",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "IF the page has no distinct task\nAND no meaningful demand, value, links, or dependency\nTHEN retire with the appropriate technical state."
+            }
+          ],
+          "tables": []
+        },
+        {
+          "heading": "Preserve",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "IF the page serves a valid user need despite low search traffic\nTHEN preserve it\nAND do not judge it only by SEO metrics."
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 13 — Content refresh or retirement"
+      }
+    },
+    {
+      "id": "SOP-14",
+      "number": 14,
+      "name": "Generative-search readiness",
+      "goal": "",
+      "sections": [],
+      "source": {
+        "document": "06",
+        "file": "06-AUDIT-AND-EXECUTION-SOPS.md",
+        "heading": "SOP 14 — Generative-search readiness"
+      }
+    }
+  ]
+}

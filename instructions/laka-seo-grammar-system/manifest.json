@@ -1,0 +1,204 @@
+{
+  "name": "LAKA SEO Grammar System",
+  "version": "1.0",
+  "created_date": "2026-09-02",
+  "course_basis": "ClickMinded SEO course transcript archive, translated into a LAKA decision and measurement system",
+  "rule_count": 144,
+  "laka_change_levels": 5,
+  "laka_internal_variables": 10,
+  "laka_change_descriptors": 14,
+  "files": [
+    {
+      "path": "01-SEO-LAKA-GRAMMAR.md",
+      "bytes": 19672,
+      "sha256": "d515b5b47e879359a7915f0e598c01df1eec65a62732210201e15c1c240f7a01",
+      "purpose": "Formal human-readable SEO grammar"
+    },
+    {
+      "path": "02-LAKA-SEO-STRATEGY-GUIDE.md",
+      "bytes": 16595,
+      "sha256": "ad7caad49db6a58ff21829853a84cf155561b6a9ede3cd155af2625e78c22ed7",
+      "purpose": "End-to-end strategy guide"
+    },
+    {
+      "path": "03-VOLUMETRIC-SEO-ENGINE.md",
+      "bytes": 14860,
+      "sha256": "f97b1bff417c52a412015303836f05efc5ce99d5dd97149c2a609e3991179f11",
+      "purpose": "Combinatorial opportunity and pruning engine"
+    },
+    {
+      "path": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+      "bytes": 76434,
+      "sha256": "b7509c017c9a637d49fc8861c2191a4197d02e5990600a736e6b99bb03f99a99",
+      "purpose": "144-rule human-readable decision library"
+    },
+    {
+      "path": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+      "bytes": 12913,
+      "sha256": "958673fc6dcdc198df4b9237ceb9bf3926d7a6130943aa513ade43f0bfb7f166",
+      "purpose": "Metrics, formulas, experiments, and dashboards"
+    },
+    {
+      "path": "06-AUDIT-AND-EXECUTION-SOPS.md",
+      "bytes": 9925,
+      "sha256": "5282862b101b29c068e6181586aba64fcbfeb293d1f43a50eebd2911f4ba11b3",
+      "purpose": "Execution procedures"
+    },
+    {
+      "path": "07-PAGE-AND-CLUSTER-TEMPLATES.md",
+      "bytes": 8471,
+      "sha256": "2507515c13992e2bda2d037106fec54e110700db8a8cca3757d8ae2818e838fb",
+      "purpose": "Consolidated reusable templates"
+    },
+    {
+      "path": "08-AGENT-OPERATING-PROMPT.md",
+      "bytes": 6920,
+      "sha256": "401d0ba227df6d1364e463cf14f498c7bb022a309934b4dce1786d77634f6715",
+      "purpose": "Prompt for an SEO agent or agent team"
+    },
+    {
+      "path": "09-IMPLEMENTATION-BACKLOG.md",
+      "bytes": 6226,
+      "sha256": "b722b5cc19c82a058fbfb878ee06c612060f535bb5842a56e6c6554a1bc122f6",
+      "purpose": "Dependency-based rollout"
+    },
+    {
+      "path": "10-COURSE-CROSSWALK-AND-SOURCES.md",
+      "bytes": 11638,
+      "sha256": "84d541da69949e421d18436d5baa1958e4fdcbc0feb28affb90796b929bbb7ad",
+      "purpose": "Course mapping and current primary sources"
+    },
+    {
+      "path": "QUICK-REFERENCE.txt",
+      "bytes": 3665,
+      "sha256": "20edbd07e6f70948923df92eb009a5399514ab48cd660ba41d5ecaa16f27f44c",
+      "purpose": "Compact reference"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5601,
+      "sha256": "01ae7241fa3c734ac1a5c605fd01b2b31b051f76c701098c22501ac821f0a818",
+      "purpose": "Orientation and system overview"
+    },
+    {
+      "path": "SEO-LAKA-COMPLETE-GUIDE.md",
+      "bytes": 198530,
+      "sha256": "fe209568f46390e22f47a9abf4d5b304469a94b5517c5173022431f2b11cb6e9",
+      "purpose": "Combined human-readable guide"
+    },
+    {
+      "path": "appendix/clickminded-seo-technical-ontology-and-measurement.md",
+      "bytes": 29256,
+      "sha256": "216556947b15850ea4a93c036204c16f188881250e4a1dce1a9920db4bd8c58d",
+      "purpose": "Technical ontology and measurement appendix"
+    },
+    {
+      "path": "examples/sample-candidate.json",
+      "bytes": 738,
+      "sha256": "e1b9ff46367a66e17d8ca19e53de3c6af62a74bc8210bf6057c987dba17697f2",
+      "purpose": "Evaluator input sample"
+    },
+    {
+      "path": "examples/sample-dimensions.json",
+      "bytes": 477,
+      "sha256": "96d5340929938d3c171210b4cdd02af6aba0121c4af437ed876477404d9e4e9e",
+      "purpose": "Volumetric sampler input"
+    },
+    {
+      "path": "examples/webdevcalgary-example.json",
+      "bytes": 10255,
+      "sha256": "1420071bf9fb15840a42f6b692704117a4f071a912e38319e3d3bac0fd8b555b",
+      "purpose": "Schema-valid worked example"
+    },
+    {
+      "path": "examples/webdevcalgary-example.md",
+      "bytes": 13206,
+      "sha256": "c043fb0cff292734da233c18ecd3b44ee5d0fbf55e96457d2073c910b29c3925",
+      "purpose": "Worked local-service example"
+    },
+    {
+      "path": "rules/seo-laka-rules.json",
+      "bytes": 90977,
+      "sha256": "00bb0b56e5d7703e114be36f0907575b995cf4275ecf8abbe22aee4b08d5a724",
+      "purpose": "Machine-readable JSON rule library"
+    },
+    {
+      "path": "rules/seo-laka-rules.yaml",
+      "bytes": 67633,
+      "sha256": "2f89f3a754141a38196f6227c447b05212bb0315efbc8be63da3070722077b26",
+      "purpose": "Machine-readable YAML rule library"
+    },
+    {
+      "path": "schemas/seo-laka-project.schema.json",
+      "bytes": 27676,
+      "sha256": "857b1e7e335167b888f0e9765f749efd9b6f2513b02b31de86558c9252d6c39d",
+      "purpose": "Project JSON Schema"
+    },
+    {
+      "path": "templates/authority-campaign.md",
+      "bytes": 702,
+      "sha256": "f22add88383a1df9c3d49ccd8d3cf7953d8d0bb3909894c0192edc2ab9fdad3b",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/canonical-registry.md",
+      "bytes": 552,
+      "sha256": "00a6070b87ab60706e3aef5d7f94dfcd887861c1ab6e84e90017183b622722c3",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/intent-cluster-brief.md",
+      "bytes": 916,
+      "sha256": "07f9b0d0f90b4ac44f1fe097ee316b5ac3e64827e02e2ba89023a97d18a48d03",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/laka-change-matrix.md",
+      "bytes": 742,
+      "sha256": "1efc65217d1d966f669e55d9a3fcbf60894ec5ffe77ae8f170f26e01024038b3",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/monthly-portfolio-review.md",
+      "bytes": 1009,
+      "sha256": "e0a1e56360987e7ff3b4bd50811930b586a864c83ac9910638eb5843c2d9255a",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/page-specification.md",
+      "bytes": 1355,
+      "sha256": "1afc51860998e4194bbdf4e5ff9a699cfcd431730d64f073f05c2c2321da47b8",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/seo-experiment-card.md",
+      "bytes": 832,
+      "sha256": "e17478e94818ada7bcdf8e96449fd7f6121f1a1203bbfd29f4308599edea6092",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "templates/technical-state-audit.md",
+      "bytes": 799,
+      "sha256": "0af19ccea663c2383add287f0f1d9c38b84c7276e36e6934ee0386d7bedd316d",
+      "purpose": "Supporting system file"
+    },
+    {
+      "path": "tools/laka_seo_engine.py",
+      "bytes": 9956,
+      "sha256": "99e1c39bd29f17a96cb83b41f8511c6fbf00f4b44802b2593fcca5f2a7e2b60f",
+      "purpose": "Candidate evaluator and bounded volumetric sampler"
+    },
+    {
+      "path": "tools/seo-laka-commands.md",
+      "bytes": 3213,
+      "sha256": "d8d2839356f064b6c8e7899e16a5fc1f6a5a18ce25b9b6c1ac33d31b9403ebac",
+      "purpose": "Pseudo-command notation"
+    },
+    {
+      "path": "tools/seo-laka.ebnf",
+      "bytes": 9919,
+      "sha256": "624fbb6e82d8ef2d62bfebeaa4dac3383db9755f18a51fa6b169fc73f0827168",
+      "purpose": "Formal EBNF syntax"
+    }
+  ]
+}

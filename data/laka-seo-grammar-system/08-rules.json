@@ -1,0 +1,4198 @@
+{
+  "title": "The 144-rule decision library",
+  "system": "LAKA SEO Grammar System",
+  "version": "1.0",
+  "rule_count": 144,
+  "precedence": [
+    "safety_law_privacy_policy",
+    "user_value_and_accuracy",
+    "technical_eligibility_and_canonical_correctness",
+    "business_value_and_constraints",
+    "intent_fit_and_information_quality",
+    "measurement_and_learning",
+    "efficiency_and_scale",
+    "cosmetic_optimization"
+  ],
+  "areas": [
+    {
+      "name": "Business Value",
+      "slug": "business-value",
+      "prefix": "BIZ",
+      "count": 12
+    },
+    {
+      "name": "Audience and Journey",
+      "slug": "audience-and-journey",
+      "prefix": "AUD",
+      "count": 12
+    },
+    {
+      "name": "Semantic Demand",
+      "slug": "semantic-demand",
+      "prefix": "SEM",
+      "count": 12
+    },
+    {
+      "name": "Clustering and Canonical Ownership",
+      "slug": "clustering-and-canonical-ownership",
+      "prefix": "CLU",
+      "count": 12
+    },
+    {
+      "name": "Content, Format, and Evidence",
+      "slug": "content-format-and-evidence",
+      "prefix": "CON",
+      "count": 12
+    },
+    {
+      "name": "On-page and Search Appearance",
+      "slug": "on-page-and-search-appearance",
+      "prefix": "ONP",
+      "count": 12
+    },
+    {
+      "name": "Internal Graph and Architecture",
+      "slug": "internal-graph-and-architecture",
+      "prefix": "GRF",
+      "count": 12
+    },
+    {
+      "name": "External Authority and Earned Evidence",
+      "slug": "external-authority-and-earned-evidence",
+      "prefix": "AUT",
+      "count": 12
+    },
+    {
+      "name": "Technical Eligibility",
+      "slug": "technical-eligibility",
+      "prefix": "TEC",
+      "count": 12
+    },
+    {
+      "name": "Conversion and Experience",
+      "slug": "conversion-and-experience",
+      "prefix": "CVR",
+      "count": 12
+    },
+    {
+      "name": "Measurement and Experimentation",
+      "slug": "measurement-and-experimentation",
+      "prefix": "EXP",
+      "count": 12
+    },
+    {
+      "name": "Generative Search, Scale, and Governance",
+      "slug": "generative-search-scale-and-governance",
+      "prefix": "GOV",
+      "count": 12
+    }
+  ],
+  "rules": [
+    {
+      "id": "BIZ-001",
+      "area": "Business Value",
+      "title": "Define value before volume",
+      "if": "the program has no defined qualified business event",
+      "then": "define the event, qualification rule, owner, and estimated contribution value before optimizing traffic",
+      "else": "use the existing qualified event as the primary business outcome",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "measurement completeness",
+      "guardrails": "Do not substitute sessions or ranking counts for value.",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-001 — Define value before volume",
+        "anchor": "biz-001-define-value-before-volume"
+      }
+    },
+    {
+      "id": "BIZ-002",
+      "area": "Business Value",
+      "title": "Traffic is diagnostic, not the north star",
+      "if": "organic traffic increases AND qualified conversions or margin do not",
+      "then": "diagnose intent quality, audience fit, next-action continuity, and attribution",
+      "else": "continue scaling only while downstream value and guardrails remain healthy",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "incremental organic contribution margin",
+      "guardrails": "lead quality, sales capacity, refund rate",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-002 — Traffic is diagnostic, not the north star",
+        "anchor": "biz-002-traffic-is-diagnostic-not-the-north-star"
+      }
+    },
+    {
+      "id": "BIZ-003",
+      "area": "Business Value",
+      "title": "Separate forecasts from actuals",
+      "if": "search volume, CTR, conversion, or revenue is estimated",
+      "then": "label the output as a forecast and record every assumption",
+      "else": "use observed query, conversion, revenue, and margin data",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "forecast error",
+      "guardrails": "confidence interval, source age",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-003 — Separate forecasts from actuals",
+        "anchor": "biz-003-separate-forecasts-from-actuals"
+      }
+    },
+    {
+      "id": "BIZ-004",
+      "area": "Business Value",
+      "title": "Respect fulfillment capacity",
+      "if": "expected qualified demand exceeds delivery or sales capacity",
+      "then": "prioritize higher-margin, higher-fit clusters OR increase capacity before expanding volume",
+      "else": "optimize for profitable demand growth",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "contribution margin per capacity unit",
+      "guardrails": "response time, customer satisfaction",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-004 — Respect fulfillment capacity",
+        "anchor": "biz-004-respect-fulfillment-capacity"
+      }
+    },
+    {
+      "id": "BIZ-005",
+      "area": "Business Value",
+      "title": "Model offers separately",
+      "if": "different offers have materially different audiences, margins, sales cycles, or qualification rules",
+      "then": "assign separate value models and cluster portfolios",
+      "else": "a shared model may be used with explicit segment dimensions",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "value by offer",
+      "guardrails": "cross-offer cannibalization",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-005 — Model offers separately",
+        "anchor": "biz-005-model-offers-separately"
+      }
+    },
+    {
+      "id": "BIZ-006",
+      "area": "Business Value",
+      "title": "Count assisted value carefully",
+      "if": "an informational asset rarely receives last-click conversions but appears in qualified journeys",
+      "then": "measure assisted progression, returning users, branded demand, and controlled lift",
+      "else": "judge the asset on direct value and task completion",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "assisted contribution value",
+      "guardrails": "double counting",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-006 — Count assisted value carefully",
+        "anchor": "biz-006-count-assisted-value-carefully"
+      }
+    },
+    {
+      "id": "BIZ-007",
+      "area": "Business Value",
+      "title": "Split branded and non-branded demand",
+      "if": "brand familiarity materially changes intent, CTR, or conversion",
+      "then": "report branded and non-branded performance separately",
+      "else": "aggregate only for top-level totals",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "value-weighted non-brand clicks",
+      "guardrails": "brand campaign effects",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-007 — Split branded and non-branded demand",
+        "anchor": "biz-007-split-branded-and-non-branded-demand"
+      }
+    },
+    {
+      "id": "BIZ-008",
+      "area": "Business Value",
+      "title": "Include retention and expansion",
+      "if": "organic search serves existing customers, support, renewal, or repeat purchase tasks",
+      "then": "assign retention events and lifetime-value effects",
+      "else": "use acquisition outcomes for new-user clusters",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "organic-assisted retained margin",
+      "guardrails": "support deflection quality, churn",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-008 — Include retention and expansion",
+        "anchor": "biz-008-include-retention-and-expansion"
+      }
+    },
+    {
+      "id": "BIZ-009",
+      "area": "Business Value",
+      "title": "Raise evidence thresholds for high stakes",
+      "if": "the topic can materially affect health, money, safety, legal rights, or major decisions",
+      "then": "require qualified review, primary sources, explicit limitations, and stronger maintenance",
+      "else": "apply the normal evidence standard",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "verified task success",
+      "guardrails": "harm, complaint, correction rate",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-009 — Raise evidence thresholds for high stakes",
+        "anchor": "biz-009-raise-evidence-thresholds-for-high-stakes"
+      }
+    },
+    {
+      "id": "BIZ-010",
+      "area": "Business Value",
+      "title": "Resolve competing goals explicitly",
+      "if": "traffic, lead quality, margin, brand, retention, and learning objectives conflict",
+      "then": "name one primary objective and classify the others as constraints or secondary outcomes",
+      "else": "use the single aligned objective",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "objective clarity",
+      "guardrails": "unintended metric trade-offs",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-010 — Resolve competing goals explicitly",
+        "anchor": "biz-010-resolve-competing-goals-explicitly"
+      }
+    },
+    {
+      "id": "BIZ-011",
+      "area": "Business Value",
+      "title": "Allocate by marginal value",
+      "if": "multiple valid initiatives compete for limited resources",
+      "then": "rank them by expected incremental value divided by effort, risk, maintenance, and time to learning",
+      "else": "execute the only valid initiative",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "realized value per implementation hour",
+      "guardrails": "portfolio concentration risk",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-011 — Allocate by marginal value",
+        "anchor": "biz-011-allocate-by-marginal-value"
+      }
+    },
+    {
+      "id": "BIZ-012",
+      "area": "Business Value",
+      "title": "Use economic stop rules",
+      "if": "expected remaining incremental value is below expected cost OR risk exceeds tolerance",
+      "then": "stop, defer, retire, or redesign the initiative",
+      "else": "continue to the next defined review point",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Paradigm"
+      ],
+      "primary_metric": "net incremental value",
+      "guardrails": "sunk-cost bias",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "BIZ",
+      "area_slug": "business-value",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "BIZ-012 — Use economic stop rules",
+        "anchor": "biz-012-use-economic-stop-rules"
+      }
+    },
+    {
+      "id": "AUD-001",
+      "area": "Audience and Journey",
+      "title": "Require an audience-task pair",
+      "if": "a candidate query cannot be mapped to a plausible audience and task",
+      "then": "classify it as uncertain and gather evidence",
+      "else": "attach the audience, condition, task, and journey state",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "classified-demand share",
+      "guardrails": "forced persona assumptions",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-001 — Require an audience-task pair",
+        "anchor": "aud-001-require-an-audience-task-pair"
+      }
+    },
+    {
+      "id": "AUD-002",
+      "area": "Audience and Journey",
+      "title": "Treat funnel modifiers as heuristics",
+      "if": "a word such as how, best, review, price, or buy suggests a journey stage",
+      "then": "use it as a hypothesis and verify the actual task and result set",
+      "else": "infer stage from the full query, context, and behavior",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "intent-classification accuracy",
+      "guardrails": "stage stereotyping",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-002 — Treat funnel modifiers as heuristics",
+        "anchor": "aud-002-treat-funnel-modifiers-as-heuristics"
+      }
+    },
+    {
+      "id": "AUD-003",
+      "area": "Audience and Journey",
+      "title": "Model the funnel as a graph",
+      "if": "journey analysis assumes every user enters at awareness and moves linearly",
+      "then": "allow entry, exit, return, skip, and backward transitions",
+      "else": "retain observed journey paths",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "state-transition rate",
+      "guardrails": "attribution inflation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-003 — Model the funnel as a graph",
+        "anchor": "aud-003-model-the-funnel-as-a-graph"
+      }
+    },
+    {
+      "id": "AUD-004",
+      "area": "Audience and Journey",
+      "title": "Use adjacent next actions",
+      "if": "the proposed CTA requires substantially more trust or commitment than the current task supports",
+      "then": "offer an adjacent useful action OR add the proof needed to justify the transition",
+      "else": "measure the direct transition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "next-state transition rate",
+      "guardrails": "bounce, complaint, unsubscribe",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-004 — Use adjacent next actions",
+        "anchor": "aud-004-use-adjacent-next-actions"
+      }
+    },
+    {
+      "id": "AUD-005",
+      "area": "Audience and Journey",
+      "title": "Split materially different audience needs",
+      "if": "two audience segments require different evidence, terminology, constraints, or offers",
+      "then": "create distinct sections, experiences, or canonical assets based on task compatibility",
+      "else": "serve them in one asset",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "qualified conversion by segment",
+      "guardrails": "duplication, maintenance",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-005 — Split materially different audience needs",
+        "anchor": "aud-005-split-materially-different-audience-needs"
+      }
+    },
+    {
+      "id": "AUD-006",
+      "area": "Audience and Journey",
+      "title": "Include accessibility conditions",
+      "if": "the task depends on visual, motor, auditory, cognitive, or assistive-technology access",
+      "then": "design the format, navigation, media, and controls for those conditions",
+      "else": "apply baseline accessible design to all assets",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "task completion by accessibility condition",
+      "guardrails": "keyboard traps, missing alternatives",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-006 — Include accessibility conditions",
+        "anchor": "aud-006-include-accessibility-conditions"
+      }
+    },
+    {
+      "id": "AUD-007",
+      "area": "Audience and Journey",
+      "title": "Require real local distinctness",
+      "if": "a geography modifier is proposed as a separate page",
+      "then": "require actual service eligibility, local evidence, local differences, and maintainable data",
+      "else": "consolidate into a broader service-area asset",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "qualified local conversions",
+      "guardrails": "doorway-page risk, inaccurate claims",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-007 — Require real local distinctness",
+        "anchor": "aud-007-require-real-local-distinctness"
+      }
+    },
+    {
+      "id": "AUD-008",
+      "area": "Audience and Journey",
+      "title": "Localize, do not merely translate",
+      "if": "language or country versions differ in terminology, regulation, inventory, currency, or user expectations",
+      "then": "localize content and targeting signals",
+      "else": "use a shared translation only where the task and facts truly remain equivalent",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "correct-locale conversion",
+      "guardrails": "translation quality, hreflang errors",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-008 — Localize, do not merely translate",
+        "anchor": "aud-008-localize-do-not-merely-translate"
+      }
+    },
+    {
+      "id": "AUD-009",
+      "area": "Audience and Journey",
+      "title": "Account for device context",
+      "if": "device changes task conditions or interface needs",
+      "then": "adapt layout, media, interaction, and next action while preserving canonical meaning",
+      "else": "use the common responsive experience",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "task completion by device",
+      "guardrails": "content parity",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-009 — Account for device context",
+        "anchor": "aud-009-account-for-device-context"
+      }
+    },
+    {
+      "id": "AUD-010",
+      "area": "Audience and Journey",
+      "title": "Match evidence to urgency",
+      "if": "the user has high urgency or high perceived risk",
+      "then": "front-load direct answers, scope, availability, proof, and safe next actions",
+      "else": "use the standard information order",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "time to task completion",
+      "guardrails": "misleading urgency",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-010 — Match evidence to urgency",
+        "anchor": "aud-010-match-evidence-to-urgency"
+      }
+    },
+    {
+      "id": "AUD-011",
+      "area": "Audience and Journey",
+      "title": "Explicitly exclude wrong audiences",
+      "if": "queries attract jobs, students, freebie seekers, unsupported geographies, or unrelated senses",
+      "then": "add exclusions to research, paid data, reporting, and content positioning",
+      "else": "retain the query in its valid cluster",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Minor"
+      ],
+      "primary_metric": "irrelevant-impression and unqualified-lead rate",
+      "guardrails": "accidental exclusion of valuable demand",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-011 — Explicitly exclude wrong audiences",
+        "anchor": "aud-011-explicitly-exclude-wrong-audiences"
+      }
+    },
+    {
+      "id": "AUD-012",
+      "area": "Audience and Journey",
+      "title": "Build post-purchase search pathways",
+      "if": "customers search for setup, use, troubleshooting, maintenance, renewal, or complementary products",
+      "then": "create support and retention task clusters with appropriate next actions",
+      "else": "focus the cluster on acquisition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "retention and support value",
+      "guardrails": "support accuracy",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUD",
+      "area_slug": "audience-and-journey",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUD-012 — Build post-purchase search pathways",
+        "anchor": "aud-012-build-post-purchase-search-pathways"
+      }
+    },
+    {
+      "id": "SEM-001",
+      "area": "Semantic Demand",
+      "title": "Start from parent concepts",
+      "if": "an offer lacks a mapped semantic territory",
+      "then": "identify parent concepts, neighboring categories, and business boundaries",
+      "else": "extend the existing concept graph",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "concept-map coverage",
+      "guardrails": "scope drift",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-001 — Start from parent concepts",
+        "anchor": "sem-001-start-from-parent-concepts"
+      }
+    },
+    {
+      "id": "SEM-002",
+      "area": "Semantic Demand",
+      "title": "Expand through subtypes",
+      "if": "a parent concept contains meaningful narrower types with distinct tasks",
+      "then": "create subtype clusters and evaluate them independently",
+      "else": "keep subtype terms as sections or variants",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "subtype demand coverage",
+      "guardrails": "thin fragmentation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-002 — Expand through subtypes",
+        "anchor": "sem-002-expand-through-subtypes"
+      }
+    },
+    {
+      "id": "SEM-003",
+      "area": "Semantic Demand",
+      "title": "Normalize synonyms and paraphrases",
+      "if": "different phrases express the same sense and dominant task",
+      "then": "map them to one query cluster and one intended canonical asset",
+      "else": "investigate whether the task differs",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "XOR"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "cluster cohesion",
+      "guardrails": "missed senses",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-003 — Normalize synonyms and paraphrases",
+        "anchor": "sem-003-normalize-synonyms-and-paraphrases"
+      }
+    },
+    {
+      "id": "SEM-004",
+      "area": "Semantic Demand",
+      "title": "Disambiguate homonyms and polysemy",
+      "if": "the same wording can refer to different concepts, entities, or tasks",
+      "then": "create sense labels and exclusions before clustering",
+      "else": "use the unambiguous concept",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "wrong-sense rate",
+      "guardrails": "query misclassification",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-004 — Disambiguate homonyms and polysemy",
+        "anchor": "sem-004-disambiguate-homonyms-and-polysemy"
+      }
+    },
+    {
+      "id": "SEM-005",
+      "area": "Semantic Demand",
+      "title": "Model modifiers as facets",
+      "if": "terms vary by price, material, size, audience, platform, location, time, or other attributes",
+      "then": "represent them as attribute-value pairs and test whether they create a distinct task",
+      "else": "treat them as lexical variants",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "facet value and distinctness",
+      "guardrails": "facet explosion",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-005 — Model modifiers as facets",
+        "anchor": "sem-005-model-modifiers-as-facets"
+      }
+    },
+    {
+      "id": "SEM-006",
+      "area": "Semantic Demand",
+      "title": "Use co-occurrence as context",
+      "if": "a term commonly appears near the topic but is not itself the user’s target",
+      "then": "use it only where it explains an entity, relation, attribute, or evidence need",
+      "else": "exclude it from mandatory coverage",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "task completeness",
+      "guardrails": "unnatural term insertion",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-006 — Use co-occurrence as context",
+        "anchor": "sem-006-use-co-occurrence-as-context"
+      }
+    },
+    {
+      "id": "SEM-007",
+      "area": "Semantic Demand",
+      "title": "Map entities and relations",
+      "if": "the task depends on named things and how they connect",
+      "then": "record entity types and typed relations, then express those relations visibly",
+      "else": "use concept-only structure",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "entity-relation coverage",
+      "guardrails": "entity ambiguity",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-007 — Map entities and relations",
+        "anchor": "sem-007-map-entities-and-relations"
+      }
+    },
+    {
+      "id": "SEM-008",
+      "area": "Semantic Demand",
+      "title": "Map query fan-out without page fan-out",
+      "if": "one broad task implies several supporting questions",
+      "then": "map the questions as sections, evidence needs, or distinct adjacent tasks",
+      "else": "do not create a separate page for every wording variation",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "fan-out task coverage",
+      "guardrails": "scaled-content duplication",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-008 — Map query fan-out without page fan-out",
+        "anchor": "sem-008-map-query-fan-out-without-page-fan-out"
+      }
+    },
+    {
+      "id": "SEM-009",
+      "area": "Semantic Demand",
+      "title": "Triangulate demand evidence",
+      "if": "a candidate appears in only one tool or source",
+      "then": "seek corroboration from first-party data, users, result sets, competitors, or sales/support evidence",
+      "else": "increase confidence when independent sources agree",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "demand-confidence score",
+      "guardrails": "tool bias",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-009 — Triangulate demand evidence",
+        "anchor": "sem-009-triangulate-demand-evidence"
+      }
+    },
+    {
+      "id": "SEM-010",
+      "area": "Semantic Demand",
+      "title": "Do not equate zero tool volume with zero demand",
+      "if": "a query has low or zero reported volume but appears in first-party or customer evidence",
+      "then": "retain it as a low-volume or emerging candidate and measure the cluster",
+      "else": "deprioritize only after value and evidence review",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "observed cluster demand",
+      "guardrails": "anecdotal overreach",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-010 — Do not equate zero tool volume with zero demand",
+        "anchor": "sem-010-do-not-equate-zero-tool-volume-with-zero-demand"
+      }
+    },
+    {
+      "id": "SEM-011",
+      "area": "Semantic Demand",
+      "title": "Attach time state",
+      "if": "facts, prices, availability, standards, laws, events, or recommendations can change",
+      "then": "assign freshness requirements and update triggers",
+      "else": "classify the asset as stable evergreen",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "freshness compliance",
+      "guardrails": "stale claims",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-011 — Attach time state",
+        "anchor": "sem-011-attach-time-state"
+      }
+    },
+    {
+      "id": "SEM-012",
+      "area": "Semantic Demand",
+      "title": "Model emerging demand separately",
+      "if": "a new technology, regulation, event, or behavior has weak historical search data but strong causal evidence",
+      "then": "create an experimental demand thesis with explicit uncertainty",
+      "else": "use normal historical prioritization",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Paradigm"
+      ],
+      "primary_metric": "learning-adjusted emerging-demand value",
+      "guardrails": "trend chasing",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "SEM",
+      "area_slug": "semantic-demand",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "SEM-012 — Model emerging demand separately",
+        "anchor": "sem-012-model-emerging-demand-separately"
+      }
+    },
+    {
+      "id": "CLU-001",
+      "area": "Clustering and Canonical Ownership",
+      "title": "One dominant intent, one owner",
+      "if": "a dominant intent cluster is approved",
+      "then": "assign exactly one intended canonical URL",
+      "else": "keep the cluster in research",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "EXACTLY_ONE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "canonical ownership completeness",
+      "guardrails": "multiple owners",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-001 — One dominant intent, one owner",
+        "anchor": "clu-001-one-dominant-intent-one-owner"
+      }
+    },
+    {
+      "id": "CLU-002",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Merge same-task candidates",
+      "if": "sense, task, answer structure, result class, and next action are compatible",
+      "then": "merge candidates into one cluster",
+      "else": "evaluate split conditions",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "demand coverage per canonical asset",
+      "guardrails": "over-broad pages",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-002 — Merge same-task candidates",
+        "anchor": "clu-002-merge-same-task-candidates"
+      }
+    },
+    {
+      "id": "CLU-003",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Split different tasks",
+      "if": "queries share vocabulary but require different completion conditions or document forms",
+      "then": "create separate clusters and page roles",
+      "else": "keep them together",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "intent purity",
+      "guardrails": "duplicated introductions",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-003 — Split different tasks",
+        "anchor": "clu-003-split-different-tasks"
+      }
+    },
+    {
+      "id": "CLU-004",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Use result overlap as evidence, not law",
+      "if": "current top results overlap strongly for two queries",
+      "then": "increase merge confidence but still inspect task and business context",
+      "else": "do not force a split solely because result overlap is low",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "cluster validation accuracy",
+      "guardrails": "SERP volatility",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-004 — Use result overlap as evidence, not law",
+        "anchor": "clu-004-use-result-overlap-as-evidence-not-law"
+      }
+    },
+    {
+      "id": "CLU-005",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Detect cannibalization by behavior",
+      "if": "multiple owned URLs receive the same cluster’s impressions with unstable dominance or divided value",
+      "then": "inspect intent, links, conversion, and canonical ownership",
+      "else": "allow multiple URLs when they serve genuinely different tasks",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "dominant URL share and URL entropy",
+      "guardrails": "false-positive cannibalization",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-005 — Detect cannibalization by behavior",
+        "anchor": "clu-005-detect-cannibalization-by-behavior"
+      }
+    },
+    {
+      "id": "CLU-006",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Merge with migration discipline",
+      "if": "two pages are redundant and one combined page is superior",
+      "then": "merge best information, select the winner, redirect the loser, and update links/sitemaps",
+      "else": "reposition or retain both",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "consolidated value and retained demand",
+      "guardrails": "migration loss",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-006 — Merge with migration discipline",
+        "anchor": "clu-006-merge-with-migration-discipline"
+      }
+    },
+    {
+      "id": "CLU-007",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Reposition a useful weaker page",
+      "if": "a weaker page has independent value but overlaps the stronger page’s task",
+      "then": "change its dominant intent and connect it as a supporting asset",
+      "else": "merge it",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "distinct-cluster value",
+      "guardrails": "residual overlap",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-007 — Reposition a useful weaker page",
+        "anchor": "clu-007-reposition-a-useful-weaker-page"
+      }
+    },
+    {
+      "id": "CLU-008",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Inspect equity before deletion",
+      "if": "a page appears useless or redundant",
+      "then": "check links, traffic, conversions, references, and dependencies before delete/noindex",
+      "else": "retain or consolidate the page",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "value preserved after retirement",
+      "guardrails": "broken dependencies",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-008 — Inspect equity before deletion",
+        "anchor": "clu-008-inspect-equity-before-deletion"
+      }
+    },
+    {
+      "id": "CLU-009",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Align canonical signals",
+      "if": "duplicate or parameter URLs must remain accessible",
+      "then": "align canonical annotations, internal links, sitemap entries, redirects, and content signals",
+      "else": "self-canonicalize the unique page",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "declared-selected canonical agreement",
+      "guardrails": "mixed signals",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-009 — Align canonical signals",
+        "anchor": "clu-009-align-canonical-signals"
+      }
+    },
+    {
+      "id": "CLU-010",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Protect established URLs",
+      "if": "an older URL has links, traffic, or history and the only proposed improvement is a prettier slug",
+      "then": "keep the URL unless expected benefit clearly exceeds migration risk",
+      "else": "optimize the new URL before launch",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "post-change value retention",
+      "guardrails": "redirect chains",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-010 — Protect established URLs",
+        "anchor": "clu-010-protect-established-urls"
+      }
+    },
+    {
+      "id": "CLU-011",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Keep lexical variants together",
+      "if": "differences are spelling, word order, pluralization, abbreviation, or stemming without task change",
+      "then": "include natural variants in one asset and reporting cluster",
+      "else": "treat materially different senses separately",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "variant coverage",
+      "guardrails": "keyword stuffing",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-011 — Keep lexical variants together",
+        "anchor": "clu-011-keep-lexical-variants-together"
+      }
+    },
+    {
+      "id": "CLU-012",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Test uncertain cluster boundaries",
+      "if": "merge/split evidence is inconclusive",
+      "then": "assign a provisional owner, record uncertainty, and observe query-to-URL behavior before scaling",
+      "else": "finalize the cluster",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "UNTIL"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "cluster stability",
+      "guardrails": "premature page multiplication",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CLU",
+      "area_slug": "clustering-and-canonical-ownership",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CLU-012 — Test uncertain cluster boundaries",
+        "anchor": "clu-012-test-uncertain-cluster-boundaries"
+      }
+    },
+    {
+      "id": "CON-001",
+      "area": "Content, Format, and Evidence",
+      "title": "Select format from task",
+      "if": "the dominant task is known",
+      "then": "choose a format that completes that task: guide, table, calculator, map, diagnostic, template, video, or transaction page",
+      "else": "research the task before drafting",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "task completion rate",
+      "guardrails": "format novelty without utility",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-001 — Select format from task",
+        "anchor": "con-001-select-format-from-task"
+      }
+    },
+    {
+      "id": "CON-002",
+      "area": "Content, Format, and Evidence",
+      "title": "Answer early",
+      "if": "a user can benefit from a concise direct answer",
+      "then": "provide it near the beginning and then support it",
+      "else": "state the path to the answer and necessary prerequisites",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "time to first useful answer",
+      "guardrails": "oversimplification",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-002 — Answer early",
+        "anchor": "con-002-answer-early"
+      }
+    },
+    {
+      "id": "CON-003",
+      "area": "Content, Format, and Evidence",
+      "title": "Require information advantage",
+      "if": "the proposed asset only restates widely available material",
+      "then": "add original experience, data, testing, utility, synthesis, local proof, or decision support",
+      "else": "proceed with the defensible advantage",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Paradigm"
+      ],
+      "primary_metric": "information-advantage score",
+      "guardrails": "unsupported originality claims",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-003 — Require information advantage",
+        "anchor": "con-003-require-information-advantage"
+      }
+    },
+    {
+      "id": "CON-004",
+      "area": "Content, Format, and Evidence",
+      "title": "Prefer firsthand evidence where relevant",
+      "if": "the task involves reviews, demonstrations, processes, products, or lived outcomes",
+      "then": "show what was actually tested, observed, used, or built",
+      "else": "use the best available primary evidence",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "firsthand-evidence coverage",
+      "guardrails": "conflicts of interest",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-004 — Prefer firsthand evidence where relevant",
+        "anchor": "con-004-prefer-firsthand-evidence-where-relevant"
+      }
+    },
+    {
+      "id": "CON-005",
+      "area": "Content, Format, and Evidence",
+      "title": "Make evidence visible",
+      "if": "a claim depends on a source, test, credential, or dataset",
+      "then": "place the supporting evidence where the user can inspect it",
+      "else": "qualify the claim as opinion or uncertainty",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "verifiable-claim rate",
+      "guardrails": "citation mismatch",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-005 — Make evidence visible",
+        "anchor": "con-005-make-evidence-visible"
+      }
+    },
+    {
+      "id": "CON-006",
+      "area": "Content, Format, and Evidence",
+      "title": "State limitations",
+      "if": "evidence has uncertainty, sample limits, conflicts, exceptions, or changing conditions",
+      "then": "state limitations and applicability boundaries",
+      "else": "present the stable conclusion",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "correction and dispute rate",
+      "guardrails": "loss of nuance",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-006 — State limitations",
+        "anchor": "con-006-state-limitations"
+      }
+    },
+    {
+      "id": "CON-007",
+      "area": "Content, Format, and Evidence",
+      "title": "Avoid arbitrary length targets",
+      "if": "a word count is proposed without a task-based reason",
+      "then": "define completeness by required questions, evidence, and decision support",
+      "else": "use length as a production estimate only",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "task completeness per reading time",
+      "guardrails": "content bloat",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-007 — Avoid arbitrary length targets",
+        "anchor": "con-007-avoid-arbitrary-length-targets"
+      }
+    },
+    {
+      "id": "CON-008",
+      "area": "Content, Format, and Evidence",
+      "title": "Govern AI-assisted content",
+      "if": "AI assists research, drafting, transformation, or scale",
+      "then": "require factual verification, original value, editorial ownership, and policy compliance",
+      "else": "use the same quality controls for human-only work",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "verified publication quality",
+      "guardrails": "hallucination, scaled abuse",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-008 — Govern AI-assisted content",
+        "anchor": "con-008-govern-ai-assisted-content"
+      }
+    },
+    {
+      "id": "CON-009",
+      "area": "Content, Format, and Evidence",
+      "title": "Require row-level uniqueness at scale",
+      "if": "a template generates pages from a dataset",
+      "then": "require accurate unique data, distinct user utility, and a valid canonical task for each row",
+      "else": "consolidate rows into filters, tables, or broader assets",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "unique-value coverage per generated page",
+      "guardrails": "doorway and thin-page risk",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-009 — Require row-level uniqueness at scale",
+        "anchor": "con-009-require-row-level-uniqueness-at-scale"
+      }
+    },
+    {
+      "id": "CON-010",
+      "area": "Content, Format, and Evidence",
+      "title": "Use media when it improves the task",
+      "if": "an image, diagram, video, audio, or interactive can explain or demonstrate more effectively",
+      "then": "include accessible, relevant media and measure its use",
+      "else": "keep the experience text-first where sufficient",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "media-assisted task completion",
+      "guardrails": "performance, accessibility",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-010 — Use media when it improves the task",
+        "anchor": "con-010-use-media-when-it-improves-the-task"
+      }
+    },
+    {
+      "id": "CON-011",
+      "area": "Content, Format, and Evidence",
+      "title": "Define refresh triggers",
+      "if": "content depends on changing data or conditions",
+      "then": "assign owner, source, review cadence, and event-triggered updates",
+      "else": "review only when performance or business context changes",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "freshness SLA",
+      "guardrails": "maintenance debt",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-011 — Define refresh triggers",
+        "anchor": "con-011-define-refresh-triggers"
+      }
+    },
+    {
+      "id": "CON-012",
+      "area": "Content, Format, and Evidence",
+      "title": "Support commercial pages with useful assets",
+      "if": "a commercial page is important but difficult to cite or insufficient for research-stage users",
+      "then": "create genuinely useful supporting evidence, tools, comparisons, or guides",
+      "else": "improve the commercial page directly",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "assisted commercial value",
+      "guardrails": "manufactured link bait",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CON",
+      "area_slug": "content-format-and-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CON-012 — Support commercial pages with useful assets",
+        "anchor": "con-012-support-commercial-pages-with-useful-assets"
+      }
+    },
+    {
+      "id": "ONP-001",
+      "area": "On-page and Search Appearance",
+      "title": "Align the title with the task",
+      "if": "the title does not clearly identify the page’s dominant task or value",
+      "then": "rewrite it truthfully for relevance and useful differentiation",
+      "else": "retain it and monitor",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "position-adjusted CTR",
+      "guardrails": "qualified conversion rate",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-001 — Align the title with the task",
+        "anchor": "onp-001-align-the-title-with-the-task"
+      }
+    },
+    {
+      "id": "ONP-002",
+      "area": "On-page and Search Appearance",
+      "title": "Use unique titles for unique canonicals",
+      "if": "two intended indexable canonical pages use materially duplicate titles",
+      "then": "differentiate titles according to their distinct tasks",
+      "else": "allow shared patterns with unique identifying content",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "duplicate-title rate",
+      "guardrails": "template inconsistency",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-002 — Use unique titles for unique canonicals",
+        "anchor": "onp-002-use-unique-titles-for-unique-canonicals"
+      }
+    },
+    {
+      "id": "ONP-003",
+      "area": "On-page and Search Appearance",
+      "title": "Measure title changes causally",
+      "if": "a title or snippet is changed",
+      "then": "record change date, exposed queries/pages, expected mechanism, and CTR guardrails",
+      "else": "do not claim impact",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "CTR residual",
+      "guardrails": "ranking, conversion, seasonality",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-003 — Measure title changes causally",
+        "anchor": "onp-003-measure-title-changes-causally"
+      }
+    },
+    {
+      "id": "ONP-004",
+      "area": "On-page and Search Appearance",
+      "title": "Write descriptions for decision support",
+      "if": "the result snippet can help users determine relevance",
+      "then": "write a concise truthful proposition with task, benefit, and distinguishing detail",
+      "else": "allow the search engine to select contextual text",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "organic CTR",
+      "guardrails": "snippet mismatch",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-004 — Write descriptions for decision support",
+        "anchor": "onp-004-write-descriptions-for-decision-support"
+      }
+    },
+    {
+      "id": "ONP-005",
+      "area": "On-page and Search Appearance",
+      "title": "Use headings as answer architecture",
+      "if": "the task has stages, criteria, subquestions, or choices",
+      "then": "structure headings around those information functions",
+      "else": "use a simple hierarchy",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "section-level task coverage",
+      "guardrails": "heading keyword stuffing",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-005 — Use headings as answer architecture",
+        "anchor": "onp-005-use-headings-as-answer-architecture"
+      }
+    },
+    {
+      "id": "ONP-006",
+      "area": "On-page and Search Appearance",
+      "title": "Write natural body language",
+      "if": "required concepts, entities, attributes, and relations are missing",
+      "then": "add them where they improve the explanation",
+      "else": "do not insert terms solely for coverage scores",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "semantic task completeness",
+      "guardrails": "readability",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-006 — Write natural body language",
+        "anchor": "onp-006-write-natural-body-language"
+      }
+    },
+    {
+      "id": "ONP-007",
+      "area": "On-page and Search Appearance",
+      "title": "Reject keyword stuffing",
+      "if": "repetition exists primarily to influence ranking rather than aid comprehension",
+      "then": "remove or rewrite it and preserve only natural references",
+      "else": "retain meaningful repetition",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "editorial quality",
+      "guardrails": "loss of clarity",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-007 — Reject keyword stuffing",
+        "anchor": "onp-007-reject-keyword-stuffing"
+      }
+    },
+    {
+      "id": "ONP-008",
+      "area": "On-page and Search Appearance",
+      "title": "Describe meaningful images",
+      "if": "an image communicates information or functions as a link/control",
+      "then": "provide appropriate descriptive alternative text",
+      "else": "use empty alternative text for purely decorative images",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "accessible-media coverage",
+      "guardrails": "redundant alt text",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-008 — Describe meaningful images",
+        "anchor": "onp-008-describe-meaningful-images"
+      }
+    },
+    {
+      "id": "ONP-009",
+      "area": "On-page and Search Appearance",
+      "title": "Optimize new URLs, protect old ones",
+      "if": "a page has not launched",
+      "then": "use a concise descriptive stable URL",
+      "else": "avoid changing an established URL without a migration case",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "URL stability and migration retention",
+      "guardrails": "redirect chains",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-009 — Optimize new URLs, protect old ones",
+        "anchor": "onp-009-optimize-new-urls-protect-old-ones"
+      }
+    },
+    {
+      "id": "ONP-010",
+      "area": "On-page and Search Appearance",
+      "title": "Use structured data only when applicable",
+      "if": "a supported structured-data type accurately represents visible page content",
+      "then": "implement and validate it",
+      "else": "do not add irrelevant or hidden markup",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "valid eligible items",
+      "guardrails": "manual action, markup drift",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-010 — Use structured data only when applicable",
+        "anchor": "onp-010-use-structured-data-only-when-applicable"
+      }
+    },
+    {
+      "id": "ONP-011",
+      "area": "On-page and Search Appearance",
+      "title": "Measure rich-result realization",
+      "if": "structured data validates successfully",
+      "then": "measure actual search appearance, impressions, CTR, and value",
+      "else": "debug eligibility or accept that display is not guaranteed",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "rich-result appearance and value",
+      "guardrails": "misattribution",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-011 — Measure rich-result realization",
+        "anchor": "onp-011-measure-rich-result-realization"
+      }
+    },
+    {
+      "id": "ONP-012",
+      "area": "On-page and Search Appearance",
+      "title": "Adjust CTR expectations",
+      "if": "CTR is evaluated",
+      "then": "control for position, device, country, brand status, query class, and search appearance",
+      "else": "do not use a universal CTR threshold",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "CTR residual",
+      "guardrails": "low sample size",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "ONP",
+      "area_slug": "on-page-and-search-appearance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "ONP-012 — Adjust CTR expectations",
+        "anchor": "onp-012-adjust-ctr-expectations"
+      }
+    },
+    {
+      "id": "GRF-001",
+      "area": "Internal Graph and Architecture",
+      "title": "Link every priority page",
+      "if": "a page is intended to receive organic visibility",
+      "then": "ensure at least one crawlable contextual internal link points to it",
+      "else": "remove it from the priority/index set if it has no valid role",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AT_LEAST"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Minor"
+      ],
+      "primary_metric": "priority-page orphan rate",
+      "guardrails": "forced links",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-001 — Link every priority page",
+        "anchor": "grf-001-link-every-priority-page"
+      }
+    },
+    {
+      "id": "GRF-002",
+      "area": "Internal Graph and Architecture",
+      "title": "Use descriptive anchors",
+      "if": "anchor text is generic and a natural descriptive label is available",
+      "then": "replace it with concise context-setting text",
+      "else": "retain the generic control only when interface convention requires it",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "descriptive-anchor coverage",
+      "guardrails": "over-optimization",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-002 — Use descriptive anchors",
+        "anchor": "grf-002-use-descriptive-anchors"
+      }
+    },
+    {
+      "id": "GRF-003",
+      "area": "Internal Graph and Architecture",
+      "title": "Require user context for links",
+      "if": "a proposed link does not help the reader understand, compare, verify, or take the next step",
+      "then": "do not add it",
+      "else": "add it in the relevant sentence or interface",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "useful internal-link interaction",
+      "guardrails": "link clutter",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-003 — Require user context for links",
+        "anchor": "grf-003-require-user-context-for-links"
+      }
+    },
+    {
+      "id": "GRF-004",
+      "area": "Internal Graph and Architecture",
+      "title": "Create hubs for navigation needs",
+      "if": "a coherent task family requires users to choose among multiple paths",
+      "then": "create or improve a hub with clear categories and routes",
+      "else": "connect assets contextually without a dedicated hub",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "hub-assisted discovery and conversion",
+      "guardrails": "empty taxonomy pages",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-004 — Create hubs for navigation needs",
+        "anchor": "grf-004-create-hubs-for-navigation-needs"
+      }
+    },
+    {
+      "id": "GRF-005",
+      "area": "Internal Graph and Architecture",
+      "title": "Validate supporting assets",
+      "if": "an adjacent question has independent demand, a complete answer, and a useful relationship to a core asset",
+      "then": "create a supporting asset and connect it",
+      "else": "include it as a section or FAQ",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "supporting-asset assisted value",
+      "guardrails": "thin content",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-005 — Validate supporting assets",
+        "anchor": "grf-005-validate-supporting-assets"
+      }
+    },
+    {
+      "id": "GRF-006",
+      "area": "Internal Graph and Architecture",
+      "title": "Reduce excessive depth",
+      "if": "important pages are difficult to reach through internal navigation",
+      "then": "add meaningful paths, hubs, or template links",
+      "else": "retain depth for low-value or intentionally isolated pages",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "priority-page click depth",
+      "guardrails": "navigation overload",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-006 — Reduce excessive depth",
+        "anchor": "grf-006-reduce-excessive-depth"
+      }
+    },
+    {
+      "id": "GRF-007",
+      "area": "Internal Graph and Architecture",
+      "title": "Use strong internal sources deliberately",
+      "if": "an authoritative owned page can naturally support a high-value target",
+      "then": "add a contextual link where it benefits the reader",
+      "else": "do not insert an unrelated link solely to move authority",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "target visibility lift",
+      "guardrails": "source-page task disruption",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-007 — Use strong internal sources deliberately",
+        "anchor": "grf-007-use-strong-internal-sources-deliberately"
+      }
+    },
+    {
+      "id": "GRF-008",
+      "area": "Internal Graph and Architecture",
+      "title": "Keep topical communities coherent",
+      "if": "a link crosses unrelated topic communities without user need",
+      "then": "remove or avoid it",
+      "else": "retain cross-topic links that represent a real prerequisite, comparison, or journey edge",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "topical edge precision",
+      "guardrails": "over-siloing",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-008 — Keep topical communities coherent",
+        "anchor": "grf-008-keep-topical-communities-coherent"
+      }
+    },
+    {
+      "id": "GRF-009",
+      "area": "Internal Graph and Architecture",
+      "title": "Make links crawlable",
+      "if": "navigation or internal discovery relies on nonstandard scripted interactions",
+      "then": "expose crawlable anchors with destinations and validate rendered HTML",
+      "else": "retain standard crawlable links",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "crawlable-link coverage",
+      "guardrails": "duplicate navigation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-009 — Make links crawlable",
+        "anchor": "grf-009-make-links-crawlable"
+      }
+    },
+    {
+      "id": "GRF-010",
+      "area": "Internal Graph and Architecture",
+      "title": "Concentrate, do not hoard",
+      "if": "many low-value pages dilute attention and internal graph flow",
+      "then": "consolidate, noindex, archive, or demote according to user and business value",
+      "else": "retain useful nodes",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "value-weighted index and graph concentration",
+      "guardrails": "loss of long-tail value",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-010 — Concentrate, do not hoard",
+        "anchor": "grf-010-concentrate-do-not-hoard"
+      }
+    },
+    {
+      "id": "GRF-011",
+      "area": "Internal Graph and Architecture",
+      "title": "Update the graph after migrations",
+      "if": "a page is merged, redirected, renamed, or retired",
+      "then": "update internal links, navigation, canonicals, and sitemaps to the final destination",
+      "else": "leave the graph unchanged",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "direct-to-final-link rate",
+      "guardrails": "redirect loops",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-011 — Update the graph after migrations",
+        "anchor": "grf-011-update-the-graph-after-migrations"
+      }
+    },
+    {
+      "id": "GRF-012",
+      "area": "Internal Graph and Architecture",
+      "title": "Measure paths, not link counts alone",
+      "if": "internal linking is evaluated",
+      "then": "measure discovery, depth, target visibility, task progression, and conversion paths",
+      "else": "use raw link counts only as diagnostics",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "graph-assisted value",
+      "guardrails": "correlation mistaken for causation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GRF",
+      "area_slug": "internal-graph-and-architecture",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GRF-012 — Measure paths, not link counts alone",
+        "anchor": "grf-012-measure-paths-not-link-counts-alone"
+      }
+    },
+    {
+      "id": "AUT-001",
+      "area": "External Authority and Earned Evidence",
+      "title": "Evaluate link quality multidimensionally",
+      "if": "an external link opportunity is considered",
+      "then": "evaluate relevance, editorial independence, source credibility, placement, uniqueness, and persistence",
+      "else": "reject or deprioritize the opportunity",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "qualified retained referring domains",
+      "guardrails": "spam and paid-link risk",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-001 — Evaluate link quality multidimensionally",
+        "anchor": "aut-001-evaluate-link-quality-multidimensionally"
+      }
+    },
+    {
+      "id": "AUT-002",
+      "area": "External Authority and Earned Evidence",
+      "title": "Create a linkable reason",
+      "if": "outreach asks for attention without a concrete user benefit",
+      "then": "build or identify data, utility, evidence, correction, visualization, or unique reference value",
+      "else": "lead with the existing value",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major",
+        "Paradigm"
+      ],
+      "primary_metric": "placement rate",
+      "guardrails": "misleading claims",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-002 — Create a linkable reason",
+        "anchor": "aut-002-create-a-linkable-reason"
+      }
+    },
+    {
+      "id": "AUT-003",
+      "area": "External Authority and Earned Evidence",
+      "title": "Support difficult commercial targets",
+      "if": "the target commercial page is unlikely to earn independent citations",
+      "then": "earn links to a relevant useful asset and connect it to the target OR improve the target’s reference value",
+      "else": "promote the target directly",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "assisted target-page visibility",
+      "guardrails": "manipulative intermediary pages",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-003 — Support difficult commercial targets",
+        "anchor": "aut-003-support-difficult-commercial-targets"
+      }
+    },
+    {
+      "id": "AUT-004",
+      "area": "External Authority and Earned Evidence",
+      "title": "Reject manipulative placements",
+      "if": "a link requires deception, irrelevant insertion, undisclosed payment, or policy violation",
+      "then": "reject it",
+      "else": "proceed with transparent editorial or appropriately attributed placement",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "policy-compliant placement rate",
+      "guardrails": "manual actions, reputation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-004 — Reject manipulative placements",
+        "anchor": "aut-004-reject-manipulative-placements"
+      }
+    },
+    {
+      "id": "AUT-005",
+      "area": "External Authority and Earned Evidence",
+      "title": "Prefer unique relevant domains",
+      "if": "many links come repeatedly from the same source while relevant independent sources are available",
+      "then": "diversify outreach toward unique relevant domains",
+      "else": "deepen the useful relationship without treating every link as independent authority",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "qualified unique referring domains",
+      "guardrails": "diversity for its own sake",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-005 — Prefer unique relevant domains",
+        "anchor": "aut-005-prefer-unique-relevant-domains"
+      }
+    },
+    {
+      "id": "AUT-006",
+      "area": "External Authority and Earned Evidence",
+      "title": "Prefer contextual editorial placement",
+      "if": "a link can appear in a useful body context or only in a repeated footer/sidebar",
+      "then": "prefer the contextual editorial placement",
+      "else": "treat repeated placement as lower-confidence evidence",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "contextual placement share",
+      "guardrails": "sponsorship disclosure",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-006 — Prefer contextual editorial placement",
+        "anchor": "aut-006-prefer-contextual-editorial-placement"
+      }
+    },
+    {
+      "id": "AUT-007",
+      "area": "External Authority and Earned Evidence",
+      "title": "Use tool metrics as proxies",
+      "if": "DA, DR, UR, PA, traffic estimates, or difficulty scores are used",
+      "then": "treat them as vendor-specific diagnostics and compare within one system",
+      "else": "use direct observations where available",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "proxy-to-outcome calibration",
+      "guardrails": "cross-tool comparisons",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-007 — Use tool metrics as proxies",
+        "anchor": "aut-007-use-tool-metrics-as-proxies"
+      }
+    },
+    {
+      "id": "AUT-008",
+      "area": "External Authority and Earned Evidence",
+      "title": "Investigate lost evidence",
+      "if": "a valuable relevant link or mention disappears",
+      "then": "classify cause and recover only when the source relationship and user value remain valid",
+      "else": "record normal churn",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "valuable-link recovery rate",
+      "guardrails": "harassing outreach",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-008 — Investigate lost evidence",
+        "anchor": "aut-008-investigate-lost-evidence"
+      }
+    },
+    {
+      "id": "AUT-009",
+      "area": "External Authority and Earned Evidence",
+      "title": "Measure brand demand effects",
+      "if": "earned media or authoritative mentions may increase awareness without direct referral clicks",
+      "then": "track branded queries, direct visits, assisted conversions, and target visibility",
+      "else": "measure direct referral and link effects",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "incremental branded demand",
+      "guardrails": "campaign overlap",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-009 — Measure brand demand effects",
+        "anchor": "aut-009-measure-brand-demand-effects"
+      }
+    },
+    {
+      "id": "AUT-010",
+      "area": "External Authority and Earned Evidence",
+      "title": "Segment outreach by relationship",
+      "if": "prospects differ by audience, reason to care, or editorial context",
+      "then": "create distinct outreach propositions and evidence packages",
+      "else": "use one aligned proposition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "positive reply and placement rate by segment",
+      "guardrails": "automation quality",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-010 — Segment outreach by relationship",
+        "anchor": "aut-010-segment-outreach-by-relationship"
+      }
+    },
+    {
+      "id": "AUT-011",
+      "area": "External Authority and Earned Evidence",
+      "title": "Compound original research",
+      "if": "original data or a benchmark performs well",
+      "then": "refresh it, expose methodology, create reusable views, and connect related clusters",
+      "else": "treat it as a one-time asset",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "research-attributed links and value",
+      "guardrails": "methodology drift",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-011 — Compound original research",
+        "anchor": "aut-011-compound-original-research"
+      }
+    },
+    {
+      "id": "AUT-012",
+      "area": "External Authority and Earned Evidence",
+      "title": "Judge authority by target outcomes",
+      "if": "links or mentions increase but the target cluster does not improve",
+      "then": "inspect relevance, target selection, indexing, content fit, and time lag",
+      "else": "continue scaling the validated authority mechanism",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "incremental target-cluster visibility and value",
+      "guardrails": "over-attribution",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "AUT",
+      "area_slug": "external-authority-and-earned-evidence",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "AUT-012 — Judge authority by target outcomes",
+        "anchor": "aut-012-judge-authority-by-target-outcomes"
+      }
+    },
+    {
+      "id": "TEC-001",
+      "area": "Technical Eligibility",
+      "title": "Require public accessibility",
+      "if": "a page is intended for search visibility",
+      "then": "ensure users and permitted crawlers can request its essential content",
+      "else": "exclude it intentionally",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "accessible-priority-URL rate",
+      "guardrails": "private or sensitive exposure",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-001 — Require public accessibility",
+        "anchor": "tec-001-require-public-accessibility"
+      }
+    },
+    {
+      "id": "TEC-002",
+      "area": "Technical Eligibility",
+      "title": "Use correct response states",
+      "if": "a canonical page is healthy and available",
+      "then": "return a successful response; use redirects, not-found, or server errors only for their true states",
+      "else": "repair the response logic",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "correct-status rate",
+      "guardrails": "soft 404s",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-002 — Use correct response states",
+        "anchor": "tec-002-use-correct-response-states"
+      }
+    },
+    {
+      "id": "TEC-003",
+      "area": "Technical Eligibility",
+      "title": "Validate rendered main content",
+      "if": "essential content or links depend on JavaScript",
+      "then": "inspect rendered output and ensure resources are accessible",
+      "else": "use the server-delivered content",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "rendered-content parity",
+      "guardrails": "hydration and blocked-resource errors",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-003 — Validate rendered main content",
+        "anchor": "tec-003-validate-rendered-main-content"
+      }
+    },
+    {
+      "id": "TEC-004",
+      "area": "Technical Eligibility",
+      "title": "Separate crawling from indexing controls",
+      "if": "the goal is to keep a page out of search results",
+      "then": "use an appropriate noindex, authentication, removal, redirect, or deletion method",
+      "else": "use robots.txt only to manage crawler requests, not as a deindex guarantee",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "intended index-state accuracy",
+      "guardrails": "content leakage",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-004 — Separate crawling from indexing controls",
+        "anchor": "tec-004-separate-crawling-from-indexing-controls"
+      }
+    },
+    {
+      "id": "TEC-005",
+      "area": "Technical Eligibility",
+      "title": "Maintain canonical coherence",
+      "if": "multiple URLs represent substantially the same content",
+      "then": "select a preferred URL and align canonical, redirects where appropriate, links, and sitemap signals",
+      "else": "self-canonicalize the unique asset where useful",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "canonical agreement",
+      "guardrails": "canonical chains",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-005 — Maintain canonical coherence",
+        "anchor": "tec-005-maintain-canonical-coherence"
+      }
+    },
+    {
+      "id": "TEC-006",
+      "area": "Technical Eligibility",
+      "title": "Keep sitemaps canonical and current",
+      "if": "a URL is important, canonical, and intended for indexing",
+      "then": "include its clean URL and accurate modification state in the sitemap",
+      "else": "exclude noncanonical, redirected, error, or intentionally nonindexed URLs",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "valid canonical sitemap coverage",
+      "guardrails": "misleading lastmod",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-006 — Keep sitemaps canonical and current",
+        "anchor": "tec-006-keep-sitemaps-canonical-and-current"
+      }
+    },
+    {
+      "id": "TEC-007",
+      "area": "Technical Eligibility",
+      "title": "Redirect to the closest valid successor",
+      "if": "a URL permanently moves or is consolidated",
+      "then": "redirect directly to the most relevant final destination and update internal references",
+      "else": "serve the existing URL",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "direct permanent-redirect accuracy",
+      "guardrails": "chains, loops, irrelevant redirects",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-007 — Redirect to the closest valid successor",
+        "anchor": "tec-007-redirect-to-the-closest-valid-successor"
+      }
+    },
+    {
+      "id": "TEC-008",
+      "area": "Technical Eligibility",
+      "title": "Treat not-found pages intentionally",
+      "if": "a resource no longer exists and has no valid replacement",
+      "then": "return a real not-found state with helpful navigation",
+      "else": "redirect only when a genuine equivalent exists",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "soft-404 rate",
+      "guardrails": "lost valuable links",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-008 — Treat not-found pages intentionally",
+        "anchor": "tec-008-treat-not-found-pages-intentionally"
+      }
+    },
+    {
+      "id": "TEC-009",
+      "area": "Technical Eligibility",
+      "title": "Control faceted and parameter volume",
+      "if": "filters, sorting, search, tracking, or session parameters create many near-duplicate URLs",
+      "then": "define crawl, canonical, link, and index rules by facet value",
+      "else": "allow unique valuable combinations",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "valuable-crawl share",
+      "guardrails": "index explosion",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-009 — Control faceted and parameter volume",
+        "anchor": "tec-009-control-faceted-and-parameter-volume"
+      }
+    },
+    {
+      "id": "TEC-010",
+      "area": "Technical Eligibility",
+      "title": "Preserve content parity",
+      "if": "mobile, desktop, locale, or rendered versions differ",
+      "then": "ensure essential content, metadata, structured data, and links remain equivalent where they should",
+      "else": "document intentional differences",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "version parity",
+      "guardrails": "cloaking-like mismatches",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-010 — Preserve content parity",
+        "anchor": "tec-010-preserve-content-parity"
+      }
+    },
+    {
+      "id": "TEC-011",
+      "area": "Technical Eligibility",
+      "title": "Prioritize real-user performance",
+      "if": "field performance or business outcomes show latency, instability, or interaction problems",
+      "then": "fix the highest-exposure causes and measure Core Web Vitals plus conversion/task outcomes",
+      "else": "repair only obvious low-cost issues and avoid score chasing",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "good-CWV exposure and task value",
+      "guardrails": "functionality regression",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-011 — Prioritize real-user performance",
+        "anchor": "tec-011-prioritize-real-user-performance"
+      }
+    },
+    {
+      "id": "TEC-012",
+      "area": "Technical Eligibility",
+      "title": "Scale crawl work to site size and change rate",
+      "if": "the site is very large, rapidly changing, or shows crawl/index waste",
+      "then": "invest in crawl-path, logs, facets, and index-quality optimization",
+      "else": "use a lighter periodic technical audit",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "valuable indexed URLs per crawl/resource unit",
+      "guardrails": "technical work without business case",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "TEC",
+      "area_slug": "technical-eligibility",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "TEC-012 — Scale crawl work to site size and change rate",
+        "anchor": "tec-012-scale-crawl-work-to-site-size-and-change-rate"
+      }
+    },
+    {
+      "id": "CVR-001",
+      "area": "Conversion and Experience",
+      "title": "Complete the search task before selling",
+      "if": "the page asks for conversion before delivering the promised answer",
+      "then": "front-load useful task completion and place the offer at a logical transition",
+      "else": "retain the aligned conversion path",
+      "operators": [
+        "IF",
+        "BEFORE",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "task completion then conversion",
+      "guardrails": "reduced qualified action",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-001 — Complete the search task before selling",
+        "anchor": "cvr-001-complete-the-search-task-before-selling"
+      }
+    },
+    {
+      "id": "CVR-002",
+      "area": "Conversion and Experience",
+      "title": "Match nudge to journey state",
+      "if": "the next action is not adjacent to the user’s current state",
+      "then": "choose a lower-friction or more relevant action",
+      "else": "measure the existing transition",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "next-state conversion rate",
+      "guardrails": "lead quality",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-002 — Match nudge to journey state",
+        "anchor": "cvr-002-match-nudge-to-journey-state"
+      }
+    },
+    {
+      "id": "CVR-003",
+      "area": "Conversion and Experience",
+      "title": "Optimize speed for outcomes",
+      "if": "slow or unstable experience correlates with abandonment or conversion loss",
+      "then": "fix the responsible bottleneck and validate field/user outcomes",
+      "else": "do not pursue a perfect tool score solely for ranking",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "conversion and task completion by performance band",
+      "guardrails": "broken features",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-003 — Optimize speed for outcomes",
+        "anchor": "cvr-003-optimize-speed-for-outcomes"
+      }
+    },
+    {
+      "id": "CVR-004",
+      "area": "Conversion and Experience",
+      "title": "Reduce form friction selectively",
+      "if": "form abandonment is high AND removed fields are not needed for qualification or routing",
+      "then": "shorten, stage, or clarify the form",
+      "else": "retain fields and improve explanation",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "qualified form completion",
+      "guardrails": "unqualified volume",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-004 — Reduce form friction selectively",
+        "anchor": "cvr-004-reduce-form-friction-selectively"
+      }
+    },
+    {
+      "id": "CVR-005",
+      "area": "Conversion and Experience",
+      "title": "Optimize for lead quality",
+      "if": "lead count rises while acceptance, close rate, or margin falls",
+      "then": "tighten intent, promise, qualification, or routing",
+      "else": "scale the validated acquisition path",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "sales-accepted organic leads",
+      "guardrails": "total pipeline",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-005 — Optimize for lead quality",
+        "anchor": "cvr-005-optimize-for-lead-quality"
+      }
+    },
+    {
+      "id": "CVR-006",
+      "area": "Conversion and Experience",
+      "title": "Test CTA propositions, not colors alone",
+      "if": "a CTA underperforms",
+      "then": "test task relevance, value, risk, evidence, commitment, placement, and wording before cosmetic variables",
+      "else": "retain and scale it",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "BEFORE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "qualified CTA conversion",
+      "guardrails": "misleading claims",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-006 — Test CTA propositions, not colors alone",
+        "anchor": "cvr-006-test-cta-propositions-not-colors-alone"
+      }
+    },
+    {
+      "id": "CVR-007",
+      "area": "Conversion and Experience",
+      "title": "Place trust at the decision point",
+      "if": "users hesitate because scope, proof, identity, terms, price, or risk is unclear",
+      "then": "place relevant evidence and clarification near the decision",
+      "else": "avoid repetitive trust decoration",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "decision completion rate",
+      "guardrails": "privacy and disclosure",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-007 — Place trust at the decision point",
+        "anchor": "cvr-007-place-trust-at-the-decision-point"
+      }
+    },
+    {
+      "id": "CVR-008",
+      "area": "Conversion and Experience",
+      "title": "Avoid premature hard selling",
+      "if": "the query is early-stage and commercial pressure harms task satisfaction",
+      "then": "use a useful soft transition such as a related guide, tool, save, or diagnostic",
+      "else": "present the proportional commercial action",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "assisted qualified progression",
+      "guardrails": "unsubscribe, bounce",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-008 — Avoid premature hard selling",
+        "anchor": "cvr-008-avoid-premature-hard-selling"
+      }
+    },
+    {
+      "id": "CVR-009",
+      "area": "Conversion and Experience",
+      "title": "Design retention paths",
+      "if": "the organic visitor is an existing customer or user",
+      "then": "route to successful use, support, renewal, expansion, or advocacy",
+      "else": "route prospects toward acquisition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "retention/expansion event value",
+      "guardrails": "support escalation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-009 — Design retention paths",
+        "anchor": "cvr-009-design-retention-paths"
+      }
+    },
+    {
+      "id": "CVR-010",
+      "area": "Conversion and Experience",
+      "title": "Measure satisfaction with task-specific events",
+      "if": "generic engagement metrics cannot show whether the task was completed",
+      "then": "instrument meaningful events such as calculator completion, comparison use, download, copy, or successful route",
+      "else": "use the existing task event",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "task completion rate",
+      "guardrails": "event inflation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-010 — Measure satisfaction with task-specific events",
+        "anchor": "cvr-010-measure-satisfaction-with-task-specific-events"
+      }
+    },
+    {
+      "id": "CVR-011",
+      "area": "Conversion and Experience",
+      "title": "Preserve message continuity",
+      "if": "the search promise, landing answer, CTA, and sales follow-up describe different outcomes",
+      "then": "align the chain around one user task and offer",
+      "else": "retain the coherent journey",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "promise-to-close continuity",
+      "guardrails": "overly narrow messaging",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-011 — Preserve message continuity",
+        "anchor": "cvr-011-preserve-message-continuity"
+      }
+    },
+    {
+      "id": "CVR-012",
+      "area": "Conversion and Experience",
+      "title": "Protect user and brand guardrails",
+      "if": "a conversion intervention increases action but also complaints, refunds, low-quality leads, or distrust",
+      "then": "revert, constrain, or redesign the intervention",
+      "else": "continue while guardrails stay within tolerance",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "guardrail-adjusted conversion value",
+      "guardrails": "dark patterns",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "CVR",
+      "area_slug": "conversion-and-experience",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "CVR-012 — Protect user and brand guardrails",
+        "anchor": "cvr-012-protect-user-and-brand-guardrails"
+      }
+    },
+    {
+      "id": "EXP-001",
+      "area": "Measurement and Experimentation",
+      "title": "Require a mechanism hypothesis",
+      "if": "an intervention has no stated reason it should affect an outcome",
+      "then": "write an object → action → mechanism → outcome hypothesis",
+      "else": "execute the stated hypothesis",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "hypothesis completeness",
+      "guardrails": "post-hoc storytelling",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-001 — Require a mechanism hypothesis",
+        "anchor": "exp-001-require-a-mechanism-hypothesis"
+      }
+    },
+    {
+      "id": "EXP-002",
+      "area": "Measurement and Experimentation",
+      "title": "Capture a baseline",
+      "if": "a change is about to be implemented",
+      "then": "record pre-change performance, context, exposure, and data quality",
+      "else": "do not claim incremental effect",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "baseline completeness",
+      "guardrails": "seasonal distortion",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-002 — Capture a baseline",
+        "anchor": "exp-002-capture-a-baseline"
+      }
+    },
+    {
+      "id": "EXP-003",
+      "area": "Measurement and Experimentation",
+      "title": "Use a change ledger",
+      "if": "any SEO-relevant production change occurs",
+      "then": "assign a change ID, owner, scope, time, expected mechanism, and rollback state",
+      "else": "retain the previous ledger",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "change attribution coverage",
+      "guardrails": "logging overhead",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-003 — Use a change ledger",
+        "anchor": "exp-003-use-a-change-ledger"
+      }
+    },
+    {
+      "id": "EXP-004",
+      "area": "Measurement and Experimentation",
+      "title": "Choose one primary metric",
+      "if": "an experiment has many possible success metrics",
+      "then": "select one primary decision metric and label others secondary or guardrail",
+      "else": "use the aligned primary metric",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "EXACTLY_ONE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "decision consistency",
+      "guardrails": "metric cherry-picking",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-004 — Choose one primary metric",
+        "anchor": "exp-004-choose-one-primary-metric"
+      }
+    },
+    {
+      "id": "EXP-005",
+      "area": "Measurement and Experimentation",
+      "title": "Set guardrails before launch",
+      "if": "a change can improve the primary metric while harming quality, accessibility, revenue, or trust",
+      "then": "define guardrail thresholds and rollback behavior",
+      "else": "use standard site guardrails",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "guardrail breach rate",
+      "guardrails": "unobserved harm",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-005 — Set guardrails before launch",
+        "anchor": "exp-005-set-guardrails-before-launch"
+      }
+    },
+    {
+      "id": "EXP-006",
+      "area": "Measurement and Experimentation",
+      "title": "Use controls when feasible",
+      "if": "comparable untreated pages, clusters, regions, or time periods exist",
+      "then": "use a control or difference-in-differences design",
+      "else": "use interrupted time series with explicit limitations",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "estimated incremental lift",
+      "guardrails": "control contamination",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-006 — Use controls when feasible",
+        "anchor": "exp-006-use-controls-when-feasible"
+      }
+    },
+    {
+      "id": "EXP-007",
+      "area": "Measurement and Experimentation",
+      "title": "Account for seasonality and external events",
+      "if": "demand, algorithms, campaigns, news, inventory, or holidays can affect the outcome",
+      "then": "annotate and model those factors before attributing change",
+      "else": "use the stable comparison",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "context-adjusted lift",
+      "guardrails": "overfitting",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-007 — Account for seasonality and external events",
+        "anchor": "exp-007-account-for-seasonality-and-external-events"
+      }
+    },
+    {
+      "id": "EXP-008",
+      "area": "Measurement and Experimentation",
+      "title": "Represent uncertainty",
+      "if": "sample size is small, variance is high, or exposure is incomplete",
+      "then": "report ranges, confidence, and directional evidence",
+      "else": "report the stable estimate",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "estimate uncertainty",
+      "guardrails": "false precision",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-008 — Represent uncertainty",
+        "anchor": "exp-008-represent-uncertainty"
+      }
+    },
+    {
+      "id": "EXP-009",
+      "area": "Measurement and Experimentation",
+      "title": "Allow processing and learning time",
+      "if": "a change has not had enough crawl, index, ranking, or behavioral exposure",
+      "then": "continue observation until the predefined minimum exposure or stop condition",
+      "else": "make the decision",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "UNTIL"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "minimum-exposure completion",
+      "guardrails": "indefinite waiting",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-009 — Allow processing and learning time",
+        "anchor": "exp-009-allow-processing-and-learning-time"
+      }
+    },
+    {
+      "id": "EXP-010",
+      "area": "Measurement and Experimentation",
+      "title": "Distinguish single-variable and package tests",
+      "if": "several material variables change together",
+      "then": "classify the intervention as a package test OR separate variables for causal learning",
+      "else": "treat it as a focused test",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "attribution confidence",
+      "guardrails": "slow recovery",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-010 — Distinguish single-variable and package tests",
+        "anchor": "exp-010-distinguish-single-variable-and-package-tests"
+      }
+    },
+    {
+      "id": "EXP-011",
+      "area": "Measurement and Experimentation",
+      "title": "Escalate by diagnosed mechanism",
+      "if": "a lower-level LAKA intervention fails",
+      "then": "re-diagnose and move to Major, Structural, or Paradigm only when the failure mechanism requires it",
+      "else": "retain or scale the successful level",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major",
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "value gained per escalation",
+      "guardrails": "unnecessary redesign",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-011 — Escalate by diagnosed mechanism",
+        "anchor": "exp-011-escalate-by-diagnosed-mechanism"
+      }
+    },
+    {
+      "id": "EXP-012",
+      "area": "Measurement and Experimentation",
+      "title": "Use explicit continue/revise/revert/retire decisions",
+      "if": "a review point is reached",
+      "then": "choose exactly one decision based on primary metric, guardrails, cost, and confidence",
+      "else": "continue observation only under a predefined uncertainty rule",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "XOR"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "decision closure rate",
+      "guardrails": "zombie experiments",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "EXP",
+      "area_slug": "measurement-and-experimentation",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "EXP-012 — Use explicit continue/revise/revert/retire decisions",
+        "anchor": "exp-012-use-explicit-continue-revise-revert-retire-decisions"
+      }
+    },
+    {
+      "id": "GOV-001",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Keep foundational SEO as the base",
+      "if": "the goal includes visibility in generative search experiences",
+      "then": "apply the same valuable-content, crawlability, indexability, and search-quality foundations",
+      "else": "apply normal search foundations",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "search and generative visibility value",
+      "guardrails": "channel-specific hacks",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-001 — Keep foundational SEO as the base",
+        "anchor": "gov-001-keep-foundational-seo-as-the-base"
+      }
+    },
+    {
+      "id": "GOV-002",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Do not depend on llms.txt for Google Search",
+      "if": "a proposal claims a special AI text file is required for Google visibility",
+      "then": "reject the requirement and prioritize public crawlable indexable content",
+      "else": "maintain such a file only for a separate system that explicitly uses it",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "eligible indexed coverage",
+      "guardrails": "maintenance distraction",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-002 — Do not depend on llms.txt for Google Search",
+        "anchor": "gov-002-do-not-depend-on-llms-txt-for-google-search"
+      }
+    },
+    {
+      "id": "GOV-003",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Do not chunk content mechanically",
+      "if": "content is being split only because an AI system is assumed to need tiny sections",
+      "then": "organize by human task, readability, and information structure",
+      "else": "retain useful natural sections",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "task completion and retrieval coverage",
+      "guardrails": "fragmentation",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-003 — Do not chunk content mechanically",
+        "anchor": "gov-003-do-not-chunk-content-mechanically"
+      }
+    },
+    {
+      "id": "GOV-004",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Use query fan-out as a research map",
+      "if": "a broad request implies related information needs",
+      "then": "map prerequisite, comparison, evidence, and follow-up needs across the cluster graph",
+      "else": "use the direct task map",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "fan-out information coverage",
+      "guardrails": "one-page-per-query expansion",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-004 — Use query fan-out as a research map",
+        "anchor": "gov-004-use-query-fan-out-as-a-research-map"
+      }
+    },
+    {
+      "id": "GOV-005",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Block scaled content abuse",
+      "if": "content volume is generated primarily to manipulate rankings or AI responses without distinct user value",
+      "then": "stop publication and redesign the system",
+      "else": "continue only with row-level utility, accuracy, and governance",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "unique useful asset rate",
+      "guardrails": "spam-policy exposure",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-005 — Block scaled content abuse",
+        "anchor": "gov-005-block-scaled-content-abuse"
+      }
+    },
+    {
+      "id": "GOV-006",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Measure generative visibility directly",
+      "if": "Search Console or another first-party surface provides generative-search reporting",
+      "then": "track it as a distinct search appearance and connect it to downstream value",
+      "else": "use broader search and referral diagnostics with limitations",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "generative-search qualified value",
+      "guardrails": "reporting coverage",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-006 — Measure generative visibility directly",
+        "anchor": "gov-006-measure-generative-visibility-directly"
+      }
+    },
+    {
+      "id": "GOV-007",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Do not invent AI-specific schema",
+      "if": "a proposal adds unsupported structured data solely for generative visibility",
+      "then": "reject it; use supported structured data only when it matches visible content",
+      "else": "validate the applicable markup",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "valid supported markup",
+      "guardrails": "markup abuse",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-007 — Do not invent AI-specific schema",
+        "anchor": "gov-007-do-not-invent-ai-specific-schema"
+      }
+    },
+    {
+      "id": "GOV-008",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Prepare for agentic use through usability",
+      "if": "browser agents or assistive systems need to interpret and operate the site",
+      "then": "improve semantic controls, labels, accessible structure, clear states, and stable data",
+      "else": "retain the usable human-facing implementation",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "successful task completion by automated/assistive clients",
+      "guardrails": "security and consent",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-008 — Prepare for agentic use through usability",
+        "anchor": "gov-008-prepare-for-agentic-use-through-usability"
+      }
+    },
+    {
+      "id": "GOV-009",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Expose freshness and provenance",
+      "if": "data may change or be reused in generated answers",
+      "then": "show dates, methodology, sources, ownership, and update state where useful",
+      "else": "omit unnecessary metadata",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "freshness/provenance completeness",
+      "guardrails": "false recency",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-009 — Expose freshness and provenance",
+        "anchor": "gov-009-expose-freshness-and-provenance"
+      }
+    },
+    {
+      "id": "GOV-010",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Constrain programmatic expansion",
+      "if": "candidate combinations exceed quality or maintenance capacity",
+      "then": "raise gates, consolidate, stage release, or automate verified data maintenance",
+      "else": "publish within capacity",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "maintained useful-page rate",
+      "guardrails": "index and maintenance debt",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-010 — Constrain programmatic expansion",
+        "anchor": "gov-010-constrain-programmatic-expansion"
+      }
+    },
+    {
+      "id": "GOV-011",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Protect privacy, consent, and sensitive data",
+      "if": "volumetric generation or personalization uses personal, confidential, licensed, or restricted data",
+      "then": "minimize data, obtain rights/consent, secure access, and exclude unsafe outputs",
+      "else": "use public or owned permissible data",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "governance compliance",
+      "guardrails": "privacy harm",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-011 — Protect privacy, consent, and sensitive data",
+        "anchor": "gov-011-protect-privacy-consent-and-sensitive-data"
+      }
+    },
+    {
+      "id": "GOV-012",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Pursue paradigm assets selectively",
+      "if": "a new tool, dataset, benchmark, diagnostic, or agent can complete the task far better than existing result classes",
+      "then": "run a bounded paradigm experiment with a defensibility and maintenance plan",
+      "else": "improve the current asset class",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Paradigm"
+      ],
+      "primary_metric": "new-demand and incremental value creation",
+      "guardrails": "build cost, adoption risk",
+      "rationale": "Makes the decision explicit, measurable, and reversible where possible.",
+      "prefix": "GOV",
+      "area_slug": "generative-search-scale-and-governance",
+      "source": {
+        "document": "04",
+        "file": "04-IF-ELSE-AND-OR-RULEBOOK.md",
+        "heading": "GOV-012 — Pursue paradigm assets selectively",
+        "anchor": "gov-012-pursue-paradigm-assets-selectively"
+      }
+    }
+  ]
+}

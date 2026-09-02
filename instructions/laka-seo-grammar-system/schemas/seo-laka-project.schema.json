@@ -1,0 +1,1351 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/seo-laka-project.schema.json",
+  "title": "LAKA SEO Project",
+  "description": "Machine-readable representation of a LAKA SEO strategy, cluster, asset, change, and measurement plan.",
+  "type": "object",
+  "required": [
+    "project_id",
+    "version",
+    "business",
+    "audiences",
+    "clusters",
+    "changes",
+    "measurement"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "business": {
+      "type": "object",
+      "required": [
+        "name",
+        "goals",
+        "offers",
+        "value_events"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "geographies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "goals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/goal"
+          }
+        },
+        "offers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/offer"
+          }
+        },
+        "value_events": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/valueEvent"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "audiences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/audience"
+      }
+    },
+    "semantic_nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/semanticNode"
+      }
+    },
+    "semantic_relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/semanticRelation"
+      }
+    },
+    "clusters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/cluster"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    },
+    "graph_edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/graphEdge"
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/change"
+      }
+    },
+    "measurement": {
+      "$ref": "#/$defs/measurement"
+    },
+    "governance": {
+      "$ref": "#/$defs/governance"
+    }
+  },
+  "$defs": {
+    "goal": {
+      "type": "object",
+      "required": [
+        "id",
+        "statement",
+        "primary_metric"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "primary_metric": {
+          "type": "string"
+        },
+        "baseline": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "target": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "horizon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "offer": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "audience_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "audience_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contribution_margin": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "capacity_per_period": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "valueEvent": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "qualification_rule"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "qualification_rule": {
+          "type": "string"
+        },
+        "estimated_value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "constraint": {
+      "type": "object",
+      "required": [
+        "type",
+        "statement"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "business",
+            "technical",
+            "legal",
+            "policy",
+            "privacy",
+            "ethical",
+            "capacity",
+            "brand",
+            "accessibility"
+          ]
+        },
+        "statement": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "hard",
+            "soft"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "audience": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "tasks"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "industry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "experience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "awareness": {
+          "$ref": "#/$defs/journeyState"
+        },
+        "urgency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "budget": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geography": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "device_context": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "accessibility_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/task"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "required": [
+        "verb",
+        "object",
+        "completion_condition",
+        "intent"
+      ],
+      "properties": {
+        "verb": {
+          "enum": [
+            "define",
+            "learn",
+            "discover",
+            "diagnose",
+            "compare",
+            "calculate",
+            "locate",
+            "verify",
+            "plan",
+            "implement",
+            "troubleshoot",
+            "buy",
+            "use",
+            "maintain",
+            "renew",
+            "refer"
+          ]
+        },
+        "object": {
+          "type": "string"
+        },
+        "completion_condition": {
+          "type": "string"
+        },
+        "intent": {
+          "$ref": "#/$defs/intent"
+        }
+      },
+      "additionalProperties": false
+    },
+    "intent": {
+      "enum": [
+        "informational",
+        "comparative",
+        "commercial_investigation",
+        "transactional",
+        "navigational",
+        "local",
+        "support",
+        "retention",
+        "reputation"
+      ]
+    },
+    "journeyState": {
+      "enum": [
+        "unaware",
+        "problem_aware",
+        "solution_aware",
+        "option_evaluation",
+        "decision",
+        "implementation",
+        "use",
+        "retention",
+        "advocacy"
+      ]
+    },
+    "semanticNode": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "concept",
+            "entity",
+            "parent",
+            "subtype",
+            "synonym",
+            "variant",
+            "attribute",
+            "attribute_value",
+            "problem",
+            "cause",
+            "consequence",
+            "solution",
+            "alternative",
+            "objection",
+            "risk",
+            "question",
+            "evidence",
+            "exclusion"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "sense_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "semanticRelation": {
+      "type": "object",
+      "required": [
+        "source",
+        "relation",
+        "target"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "IS_A",
+            "PART_OF",
+            "HAS_ATTRIBUTE",
+            "HAS_VALUE",
+            "LOCATED_IN",
+            "USED_BY",
+            "REQUIRES",
+            "CAUSES",
+            "PREVENTS",
+            "SOLVES",
+            "PRODUCES",
+            "MEASURED_BY",
+            "COMPARED_WITH",
+            "ALTERNATIVE_TO",
+            "COMPATIBLE_WITH",
+            "INCOMPATIBLE_WITH",
+            "EVIDENCED_BY",
+            "AUTHORED_BY",
+            "OFFERED_BY",
+            "PRECEDES",
+            "FOLLOWS",
+            "LINKS_TO",
+            "SUPPORTS",
+            "CANONICALIZES_TO",
+            "CONVERTS_TO",
+            "RETAINS",
+            "EXCLUDES"
+          ]
+        },
+        "target": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "cluster": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "audience_ids",
+        "task",
+        "representative_query",
+        "queries",
+        "canonical_owner",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "audience_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "task": {
+          "$ref": "#/$defs/task"
+        },
+        "journey_state": {
+          "$ref": "#/$defs/journeyState"
+        },
+        "representative_query": {
+          "type": "string"
+        },
+        "queries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "adjacent_cluster_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "demand_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceObservation"
+          }
+        },
+        "canonical_owner": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "existing_urls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri-reference"
+          }
+        },
+        "status": {
+          "enum": [
+            "research",
+            "provisional",
+            "approved",
+            "implemented",
+            "monitor",
+            "merge",
+            "retire",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "opportunity_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidenceObservation": {
+      "type": "object",
+      "required": [
+        "type",
+        "description"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "search_console",
+            "analytics",
+            "crm",
+            "customer_language",
+            "sales",
+            "support",
+            "serp",
+            "competitor",
+            "market_data",
+            "paid_search",
+            "firsthand",
+            "primary_source",
+            "inference"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": [
+        "id",
+        "cluster_id",
+        "url",
+        "page_type",
+        "format",
+        "information_advantage",
+        "next_action",
+        "technical_state"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "cluster_id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "page_type": {
+          "enum": [
+            "service_page",
+            "product_page",
+            "category",
+            "guide",
+            "comparison",
+            "calculator",
+            "diagnostic",
+            "template",
+            "checklist",
+            "directory",
+            "location_page",
+            "case_study",
+            "dataset",
+            "benchmark",
+            "glossary",
+            "faq",
+            "video",
+            "interactive",
+            "api"
+          ]
+        },
+        "format": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "text",
+              "table",
+              "image",
+              "video",
+              "audio",
+              "map",
+              "form",
+              "calculator",
+              "decision_tree",
+              "dataset",
+              "download",
+              "interactive"
+            ]
+          }
+        },
+        "direct_answer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "information_advantage": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "next_action": {
+          "type": "string"
+        },
+        "technical_state": {
+          "$ref": "#/$defs/technicalState"
+        },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "refresh_trigger": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "technicalState": {
+      "type": "object",
+      "required": [
+        "intended_index_state"
+      ],
+      "properties": {
+        "intended_index_state": {
+          "enum": [
+            "index",
+            "noindex",
+            "private",
+            "retired"
+          ]
+        },
+        "accessible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "status_code": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 100,
+          "maximum": 599
+        },
+        "rendered": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "declared_canonical": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri-reference"
+        },
+        "selected_canonical": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri-reference"
+        },
+        "indexed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sitemap": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "structured_data_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "field_lcp_ms": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "field_inp_ms": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "field_cls": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "graphEdge": {
+      "type": "object",
+      "required": [
+        "source",
+        "target",
+        "edge_type",
+        "crawlable",
+        "user_reason"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "target": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "edge_type": {
+          "enum": [
+            "definition_of",
+            "prerequisite_of",
+            "example_of",
+            "evidence_for",
+            "comparison_to",
+            "alternative_to",
+            "step_before",
+            "step_after",
+            "supports",
+            "converts_to",
+            "location_variant_of",
+            "service_variant_of"
+          ]
+        },
+        "anchor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crawlable": {
+          "type": "boolean"
+        },
+        "user_reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "change": {
+      "type": "object",
+      "required": [
+        "id",
+        "object",
+        "laka_level",
+        "internal_variables",
+        "signature",
+        "hypothesis",
+        "primary_metric",
+        "decision_rule"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "object": {
+          "type": "string"
+        },
+        "laka_level": {
+          "enum": [
+            "Baseline",
+            "Minor Change",
+            "Major Change",
+            "Structural Change",
+            "Paradigm Change"
+          ]
+        },
+        "internal_variables": {
+          "$ref": "#/$defs/internalVariables"
+        },
+        "signature": {
+          "$ref": "#/$defs/changeSignature"
+        },
+        "hypothesis": {
+          "type": "string"
+        },
+        "mechanism": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary_metric": {
+          "type": "string"
+        },
+        "guardrails": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "baseline": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "minimum_exposure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_rule": {
+          "type": "string"
+        },
+        "rollback": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "active",
+            "observing",
+            "won",
+            "lost",
+            "revised",
+            "reversed",
+            "expanded",
+            "retired",
+            "uncertain"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "internalVariables": {
+      "type": "object",
+      "required": [
+        "object",
+        "conditions",
+        "actions",
+        "tools",
+        "resources",
+        "outcomes",
+        "feedback",
+        "constraints",
+        "value",
+        "failure_mode"
+      ],
+      "properties": {
+        "object": {
+          "type": "string"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outcomes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feedback": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "value": {
+          "type": "string"
+        },
+        "failure_mode": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "changeSignature": {
+      "type": "object",
+      "required": [
+        "magnitude",
+        "rate",
+        "direction",
+        "scope",
+        "depth",
+        "duration",
+        "frequency",
+        "acceleration",
+        "variability",
+        "detectability",
+        "reversibility",
+        "propagation",
+        "amplification",
+        "accumulation"
+      ],
+      "properties": {
+        "magnitude": {
+          "enum": [
+            "negligible",
+            "small",
+            "medium",
+            "large",
+            "transformational"
+          ]
+        },
+        "rate": {
+          "enum": [
+            "immediate",
+            "fast",
+            "gradual",
+            "slow",
+            "unknown"
+          ]
+        },
+        "direction": {
+          "enum": [
+            "positive",
+            "negative",
+            "mixed",
+            "neutral"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "element",
+            "page",
+            "cluster",
+            "template",
+            "site",
+            "market"
+          ]
+        },
+        "depth": {
+          "enum": [
+            "copy",
+            "behavior",
+            "document",
+            "architecture",
+            "business_model"
+          ]
+        },
+        "duration": {
+          "enum": [
+            "transient",
+            "campaign",
+            "persistent",
+            "permanent"
+          ]
+        },
+        "frequency": {
+          "enum": [
+            "once",
+            "periodic",
+            "event_driven",
+            "continuous"
+          ]
+        },
+        "acceleration": {
+          "enum": [
+            "decaying",
+            "linear",
+            "compounding",
+            "volatile"
+          ]
+        },
+        "variability": {
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "unknown"
+          ]
+        },
+        "detectability": {
+          "enum": [
+            "direct",
+            "proxy",
+            "modeled",
+            "latent"
+          ]
+        },
+        "reversibility": {
+          "enum": [
+            "easy",
+            "moderate",
+            "difficult",
+            "irreversible"
+          ]
+        },
+        "propagation": {
+          "enum": [
+            "isolated",
+            "linked",
+            "template_wide",
+            "site_wide",
+            "ecosystem"
+          ]
+        },
+        "amplification": {
+          "enum": [
+            "none",
+            "internal_graph",
+            "external_citations",
+            "brand",
+            "network"
+          ]
+        },
+        "accumulation": {
+          "enum": [
+            "none",
+            "episodic",
+            "stock_building",
+            "compounding"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "measurement": {
+      "type": "object",
+      "required": [
+        "primary_business_metric",
+        "event_dictionary",
+        "dimensions",
+        "change_ledger"
+      ],
+      "properties": {
+        "primary_business_metric": {
+          "type": "string"
+        },
+        "executive_metrics": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "event_dictionary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "definition"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "definition": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "data_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "change_ledger": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "governance": {
+      "type": "object",
+      "properties": {
+        "hard_gates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "privacy_rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policy_rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quality_owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "maintenance_capacity": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "review_cadence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "dimensions": {
+    "audience": [
+      "business owner",
+      "marketing manager"
+    ],
+    "task": [
+      "compare",
+      "calculate",
+      "hire"
+    ],
+    "service": [
+      "web design",
+      "website redesign",
+      "accessibility audit"
+    ],
+    "format": [
+      "guide",
+      "comparison",
+      "calculator"
+    ],
+    "journey": [
+      "evaluation",
+      "decision"
+    ],
+    "next_action": [
+      "assessment",
+      "brief download"
+    ]
+  }
+}

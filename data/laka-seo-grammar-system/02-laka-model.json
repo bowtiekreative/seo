@@ -1,0 +1,212 @@
+{
+  "title": "The LAKA change model",
+  "levels": [
+    {
+      "id": "baseline",
+      "name": "Baseline",
+      "definition": "The system is observed without changing its structure.",
+      "examples": [
+        "OBJECT: existing query, page, cluster, or site",
+        "ACTION: measure, inventory, classify",
+        "OUTCOME: trustworthy baseline"
+      ],
+      "rule_count": 49,
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.1 Baseline"
+      }
+    },
+    {
+      "id": "minor",
+      "name": "Minor",
+      "definition": "Surface elements change while the object and mechanism stay mostly stable.",
+      "examples": [
+        "Examples:",
+        "title wording",
+        "meta description",
+        "opening answer",
+        "anchor text",
+        "image compression",
+        "small internal-link addition",
+        "CTA wording"
+      ],
+      "rule_count": 29,
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.2 Minor change"
+      }
+    },
+    {
+      "id": "major",
+      "name": "Major",
+      "definition": "The document or campaign is substantially improved, but its role remains stable.",
+      "examples": [
+        "Examples:",
+        "rewrite the page",
+        "add original evidence",
+        "change format from prose to comparison table",
+        "build a video or calculator into the page",
+        "consolidate weak sections",
+        "launch a focused outreach campaign"
+      ],
+      "rule_count": 53,
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.3 Major change"
+      }
+    },
+    {
+      "id": "structural",
+      "name": "Structural",
+      "definition": "Relationships, architecture, ownership, or workflow change.",
+      "examples": [
+        "Examples:",
+        "merge cannibalizing pages",
+        "redesign cluster architecture",
+        "change templates",
+        "repair faceted navigation",
+        "move from isolated pages to a hub graph",
+        "connect CRM value data to SEO reporting"
+      ],
+      "rule_count": 62,
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.4 Structural change"
+      }
+    },
+    {
+      "id": "paradigm",
+      "name": "Paradigm",
+      "definition": "The class of solution changes.",
+      "examples": [
+        "Examples:",
+        "replace a blog post with a free diagnostic tool",
+        "replace a static directory with a verified data product",
+        "turn service research into a benchmark index",
+        "build a proprietary dataset competitors cannot reproduce",
+        "make the website agent-operable, not merely readable",
+        "create demand rather than only capture existing demand"
+      ],
+      "rule_count": 10,
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.5 Paradigm change"
+      }
+    }
+  ],
+  "escalation_rule": "START at Baseline.\n\nIF diagnosis is high-confidence\nAND minor intervention can affect the mechanism\nTHEN test Minor.\n\nELSE IF page value exists\nAND information or format is inadequate\nTHEN apply Major.\n\nELSE IF multiple assets or systems create the failure\nTHEN apply Structural.\n\nELSE IF the result class itself cannot satisfy the task\nOR a new information product creates a defensible advantage\nTHEN test Paradigm.",
+  "internal_variables": [
+    "Object",
+    "Conditions",
+    "Actions",
+    "Tools",
+    "Resources",
+    "Outcomes",
+    "Feedback",
+    "Constraints",
+    "Value",
+    "Failure Mode"
+  ],
+  "internal_variable_sentence": [
+    {
+      "lang": "text",
+      "code": "CHANGE\n=\nOBJECT\nUNDER CONDITIONS\nPERFORMS ACTION\nUSING TOOLS\nWITH RESOURCES\nTO PRODUCE OUTCOMES\nOBSERVED_BY FEEDBACK\nLIMITED_BY CONSTRAINTS\nCREATING VALUE\nWHILE MONITORING FAILURE_MODE"
+    }
+  ],
+  "change_variables": [
+    "Magnitude",
+    "Rate",
+    "Direction",
+    "Scope",
+    "Depth",
+    "Duration",
+    "Frequency",
+    "Acceleration",
+    "Variability",
+    "Detectability",
+    "Reversibility",
+    "Propagation",
+    "Amplification",
+    "Accumulation"
+  ],
+  "change_descriptor": [
+    {
+      "lang": "text",
+      "code": "ΔSEO[\nM=medium,\nR=gradual,\nD=positive,\nS=cluster,\nDp=architecture,\nDu=persistent,\nF=once,\nA=compounding,\nV=moderate,\nDe=direct,\nRe=moderate,\nP=linked,\nAm=internal_graph,\nAc=stock_building\n]"
+    }
+  ],
+  "change_descriptor_table": {
+    "headers": [
+      "Variable",
+      "Suggested states"
+    ],
+    "rows": [
+      [
+        "Magnitude",
+        "negligible, small, medium, large, transformational"
+      ],
+      [
+        "Rate",
+        "immediate, fast, gradual, slow, unknown"
+      ],
+      [
+        "Direction",
+        "positive, negative, mixed, neutral"
+      ],
+      [
+        "Scope",
+        "element, page, cluster, template, site, market"
+      ],
+      [
+        "Depth",
+        "copy, behavior, document, architecture, business model"
+      ],
+      [
+        "Duration",
+        "transient, campaign, persistent, permanent"
+      ],
+      [
+        "Frequency",
+        "once, periodic, event-driven, continuous"
+      ],
+      [
+        "Acceleration",
+        "decaying, linear, compounding, volatile"
+      ],
+      [
+        "Variability",
+        "low, moderate, high, unknown"
+      ],
+      [
+        "Detectability",
+        "direct, proxy, modeled, latent"
+      ],
+      [
+        "Reversibility",
+        "easy, moderate, difficult, irreversible"
+      ],
+      [
+        "Propagation",
+        "isolated, linked, template-wide, site-wide, ecosystem"
+      ],
+      [
+        "Amplification",
+        "none, internal graph, external citations, brand, network"
+      ],
+      [
+        "Accumulation",
+        "none, episodic, stock-building, compounding"
+      ]
+    ]
+  },
+  "source": {
+    "document": "01",
+    "file": "01-SEO-LAKA-GRAMMAR.md",
+    "heading": "10–12"
+  }
+}

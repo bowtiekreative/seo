@@ -1,0 +1,436 @@
+{
+  "title": "Worked examples",
+  "project": {
+    "project_id": "webdevcalgary-laka-example",
+    "version": "1.0",
+    "created_at": "2026-09-02T12:00:00Z",
+    "source_review_date": "2026-09-02",
+    "business": {
+      "name": "WebDevCalgary.com",
+      "model": "professional services",
+      "geographies": [
+        "Calgary, Alberta, Canada"
+      ],
+      "constraints": [
+        {
+          "type": "capacity",
+          "statement": "Qualified lead volume must remain within sales and delivery capacity.",
+          "severity": "hard"
+        },
+        {
+          "type": "brand",
+          "statement": "All cost and performance claims must be supportable.",
+          "severity": "hard"
+        }
+      ],
+      "goals": [
+        {
+          "id": "goal-qualified-margin",
+          "statement": "Increase qualified organic project value.",
+          "primary_metric": "incremental organic contribution margin",
+          "baseline": null,
+          "target": null,
+          "horizon": null
+        }
+      ],
+      "offers": [
+        {
+          "id": "offer-web-project",
+          "name": "Website strategy, design, and development",
+          "audience_ids": [
+            "aud-local-business"
+          ],
+          "price": null,
+          "currency": "CAD",
+          "contribution_margin": null,
+          "capacity_per_period": null
+        }
+      ],
+      "value_events": [
+        {
+          "id": "qualified-assessment",
+          "name": "Qualified project assessment",
+          "qualification_rule": "Service, geography, scope, and budget fit are confirmed.",
+          "estimated_value": null,
+          "currency": "CAD",
+          "source_system": "CRM"
+        }
+      ]
+    },
+    "audiences": [
+      {
+        "id": "aud-local-business",
+        "name": "Calgary business seeking a website project",
+        "role": "owner or marketing lead",
+        "industry": null,
+        "experience": "mixed",
+        "awareness": "option_evaluation",
+        "urgency": "mixed",
+        "budget": null,
+        "geography": "Calgary, Alberta",
+        "language": "English",
+        "device_context": "responsive web",
+        "accessibility_conditions": [],
+        "tasks": [
+          {
+            "verb": "calculate",
+            "object": "website project cost",
+            "completion_condition": "receives a useful scoped estimate and understands assumptions",
+            "intent": "commercial_investigation"
+          }
+        ]
+      }
+    ],
+    "semantic_nodes": [
+      {
+        "id": "concept-web-design",
+        "type": "concept",
+        "label": "web design",
+        "sense_id": "professional-service",
+        "properties": {}
+      },
+      {
+        "id": "entity-calgary",
+        "type": "entity",
+        "label": "Calgary",
+        "sense_id": "city-alberta",
+        "properties": {
+          "country": "Canada"
+        }
+      },
+      {
+        "id": "attribute-price",
+        "type": "attribute",
+        "label": "price",
+        "sense_id": null,
+        "properties": {}
+      }
+    ],
+    "semantic_relations": [
+      {
+        "source": "concept-web-design",
+        "relation": "LOCATED_IN",
+        "target": "entity-calgary",
+        "confidence": 1
+      },
+      {
+        "source": "concept-web-design",
+        "relation": "HAS_ATTRIBUTE",
+        "target": "attribute-price",
+        "confidence": 1
+      }
+    ],
+    "clusters": [
+      {
+        "id": "YYC-COST-001",
+        "name": "Website cost in Calgary",
+        "audience_ids": [
+          "aud-local-business"
+        ],
+        "task": {
+          "verb": "calculate",
+          "object": "website project cost",
+          "completion_condition": "receives a useful scoped estimate and understands assumptions",
+          "intent": "commercial_investigation"
+        },
+        "journey_state": "option_evaluation",
+        "representative_query": "website cost Calgary",
+        "queries": [
+          "website cost Calgary",
+          "Calgary website pricing",
+          "how much does a website cost in Calgary"
+        ],
+        "exclusions": [
+          "website developer salary",
+          "web design jobs"
+        ],
+        "adjacent_cluster_ids": [],
+        "demand_evidence": [
+          {
+            "type": "inference",
+            "description": "Illustrative cluster; live evidence must be collected before approval.",
+            "value": null,
+            "observed_at": null,
+            "confidence": 0.2
+          }
+        ],
+        "canonical_owner": "/website-cost-calgary/",
+        "existing_urls": [],
+        "status": "provisional",
+        "confidence": 0.2,
+        "opportunity_score": null
+      }
+    ],
+    "assets": [
+      {
+        "id": "asset-cost-estimator",
+        "cluster_id": "YYC-COST-001",
+        "url": "/website-cost-calgary/",
+        "page_type": "calculator",
+        "format": [
+          "text",
+          "table",
+          "calculator",
+          "form"
+        ],
+        "direct_answer": "A useful estimate depends on scope, platform, content, integrations, accessibility, and support.",
+        "information_advantage": [
+          "transparent local assumptions",
+          "interactive scope estimator",
+          "visible methodology"
+        ],
+        "evidence": [
+          "methodology",
+          "anonymized project patterns where permitted",
+          "limitations"
+        ],
+        "next_action": "qualified project assessment",
+        "technical_state": {
+          "intended_index_state": "index",
+          "accessible": null,
+          "status_code": null,
+          "rendered": null,
+          "declared_canonical": "/website-cost-calgary/",
+          "selected_canonical": null,
+          "indexed": null,
+          "sitemap": null,
+          "structured_data_state": null,
+          "field_lcp_ms": null,
+          "field_inp_ms": null,
+          "field_cls": null
+        },
+        "owner": null,
+        "refresh_trigger": "pricing model, delivery process, or market assumptions change"
+      }
+    ],
+    "graph_edges": [
+      {
+        "source": "/website-cost-calgary/",
+        "target": "/calgary-web-design/",
+        "edge_type": "converts_to",
+        "anchor": "Calgary web design assessment",
+        "crawlable": true,
+        "user_reason": "The service assessment is the next logical action after estimating scope and cost."
+      }
+    ],
+    "changes": [
+      {
+        "id": "EXP-YYC-COST-001",
+        "object": "Website cost in Calgary asset",
+        "laka_level": "Paradigm Change",
+        "internal_variables": {
+          "object": "Static cost content becomes an interactive estimator.",
+          "conditions": [
+            "local commercial investigation",
+            "mobile and desktop use"
+          ],
+          "actions": [
+            "build calculator",
+            "publish methodology",
+            "instrument task events"
+          ],
+          "tools": [
+            "CMS",
+            "calculator",
+            "analytics",
+            "CRM"
+          ],
+          "resources": [
+            "development",
+            "project data",
+            "copy",
+            "QA"
+          ],
+          "outcomes": [
+            "task completion",
+            "qualified assessments",
+            "original evidence asset"
+          ],
+          "feedback": [
+            "estimator completion",
+            "qualification",
+            "close rate",
+            "estimate error"
+          ],
+          "constraints": [
+            "privacy",
+            "accuracy",
+            "capacity",
+            "accessibility"
+          ],
+          "value": "Better decisions for users and better qualification for the business.",
+          "failure_mode": [
+            "misleading estimates",
+            "low adoption",
+            "unqualified volume"
+          ]
+        },
+        "signature": {
+          "magnitude": "large",
+          "rate": "gradual",
+          "direction": "positive",
+          "scope": "cluster",
+          "depth": "business_model",
+          "duration": "persistent",
+          "frequency": "continuous",
+          "acceleration": "compounding",
+          "variability": "moderate",
+          "detectability": "direct",
+          "reversibility": "moderate",
+          "propagation": "linked",
+          "amplification": "external_citations",
+          "accumulation": "compounding"
+        },
+        "hypothesis": "An interactive transparent estimator will complete the cost task better than generic prose and increase qualified project assessments.",
+        "mechanism": "Higher task utility, trust, and message continuity.",
+        "primary_metric": "incremental qualified assessment contribution margin",
+        "guardrails": [
+          "estimate accuracy",
+          "unqualified lead rate",
+          "performance",
+          "accessibility"
+        ],
+        "baseline": null,
+        "minimum_exposure": "predefined impressions, estimator completions, and sales cycle",
+        "decision_rule": "Expand if incremental value is positive and guardrails pass; revise or reverse otherwise.",
+        "rollback": "Return to noninteractive guide while preserving useful evidence.",
+        "status": "planned"
+      }
+    ],
+    "measurement": {
+      "primary_business_metric": "incremental organic contribution margin",
+      "executive_metrics": [
+        "incremental organic contribution margin",
+        "qualified organic assessments",
+        "value-weighted non-brand clicks",
+        "value-weighted target-cluster visibility",
+        "eligible canonical coverage"
+      ],
+      "event_dictionary": [
+        {
+          "name": "estimator_complete",
+          "definition": "A valid website-cost estimate is produced.",
+          "properties": [
+            "cluster_id",
+            "result_band"
+          ]
+        },
+        {
+          "name": "qualified_assessment",
+          "definition": "The assessment meets the documented qualification rule.",
+          "properties": [
+            "offer_id",
+            "qualification_status"
+          ]
+        }
+      ],
+      "dimensions": [
+        "date",
+        "cluster_id",
+        "query",
+        "canonical_url",
+        "country",
+        "device",
+        "search_appearance",
+        "brand_class",
+        "change_id"
+      ],
+      "data_sources": [
+        "Search Console",
+        "analytics",
+        "CRM"
+      ],
+      "change_ledger": [
+        "EXP-YYC-COST-001"
+      ]
+    },
+    "governance": {
+      "hard_gates": [
+        "demand",
+        "distinct task",
+        "business value",
+        "information advantage",
+        "technical feasibility",
+        "maintainability",
+        "measurement",
+        "policy compliance"
+      ],
+      "privacy_rules": [
+        "collect only inputs needed for a useful estimate"
+      ],
+      "policy_rules": [
+        "do not invent price evidence or local claims"
+      ],
+      "quality_owner": null,
+      "maintenance_capacity": null,
+      "review_cadence": "monthly"
+    }
+  },
+  "candidate": {
+    "id": "YYC-COST-001",
+    "gates": {
+      "demand": true,
+      "distinct_task": true,
+      "business_value": true,
+      "information_advantage": true,
+      "technical_feasibility": true,
+      "maintainability": true,
+      "measurement": true,
+      "compliance": true
+    },
+    "scores": {
+      "demand_confidence": 4,
+      "business_fit": 5,
+      "task_value": 5,
+      "information_advantage": 4,
+      "conversion_value": 4,
+      "attainability": 3,
+      "existing_signal": 2,
+      "reuse_potential": 4,
+      "learning_value": 5
+    },
+    "costs": {
+      "production_effort": 4,
+      "technical_risk": 2,
+      "maintenance_burden": 3,
+      "time_to_learning": 3,
+      "opportunity_cost": 2
+    },
+    "confidence": {
+      "evidence": 0.8,
+      "measurement": 0.85
+    }
+  },
+  "dimensions": {
+    "dimensions": {
+      "audience": [
+        "business owner",
+        "marketing manager"
+      ],
+      "task": [
+        "compare",
+        "calculate",
+        "hire"
+      ],
+      "service": [
+        "web design",
+        "website redesign",
+        "accessibility audit"
+      ],
+      "format": [
+        "guide",
+        "comparison",
+        "calculator"
+      ],
+      "journey": [
+        "evaluation",
+        "decision"
+      ],
+      "next_action": [
+        "assessment",
+        "brief download"
+      ]
+    }
+  },
+  "narrative": "# Worked Example — WebDevCalgary.com\n\n> This is an illustrative application of the grammar. It deliberately does not invent current search volumes, rankings, or revenue. Those fields must be populated from live first-party and market evidence.\n\n## 1. Business sentence\n\n```text\nIncrease qualified Calgary website-project assessments\nFOR small and midsize businesses\nUNDER active website launch, redesign, accessibility, or growth needs\nSEEKING to choose and hire a web-development solution\nWITH local commercial-investigation and transactional intent\nABOUT web design and development in Calgary\nSERVED BY a canonical local-service and decision-support system\nSUPPORTED BY firsthand audits, case evidence, transparent process, and useful tools\nCONNECTED BY a task-based internal graph\nLEADING TO a qualification assessment\nMEASURED BY incremental organic contribution margin\nGUARDED BY lead quality, delivery capacity, accessibility, accuracy, and trust.\n```\n\n---\n\n## 2. Business value model\n\n```text\nBusiness: WebDevCalgary.com\nOffer: web strategy, design, development, accessibility, SEO, and related consulting\nPrimary audience: Calgary-area organizations seeking a new or improved website\nPrimary value event: qualified project assessment\nQualification rule: project fits services, geography, scope, and realistic budget/timeline\nPrimary business metric: incremental organic contribution margin\nCapacity constraint: must be filled from actual sales and delivery capacity\nGuardrails: lead quality, response time, close rate, customer fit, accessibility, truthful claims\n```\n\n---\n\n## 3. Audience–task map\n\n| Audience | Condition | Task | Intent | Journey state | Next action |\n|---|---|---|---|---|---|\n| Local business owner | Needs a provider | Locate and evaluate Calgary web designers | Local commercial | Option evaluation | View service/process or assessment |\n| Marketing manager | Planning a redesign | Build requirements and compare approaches | Informational/comparative | Problem/solution aware | Download brief or assessment |\n| Founder | Budgeting | Estimate website cost | Commercial investigation | Evaluation | Use estimator or scope assessment |\n| Organization with accessibility risk | Existing site may be inaccessible | Diagnose and plan remediation | Diagnostic/commercial | Problem aware | Accessibility audit |\n| Ecommerce company | Platform or conversion problem | Compare platform/build options | Comparative | Option evaluation | Ecommerce consultation |\n| Existing client/user | Needs support or improvement | Troubleshoot, maintain, expand | Support/retention | Use/retention | Support or improvement plan |\n\n---\n\n## 4. Semantic territory\n\n### Parent concepts\n\n```text\nweb development\nweb design\ndigital experience\nwebsite strategy\naccessibility\nsearch optimization\nconversion design\n```\n\n### Subtypes\n\n```text\nsmall-business websites\necommerce websites\nprofessional-service websites\naccessible websites\nwebsite redesign\nWordPress development\ncustom development\nlanding pages\nwebsite maintenance\n```\n\n### Entities\n\n```text\nCalgary\nAlberta\nWordPress\nWebflow\nShopify\nWCAG\nGoogle Search Console\nGoogle Analytics\n```\n\n### Attributes\n\n```text\nprice\nscope\ntimeline\nplatform\naccessibility\nperformance\nmaintainability\nownership\nsupport\nconversion\nlocal experience\n```\n\n### Relations\n\n```text\nWEB_DESIGN LOCATED_IN CALGARY\nWEBSITE_REQUIREMENTS PRECEDES WEBSITE_REDESIGN\nWCAG_AUDIT DIAGNOSES ACCESSIBILITY_RISK\nPLATFORM_SELECTION AFFECTS MAINTAINABILITY\nCASE_STUDY EVIDENCES DELIVERY_ABILITY\nCOST_ESTIMATOR SUPPORTS PROJECT_ASSESSMENT\n```\n\n### Exclusions\n\n```text\nweb design jobs\nweb developer salary\nfree coding course\nunrelated Calgary events\nunsupported service geographies\nDIY-only intent where no useful business pathway exists\n```\n\n---\n\n## 5. Candidate space\n\nIllustrative dimensions:\n\n```text\n6 audiences\n× 12 tasks\n× 8 intents\n× 10 service/subtype nodes\n× 12 modifier families\n× 8 formats\n× 4 local scopes\n× 6 next actions\n=\n1,658,880 theoretical candidates\n```\n\nThe engine does not publish 1.6 million pages. It normalizes language, groups same tasks, rejects weak combinations, and selects a small portfolio.\n\n---\n\n## 6. Hard-gate example\n\nCandidate:\n\n```text\n\"Calgary restaurant website design under $2,000\"\n```\n\nEvaluate:\n\n```text\nDemand evidence?             UNKNOWN\nDistinct task?               MAYBE\nBusiness fit?                DEPENDS on offer and budget\nInformation advantage?       NOT YET\nReal local evidence?         NOT YET\nMaintainable?                YES at low volume\nMeasurable?                  YES\nPolicy/accuracy?             PASS if truthful\n```\n\nDecision:\n\n```text\nIF live evidence shows a meaningful restaurant-specific task\nAND the offer actually serves that budget/segment\nAND unique restaurant evidence exists\nTHEN create a distinct restaurant solution or guide.\nELSE include restaurant examples in a broader small-business asset\nOR reject the candidate.\n```\n\n---\n\n## 7. Initial canonical portfolio\n\n| Cluster | Dominant task | Intended canonical role | Likely format | Next action |\n|---|---|---|---|---|\n| Calgary web design service | Find, evaluate, hire | Core local service page | Service + process + proof | Qualification assessment |\n| Website cost in Calgary | Estimate realistic budget | Decision-support asset | Calculator + cost model | Scoped estimate |\n| Website redesign Calgary | Plan and select redesign help | Service/guide hybrid | Diagnostic + redesign process | Redesign assessment |\n| Accessible web design Calgary | Diagnose risk and choose help | Specialized service page | Audit evidence + remediation plan | Accessibility audit |\n| Ecommerce development Calgary | Select ecommerce solution | Specialized service page | Platform and delivery comparison | Ecommerce consultation |\n| WordPress vs Webflow vs custom | Compare implementation paths | Comparison asset | Decision matrix | Platform assessment |\n| How to write a website brief | Plan requirements | Supporting guide/template | Downloadable brief | Brief review |\n| Calgary web design case studies | Verify provider ability | Evidence hub | Case-study collection | Relevant service |\n| Website maintenance Calgary | Keep site reliable | Retention/service page | Service + checklist | Maintenance assessment |\n| Calgary web-design company comparison | Compare provider types | Neutral decision guide | Criteria matrix | Assessment after criteria |\n\nThis is a provisional architecture. Live result sets, customer language, query evidence, existing URLs, and business data determine final boundaries.\n\n---\n\n## 8. Same-page / split examples\n\n### Example A\n\n```text\nweb design Calgary\nCalgary web designer\nwebsite design company Calgary\n```\n\nLikely decision:\n\n```text\nsame sense\nAND same dominant task\nAND same local service result class\nAND same next action\n→ one canonical service cluster\n```\n\n### Example B\n\n```text\nweb design Calgary\nwebsite cost Calgary\n```\n\nLikely decision:\n\n```text\nrelated concept\nBUT different task\nAND different answer structure\nAND different journey stage\n→ separate clusters connected by internal links\n```\n\n### Example C\n\n```text\nCalgary WordPress developer\nCalgary Webflow developer\n```\n\nDecision depends on the offer and result ecosystem:\n\n```text\nIF platform choice is part of one broader selection task\nTHEN one comparison/service architecture may suffice.\nELSE IF each platform has distinct demand, proof, process, and offer\nTHEN split into platform-specific clusters.\n```\n\n---\n\n## 9. Page specification — Website cost in Calgary\n\n```text\nCluster ID: YYC-COST-001\nDominant task: estimate the likely cost and scope of a Calgary business website\nIntent: commercial investigation\nJourney state: evaluation\nRepresentative query: website cost Calgary\nCanonical role: cost decision-support asset\nRecommended format: calculator + pricing bands + scope matrix + examples\nInformation advantage: transparent local assumptions, real project patterns, accessible estimator\nEvidence: disclosed methodology, case ranges where permission exists, explicit exclusions\nNext action: save result or request a scoped assessment\nPrimary metric: qualified assessment contribution value\nGuardrails: estimator accuracy, unqualified inquiry rate, delivery capacity\n```\n\n### Required sections\n\n```text\nDirect answer and range disclaimer\nWhat changes the cost\nProject-type matrix\nCalgary/Alberta-specific assumptions where real\nCalculator\nExamples or anonymized scope patterns\nWhat is not included\nDIY, template, freelancer, agency, and custom trade-offs\nTimeline implications\nQuestions to ask a provider\nNext-step assessment\nMethodology and update date\n```\n\n---\n\n## 10. LAKA 50-cell example for the cost asset\n\n| Variable | Baseline | Minor | Major | Structural | Paradigm |\n|---|---|---|---|---|---|\n| Object | Existing cost content and query behavior | Title/snippet/direct answer | Full cost guide and evidence | Connect estimator, CRM, service pages, case data | Live project-scope intelligence product |\n| Conditions | Local users, device, query mix, current offers | High impressions or weak CTR | Weak task completion or inferior format | Repeated cost questions across journeys | Market lacks transparent usable estimates |\n| Actions | Measure and classify | Rewrite proposition/CTA | Build matrix, examples, calculator | Integrate data and graph | Build adaptive scope engine |\n| Tools | Search Console, analytics, CRM | CMS, change ledger | Calculator, content, design | CRM/API, event pipeline | Rules engine, dataset, agent interface |\n| Resources | Existing data | Copy/design time | Project evidence and development | Engineering and sales operations | Proprietary data and product maintenance |\n| Outcomes | Trusted baseline | Better qualified clicks/action | Better task completion and leads | Closed-loop forecast calibration | New demand, citations, product adoption |\n| Feedback | Query, CTR, conversion | CTR residual and quality | completion, qualification, close rate | estimate-vs-actual error | market usage, links, brand, margin |\n| Constraints | Data gaps | Snippet rewrite uncertainty | Range accuracy and disclosure | Privacy and data quality | Build cost and defensibility |\n| Value | Opportunity quantified | Low-cost response lift | Better decisions and pipeline | Better pricing/qualification | Category-defining utility |\n| Failure mode | Wrong baseline | Clickbait or low-quality traffic | Misleading estimates | Bad CRM data propagates | Complex tool with no adoption |\n\n---\n\n## 11. IF / ELSE program for the cost asset\n\n```text\nIF the existing page has meaningful impressions\nAND selected canonical is correct\nAND qualified conversion is possible\nTHEN optimize the existing asset before creating a replacement.\n\nELSE IF multiple cost pages compete for the same task\nTHEN select one owner, merge useful information, and migrate carefully.\n\nELSE IF no useful cost asset exists\nAND demand/business gates pass\nTHEN create the canonical estimator/guide.\n\nIF users complete the estimator\nBUT do not take the next action\nTHEN test value continuity, trust, qualification, and CTA commitment.\n\nIF the calculator produces many unqualified inquiries\nTHEN tighten audience conditions, assumptions, outputs, or routing.\n\nIF the tool earns citations and branded demand\nTHEN compound it with annual benchmarks, platform views, and case evidence.\n\nELSE maintain it as a decision-support asset without uncontrolled expansion.\n```\n\n---\n\n## 12. Internal graph\n\n```text\n/calgary-web-design/  [core local service]\n    ↑ supported by\n/website-cost-calgary/\n/website-redesign-calgary/\n/website-brief-template/\n/web-design-company-comparison/\n/case-studies/\n\nwebsite cost\n    → platform comparison\n    → website brief\n    → relevant case study\n    → scoped assessment\n\naccessibility service\n    ← WCAG diagnostic guide\n    ← accessibility case study\n    → accessibility audit\n```\n\nEvery edge needs a user reason. Do not add links solely to make the diagram denser.\n\n---\n\n## 13. Measurement plan\n\n### Executive\n\n```text\nincremental organic contribution margin\nqualified organic assessments\nvalue-weighted non-brand clicks\nvalue-weighted priority-cluster visibility\neligible canonical coverage\n```\n\n### Cluster diagnostics\n\n```text\nimpressions\nCTR residual\ndominant URL share\ntask completion\nnext-action rate\nqualified rate\nclose rate\ncontribution value\n```\n\n### Cost-estimator task events\n\n```text\nestimator_start\nestimator_complete\nresult_band\nassumption_expand\nmethodology_view\nbrief_download\nassessment_start\nqualified_assessment\nsales_accept\nclosed_value\n```\n\nDo not collect sensitive inputs unnecessarily.\n\n---\n\n## 14. First execution order\n\n```text\n1. Verify measurement and qualified-value chain.\n2. Audit existing URL/index/canonical state.\n3. Build current query-to-URL clusters.\n4. Fix high-value cannibalization and technical blockers.\n5. Improve existing pages with signal.\n6. Build the cost estimator and core service proof where gaps exist.\n7. Build internal graph and supporting task assets.\n8. Launch evidence/authority campaigns.\n9. Test selected platform, industry, or neighborhood expansions only after hard gates pass.\n10. Pursue paradigm tools from observed user needs, not from page-volume goals.\n```\n"
+}

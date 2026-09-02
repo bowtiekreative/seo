@@ -1,0 +1,330 @@
+{
+  "title": "Hard publication gates and the soft scoring model",
+  "approve_expression": [
+    "APPROVE",
+    "=",
+    "DEMAND",
+    "AND DISTINCTNESS",
+    "AND BUSINESS VALUE",
+    "AND INFORMATION ADVANTAGE",
+    "AND TECHNICAL FEASIBILITY",
+    "AND MAINTAINABILITY",
+    "AND MEASURABILITY",
+    "AND POLICY / ETHICAL COMPLIANCE"
+  ],
+  "gates": [
+    {
+      "id": "demand",
+      "field": "demand",
+      "order": 1,
+      "term": "DEMAND",
+      "name": "Demand gate",
+      "qualifier": null,
+      "joiner": "OR",
+      "conditions": [
+        "observed impressions",
+        "customer evidence",
+        "sales/support frequency",
+        "stable result ecosystem",
+        "defensible emerging-demand thesis"
+      ],
+      "defined_by": [
+        "03 §7 Demand gate"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Demand gate"
+      }
+    },
+    {
+      "id": "distinct-task",
+      "field": "distinct_task",
+      "order": 2,
+      "term": "DISTINCTNESS",
+      "name": "Distinctness gate",
+      "qualifier": null,
+      "joiner": "OR",
+      "conditions": [
+        "the candidate owns a distinct task",
+        "needs a materially different answer",
+        "has real local/product data",
+        "requires a different conversion path"
+      ],
+      "defined_by": [
+        "03 §7 Distinctness gate",
+        "03 §6 Intent equivalence test"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Distinctness gate"
+      }
+    },
+    {
+      "id": "business-value",
+      "field": "business_value",
+      "order": 3,
+      "term": "BUSINESS VALUE",
+      "name": "Value gate",
+      "qualifier": null,
+      "joiner": "OR",
+      "conditions": [
+        "direct conversion value",
+        "assisted conversion value",
+        "retention value",
+        "authority value",
+        "strategic learning value"
+      ],
+      "defined_by": [
+        "03 §7 Value gate"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Value gate"
+      }
+    },
+    {
+      "id": "information-advantage",
+      "field": "information_advantage",
+      "order": 4,
+      "term": "INFORMATION ADVANTAGE",
+      "name": "Information-advantage gate",
+      "qualifier": "at_least_one",
+      "joiner": "OR",
+      "conditions": [
+        "original experience",
+        "proprietary data",
+        "better methodology",
+        "better utility",
+        "stronger evidence",
+        "clearer decision support",
+        "unique local coverage",
+        "better accessibility"
+      ],
+      "defined_by": [
+        "03 §7 Information-advantage gate"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Information-advantage gate"
+      }
+    },
+    {
+      "id": "technical-feasibility",
+      "field": "technical_feasibility",
+      "order": 5,
+      "term": "TECHNICAL FEASIBILITY",
+      "name": "Technical feasibility gate",
+      "qualifier": null,
+      "joiner": null,
+      "conditions": [],
+      "defined_by": [
+        "06 SOP 9 — Technical eligibility audit",
+        "Rules TEC-001…TEC-012"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "7. Boolean publication gates"
+      }
+    },
+    {
+      "id": "maintainability",
+      "field": "maintainability",
+      "order": 6,
+      "term": "MAINTAINABILITY",
+      "name": "Maintainability gate",
+      "qualifier": null,
+      "joiner": "AND",
+      "conditions": [
+        "owner exists",
+        "refresh triggers are defined",
+        "data can be kept accurate",
+        "total approved volume fits capacity"
+      ],
+      "defined_by": [
+        "03 §7 Maintainability gate"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Maintainability gate"
+      }
+    },
+    {
+      "id": "measurement",
+      "field": "measurement",
+      "order": 7,
+      "term": "MEASURABILITY",
+      "name": "Measurement gate",
+      "qualifier": null,
+      "joiner": "AND",
+      "conditions": [
+        "primary outcome",
+        "baseline",
+        "change ID",
+        "observation method",
+        "decision rule"
+      ],
+      "defined_by": [
+        "03 §7 Measurement gate",
+        "05 §6 Baseline protocol"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Measurement gate"
+      }
+    },
+    {
+      "id": "compliance",
+      "field": "compliance",
+      "order": 8,
+      "term": "POLICY / ETHICAL COMPLIANCE",
+      "name": "Policy / ethical compliance gate",
+      "qualifier": null,
+      "joiner": null,
+      "conditions": [],
+      "defined_by": [
+        "Rules GOV-001…GOV-012",
+        "10 §4 Current primary-source guidance used"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "7. Boolean publication gates"
+      }
+    }
+  ],
+  "gate_count": 8,
+  "gate_note": "All eight must pass. A candidate that fails any one routes to research, consolidation, repair, deferral or rejection — never to publication.",
+  "cluster_gates": [
+    {
+      "id": "merge",
+      "name": "Merge gate",
+      "qualifier": null,
+      "joiner": "AND",
+      "conditions": [
+        "IF sense_match = true",
+        "task_match = true",
+        "answer_structure_compatible = true",
+        "next_action_compatible = true",
+        "separate_page_value = low",
+        "THEN assign to same cluster"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Merge gate"
+      }
+    },
+    {
+      "id": "split",
+      "name": "Split gate",
+      "qualifier": null,
+      "joiner": "OR",
+      "conditions": [
+        "IF sense differs",
+        "task differs",
+        "result class differs",
+        "local/product inventory differs",
+        "legal context differs",
+        "combined answer harms usability",
+        "THEN create separate cluster candidate"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Split gate"
+      }
+    },
+    {
+      "id": "test",
+      "name": "Test gate",
+      "qualifier": null,
+      "joiner": "AND",
+      "conditions": [
+        "IF evidence is ambiguous",
+        "THEN:",
+        "keep one provisional cluster",
+        "observe query/page behavior",
+        "run a controlled asset-format test",
+        "BEFORE multiplying pages"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Test gate"
+      }
+    }
+  ],
+  "cluster_gate_note": "These decide whether two candidates share one canonical page. They are not publication gates.",
+  "one_page_rule": [
+    "IF same sense",
+    "AND same task",
+    "AND compatible answer structure",
+    "AND compatible result class",
+    "AND compatible next action",
+    "THEN same cluster and one canonical owner",
+    "ELSE split or test."
+  ],
+  "scoring": {
+    "value_factors": [
+      "DemandConfidence",
+      "BusinessFit",
+      "TaskValue",
+      "InformationAdvantage",
+      "ConversionValue",
+      "Attainability",
+      "ReusePotential",
+      "LearningValue"
+    ],
+    "cost_factors": [
+      "ProductionEffort",
+      "TechnicalRisk",
+      "MaintenanceBurden",
+      "TimeToLearning",
+      "OpportunityCost"
+    ],
+    "priority_expression": "VALUE NUMERATOR / COST DENOMINATOR",
+    "floor_note": "Avoid zero in a multiplicative score by using a minimum floor such as 0.2 for uncertain but nonzero factors, or use a weighted log model.",
+    "confidence_adjustment": [
+      "ADJUSTED SCORE =",
+      "PRIORITY SCORE",
+      "× EvidenceConfidence",
+      "× MeasurementConfidence"
+    ],
+    "existing_asset_multiplier": [
+      "IF existing URL has:",
+      "impressions",
+      "OR links",
+      "OR conversions",
+      "OR stable indexing",
+      "OR strong internal position",
+      "THEN multiply by ExistingSignalFactor."
+    ],
+    "source": {
+      "document": "03",
+      "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+      "heading": "8. Soft scoring model"
+    }
+  },
+  "priority_order": [
+    "measurement blocker",
+    "technical eligibility blocker",
+    "canonical conflict",
+    "existing high-value opportunity",
+    "information/format gap",
+    "authority gap",
+    "new asset",
+    "paradigm experiment"
+  ],
+  "source": {
+    "document": "03",
+    "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+    "heading": "7. Boolean publication gates"
+  }
+}

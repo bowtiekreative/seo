@@ -1,0 +1,66 @@
+{
+  "title": "Task-native format selection",
+  "note": "The task the searcher must complete selects the format. Appearance does not.",
+  "task_formats": [
+    {
+      "task": "define",
+      "format": "definition + boundaries + examples"
+    },
+    {
+      "task": "learn",
+      "format": "guide + demonstration"
+    },
+    {
+      "task": "compare",
+      "format": "table/matrix + trade-offs"
+    },
+    {
+      "task": "calculate",
+      "format": "calculator/formula + examples"
+    },
+    {
+      "task": "diagnose",
+      "format": "symptom/cause/test/remedy tree"
+    },
+    {
+      "task": "locate",
+      "format": "verified map/directory/location page"
+    },
+    {
+      "task": "verify",
+      "format": "claim/evidence/source/limitation"
+    },
+    {
+      "task": "plan",
+      "format": "roadmap/template/checklist"
+    },
+    {
+      "task": "implement",
+      "format": "SOP/code/configuration"
+    },
+    {
+      "task": "choose",
+      "format": "criteria/options/recommendation"
+    },
+    {
+      "task": "buy",
+      "format": "offer/proof/scope/process/action"
+    },
+    {
+      "task": "maintain",
+      "format": "monitoring/checklist/dashboard"
+    }
+  ],
+  "selection_grammar": [
+    {
+      "lang": "text",
+      "code": "IF intent = compare\nTHEN use table OR matrix OR scored decision framework\n\nIF intent = calculate\nTHEN use calculator OR formula + worked examples\n\nIF intent = locate\nTHEN use map OR directory OR location page with verifiable local evidence\n\nIF intent = learn_process\nTHEN use ordered steps + prerequisites + checkpoints\n\nIF intent = diagnose\nTHEN use symptom → cause → test → remedy decision tree\n\nIF intent = choose\nTHEN use criteria → options → trade-offs → recommendation\n\nIF intent = verify\nTHEN use claim → evidence → source → limitation\n\nIF intent = transact\nTHEN use offer → proof → scope → price/process → action\n\nIF intent = explore\nTHEN use hub → categories → paths → filters"
+    }
+  ],
+  "information_product_selector": [],
+  "source": {
+    "document": "01",
+    "file": "01-SEO-LAKA-GRAMMAR.md",
+    "heading": "Format-selection grammar"
+  }
+}

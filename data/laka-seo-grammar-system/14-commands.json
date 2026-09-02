@@ -1,0 +1,404 @@
+{
+  "title": "Pseudo-command notation",
+  "count": 10,
+  "commands": [
+    {
+      "id": "/seo",
+      "name": "/seo",
+      "purpose": "Define a program",
+      "parameters": [
+        {
+          "name": "goal",
+          "placeholder": "<qualified business outcome>"
+        },
+        {
+          "name": "business",
+          "placeholder": "<business>"
+        },
+        {
+          "name": "offer",
+          "placeholder": "<offer>"
+        },
+        {
+          "name": "audience",
+          "placeholder": "<segment>"
+        },
+        {
+          "name": "conditions",
+          "placeholder": "<context>"
+        },
+        {
+          "name": "task",
+          "placeholder": "<verb + object>"
+        },
+        {
+          "name": "intent",
+          "placeholder": "<intent>"
+        },
+        {
+          "name": "cluster",
+          "placeholder": "<representative cluster>"
+        },
+        {
+          "name": "canonical",
+          "placeholder": "<URL>"
+        },
+        {
+          "name": "format",
+          "placeholder": "<task-native format>"
+        },
+        {
+          "name": "evidence",
+          "placeholder": "<proof>"
+        },
+        {
+          "name": "graph",
+          "placeholder": "<role and edges>"
+        },
+        {
+          "name": "next",
+          "placeholder": "<adjacent action>"
+        },
+        {
+          "name": "metric",
+          "placeholder": "<primary metric>"
+        },
+        {
+          "name": "constraints",
+          "placeholder": "<hard limits>"
+        }
+      ],
+      "block": "/seo\ngoal=\"<qualified business outcome>\"\nbusiness=\"<business>\"\noffer=\"<offer>\"\naudience=\"<segment>\"\nconditions=\"<context>\"\ntask=\"<verb + object>\"\nintent=\"<intent>\"\ncluster=\"<representative cluster>\"\ncanonical=\"<URL>\"\nformat=\"<task-native format>\"\nevidence=\"<proof>\"\ngraph=\"<role and edges>\"\nnext=\"<adjacent action>\"\nmetric=\"<primary metric>\"\nconstraints=\"<hard limits>\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Define a program"
+      }
+    },
+    {
+      "id": "/expand",
+      "name": "/expand",
+      "purpose": "Expand a semantic territory",
+      "parameters": [
+        {
+          "name": "concept",
+          "placeholder": "<parent concept>"
+        },
+        {
+          "name": "dimensions",
+          "placeholder": "parents,subtypes,synonyms,entities,attributes,relations,problems,causes,solutions,comparisons,questions,time"
+        },
+        {
+          "name": "audiences",
+          "placeholder": "<approved audiences>"
+        },
+        {
+          "name": "tasks",
+          "placeholder": "<approved task verbs>"
+        },
+        {
+          "name": "geographies",
+          "placeholder": "<approved locations>"
+        },
+        {
+          "name": "exclude",
+          "placeholder": "<wrong senses and audiences>"
+        }
+      ],
+      "block": "/expand\nconcept=\"<parent concept>\"\ndimensions=\"parents,subtypes,synonyms,entities,attributes,relations,problems,causes,solutions,comparisons,questions,time\"\naudiences=\"<approved audiences>\"\ntasks=\"<approved task verbs>\"\ngeographies=\"<approved locations>\"\nexclude=\"<wrong senses and audiences>\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Expand a semantic territory"
+      }
+    },
+    {
+      "id": "/cluster",
+      "name": "/cluster",
+      "purpose": "Cluster candidates",
+      "parameters": [
+        {
+          "name": "input",
+          "placeholder": "<candidate set>"
+        },
+        {
+          "name": "same_page_if",
+          "placeholder": "same sense AND same task AND compatible answer AND compatible next action"
+        },
+        {
+          "name": "split_if",
+          "placeholder": "different task OR different sense OR different necessary format OR real local/product difference"
+        },
+        {
+          "name": "output",
+          "placeholder": "canonical intent registry"
+        }
+      ],
+      "block": "/cluster\ninput=\"<candidate set>\"\nsame_page_if=\"same sense AND same task AND compatible answer AND compatible next action\"\nsplit_if=\"different task OR different sense OR different necessary format OR real local/product difference\"\noutput=\"canonical intent registry\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Cluster candidates"
+      }
+    },
+    {
+      "id": "/gate",
+      "name": "/gate",
+      "purpose": "Apply publication gates",
+      "parameters": [
+        {
+          "name": "candidate",
+          "placeholder": "<candidate>"
+        },
+        {
+          "name": "require",
+          "placeholder": "demand AND distinct task AND business value AND information advantage AND technical feasibility AND maintainability AND measurement AND compliance"
+        },
+        {
+          "name": "else",
+          "placeholder": "merge OR section OR research OR defer OR reject"
+        }
+      ],
+      "block": "/gate\ncandidate=\"<candidate>\"\nrequire=\"demand AND distinct task AND business value AND information advantage AND technical feasibility AND maintainability AND measurement AND compliance\"\nelse=\"merge OR section OR research OR defer OR reject\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Apply publication gates"
+      }
+    },
+    {
+      "id": "/laka",
+      "name": "/laka",
+      "purpose": "Run LAKA",
+      "parameters": [
+        {
+          "name": "object",
+          "placeholder": "<SEO object>"
+        },
+        {
+          "name": "goal",
+          "placeholder": "<outcome>"
+        },
+        {
+          "name": "levels",
+          "placeholder": "Baseline,Minor,Major,Structural,Paradigm"
+        },
+        {
+          "name": "variables",
+          "placeholder": "Object,Conditions,Actions,Tools,Resources,Outcomes,Feedback,Constraints,Value,FailureMode"
+        },
+        {
+          "name": "descriptors",
+          "placeholder": "Magnitude,Rate,Direction,Scope,Depth,Duration,Frequency,Acceleration,Variability,Detectability,Reversibility,Propagation,Amplification,Accumulation"
+        }
+      ],
+      "block": "/laka\nobject=\"<SEO object>\"\ngoal=\"<outcome>\"\nlevels=\"Baseline,Minor,Major,Structural,Paradigm\"\nvariables=\"Object,Conditions,Actions,Tools,Resources,Outcomes,Feedback,Constraints,Value,FailureMode\"\ndescriptors=\"Magnitude,Rate,Direction,Scope,Depth,Duration,Frequency,Acceleration,Variability,Detectability,Reversibility,Propagation,Amplification,Accumulation\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Run LAKA"
+      }
+    },
+    {
+      "id": "/experiment",
+      "name": "/experiment",
+      "purpose": "Create an experiment",
+      "parameters": [
+        {
+          "name": "id",
+          "placeholder": "<change ID>"
+        },
+        {
+          "name": "object",
+          "placeholder": "<object>"
+        },
+        {
+          "name": "laka",
+          "placeholder": "<level>"
+        },
+        {
+          "name": "if",
+          "placeholder": "<condition>"
+        },
+        {
+          "name": "then",
+          "placeholder": "<expected outcome>"
+        },
+        {
+          "name": "because",
+          "placeholder": "<mechanism>"
+        },
+        {
+          "name": "primary",
+          "placeholder": "<metric>"
+        },
+        {
+          "name": "guardrails",
+          "placeholder": "<metrics>"
+        },
+        {
+          "name": "baseline",
+          "placeholder": "<state>"
+        },
+        {
+          "name": "exposure",
+          "placeholder": "<minimum exposure>"
+        },
+        {
+          "name": "decision",
+          "placeholder": "<continue/expand/revise/reverse/escalate/retire>"
+        },
+        {
+          "name": "rollback",
+          "placeholder": "<rollback>"
+        }
+      ],
+      "block": "/experiment\nid=\"<change ID>\"\nobject=\"<object>\"\nlaka=\"<level>\"\nif=\"<condition>\"\nthen=\"<expected outcome>\"\nbecause=\"<mechanism>\"\nprimary=\"<metric>\"\nguardrails=\"<metrics>\"\nbaseline=\"<state>\"\nexposure=\"<minimum exposure>\"\ndecision=\"<continue/expand/revise/reverse/escalate/retire>\"\nrollback=\"<rollback>\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Create an experiment"
+      }
+    },
+    {
+      "id": "/audit-technical",
+      "name": "/audit-technical",
+      "purpose": "Audit technical eligibility",
+      "parameters": [
+        {
+          "name": "scope",
+          "placeholder": "<site/cohort/URL>"
+        },
+        {
+          "name": "states",
+          "placeholder": "access,status,render,robots,index,canonical,sitemap,links,depth,CWV,structured-data"
+        },
+        {
+          "name": "prioritize_by",
+          "placeholder": "affected business value × impact probability / effort and risk"
+        }
+      ],
+      "block": "/audit-technical\nscope=\"<site/cohort/URL>\"\nstates=\"access,status,render,robots,index,canonical,sitemap,links,depth,CWV,structured-data\"\nprioritize_by=\"affected business value × impact probability / effort and risk\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Audit technical eligibility"
+      }
+    },
+    {
+      "id": "/audit-canonical",
+      "name": "/audit-canonical",
+      "purpose": "Audit canonical ownership",
+      "parameters": [
+        {
+          "name": "clusters",
+          "placeholder": "<cluster registry>"
+        },
+        {
+          "name": "detect",
+          "placeholder": "multiple owners OR unstable URL dominance OR divided value"
+        },
+        {
+          "name": "actions",
+          "placeholder": "keep,merge,reposition,retire"
+        }
+      ],
+      "block": "/audit-canonical\nclusters=\"<cluster registry>\"\ndetect=\"multiple owners OR unstable URL dominance OR divided value\"\nactions=\"keep,merge,reposition,retire\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Audit canonical ownership"
+      }
+    },
+    {
+      "id": "/page",
+      "name": "/page",
+      "purpose": "Generate a page brief",
+      "parameters": [
+        {
+          "name": "cluster",
+          "placeholder": "<cluster ID>"
+        },
+        {
+          "name": "audience",
+          "placeholder": "<audience>"
+        },
+        {
+          "name": "task",
+          "placeholder": "<task>"
+        },
+        {
+          "name": "canonical",
+          "placeholder": "<URL>"
+        },
+        {
+          "name": "format",
+          "placeholder": "<format>"
+        },
+        {
+          "name": "answer",
+          "placeholder": "<direct answer>"
+        },
+        {
+          "name": "entities",
+          "placeholder": "<entities>"
+        },
+        {
+          "name": "relations",
+          "placeholder": "<relations>"
+        },
+        {
+          "name": "evidence",
+          "placeholder": "<evidence>"
+        },
+        {
+          "name": "links",
+          "placeholder": "<in/out edges>"
+        },
+        {
+          "name": "next",
+          "placeholder": "<next action>"
+        },
+        {
+          "name": "metric",
+          "placeholder": "<primary metric>"
+        }
+      ],
+      "block": "/page\ncluster=\"<cluster ID>\"\naudience=\"<audience>\"\ntask=\"<task>\"\ncanonical=\"<URL>\"\nformat=\"<format>\"\nanswer=\"<direct answer>\"\nentities=\"<entities>\"\nrelations=\"<relations>\"\nevidence=\"<evidence>\"\nlinks=\"<in/out edges>\"\nnext=\"<next action>\"\nmetric=\"<primary metric>\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Generate a page brief"
+      }
+    },
+    {
+      "id": "/review",
+      "name": "/review",
+      "purpose": "Review a portfolio",
+      "parameters": [
+        {
+          "name": "period",
+          "placeholder": "<period>"
+        },
+        {
+          "name": "evaluate",
+          "placeholder": "business,demands,canonicals,assets,technical,authority,experiments"
+        },
+        {
+          "name": "decide",
+          "placeholder": "continue XOR expand XOR revise XOR reverse XOR escalate XOR retire XOR monitor"
+        },
+        {
+          "name": "update",
+          "placeholder": "scores,rules,gates,backlog"
+        }
+      ],
+      "block": "/review\nperiod=\"<period>\"\nevaluate=\"business,demands,canonicals,assets,technical,authority,experiments\"\ndecide=\"continue XOR expand XOR revise XOR reverse XOR escalate XOR retire XOR monitor\"\nupdate=\"scores,rules,gates,backlog\"",
+      "source": {
+        "document": "tools",
+        "file": "tools/seo-laka-commands.md",
+        "heading": "Review a portfolio"
+      }
+    }
+  ]
+}

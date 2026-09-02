@@ -1,0 +1,174 @@
+{
+  "title": "Boolean and decision logic",
+  "operators": [
+    {
+      "id": "and-mandatory-conjunction",
+      "name": "AND — mandatory conjunction",
+      "definition": "Use `AND` when all conditions are necessary. A failed mandatory condition blocks publication or sends the candidate to research.",
+      "example": "PUBLISH\nIF demand_is_evidenced\nAND intent_is_distinct\nAND business_fit_is_positive\nAND information_advantage_exists\nAND asset_is_maintainable\nAND measurement_is_installed",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.1 AND — mandatory conjunction"
+      }
+    },
+    {
+      "id": "or-valid-alternatives",
+      "name": "OR — valid alternatives",
+      "definition": "Use `OR` when several different forms can satisfy the same requirement. `OR` does not mean “include everything.” It means choose one or more valid alternatives according to the task.",
+      "example": "EVIDENCE\n=\nfirsthand_experience\nOR original_data\nOR reproducible_test\nOR qualified_expert_review\nOR documented_case_study",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.2 OR — valid alternatives"
+      }
+    },
+    {
+      "id": "xor-exactly-one",
+      "name": "XOR — exactly one",
+      "definition": "Use `XOR` when only one choice can be canonical.",
+      "example": "FOR EACH dominant_intent_cluster:\n    existing_url XOR new_url XOR merged_url\n    MUST be the intended canonical destination",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.3 XOR — exactly one"
+      }
+    },
+    {
+      "id": "not-explicit-exclusion",
+      "name": "NOT — explicit exclusion",
+      "definition": "",
+      "example": "TARGET_CLUSTER\n=\ncandidate_queries\nNOT jobs\nNOT salaries\nNOT unrelated_brand\nNOT wrong_geography\nNOT wrong_language",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.4 NOT — explicit exclusion"
+      }
+    },
+    {
+      "id": "if-then-else-branching-decision",
+      "name": "IF / THEN / ELSE — branching decision",
+      "definition": "",
+      "example": "IF same_task\nAND same_answer_structure\nAND same_result_format\nAND same_next_action\nTHEN merge_into_one_canonical_asset\nELSE split_or_test",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.5 IF / THEN / ELSE — branching decision"
+      }
+    },
+    {
+      "id": "for-each-controlled-scale",
+      "name": "FOR EACH — controlled scale",
+      "definition": "This creates candidates, not automatic publication.",
+      "example": "FOR EACH approved_location\nAND FOR EACH approved_service\nGENERATE candidate_location_service_page",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.6 FOR EACH — controlled scale"
+      }
+    },
+    {
+      "id": "until-optimization-loop",
+      "name": "UNTIL — optimization loop",
+      "definition": "",
+      "example": "REPEAT diagnose → change → observe → decide\nUNTIL:\n    target_is_reached\n    OR expected_value_falls_below_cost\n    OR constraint_is_triggered",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.7 UNTIL — optimization loop"
+      }
+    },
+    {
+      "id": "at-least-at-most-exactly",
+      "name": "AT LEAST / AT MOST / EXACTLY",
+      "definition": "",
+      "example": "AT_LEAST 1 useful internal link points to every priority canonical page\nAT_MOST 1 dominant intent owns a canonical URL\nEXACTLY 1 primary KPI governs an experiment",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "5.8 AT LEAST / AT MOST / EXACTLY"
+      }
+    }
+  ],
+  "semantics": [
+    "IF       begins a condition.",
+    "THEN     specifies the action when the condition is true.",
+    "ELSE     specifies the valid fallback when the condition is false.",
+    "AND      requires every connected condition.",
+    "OR       permits one or more valid alternatives.",
+    "NOT      excludes a state or candidate.",
+    "XOR      requires exactly one choice.",
+    "BEFORE   establishes dependency order.",
+    "UNTIL    establishes a bounded feedback loop.",
+    "AT_LEAST sets a minimum.",
+    "EXACTLY_ONE assigns unique ownership or a single decision."
+  ],
+  "precedence": [
+    "safety_law_privacy_policy",
+    "user_value_and_accuracy",
+    "technical_eligibility_and_canonical_correctness",
+    "business_value_and_constraints",
+    "intent_fit_and_information_quality",
+    "measurement_and_learning",
+    "efficiency_and_scale",
+    "cosmetic_optimization"
+  ],
+  "precedence_note": "Rules conflict. Resolve them in this order, highest first.",
+  "execution_order": [
+    "1. Safety, law, privacy, and policy",
+    "2. User value and factual accuracy",
+    "3. Technical eligibility and canonical correctness",
+    "4. Business value and constraints",
+    "5. Intent fit and information quality",
+    "6. Measurement and learning",
+    "7. Efficiency and scale",
+    "8. Cosmetic optimization"
+  ],
+  "hard_gate_pattern": "IF all mandatory conditions pass\nTHEN execute or advance the candidate\nELSE route to research, consolidation, repair, deferral, or rejection",
+  "operator_usage": [
+    {
+      "operator": "IF",
+      "count": 144
+    },
+    {
+      "operator": "THEN",
+      "count": 144
+    },
+    {
+      "operator": "ELSE",
+      "count": 144
+    },
+    {
+      "operator": "OR",
+      "count": 74
+    },
+    {
+      "operator": "AND",
+      "count": 72
+    },
+    {
+      "operator": "NOT",
+      "count": 4
+    },
+    {
+      "operator": "XOR",
+      "count": 2
+    },
+    {
+      "operator": "EXACTLY_ONE",
+      "count": 2
+    },
+    {
+      "operator": "UNTIL",
+      "count": 2
+    },
+    {
+      "operator": "BEFORE",
+      "count": 2
+    },
+    {
+      "operator": "AT_LEAST",
+      "count": 1
+    }
+  ]
+}

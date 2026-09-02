@@ -1,0 +1,366 @@
+{
+  "project_id": "webdevcalgary-laka-example",
+  "version": "1.0",
+  "created_at": "2026-09-02T12:00:00Z",
+  "source_review_date": "2026-09-02",
+  "business": {
+    "name": "WebDevCalgary.com",
+    "model": "professional services",
+    "geographies": [
+      "Calgary, Alberta, Canada"
+    ],
+    "constraints": [
+      {
+        "type": "capacity",
+        "statement": "Qualified lead volume must remain within sales and delivery capacity.",
+        "severity": "hard"
+      },
+      {
+        "type": "brand",
+        "statement": "All cost and performance claims must be supportable.",
+        "severity": "hard"
+      }
+    ],
+    "goals": [
+      {
+        "id": "goal-qualified-margin",
+        "statement": "Increase qualified organic project value.",
+        "primary_metric": "incremental organic contribution margin",
+        "baseline": null,
+        "target": null,
+        "horizon": null
+      }
+    ],
+    "offers": [
+      {
+        "id": "offer-web-project",
+        "name": "Website strategy, design, and development",
+        "audience_ids": [
+          "aud-local-business"
+        ],
+        "price": null,
+        "currency": "CAD",
+        "contribution_margin": null,
+        "capacity_per_period": null
+      }
+    ],
+    "value_events": [
+      {
+        "id": "qualified-assessment",
+        "name": "Qualified project assessment",
+        "qualification_rule": "Service, geography, scope, and budget fit are confirmed.",
+        "estimated_value": null,
+        "currency": "CAD",
+        "source_system": "CRM"
+      }
+    ]
+  },
+  "audiences": [
+    {
+      "id": "aud-local-business",
+      "name": "Calgary business seeking a website project",
+      "role": "owner or marketing lead",
+      "industry": null,
+      "experience": "mixed",
+      "awareness": "option_evaluation",
+      "urgency": "mixed",
+      "budget": null,
+      "geography": "Calgary, Alberta",
+      "language": "English",
+      "device_context": "responsive web",
+      "accessibility_conditions": [],
+      "tasks": [
+        {
+          "verb": "calculate",
+          "object": "website project cost",
+          "completion_condition": "receives a useful scoped estimate and understands assumptions",
+          "intent": "commercial_investigation"
+        }
+      ]
+    }
+  ],
+  "semantic_nodes": [
+    {
+      "id": "concept-web-design",
+      "type": "concept",
+      "label": "web design",
+      "sense_id": "professional-service",
+      "properties": {}
+    },
+    {
+      "id": "entity-calgary",
+      "type": "entity",
+      "label": "Calgary",
+      "sense_id": "city-alberta",
+      "properties": {
+        "country": "Canada"
+      }
+    },
+    {
+      "id": "attribute-price",
+      "type": "attribute",
+      "label": "price",
+      "sense_id": null,
+      "properties": {}
+    }
+  ],
+  "semantic_relations": [
+    {
+      "source": "concept-web-design",
+      "relation": "LOCATED_IN",
+      "target": "entity-calgary",
+      "confidence": 1.0
+    },
+    {
+      "source": "concept-web-design",
+      "relation": "HAS_ATTRIBUTE",
+      "target": "attribute-price",
+      "confidence": 1.0
+    }
+  ],
+  "clusters": [
+    {
+      "id": "YYC-COST-001",
+      "name": "Website cost in Calgary",
+      "audience_ids": [
+        "aud-local-business"
+      ],
+      "task": {
+        "verb": "calculate",
+        "object": "website project cost",
+        "completion_condition": "receives a useful scoped estimate and understands assumptions",
+        "intent": "commercial_investigation"
+      },
+      "journey_state": "option_evaluation",
+      "representative_query": "website cost Calgary",
+      "queries": [
+        "website cost Calgary",
+        "Calgary website pricing",
+        "how much does a website cost in Calgary"
+      ],
+      "exclusions": [
+        "website developer salary",
+        "web design jobs"
+      ],
+      "adjacent_cluster_ids": [],
+      "demand_evidence": [
+        {
+          "type": "inference",
+          "description": "Illustrative cluster; live evidence must be collected before approval.",
+          "value": null,
+          "observed_at": null,
+          "confidence": 0.2
+        }
+      ],
+      "canonical_owner": "/website-cost-calgary/",
+      "existing_urls": [],
+      "status": "provisional",
+      "confidence": 0.2,
+      "opportunity_score": null
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset-cost-estimator",
+      "cluster_id": "YYC-COST-001",
+      "url": "/website-cost-calgary/",
+      "page_type": "calculator",
+      "format": [
+        "text",
+        "table",
+        "calculator",
+        "form"
+      ],
+      "direct_answer": "A useful estimate depends on scope, platform, content, integrations, accessibility, and support.",
+      "information_advantage": [
+        "transparent local assumptions",
+        "interactive scope estimator",
+        "visible methodology"
+      ],
+      "evidence": [
+        "methodology",
+        "anonymized project patterns where permitted",
+        "limitations"
+      ],
+      "next_action": "qualified project assessment",
+      "technical_state": {
+        "intended_index_state": "index",
+        "accessible": null,
+        "status_code": null,
+        "rendered": null,
+        "declared_canonical": "/website-cost-calgary/",
+        "selected_canonical": null,
+        "indexed": null,
+        "sitemap": null,
+        "structured_data_state": null,
+        "field_lcp_ms": null,
+        "field_inp_ms": null,
+        "field_cls": null
+      },
+      "owner": null,
+      "refresh_trigger": "pricing model, delivery process, or market assumptions change"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "/website-cost-calgary/",
+      "target": "/calgary-web-design/",
+      "edge_type": "converts_to",
+      "anchor": "Calgary web design assessment",
+      "crawlable": true,
+      "user_reason": "The service assessment is the next logical action after estimating scope and cost."
+    }
+  ],
+  "changes": [
+    {
+      "id": "EXP-YYC-COST-001",
+      "object": "Website cost in Calgary asset",
+      "laka_level": "Paradigm Change",
+      "internal_variables": {
+        "object": "Static cost content becomes an interactive estimator.",
+        "conditions": [
+          "local commercial investigation",
+          "mobile and desktop use"
+        ],
+        "actions": [
+          "build calculator",
+          "publish methodology",
+          "instrument task events"
+        ],
+        "tools": [
+          "CMS",
+          "calculator",
+          "analytics",
+          "CRM"
+        ],
+        "resources": [
+          "development",
+          "project data",
+          "copy",
+          "QA"
+        ],
+        "outcomes": [
+          "task completion",
+          "qualified assessments",
+          "original evidence asset"
+        ],
+        "feedback": [
+          "estimator completion",
+          "qualification",
+          "close rate",
+          "estimate error"
+        ],
+        "constraints": [
+          "privacy",
+          "accuracy",
+          "capacity",
+          "accessibility"
+        ],
+        "value": "Better decisions for users and better qualification for the business.",
+        "failure_mode": [
+          "misleading estimates",
+          "low adoption",
+          "unqualified volume"
+        ]
+      },
+      "signature": {
+        "magnitude": "large",
+        "rate": "gradual",
+        "direction": "positive",
+        "scope": "cluster",
+        "depth": "business_model",
+        "duration": "persistent",
+        "frequency": "continuous",
+        "acceleration": "compounding",
+        "variability": "moderate",
+        "detectability": "direct",
+        "reversibility": "moderate",
+        "propagation": "linked",
+        "amplification": "external_citations",
+        "accumulation": "compounding"
+      },
+      "hypothesis": "An interactive transparent estimator will complete the cost task better than generic prose and increase qualified project assessments.",
+      "mechanism": "Higher task utility, trust, and message continuity.",
+      "primary_metric": "incremental qualified assessment contribution margin",
+      "guardrails": [
+        "estimate accuracy",
+        "unqualified lead rate",
+        "performance",
+        "accessibility"
+      ],
+      "baseline": null,
+      "minimum_exposure": "predefined impressions, estimator completions, and sales cycle",
+      "decision_rule": "Expand if incremental value is positive and guardrails pass; revise or reverse otherwise.",
+      "rollback": "Return to noninteractive guide while preserving useful evidence.",
+      "status": "planned"
+    }
+  ],
+  "measurement": {
+    "primary_business_metric": "incremental organic contribution margin",
+    "executive_metrics": [
+      "incremental organic contribution margin",
+      "qualified organic assessments",
+      "value-weighted non-brand clicks",
+      "value-weighted target-cluster visibility",
+      "eligible canonical coverage"
+    ],
+    "event_dictionary": [
+      {
+        "name": "estimator_complete",
+        "definition": "A valid website-cost estimate is produced.",
+        "properties": [
+          "cluster_id",
+          "result_band"
+        ]
+      },
+      {
+        "name": "qualified_assessment",
+        "definition": "The assessment meets the documented qualification rule.",
+        "properties": [
+          "offer_id",
+          "qualification_status"
+        ]
+      }
+    ],
+    "dimensions": [
+      "date",
+      "cluster_id",
+      "query",
+      "canonical_url",
+      "country",
+      "device",
+      "search_appearance",
+      "brand_class",
+      "change_id"
+    ],
+    "data_sources": [
+      "Search Console",
+      "analytics",
+      "CRM"
+    ],
+    "change_ledger": [
+      "EXP-YYC-COST-001"
+    ]
+  },
+  "governance": {
+    "hard_gates": [
+      "demand",
+      "distinct task",
+      "business value",
+      "information advantage",
+      "technical feasibility",
+      "maintainability",
+      "measurement",
+      "policy compliance"
+    ],
+    "privacy_rules": [
+      "collect only inputs needed for a useful estimate"
+    ],
+    "policy_rules": [
+      "do not invent price evidence or local claims"
+    ],
+    "quality_owner": null,
+    "maintenance_capacity": null,
+    "review_cadence": "monthly"
+  }
+}

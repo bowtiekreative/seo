@@ -1,0 +1,93 @@
+{
+  "title": "The SEO grammar",
+  "purpose": "The vocabulary, sentence forms and operators the whole system is written in.",
+  "governing_sentence": [
+    "FOR [AUDIENCE]",
+    "UNDER [CONDITIONS]",
+    "SEEKING [TASK]",
+    "WITH [INTENT]",
+    "ABOUT [CONCEPT / ENTITY]",
+    "USING [QUERY CLUSTER]",
+    "SERVED BY [ONE CANONICAL ASSET]",
+    "IN [TASK-NATIVE FORMAT]",
+    "SUPPORTED BY [EVIDENCE]",
+    "CONNECTED BY [INTERNAL GRAPH]",
+    "LEADING TO [NEXT ACTION]",
+    "MEASURED BY [PRIMARY OUTCOME]",
+    "GUARDED BY [CONSTRAINTS]"
+  ],
+  "governing_equation": [
+    "SEO BUSINESS VALUE =",
+    "VALUABLE DEMAND",
+    "x TECHNICAL ELIGIBILITY",
+    "x INTENT FIT",
+    "x INFORMATION ADVANTAGE",
+    "x DISCOVERABILITY",
+    "x PROMINENCE",
+    "x SEARCH-RESULT RESPONSE",
+    "x CONVERSION EFFICIENCY",
+    "x CONTRIBUTION MARGIN",
+    "x LEARNING VELOCITY"
+  ],
+  "equation_note": "The terms are multiplied conceptually, so a near-zero factor neutralises the rest of the system.",
+  "layers": null,
+  "output_hierarchy": [
+    "BUSINESS",
+    "└── AUDIENCE",
+    "└── PROBLEM / DESIRE",
+    "└── JOURNEY STATE",
+    "└── INTENT",
+    "└── TASK",
+    "└── QUERY CLUSTER",
+    "└── CANONICAL ASSET",
+    "└── SUPPORTING GRAPH",
+    "└── SEARCH APPEARANCE",
+    "└── USER ACTION",
+    "└── BUSINESS OUTCOME",
+    "└── FEEDBACK"
+  ],
+  "one_page_rule": [
+    "IF same sense",
+    "AND same task",
+    "AND compatible answer structure",
+    "AND compatible result class",
+    "AND compatible next action",
+    "THEN same cluster and one canonical owner",
+    "ELSE split or test."
+  ],
+  "compact_notation": [
+    {
+      "lang": "text",
+      "code": "G → A:C:T:I:Q → D:F:E → L → N → M | X"
+    },
+    {
+      "lang": "text",
+      "code": "Increase qualified assessments\nFOR Calgary small-business owners\nUNDER active website redesign consideration\nSEEKING compare-agencies\nWITH commercial-investigation intent\nABOUT Calgary web design providers\nUSING the agency-comparison query cluster\nSERVED BY /calgary-web-design-companies/\nIN a scored comparison + decision guide\nSUPPORTED BY disclosed criteria + firsthand audits\nCONNECTED BY links from cost, process, and case-study nodes\nLEADING TO a website assessment\nMEASURED BY qualified assessment contribution margin\nGUARDED BY neutrality, disclosure, and lead-quality constraints."
+    }
+  ],
+  "canonical_sentence": [
+    {
+      "lang": "text",
+      "code": "SEO_SENTENCE ::=\nGOAL\nFOR AUDIENCE\nIN JOURNEY_STATE\nUNDER CONDITIONS\nSEEKING TASK\nWITH INTENT\nABOUT CONCEPT_OR_ENTITY\nUSING QUERY_CLUSTER\nSERVED_BY CANONICAL_ASSET\nIN FORMAT\nSUPPORTED_BY EVIDENCE\nCONNECTED_BY GRAPH\nLEADING_TO NEXT_ACTION\nMEASURED_BY PRIMARY_METRIC\nGUARDED_BY CONSTRAINTS"
+    }
+  ],
+  "validity": [
+    {
+      "lang": "text",
+      "code": "VALID_CANDIDATE\n=\nDEMAND_EVIDENCE\nAND DISTINCT_TASK\nAND BUSINESS_FIT\nAND UNIQUE_OR_SUPERIOR_VALUE\nAND TECHNICAL_FEASIBILITY\nAND MAINTAINABILITY\nAND MEASURABILITY\nAND POLICY_COMPLIANCE"
+    },
+    {
+      "lang": "text",
+      "code": "VALID_PAGE\n=\nONE_DOMINANT_INTENT\nAND ONE_INTENDED_CANONICAL\nAND TASK_APPROPRIATE_FORMAT\nAND VISIBLE_EVIDENCE\nAND CLEAR_NEXT_ACTION\nAND CRAWLABLE_PATH\nAND INDEXABLE_WHEN_INTENDED\nAND NO_MATERIAL_DUPLICATION"
+    },
+    {
+      "lang": "text",
+      "code": "VALID_EXPERIMENT\n=\nHYPOTHESIS\nAND MECHANISM\nAND PRIMARY_METRIC\nAND BASELINE\nAND TREATMENT_SCOPE\nAND OBSERVATION_WINDOW\nAND DECISION_RULE\nAND GUARDRAILS"
+    }
+  ],
+  "source": {
+    "document": "01",
+    "file": "01-SEO-LAKA-GRAMMAR.md",
+    "heading": "whole document"
+  }
+}

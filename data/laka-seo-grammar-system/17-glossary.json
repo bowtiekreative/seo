@@ -1,0 +1,906 @@
+{
+  "title": "Glossary",
+  "count": 90,
+  "terms": [
+    {
+      "term": "Actual organic contribution margin",
+      "slug": "actual-organic-contribution-margin",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.1 Actual organic contribution margin"
+      }
+    },
+    {
+      "term": "ASSET",
+      "slug": "asset",
+      "definition": "Any retrievable content or tool",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "ATTRIBUTE",
+      "slug": "attribute",
+      "definition": "Descriptive dimension",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "AUDIENCE",
+      "slug": "audience",
+      "definition": "A meaningful user segment",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "Authority diagnostics",
+      "slug": "authority-diagnostics",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.12 Authority diagnostics"
+      }
+    },
+    {
+      "term": "BACKLINK",
+      "slug": "backlink",
+      "definition": "External edge pointing to an owned asset",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "Baseline",
+      "slug": "baseline",
+      "definition": "The system is observed without changing its structure.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.1 Baseline"
+      }
+    },
+    {
+      "term": "BUSINESS",
+      "slug": "business",
+      "definition": "Organization receiving value",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "term": "buy (task)",
+      "slug": "buy-task",
+      "definition": "Task-native format: offer/proof/scope/process/action.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "calculate (task)",
+      "slug": "calculate-task",
+      "definition": "Task-native format: calculator/formula + examples.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "Cannibalization indicators",
+      "slug": "cannibalization-indicators",
+      "definition": "High entropy is a diagnostic, not automatic failure. Confirm same-intent duplication, instability, divided links, or value loss.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.10 Cannibalization indicators"
+      }
+    },
+    {
+      "term": "Canonical agreement",
+      "slug": "canonical-agreement",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.9 Canonical agreement"
+      }
+    },
+    {
+      "term": "CANONICAL_ASSET",
+      "slug": "canonical-asset",
+      "definition": "Intended primary destination for an intent cluster",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "CANONICAL_SET",
+      "slug": "canonical-set",
+      "definition": "Duplicate or near-duplicate URLs represented by one preferred URL",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "CANONICALIZED",
+      "slug": "canonicalized",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "choose (task)",
+      "slug": "choose-task",
+      "definition": "Task-native format: criteria/options/recommendation.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "compare (task)",
+      "slug": "compare-task",
+      "definition": "Task-native format: table/matrix + trade-offs.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "COMPLETED",
+      "slug": "completed",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "CONCEPT",
+      "slug": "concept",
+      "definition": "General idea or class",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "CONSTRAINT",
+      "slug": "constraint",
+      "definition": "Limit on valid strategies",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "term": "CONVERTED",
+      "slug": "converted",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "CTR residual",
+      "slug": "ctr-residual",
+      "definition": "This is more useful than a universal “good CTR” threshold.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.5 CTR residual"
+      }
+    },
+    {
+      "term": "define (task)",
+      "slug": "define-task",
+      "definition": "Task-native format: definition + boundaries + examples.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "Demand gate",
+      "slug": "demand-gate",
+      "definition": "Hard publication gate 1 of 8. Passes if observed impressions OR customer evidence OR sales/support frequency OR stable result ecosystem OR defensible emerging-demand thesis.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Demand gate"
+      }
+    },
+    {
+      "term": "DESIRE",
+      "slug": "desire",
+      "definition": "Desired state",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "diagnose (task)",
+      "slug": "diagnose-task",
+      "definition": "Task-native format: symptom/cause/test/remedy tree.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "DISCOVERED",
+      "slug": "discovered",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "DISPLAYED",
+      "slug": "displayed",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "Distinctness gate",
+      "slug": "distinctness-gate",
+      "definition": "Hard publication gate 2 of 8. Passes if the candidate owns a distinct task OR needs a materially different answer OR has real local/product data OR requires a different conversion path.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Distinctness gate"
+      }
+    },
+    {
+      "term": "EDGE",
+      "slug": "edge",
+      "definition": "A typed connection between nodes",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "Eligible canonical coverage",
+      "slug": "eligible-canonical-coverage",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.8 Eligible canonical coverage"
+      }
+    },
+    {
+      "term": "ENTITY",
+      "slug": "entity",
+      "definition": "Distinct named thing",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "EVIDENCE",
+      "slug": "evidence",
+      "definition": "Firsthand experience, data, test, citation, case study, demonstration",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "EXCLUSION",
+      "slug": "exclusion",
+      "definition": "Wrong sense, audience, or task",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "Expected value",
+      "slug": "expected-value",
+      "definition": "Every estimated input must be labeled and later replaced with observed data.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.3 Expected value"
+      }
+    },
+    {
+      "term": "EXTERNAL_LINK",
+      "slug": "external-link",
+      "definition": "Citation or navigation to another site",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "FETCHED",
+      "slug": "fetched",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "FORMAT",
+      "slug": "format",
+      "definition": "Text, table, video, image, tool, dataset, map, interactive, downloadable",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "GOAL",
+      "slug": "goal",
+      "definition": "Desired business state",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "term": "HUB",
+      "slug": "hub",
+      "definition": "Page that organizes a coherent topic or task family",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "implement (task)",
+      "slug": "implement-task",
+      "definition": "Task-native format: SOP/code/configuration.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "Incremental lift",
+      "slug": "incremental-lift",
+      "definition": "When a reasonable comparison group exists: Apply separately to: - impressions; - clicks; - qualified conversions; - revenue; - contribution margin; - retention.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.2 Incremental lift"
+      }
+    },
+    {
+      "term": "INDEXED",
+      "slug": "indexed",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "Information-advantage gate",
+      "slug": "information-advantage-gate",
+      "definition": "Hard publication gate 4 of 8. Passes if original experience OR proprietary data OR better methodology OR better utility OR stronger evidence OR clearer decision support OR unique local coverage OR better accessibility.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Information-advantage gate"
+      }
+    },
+    {
+      "term": "INTENT",
+      "slug": "intent",
+      "definition": "Why the task is being performed now",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "Internal graph diagnostics",
+      "slug": "internal-graph-diagnostics",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.11 Internal graph diagnostics"
+      }
+    },
+    {
+      "term": "INTERNAL_LINK",
+      "slug": "internal-link",
+      "definition": "Crawlable relationship between owned pages",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "JOURNEY_STATE",
+      "slug": "journey-state",
+      "definition": "Relationship state with the business",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "learn (task)",
+      "slug": "learn-task",
+      "definition": "Task-native format: guide + demonstration.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "locate (task)",
+      "slug": "locate-task",
+      "definition": "Task-native format: verified map/directory/location page.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "maintain (task)",
+      "slug": "maintain-task",
+      "definition": "Task-native format: monitoring/checklist/dashboard.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "Maintainability gate",
+      "slug": "maintainability-gate",
+      "definition": "Hard publication gate 6 of 8. Passes if owner exists AND refresh triggers are defined AND data can be kept accurate AND total approved volume fits capacity.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Maintainability gate"
+      }
+    },
+    {
+      "term": "Major",
+      "slug": "major",
+      "definition": "The document or campaign is substantially improved, but its role remains stable.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.3 Major change"
+      }
+    },
+    {
+      "term": "Measurement gate",
+      "slug": "measurement-gate",
+      "definition": "Hard publication gate 7 of 8. Passes if primary outcome AND baseline AND change ID AND observation method AND decision rule.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Measurement gate"
+      }
+    },
+    {
+      "term": "Minor",
+      "slug": "minor",
+      "definition": "Surface elements change while the object and mechanism stay mostly stable.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.2 Minor change"
+      }
+    },
+    {
+      "term": "NEXT_ACTION",
+      "slug": "next-action",
+      "definition": "Logical transition after the task is served",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "NODE",
+      "slug": "node",
+      "definition": "A page, entity, cluster, or asset in a graph",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "OFFER",
+      "slug": "offer",
+      "definition": "Exchange presented to a user",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "term": "Opportunity score",
+      "slug": "opportunity-score",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.7 Opportunity score"
+      }
+    },
+    {
+      "term": "ORPHAN",
+      "slug": "orphan",
+      "definition": "Important page without a useful internal path",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "PAGE_TYPE",
+      "slug": "page-type",
+      "definition": "Service, product, category, guide, comparison, calculator, template, location, case study, glossary, FAQ",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "Paradigm",
+      "slug": "paradigm",
+      "definition": "The class of solution changes.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.5 Paradigm change"
+      }
+    },
+    {
+      "term": "PARENT",
+      "slug": "parent",
+      "definition": "Broader concept",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "PATH",
+      "slug": "path",
+      "definition": "Ordered sequence from entry to task completion or conversion",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "term": "PERSONA",
+      "slug": "persona",
+      "definition": "Operational representation of a segment",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "plan (task)",
+      "slug": "plan-task",
+      "definition": "Task-native format: roadmap/template/checklist.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "Policy / ethical compliance gate",
+      "slug": "policy-ethical-compliance-gate",
+      "definition": "Hard publication gate 8 of 8. Specified in Rules GOV-001…GOV-012; 10 §4 Current primary-source guidance used.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "7. Boolean publication gates"
+      }
+    },
+    {
+      "term": "PROBLEM",
+      "slug": "problem",
+      "definition": "Undesired state",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "Qualified conversion value",
+      "slug": "qualified-conversion-value",
+      "definition": "Measurement formula.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.6 Qualified conversion value"
+      }
+    },
+    {
+      "term": "QUERY",
+      "slug": "query",
+      "definition": "Observed search expression",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "QUERY_CLUSTER",
+      "slug": "query-cluster",
+      "definition": "Queries sharing one dominant task",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "QUESTION",
+      "slug": "question",
+      "definition": "Explicit information gap",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "RELATION",
+      "slug": "relation",
+      "definition": "Typed connection",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "RENDERED",
+      "slug": "rendered",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "RESOURCE",
+      "slug": "resource",
+      "definition": "Asset available to execute",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "term": "RETRIEVED",
+      "slug": "retrieved",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    },
+    {
+      "term": "SEARCH_APPEARANCE",
+      "slug": "search-appearance",
+      "definition": "Web result, image, video, local result, product result, rich result, generative citation",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "Structural",
+      "slug": "structural",
+      "definition": "Relationships, architecture, ownership, or workflow change.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "10.4 Structural change"
+      }
+    },
+    {
+      "term": "SUBTYPE",
+      "slug": "subtype",
+      "definition": "Narrower type",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "SUPPORTING_ASSET",
+      "slug": "supporting-asset",
+      "definition": "Asset answering an adjacent task and supporting a canonical asset",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "term": "SYNONYM",
+      "slug": "synonym",
+      "definition": "Near-equivalent expression",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "TASK",
+      "slug": "task",
+      "definition": "What the user is trying to accomplish",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "term": "Technical feasibility gate",
+      "slug": "technical-feasibility-gate",
+      "definition": "Hard publication gate 5 of 8. Specified in 06 SOP 9 — Technical eligibility audit; Rules TEC-001…TEC-012.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "7. Boolean publication gates"
+      }
+    },
+    {
+      "term": "VALUE",
+      "slug": "value",
+      "definition": "Attribute state",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "Value gate",
+      "slug": "value-gate",
+      "definition": "Hard publication gate 3 of 8. Passes if direct conversion value OR assisted conversion value OR retention value OR authority value OR strategic learning value.",
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "Value gate"
+      }
+    },
+    {
+      "term": "VALUE_EVENT",
+      "slug": "value-event",
+      "definition": "Event that produces measurable value",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "term": "Value-weighted visibility",
+      "slug": "value-weighted-visibility",
+      "definition": "Visibility weight may be based on impression share, rank distribution, or a calibrated CTR curve.",
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "3.4 Value-weighted visibility"
+      }
+    },
+    {
+      "term": "VARIANT",
+      "slug": "variant",
+      "definition": "Morphological or orthographic form",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "term": "verify (task)",
+      "slug": "verify-task",
+      "definition": "Task-native format: claim/evidence/source/limitation.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "Format-selection grammar"
+      }
+    },
+    {
+      "term": "VISITED",
+      "slug": "visited",
+      "definition": "A retrieval states state in the SEO grammar.",
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    }
+  ]
+}

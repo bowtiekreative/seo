@@ -1,0 +1,325 @@
+{
+  "title": "Volumetric opportunity dimensions",
+  "note": "Theoretical volume is an analysis space, not a publishing target.",
+  "families": [
+    {
+      "id": "business",
+      "name": "Business",
+      "heading": "2.1 Business dimensions",
+      "values": [
+        "offer",
+        "revenue model",
+        "margin",
+        "capacity",
+        "sales cycle",
+        "qualification threshold",
+        "retention value",
+        "risk",
+        "strategic priority"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.1 Business dimensions"
+      }
+    },
+    {
+      "id": "audience",
+      "name": "Audience",
+      "heading": "2.2 Audience dimensions",
+      "values": [
+        "segment",
+        "role",
+        "industry",
+        "organization size",
+        "experience",
+        "problem awareness",
+        "solution awareness",
+        "urgency",
+        "budget",
+        "geography",
+        "language",
+        "device/context",
+        "accessibility need"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.2 Audience dimensions"
+      }
+    },
+    {
+      "id": "task",
+      "name": "Task",
+      "heading": "2.3 Task dimensions",
+      "values": [
+        "define",
+        "learn",
+        "discover",
+        "diagnose",
+        "compare",
+        "calculate",
+        "locate",
+        "verify",
+        "plan",
+        "implement",
+        "troubleshoot",
+        "buy",
+        "use",
+        "maintain",
+        "renew",
+        "refer"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.3 Task dimensions"
+      }
+    },
+    {
+      "id": "intent",
+      "name": "Intent",
+      "heading": "2.4 Intent dimensions",
+      "values": [
+        "informational",
+        "comparative",
+        "commercial investigation",
+        "transactional",
+        "navigational",
+        "local",
+        "support",
+        "retention",
+        "reputation"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.4 Intent dimensions"
+      }
+    },
+    {
+      "id": "semantic",
+      "name": "Semantic",
+      "heading": "2.5 Semantic dimensions",
+      "values": [
+        "parent concept",
+        "subtype",
+        "synonym",
+        "entity",
+        "attribute",
+        "attribute value",
+        "process",
+        "prerequisite",
+        "problem",
+        "cause",
+        "consequence",
+        "solution",
+        "alternative",
+        "comparison",
+        "objection",
+        "risk",
+        "evidence",
+        "question"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.5 Semantic dimensions"
+      }
+    },
+    {
+      "id": "modifier",
+      "name": "Modifier",
+      "heading": "2.6 Modifier dimensions",
+      "values": [
+        "who",
+        "what",
+        "where",
+        "when",
+        "why",
+        "how",
+        "best",
+        "cost",
+        "price",
+        "cheap/premium",
+        "near me",
+        "reviews",
+        "versus",
+        "alternative",
+        "for [audience]",
+        "with [attribute]",
+        "without [constraint]",
+        "under/over [value]",
+        "before/after",
+        "current/year",
+        "beginner/advanced"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.6 Modifier dimensions"
+      }
+    },
+    {
+      "id": "asset",
+      "name": "Asset",
+      "heading": "2.7 Asset dimensions",
+      "values": [
+        "service page",
+        "product page",
+        "category",
+        "guide",
+        "comparison",
+        "calculator",
+        "diagnostic",
+        "template",
+        "checklist",
+        "directory",
+        "location page",
+        "case study",
+        "dataset",
+        "benchmark",
+        "glossary",
+        "FAQ",
+        "video",
+        "image series",
+        "interactive",
+        "API/data feed"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.7 Asset dimensions"
+      }
+    },
+    {
+      "id": "evidence",
+      "name": "Evidence",
+      "heading": "2.8 Evidence dimensions",
+      "values": [
+        "firsthand experience",
+        "original data",
+        "controlled test",
+        "field observation",
+        "customer evidence",
+        "expert review",
+        "documented case study",
+        "primary-source citation",
+        "methodology",
+        "screenshots",
+        "demonstration",
+        "limitations"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.8 Evidence dimensions"
+      }
+    },
+    {
+      "id": "search-surface",
+      "name": "Search-surface",
+      "heading": "2.9 Search-surface dimensions",
+      "values": [
+        "web results",
+        "images",
+        "video",
+        "local",
+        "shopping/product",
+        "news",
+        "Discover",
+        "generative AI features",
+        "site search",
+        "third-party marketplace"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.9 Search-surface dimensions"
+      }
+    },
+    {
+      "id": "journey-and-conversion",
+      "name": "Journey and conversion",
+      "heading": "2.10 Journey and conversion dimensions",
+      "values": [
+        "awareness → related content",
+        "evaluation → tool/comparison",
+        "decision → assessment/demo/quote",
+        "transaction → purchase/signup",
+        "use → successful implementation",
+        "retention → renewal/expansion",
+        "advocacy → review/referral/citation"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.10 Journey and conversion dimensions"
+      }
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "heading": "2.11 Time dimensions",
+      "values": [
+        "evergreen",
+        "seasonal",
+        "event-driven",
+        "newly changed",
+        "periodic",
+        "decaying",
+        "historical",
+        "real-time",
+        "forecast"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.11 Time dimensions"
+      }
+    },
+    {
+      "id": "measurement",
+      "name": "Measurement",
+      "heading": "2.12 Measurement dimensions",
+      "values": [
+        "query",
+        "page",
+        "cluster",
+        "country",
+        "device",
+        "search appearance",
+        "audience",
+        "offer",
+        "change ID",
+        "date",
+        "cohort",
+        "value event"
+      ],
+      "source": {
+        "document": "03",
+        "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+        "heading": "2.12 Measurement dimensions"
+      }
+    }
+  ],
+  "family_count": 12,
+  "theoretical_volume": 11555086233600,
+  "safe_scale": [
+    "Generate broadly.",
+    "Normalize.",
+    "Cluster by task.",
+    "Assign one canonical owner.",
+    "Apply all hard gates.",
+    "Score by value / cost.",
+    "Stage publication.",
+    "Measure.",
+    "Update the generator.",
+    "Never publish the Cartesian product."
+  ],
+  "source": {
+    "document": "03",
+    "file": "03-VOLUMETRIC-SEO-ENGINE.md",
+    "heading": "2. Opportunity dimensions"
+  }
+}

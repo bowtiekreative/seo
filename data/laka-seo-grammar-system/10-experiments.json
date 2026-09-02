@@ -1,0 +1,192 @@
+{
+  "title": "Hypotheses, experiment cards and decisions",
+  "hypothesis_grammar": [
+    {
+      "lang": "text",
+      "code": "IF [INTERVENTION]\nis applied to [OBJECT]\nunder [CONDITIONS],\nTHEN [PRIMARY METRIC]\nwill change in [DIRECTION]\nbecause [MECHANISM],\nwhile [GUARDRAILS]\nremain within [THRESHOLDS]."
+    },
+    {
+      "lang": "text",
+      "code": "IF the title proposition for the Calgary web design cost guide\nis rewritten to state the year, location, and estimator benefit,\nTHEN position-adjusted organic CTR will increase\nbecause relevance and expected utility become clearer,\nwhile qualified assessment rate does not decline by more than 10%."
+    }
+  ],
+  "compact_grammar": [
+    "IF [intervention]",
+    "is applied to [object]",
+    "under [conditions],",
+    "THEN [primary metric]",
+    "changes [direction]",
+    "because [mechanism],",
+    "while [guardrails] pass."
+  ],
+  "experiment_card": [
+    {
+      "lang": "text",
+      "code": "Experiment ID:\nObject:\nConditions:\nAction:\nTools:\nResources:\nExpected outcome:\nFeedback source:\nConstraints:\nValue:\nFailure mode:\n\nLAKA level:\nMagnitude:\nRate:\nDirection:\nScope:\nDepth:\nDuration:\nFrequency:\nAcceleration:\nVariability:\nDetectability:\nReversibility:\nPropagation:\nAmplification:\nAccumulation:\n\nPrimary metric:\nBaseline:\nTreatment scope:\nComparison:\nMinimum exposure:\nDecision rule:\nGuardrails:\nRollback:\nOwner:"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "continue",
+      "name": "Continue",
+      "block": "IF evidence is positive\nAND guardrails pass\nAND additional exposure is needed\nTHEN continue.",
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Continue"
+      }
+    },
+    {
+      "id": "expand",
+      "name": "Expand",
+      "block": "IF positive effect is credible\nAND mechanism is transferable\nAND capacity permits\nTHEN expand to a defined cohort.",
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Expand"
+      }
+    },
+    {
+      "id": "revise",
+      "name": "Revise",
+      "block": "IF mechanism appears valid\nBUT implementation is weak or guardrails fail mildly\nTHEN revise.",
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Revise"
+      }
+    },
+    {
+      "id": "reverse",
+      "name": "Reverse",
+      "block": "IF primary outcome declines materially\nOR a critical guardrail fails\nAND rollback is feasible\nTHEN reverse.",
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Reverse"
+      }
+    },
+    {
+      "id": "escalate",
+      "name": "Escalate",
+      "block": "IF the diagnosed failure is deeper than the current LAKA level\nAND expected value still exceeds cost\nTHEN escalate.",
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Escalate"
+      }
+    },
+    {
+      "id": "retire",
+      "name": "Retire",
+      "block": "IF remaining value is low\nOR maintenance/risk is too high\nOR the asset has no distinct task\nTHEN consolidate, redirect, noindex, archive, or remove appropriately.",
+      "prose": [],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "Retire"
+      }
+    }
+  ],
+  "decision_names": [
+    "CONTINUE",
+    "EXPAND",
+    "REVISE",
+    "REVERSE",
+    "ESCALATE",
+    "RETIRE",
+    "MONITOR"
+  ],
+  "types": [
+    {
+      "id": "minor-element-test",
+      "name": "Minor element test",
+      "block": "",
+      "prose": [
+        "Examples:",
+        "- title proposition;",
+        "- snippet description;",
+        "- introductory answer;",
+        "- CTA wording;",
+        "- anchor text;",
+        "- small media change.",
+        "Best for high exposure and reversible mechanisms."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "10.1 Minor element test"
+      }
+    },
+    {
+      "id": "major-asset-test",
+      "name": "Major asset test",
+      "block": "",
+      "prose": [
+        "Examples:",
+        "- full rewrite;",
+        "- new comparison;",
+        "- original data;",
+        "- tool or video;",
+        "- new evidence architecture.",
+        "Evaluate as an intervention package unless components can be separated."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "10.2 Major asset test"
+      }
+    },
+    {
+      "id": "structural-test",
+      "name": "Structural test",
+      "block": "",
+      "prose": [
+        "Examples:",
+        "- page merge;",
+        "- template change;",
+        "- internal graph redesign;",
+        "- facet control;",
+        "- CRM linkage;",
+        "- site architecture.",
+        "Use cohort or time-series analysis and monitor propagation."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "10.3 Structural test"
+      }
+    },
+    {
+      "id": "paradigm-test",
+      "name": "Paradigm test",
+      "block": "",
+      "prose": [
+        "Examples:",
+        "- calculator instead of article;",
+        "- benchmark instead of generic guide;",
+        "- verified directory instead of location-page set;",
+        "- interactive diagnostic instead of lead form;",
+        "- data API or agent action instead of static copy.",
+        "Primary value may include new demand, citations, brand searches, product adoption, and conversion."
+      ],
+      "source": {
+        "document": "05",
+        "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+        "heading": "10.4 Paradigm test"
+      }
+    }
+  ],
+  "comparison_designs": null,
+  "observation_windows": null,
+  "source": {
+    "document": "05",
+    "file": "05-MEASUREMENT-AND-EXPERIMENT-SYSTEM.md",
+    "heading": "7–12"
+  }
+}

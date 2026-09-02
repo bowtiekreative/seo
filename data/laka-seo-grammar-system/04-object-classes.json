@@ -1,0 +1,420 @@
+{
+  "title": "Primitive object classes",
+  "classes": [
+    {
+      "id": "business-objects",
+      "name": "Business objects",
+      "columns": [
+        "Primitive",
+        "Meaning",
+        "Required properties"
+      ],
+      "members": [
+        {
+          "primitive": "BUSINESS",
+          "meaning": "Organization receiving value",
+          "required_properties": "model, geography, capacity"
+        },
+        {
+          "primitive": "GOAL",
+          "meaning": "Desired business state",
+          "required_properties": "metric, baseline, target, horizon"
+        },
+        {
+          "primitive": "OFFER",
+          "meaning": "Exchange presented to a user",
+          "required_properties": "audience, price/value, margin"
+        },
+        {
+          "primitive": "VALUE_EVENT",
+          "meaning": "Event that produces measurable value",
+          "required_properties": "event name, value, qualification rule"
+        },
+        {
+          "primitive": "CONSTRAINT",
+          "meaning": "Limit on valid strategies",
+          "required_properties": "budget, policy, capacity, risk"
+        },
+        {
+          "primitive": "RESOURCE",
+          "meaning": "Asset available to execute",
+          "required_properties": "people, data, technology, time"
+        }
+      ],
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.1 Business objects"
+      }
+    },
+    {
+      "id": "audience-objects",
+      "name": "Audience objects",
+      "columns": [
+        "Primitive",
+        "Meaning",
+        "Required properties"
+      ],
+      "members": [
+        {
+          "primitive": "AUDIENCE",
+          "meaning": "A meaningful user segment",
+          "required_properties": "need, language, geography"
+        },
+        {
+          "primitive": "PERSONA",
+          "meaning": "Operational representation of a segment",
+          "required_properties": "context, goal, barriers"
+        },
+        {
+          "primitive": "JOURNEY_STATE",
+          "meaning": "Relationship state with the business",
+          "required_properties": "awareness, evaluation, decision, use, retention"
+        },
+        {
+          "primitive": "PROBLEM",
+          "meaning": "Undesired state",
+          "required_properties": "severity, urgency, frequency"
+        },
+        {
+          "primitive": "DESIRE",
+          "meaning": "Desired state",
+          "required_properties": "value, urgency, evidence of demand"
+        },
+        {
+          "primitive": "TASK",
+          "meaning": "What the user is trying to accomplish",
+          "required_properties": "verb, object, completion condition"
+        },
+        {
+          "primitive": "INTENT",
+          "meaning": "Why the task is being performed now",
+          "required_properties": "informational, comparative, transactional, navigational, local, support"
+        }
+      ],
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.2 Audience objects"
+      }
+    },
+    {
+      "id": "semantic-objects",
+      "name": "Semantic objects",
+      "columns": [
+        "Primitive",
+        "Meaning",
+        "Example"
+      ],
+      "members": [
+        {
+          "primitive": "CONCEPT",
+          "meaning": "General idea or class",
+          "example": "web design"
+        },
+        {
+          "primitive": "ENTITY",
+          "meaning": "Distinct named thing",
+          "example": "Calgary, WordPress, Google"
+        },
+        {
+          "primitive": "PARENT",
+          "meaning": "Broader concept",
+          "example": "digital marketing"
+        },
+        {
+          "primitive": "SUBTYPE",
+          "meaning": "Narrower type",
+          "example": "ecommerce web design"
+        },
+        {
+          "primitive": "SYNONYM",
+          "meaning": "Near-equivalent expression",
+          "example": "website designer / web designer"
+        },
+        {
+          "primitive": "VARIANT",
+          "meaning": "Morphological or orthographic form",
+          "example": "website / web site"
+        },
+        {
+          "primitive": "ATTRIBUTE",
+          "meaning": "Descriptive dimension",
+          "example": "price, speed, accessibility"
+        },
+        {
+          "primitive": "VALUE",
+          "meaning": "Attribute state",
+          "example": "under $5,000, fast, WCAG conformant"
+        },
+        {
+          "primitive": "RELATION",
+          "meaning": "Typed connection",
+          "example": "service LOCATED-IN Calgary"
+        },
+        {
+          "primitive": "QUESTION",
+          "meaning": "Explicit information gap",
+          "example": "how much does a website cost?"
+        },
+        {
+          "primitive": "QUERY",
+          "meaning": "Observed search expression",
+          "example": "Calgary web design prices"
+        },
+        {
+          "primitive": "QUERY_CLUSTER",
+          "meaning": "Queries sharing one dominant task",
+          "example": "cost-intent cluster"
+        },
+        {
+          "primitive": "EXCLUSION",
+          "meaning": "Wrong sense, audience, or task",
+          "example": "jobs, salary, course"
+        }
+      ],
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.3 Semantic objects"
+      }
+    },
+    {
+      "id": "document-objects",
+      "name": "Document objects",
+      "columns": [
+        "Primitive",
+        "Meaning"
+      ],
+      "members": [
+        {
+          "primitive": "ASSET",
+          "meaning": "Any retrievable content or tool"
+        },
+        {
+          "primitive": "CANONICAL_ASSET",
+          "meaning": "Intended primary destination for an intent cluster"
+        },
+        {
+          "primitive": "SUPPORTING_ASSET",
+          "meaning": "Asset answering an adjacent task and supporting a canonical asset"
+        },
+        {
+          "primitive": "PAGE_TYPE",
+          "meaning": "Service, product, category, guide, comparison, calculator, template, location, case study, glossary, FAQ"
+        },
+        {
+          "primitive": "FORMAT",
+          "meaning": "Text, table, video, image, tool, dataset, map, interactive, downloadable"
+        },
+        {
+          "primitive": "EVIDENCE",
+          "meaning": "Firsthand experience, data, test, citation, case study, demonstration"
+        },
+        {
+          "primitive": "NEXT_ACTION",
+          "meaning": "Logical transition after the task is served"
+        },
+        {
+          "primitive": "SEARCH_APPEARANCE",
+          "meaning": "Web result, image, video, local result, product result, rich result, generative citation"
+        }
+      ],
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.4 Document objects"
+      }
+    },
+    {
+      "id": "graph-objects",
+      "name": "Graph objects",
+      "columns": [
+        "Primitive",
+        "Meaning"
+      ],
+      "members": [
+        {
+          "primitive": "NODE",
+          "meaning": "A page, entity, cluster, or asset in a graph"
+        },
+        {
+          "primitive": "EDGE",
+          "meaning": "A typed connection between nodes"
+        },
+        {
+          "primitive": "INTERNAL_LINK",
+          "meaning": "Crawlable relationship between owned pages"
+        },
+        {
+          "primitive": "EXTERNAL_LINK",
+          "meaning": "Citation or navigation to another site"
+        },
+        {
+          "primitive": "BACKLINK",
+          "meaning": "External edge pointing to an owned asset"
+        },
+        {
+          "primitive": "HUB",
+          "meaning": "Page that organizes a coherent topic or task family"
+        },
+        {
+          "primitive": "PATH",
+          "meaning": "Ordered sequence from entry to task completion or conversion"
+        },
+        {
+          "primitive": "ORPHAN",
+          "meaning": "Important page without a useful internal path"
+        },
+        {
+          "primitive": "CANONICAL_SET",
+          "meaning": "Duplicate or near-duplicate URLs represented by one preferred URL"
+        }
+      ],
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.5 Graph objects"
+      }
+    },
+    {
+      "id": "retrieval-states",
+      "name": "Retrieval states",
+      "columns": [
+        "Primitive"
+      ],
+      "members": [
+        {
+          "primitive": "DISCOVERED",
+          "step": 1
+        },
+        {
+          "primitive": "FETCHED",
+          "step": 2
+        },
+        {
+          "primitive": "RENDERED",
+          "step": 3
+        },
+        {
+          "primitive": "CANONICALIZED",
+          "step": 4
+        },
+        {
+          "primitive": "INDEXED",
+          "step": 5
+        },
+        {
+          "primitive": "RETRIEVED",
+          "step": 6
+        },
+        {
+          "primitive": "DISPLAYED",
+          "step": 7
+        },
+        {
+          "primitive": "VISITED",
+          "step": 8
+        },
+        {
+          "primitive": "COMPLETED",
+          "step": 9
+        },
+        {
+          "primitive": "CONVERTED",
+          "step": 10
+        }
+      ],
+      "source": {
+        "document": "01",
+        "file": "01-SEO-LAKA-GRAMMAR.md",
+        "heading": "3.6 Retrieval states"
+      }
+    }
+  ],
+  "relations": {
+    "heading": "4. Relation vocabulary",
+    "blocks": [
+      {
+        "lang": "text",
+        "code": "IS_A\nPART_OF\nHAS_ATTRIBUTE\nHAS_VALUE\nLOCATED_IN\nUSED_BY\nREQUIRES\nCAUSES\nPREVENTS\nSOLVES\nPRODUCES\nMEASURED_BY\nCOMPARED_WITH\nALTERNATIVE_TO\nCOMPATIBLE_WITH\nINCOMPATIBLE_WITH\nEVIDENCED_BY\nAUTHORED_BY\nOFFERED_BY\nPRECEDES\nFOLLOWS\nLINKS_TO\nSUPPORTS\nCANONICALIZES_TO\nCONVERTS_TO\nRETAINS\nEXCLUDES"
+      },
+      {
+        "lang": "text",
+        "code": "WEB_DESIGN IS_A PROFESSIONAL_SERVICE\nWEB_DESIGN HAS_ATTRIBUTE PRICE\nCALGARY_WEB_DESIGN LOCATED_IN CALGARY\nWCAG_AUDIT PREVENTS ACCESSIBILITY_RISK\nCASE_STUDY EVIDENCED_BY FIRST_PARTY_ANALYTICS\nCOST_GUIDE SUPPORTS CALGARY_WEB_DESIGN_SERVICE\nFILTER_URL CANONICALIZES_TO CATEGORY_URL\nORGANIC_SESSION CONVERTS_TO QUALIFIED_ASSESSMENT"
+      }
+    ],
+    "table": null,
+    "source": {
+      "document": "01",
+      "file": "01-SEO-LAKA-GRAMMAR.md",
+      "heading": "4. Relation vocabulary"
+    }
+  },
+  "retrieval_states": [
+    "DISCOVERED",
+    "FETCHED",
+    "RENDERED",
+    "CANONICALIZED",
+    "INDEXED",
+    "RETRIEVED",
+    "DISPLAYED",
+    "VISITED",
+    "COMPLETED",
+    "CONVERTED"
+  ],
+  "retrieval_state_detail": {
+    "id": "retrieval-states",
+    "name": "Retrieval states",
+    "columns": [
+      "Primitive"
+    ],
+    "members": [
+      {
+        "primitive": "DISCOVERED",
+        "step": 1
+      },
+      {
+        "primitive": "FETCHED",
+        "step": 2
+      },
+      {
+        "primitive": "RENDERED",
+        "step": 3
+      },
+      {
+        "primitive": "CANONICALIZED",
+        "step": 4
+      },
+      {
+        "primitive": "INDEXED",
+        "step": 5
+      },
+      {
+        "primitive": "RETRIEVED",
+        "step": 6
+      },
+      {
+        "primitive": "DISPLAYED",
+        "step": 7
+      },
+      {
+        "primitive": "VISITED",
+        "step": 8
+      },
+      {
+        "primitive": "COMPLETED",
+        "step": 9
+      },
+      {
+        "primitive": "CONVERTED",
+        "step": 10
+      }
+    ],
+    "source": {
+      "document": "01",
+      "file": "01-SEO-LAKA-GRAMMAR.md",
+      "heading": "3.6 Retrieval states"
+    }
+  }
+}

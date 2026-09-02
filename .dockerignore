@@ -1,0 +1,10 @@
+node_modules
+.git
+.env
+.env.*
+instructions
+instructions.zip
+scripts
+test
+*.md
+!README.md

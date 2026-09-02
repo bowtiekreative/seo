@@ -1,0 +1,2971 @@
+{
+  "system": "LAKA SEO Grammar System",
+  "version": "1.0",
+  "rule_count": 144,
+  "precedence": [
+    "safety_law_privacy_policy",
+    "user_value_and_accuracy",
+    "technical_eligibility_and_canonical_correctness",
+    "business_value_and_constraints",
+    "intent_fit_and_information_quality",
+    "measurement_and_learning",
+    "efficiency_and_scale",
+    "cosmetic_optimization"
+  ],
+  "rules": [
+    {
+      "id": "BIZ-001",
+      "area": "Business Value",
+      "title": "Define value before volume",
+      "if": "the program has no defined qualified business event",
+      "then": "define the event, qualification rule, owner, and estimated contribution value before optimizing traffic",
+      "else": "use the existing qualified event as the primary business outcome",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "measurement completeness",
+      "guardrails": "Do not substitute sessions or ranking counts for value.",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-002",
+      "area": "Business Value",
+      "title": "Traffic is diagnostic, not the north star",
+      "if": "organic traffic increases AND qualified conversions or margin do not",
+      "then": "diagnose intent quality, audience fit, next-action continuity, and attribution",
+      "else": "continue scaling only while downstream value and guardrails remain healthy",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "incremental organic contribution margin",
+      "guardrails": "lead quality, sales capacity, refund rate",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-003",
+      "area": "Business Value",
+      "title": "Separate forecasts from actuals",
+      "if": "search volume, CTR, conversion, or revenue is estimated",
+      "then": "label the output as a forecast and record every assumption",
+      "else": "use observed query, conversion, revenue, and margin data",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "forecast error",
+      "guardrails": "confidence interval, source age",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-004",
+      "area": "Business Value",
+      "title": "Respect fulfillment capacity",
+      "if": "expected qualified demand exceeds delivery or sales capacity",
+      "then": "prioritize higher-margin, higher-fit clusters OR increase capacity before expanding volume",
+      "else": "optimize for profitable demand growth",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "contribution margin per capacity unit",
+      "guardrails": "response time, customer satisfaction",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-005",
+      "area": "Business Value",
+      "title": "Model offers separately",
+      "if": "different offers have materially different audiences, margins, sales cycles, or qualification rules",
+      "then": "assign separate value models and cluster portfolios",
+      "else": "a shared model may be used with explicit segment dimensions",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "value by offer",
+      "guardrails": "cross-offer cannibalization",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-006",
+      "area": "Business Value",
+      "title": "Count assisted value carefully",
+      "if": "an informational asset rarely receives last-click conversions but appears in qualified journeys",
+      "then": "measure assisted progression, returning users, branded demand, and controlled lift",
+      "else": "judge the asset on direct value and task completion",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "assisted contribution value",
+      "guardrails": "double counting",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-007",
+      "area": "Business Value",
+      "title": "Split branded and non-branded demand",
+      "if": "brand familiarity materially changes intent, CTR, or conversion",
+      "then": "report branded and non-branded performance separately",
+      "else": "aggregate only for top-level totals",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "value-weighted non-brand clicks",
+      "guardrails": "brand campaign effects",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-008",
+      "area": "Business Value",
+      "title": "Include retention and expansion",
+      "if": "organic search serves existing customers, support, renewal, or repeat purchase tasks",
+      "then": "assign retention events and lifetime-value effects",
+      "else": "use acquisition outcomes for new-user clusters",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "organic-assisted retained margin",
+      "guardrails": "support deflection quality, churn",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-009",
+      "area": "Business Value",
+      "title": "Raise evidence thresholds for high stakes",
+      "if": "the topic can materially affect health, money, safety, legal rights, or major decisions",
+      "then": "require qualified review, primary sources, explicit limitations, and stronger maintenance",
+      "else": "apply the normal evidence standard",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "verified task success",
+      "guardrails": "harm, complaint, correction rate",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-010",
+      "area": "Business Value",
+      "title": "Resolve competing goals explicitly",
+      "if": "traffic, lead quality, margin, brand, retention, and learning objectives conflict",
+      "then": "name one primary objective and classify the others as constraints or secondary outcomes",
+      "else": "use the single aligned objective",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "objective clarity",
+      "guardrails": "unintended metric trade-offs",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-011",
+      "area": "Business Value",
+      "title": "Allocate by marginal value",
+      "if": "multiple valid initiatives compete for limited resources",
+      "then": "rank them by expected incremental value divided by effort, risk, maintenance, and time to learning",
+      "else": "execute the only valid initiative",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "realized value per implementation hour",
+      "guardrails": "portfolio concentration risk",
+      "rationale": ""
+    },
+    {
+      "id": "BIZ-012",
+      "area": "Business Value",
+      "title": "Use economic stop rules",
+      "if": "expected remaining incremental value is below expected cost OR risk exceeds tolerance",
+      "then": "stop, defer, retire, or redesign the initiative",
+      "else": "continue to the next defined review point",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Paradigm"
+      ],
+      "primary_metric": "net incremental value",
+      "guardrails": "sunk-cost bias",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-001",
+      "area": "Audience and Journey",
+      "title": "Require an audience-task pair",
+      "if": "a candidate query cannot be mapped to a plausible audience and task",
+      "then": "classify it as uncertain and gather evidence",
+      "else": "attach the audience, condition, task, and journey state",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "classified-demand share",
+      "guardrails": "forced persona assumptions",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-002",
+      "area": "Audience and Journey",
+      "title": "Treat funnel modifiers as heuristics",
+      "if": "a word such as how, best, review, price, or buy suggests a journey stage",
+      "then": "use it as a hypothesis and verify the actual task and result set",
+      "else": "infer stage from the full query, context, and behavior",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "intent-classification accuracy",
+      "guardrails": "stage stereotyping",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-003",
+      "area": "Audience and Journey",
+      "title": "Model the funnel as a graph",
+      "if": "journey analysis assumes every user enters at awareness and moves linearly",
+      "then": "allow entry, exit, return, skip, and backward transitions",
+      "else": "retain observed journey paths",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "state-transition rate",
+      "guardrails": "attribution inflation",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-004",
+      "area": "Audience and Journey",
+      "title": "Use adjacent next actions",
+      "if": "the proposed CTA requires substantially more trust or commitment than the current task supports",
+      "then": "offer an adjacent useful action OR add the proof needed to justify the transition",
+      "else": "measure the direct transition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "next-state transition rate",
+      "guardrails": "bounce, complaint, unsubscribe",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-005",
+      "area": "Audience and Journey",
+      "title": "Split materially different audience needs",
+      "if": "two audience segments require different evidence, terminology, constraints, or offers",
+      "then": "create distinct sections, experiences, or canonical assets based on task compatibility",
+      "else": "serve them in one asset",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "qualified conversion by segment",
+      "guardrails": "duplication, maintenance",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-006",
+      "area": "Audience and Journey",
+      "title": "Include accessibility conditions",
+      "if": "the task depends on visual, motor, auditory, cognitive, or assistive-technology access",
+      "then": "design the format, navigation, media, and controls for those conditions",
+      "else": "apply baseline accessible design to all assets",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "task completion by accessibility condition",
+      "guardrails": "keyboard traps, missing alternatives",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-007",
+      "area": "Audience and Journey",
+      "title": "Require real local distinctness",
+      "if": "a geography modifier is proposed as a separate page",
+      "then": "require actual service eligibility, local evidence, local differences, and maintainable data",
+      "else": "consolidate into a broader service-area asset",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "qualified local conversions",
+      "guardrails": "doorway-page risk, inaccurate claims",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-008",
+      "area": "Audience and Journey",
+      "title": "Localize, do not merely translate",
+      "if": "language or country versions differ in terminology, regulation, inventory, currency, or user expectations",
+      "then": "localize content and targeting signals",
+      "else": "use a shared translation only where the task and facts truly remain equivalent",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "correct-locale conversion",
+      "guardrails": "translation quality, hreflang errors",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-009",
+      "area": "Audience and Journey",
+      "title": "Account for device context",
+      "if": "device changes task conditions or interface needs",
+      "then": "adapt layout, media, interaction, and next action while preserving canonical meaning",
+      "else": "use the common responsive experience",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "task completion by device",
+      "guardrails": "content parity",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-010",
+      "area": "Audience and Journey",
+      "title": "Match evidence to urgency",
+      "if": "the user has high urgency or high perceived risk",
+      "then": "front-load direct answers, scope, availability, proof, and safe next actions",
+      "else": "use the standard information order",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "time to task completion",
+      "guardrails": "misleading urgency",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-011",
+      "area": "Audience and Journey",
+      "title": "Explicitly exclude wrong audiences",
+      "if": "queries attract jobs, students, freebie seekers, unsupported geographies, or unrelated senses",
+      "then": "add exclusions to research, paid data, reporting, and content positioning",
+      "else": "retain the query in its valid cluster",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Minor"
+      ],
+      "primary_metric": "irrelevant-impression and unqualified-lead rate",
+      "guardrails": "accidental exclusion of valuable demand",
+      "rationale": ""
+    },
+    {
+      "id": "AUD-012",
+      "area": "Audience and Journey",
+      "title": "Build post-purchase search pathways",
+      "if": "customers search for setup, use, troubleshooting, maintenance, renewal, or complementary products",
+      "then": "create support and retention task clusters with appropriate next actions",
+      "else": "focus the cluster on acquisition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "retention and support value",
+      "guardrails": "support accuracy",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-001",
+      "area": "Semantic Demand",
+      "title": "Start from parent concepts",
+      "if": "an offer lacks a mapped semantic territory",
+      "then": "identify parent concepts, neighboring categories, and business boundaries",
+      "else": "extend the existing concept graph",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "concept-map coverage",
+      "guardrails": "scope drift",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-002",
+      "area": "Semantic Demand",
+      "title": "Expand through subtypes",
+      "if": "a parent concept contains meaningful narrower types with distinct tasks",
+      "then": "create subtype clusters and evaluate them independently",
+      "else": "keep subtype terms as sections or variants",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "subtype demand coverage",
+      "guardrails": "thin fragmentation",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-003",
+      "area": "Semantic Demand",
+      "title": "Normalize synonyms and paraphrases",
+      "if": "different phrases express the same sense and dominant task",
+      "then": "map them to one query cluster and one intended canonical asset",
+      "else": "investigate whether the task differs",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "XOR"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "cluster cohesion",
+      "guardrails": "missed senses",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-004",
+      "area": "Semantic Demand",
+      "title": "Disambiguate homonyms and polysemy",
+      "if": "the same wording can refer to different concepts, entities, or tasks",
+      "then": "create sense labels and exclusions before clustering",
+      "else": "use the unambiguous concept",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "wrong-sense rate",
+      "guardrails": "query misclassification",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-005",
+      "area": "Semantic Demand",
+      "title": "Model modifiers as facets",
+      "if": "terms vary by price, material, size, audience, platform, location, time, or other attributes",
+      "then": "represent them as attribute-value pairs and test whether they create a distinct task",
+      "else": "treat them as lexical variants",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "facet value and distinctness",
+      "guardrails": "facet explosion",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-006",
+      "area": "Semantic Demand",
+      "title": "Use co-occurrence as context",
+      "if": "a term commonly appears near the topic but is not itself the user’s target",
+      "then": "use it only where it explains an entity, relation, attribute, or evidence need",
+      "else": "exclude it from mandatory coverage",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "task completeness",
+      "guardrails": "unnatural term insertion",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-007",
+      "area": "Semantic Demand",
+      "title": "Map entities and relations",
+      "if": "the task depends on named things and how they connect",
+      "then": "record entity types and typed relations, then express those relations visibly",
+      "else": "use concept-only structure",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "entity-relation coverage",
+      "guardrails": "entity ambiguity",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-008",
+      "area": "Semantic Demand",
+      "title": "Map query fan-out without page fan-out",
+      "if": "one broad task implies several supporting questions",
+      "then": "map the questions as sections, evidence needs, or distinct adjacent tasks",
+      "else": "do not create a separate page for every wording variation",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "fan-out task coverage",
+      "guardrails": "scaled-content duplication",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-009",
+      "area": "Semantic Demand",
+      "title": "Triangulate demand evidence",
+      "if": "a candidate appears in only one tool or source",
+      "then": "seek corroboration from first-party data, users, result sets, competitors, or sales/support evidence",
+      "else": "increase confidence when independent sources agree",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "demand-confidence score",
+      "guardrails": "tool bias",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-010",
+      "area": "Semantic Demand",
+      "title": "Do not equate zero tool volume with zero demand",
+      "if": "a query has low or zero reported volume but appears in first-party or customer evidence",
+      "then": "retain it as a low-volume or emerging candidate and measure the cluster",
+      "else": "deprioritize only after value and evidence review",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "observed cluster demand",
+      "guardrails": "anecdotal overreach",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-011",
+      "area": "Semantic Demand",
+      "title": "Attach time state",
+      "if": "facts, prices, availability, standards, laws, events, or recommendations can change",
+      "then": "assign freshness requirements and update triggers",
+      "else": "classify the asset as stable evergreen",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "freshness compliance",
+      "guardrails": "stale claims",
+      "rationale": ""
+    },
+    {
+      "id": "SEM-012",
+      "area": "Semantic Demand",
+      "title": "Model emerging demand separately",
+      "if": "a new technology, regulation, event, or behavior has weak historical search data but strong causal evidence",
+      "then": "create an experimental demand thesis with explicit uncertainty",
+      "else": "use normal historical prioritization",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Paradigm"
+      ],
+      "primary_metric": "learning-adjusted emerging-demand value",
+      "guardrails": "trend chasing",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-001",
+      "area": "Clustering and Canonical Ownership",
+      "title": "One dominant intent, one owner",
+      "if": "a dominant intent cluster is approved",
+      "then": "assign exactly one intended canonical URL",
+      "else": "keep the cluster in research",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "EXACTLY_ONE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "canonical ownership completeness",
+      "guardrails": "multiple owners",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-002",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Merge same-task candidates",
+      "if": "sense, task, answer structure, result class, and next action are compatible",
+      "then": "merge candidates into one cluster",
+      "else": "evaluate split conditions",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "demand coverage per canonical asset",
+      "guardrails": "over-broad pages",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-003",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Split different tasks",
+      "if": "queries share vocabulary but require different completion conditions or document forms",
+      "then": "create separate clusters and page roles",
+      "else": "keep them together",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "intent purity",
+      "guardrails": "duplicated introductions",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-004",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Use result overlap as evidence, not law",
+      "if": "current top results overlap strongly for two queries",
+      "then": "increase merge confidence but still inspect task and business context",
+      "else": "do not force a split solely because result overlap is low",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "cluster validation accuracy",
+      "guardrails": "SERP volatility",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-005",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Detect cannibalization by behavior",
+      "if": "multiple owned URLs receive the same cluster’s impressions with unstable dominance or divided value",
+      "then": "inspect intent, links, conversion, and canonical ownership",
+      "else": "allow multiple URLs when they serve genuinely different tasks",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "dominant URL share and URL entropy",
+      "guardrails": "false-positive cannibalization",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-006",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Merge with migration discipline",
+      "if": "two pages are redundant and one combined page is superior",
+      "then": "merge best information, select the winner, redirect the loser, and update links/sitemaps",
+      "else": "reposition or retain both",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "consolidated value and retained demand",
+      "guardrails": "migration loss",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-007",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Reposition a useful weaker page",
+      "if": "a weaker page has independent value but overlaps the stronger page’s task",
+      "then": "change its dominant intent and connect it as a supporting asset",
+      "else": "merge it",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "distinct-cluster value",
+      "guardrails": "residual overlap",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-008",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Inspect equity before deletion",
+      "if": "a page appears useless or redundant",
+      "then": "check links, traffic, conversions, references, and dependencies before delete/noindex",
+      "else": "retain or consolidate the page",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "value preserved after retirement",
+      "guardrails": "broken dependencies",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-009",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Align canonical signals",
+      "if": "duplicate or parameter URLs must remain accessible",
+      "then": "align canonical annotations, internal links, sitemap entries, redirects, and content signals",
+      "else": "self-canonicalize the unique page",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "declared-selected canonical agreement",
+      "guardrails": "mixed signals",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-010",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Protect established URLs",
+      "if": "an older URL has links, traffic, or history and the only proposed improvement is a prettier slug",
+      "then": "keep the URL unless expected benefit clearly exceeds migration risk",
+      "else": "optimize the new URL before launch",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "post-change value retention",
+      "guardrails": "redirect chains",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-011",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Keep lexical variants together",
+      "if": "differences are spelling, word order, pluralization, abbreviation, or stemming without task change",
+      "then": "include natural variants in one asset and reporting cluster",
+      "else": "treat materially different senses separately",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "variant coverage",
+      "guardrails": "keyword stuffing",
+      "rationale": ""
+    },
+    {
+      "id": "CLU-012",
+      "area": "Clustering and Canonical Ownership",
+      "title": "Test uncertain cluster boundaries",
+      "if": "merge/split evidence is inconclusive",
+      "then": "assign a provisional owner, record uncertainty, and observe query-to-URL behavior before scaling",
+      "else": "finalize the cluster",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "UNTIL"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "cluster stability",
+      "guardrails": "premature page multiplication",
+      "rationale": ""
+    },
+    {
+      "id": "CON-001",
+      "area": "Content, Format, and Evidence",
+      "title": "Select format from task",
+      "if": "the dominant task is known",
+      "then": "choose a format that completes that task: guide, table, calculator, map, diagnostic, template, video, or transaction page",
+      "else": "research the task before drafting",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "task completion rate",
+      "guardrails": "format novelty without utility",
+      "rationale": ""
+    },
+    {
+      "id": "CON-002",
+      "area": "Content, Format, and Evidence",
+      "title": "Answer early",
+      "if": "a user can benefit from a concise direct answer",
+      "then": "provide it near the beginning and then support it",
+      "else": "state the path to the answer and necessary prerequisites",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "time to first useful answer",
+      "guardrails": "oversimplification",
+      "rationale": ""
+    },
+    {
+      "id": "CON-003",
+      "area": "Content, Format, and Evidence",
+      "title": "Require information advantage",
+      "if": "the proposed asset only restates widely available material",
+      "then": "add original experience, data, testing, utility, synthesis, local proof, or decision support",
+      "else": "proceed with the defensible advantage",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Paradigm"
+      ],
+      "primary_metric": "information-advantage score",
+      "guardrails": "unsupported originality claims",
+      "rationale": ""
+    },
+    {
+      "id": "CON-004",
+      "area": "Content, Format, and Evidence",
+      "title": "Prefer firsthand evidence where relevant",
+      "if": "the task involves reviews, demonstrations, processes, products, or lived outcomes",
+      "then": "show what was actually tested, observed, used, or built",
+      "else": "use the best available primary evidence",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "firsthand-evidence coverage",
+      "guardrails": "conflicts of interest",
+      "rationale": ""
+    },
+    {
+      "id": "CON-005",
+      "area": "Content, Format, and Evidence",
+      "title": "Make evidence visible",
+      "if": "a claim depends on a source, test, credential, or dataset",
+      "then": "place the supporting evidence where the user can inspect it",
+      "else": "qualify the claim as opinion or uncertainty",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "verifiable-claim rate",
+      "guardrails": "citation mismatch",
+      "rationale": ""
+    },
+    {
+      "id": "CON-006",
+      "area": "Content, Format, and Evidence",
+      "title": "State limitations",
+      "if": "evidence has uncertainty, sample limits, conflicts, exceptions, or changing conditions",
+      "then": "state limitations and applicability boundaries",
+      "else": "present the stable conclusion",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "correction and dispute rate",
+      "guardrails": "loss of nuance",
+      "rationale": ""
+    },
+    {
+      "id": "CON-007",
+      "area": "Content, Format, and Evidence",
+      "title": "Avoid arbitrary length targets",
+      "if": "a word count is proposed without a task-based reason",
+      "then": "define completeness by required questions, evidence, and decision support",
+      "else": "use length as a production estimate only",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "task completeness per reading time",
+      "guardrails": "content bloat",
+      "rationale": ""
+    },
+    {
+      "id": "CON-008",
+      "area": "Content, Format, and Evidence",
+      "title": "Govern AI-assisted content",
+      "if": "AI assists research, drafting, transformation, or scale",
+      "then": "require factual verification, original value, editorial ownership, and policy compliance",
+      "else": "use the same quality controls for human-only work",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "verified publication quality",
+      "guardrails": "hallucination, scaled abuse",
+      "rationale": ""
+    },
+    {
+      "id": "CON-009",
+      "area": "Content, Format, and Evidence",
+      "title": "Require row-level uniqueness at scale",
+      "if": "a template generates pages from a dataset",
+      "then": "require accurate unique data, distinct user utility, and a valid canonical task for each row",
+      "else": "consolidate rows into filters, tables, or broader assets",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "unique-value coverage per generated page",
+      "guardrails": "doorway and thin-page risk",
+      "rationale": ""
+    },
+    {
+      "id": "CON-010",
+      "area": "Content, Format, and Evidence",
+      "title": "Use media when it improves the task",
+      "if": "an image, diagram, video, audio, or interactive can explain or demonstrate more effectively",
+      "then": "include accessible, relevant media and measure its use",
+      "else": "keep the experience text-first where sufficient",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "media-assisted task completion",
+      "guardrails": "performance, accessibility",
+      "rationale": ""
+    },
+    {
+      "id": "CON-011",
+      "area": "Content, Format, and Evidence",
+      "title": "Define refresh triggers",
+      "if": "content depends on changing data or conditions",
+      "then": "assign owner, source, review cadence, and event-triggered updates",
+      "else": "review only when performance or business context changes",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "freshness SLA",
+      "guardrails": "maintenance debt",
+      "rationale": ""
+    },
+    {
+      "id": "CON-012",
+      "area": "Content, Format, and Evidence",
+      "title": "Support commercial pages with useful assets",
+      "if": "a commercial page is important but difficult to cite or insufficient for research-stage users",
+      "then": "create genuinely useful supporting evidence, tools, comparisons, or guides",
+      "else": "improve the commercial page directly",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "assisted commercial value",
+      "guardrails": "manufactured link bait",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-001",
+      "area": "On-page and Search Appearance",
+      "title": "Align the title with the task",
+      "if": "the title does not clearly identify the page’s dominant task or value",
+      "then": "rewrite it truthfully for relevance and useful differentiation",
+      "else": "retain it and monitor",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "position-adjusted CTR",
+      "guardrails": "qualified conversion rate",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-002",
+      "area": "On-page and Search Appearance",
+      "title": "Use unique titles for unique canonicals",
+      "if": "two intended indexable canonical pages use materially duplicate titles",
+      "then": "differentiate titles according to their distinct tasks",
+      "else": "allow shared patterns with unique identifying content",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "duplicate-title rate",
+      "guardrails": "template inconsistency",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-003",
+      "area": "On-page and Search Appearance",
+      "title": "Measure title changes causally",
+      "if": "a title or snippet is changed",
+      "then": "record change date, exposed queries/pages, expected mechanism, and CTR guardrails",
+      "else": "do not claim impact",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "CTR residual",
+      "guardrails": "ranking, conversion, seasonality",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-004",
+      "area": "On-page and Search Appearance",
+      "title": "Write descriptions for decision support",
+      "if": "the result snippet can help users determine relevance",
+      "then": "write a concise truthful proposition with task, benefit, and distinguishing detail",
+      "else": "allow the search engine to select contextual text",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "organic CTR",
+      "guardrails": "snippet mismatch",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-005",
+      "area": "On-page and Search Appearance",
+      "title": "Use headings as answer architecture",
+      "if": "the task has stages, criteria, subquestions, or choices",
+      "then": "structure headings around those information functions",
+      "else": "use a simple hierarchy",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "section-level task coverage",
+      "guardrails": "heading keyword stuffing",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-006",
+      "area": "On-page and Search Appearance",
+      "title": "Write natural body language",
+      "if": "required concepts, entities, attributes, and relations are missing",
+      "then": "add them where they improve the explanation",
+      "else": "do not insert terms solely for coverage scores",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "semantic task completeness",
+      "guardrails": "readability",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-007",
+      "area": "On-page and Search Appearance",
+      "title": "Reject keyword stuffing",
+      "if": "repetition exists primarily to influence ranking rather than aid comprehension",
+      "then": "remove or rewrite it and preserve only natural references",
+      "else": "retain meaningful repetition",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "editorial quality",
+      "guardrails": "loss of clarity",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-008",
+      "area": "On-page and Search Appearance",
+      "title": "Describe meaningful images",
+      "if": "an image communicates information or functions as a link/control",
+      "then": "provide appropriate descriptive alternative text",
+      "else": "use empty alternative text for purely decorative images",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "accessible-media coverage",
+      "guardrails": "redundant alt text",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-009",
+      "area": "On-page and Search Appearance",
+      "title": "Optimize new URLs, protect old ones",
+      "if": "a page has not launched",
+      "then": "use a concise descriptive stable URL",
+      "else": "avoid changing an established URL without a migration case",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "URL stability and migration retention",
+      "guardrails": "redirect chains",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-010",
+      "area": "On-page and Search Appearance",
+      "title": "Use structured data only when applicable",
+      "if": "a supported structured-data type accurately represents visible page content",
+      "then": "implement and validate it",
+      "else": "do not add irrelevant or hidden markup",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "valid eligible items",
+      "guardrails": "manual action, markup drift",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-011",
+      "area": "On-page and Search Appearance",
+      "title": "Measure rich-result realization",
+      "if": "structured data validates successfully",
+      "then": "measure actual search appearance, impressions, CTR, and value",
+      "else": "debug eligibility or accept that display is not guaranteed",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "rich-result appearance and value",
+      "guardrails": "misattribution",
+      "rationale": ""
+    },
+    {
+      "id": "ONP-012",
+      "area": "On-page and Search Appearance",
+      "title": "Adjust CTR expectations",
+      "if": "CTR is evaluated",
+      "then": "control for position, device, country, brand status, query class, and search appearance",
+      "else": "do not use a universal CTR threshold",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "CTR residual",
+      "guardrails": "low sample size",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-001",
+      "area": "Internal Graph and Architecture",
+      "title": "Link every priority page",
+      "if": "a page is intended to receive organic visibility",
+      "then": "ensure at least one crawlable contextual internal link points to it",
+      "else": "remove it from the priority/index set if it has no valid role",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AT_LEAST"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Minor"
+      ],
+      "primary_metric": "priority-page orphan rate",
+      "guardrails": "forced links",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-002",
+      "area": "Internal Graph and Architecture",
+      "title": "Use descriptive anchors",
+      "if": "anchor text is generic and a natural descriptive label is available",
+      "then": "replace it with concise context-setting text",
+      "else": "retain the generic control only when interface convention requires it",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "descriptive-anchor coverage",
+      "guardrails": "over-optimization",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-003",
+      "area": "Internal Graph and Architecture",
+      "title": "Require user context for links",
+      "if": "a proposed link does not help the reader understand, compare, verify, or take the next step",
+      "then": "do not add it",
+      "else": "add it in the relevant sentence or interface",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "useful internal-link interaction",
+      "guardrails": "link clutter",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-004",
+      "area": "Internal Graph and Architecture",
+      "title": "Create hubs for navigation needs",
+      "if": "a coherent task family requires users to choose among multiple paths",
+      "then": "create or improve a hub with clear categories and routes",
+      "else": "connect assets contextually without a dedicated hub",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "hub-assisted discovery and conversion",
+      "guardrails": "empty taxonomy pages",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-005",
+      "area": "Internal Graph and Architecture",
+      "title": "Validate supporting assets",
+      "if": "an adjacent question has independent demand, a complete answer, and a useful relationship to a core asset",
+      "then": "create a supporting asset and connect it",
+      "else": "include it as a section or FAQ",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "supporting-asset assisted value",
+      "guardrails": "thin content",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-006",
+      "area": "Internal Graph and Architecture",
+      "title": "Reduce excessive depth",
+      "if": "important pages are difficult to reach through internal navigation",
+      "then": "add meaningful paths, hubs, or template links",
+      "else": "retain depth for low-value or intentionally isolated pages",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "priority-page click depth",
+      "guardrails": "navigation overload",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-007",
+      "area": "Internal Graph and Architecture",
+      "title": "Use strong internal sources deliberately",
+      "if": "an authoritative owned page can naturally support a high-value target",
+      "then": "add a contextual link where it benefits the reader",
+      "else": "do not insert an unrelated link solely to move authority",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor"
+      ],
+      "primary_metric": "target visibility lift",
+      "guardrails": "source-page task disruption",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-008",
+      "area": "Internal Graph and Architecture",
+      "title": "Keep topical communities coherent",
+      "if": "a link crosses unrelated topic communities without user need",
+      "then": "remove or avoid it",
+      "else": "retain cross-topic links that represent a real prerequisite, comparison, or journey edge",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "topical edge precision",
+      "guardrails": "over-siloing",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-009",
+      "area": "Internal Graph and Architecture",
+      "title": "Make links crawlable",
+      "if": "navigation or internal discovery relies on nonstandard scripted interactions",
+      "then": "expose crawlable anchors with destinations and validate rendered HTML",
+      "else": "retain standard crawlable links",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "crawlable-link coverage",
+      "guardrails": "duplicate navigation",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-010",
+      "area": "Internal Graph and Architecture",
+      "title": "Concentrate, do not hoard",
+      "if": "many low-value pages dilute attention and internal graph flow",
+      "then": "consolidate, noindex, archive, or demote according to user and business value",
+      "else": "retain useful nodes",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "value-weighted index and graph concentration",
+      "guardrails": "loss of long-tail value",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-011",
+      "area": "Internal Graph and Architecture",
+      "title": "Update the graph after migrations",
+      "if": "a page is merged, redirected, renamed, or retired",
+      "then": "update internal links, navigation, canonicals, and sitemaps to the final destination",
+      "else": "leave the graph unchanged",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "direct-to-final-link rate",
+      "guardrails": "redirect loops",
+      "rationale": ""
+    },
+    {
+      "id": "GRF-012",
+      "area": "Internal Graph and Architecture",
+      "title": "Measure paths, not link counts alone",
+      "if": "internal linking is evaluated",
+      "then": "measure discovery, depth, target visibility, task progression, and conversion paths",
+      "else": "use raw link counts only as diagnostics",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "graph-assisted value",
+      "guardrails": "correlation mistaken for causation",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-001",
+      "area": "External Authority and Earned Evidence",
+      "title": "Evaluate link quality multidimensionally",
+      "if": "an external link opportunity is considered",
+      "then": "evaluate relevance, editorial independence, source credibility, placement, uniqueness, and persistence",
+      "else": "reject or deprioritize the opportunity",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "qualified retained referring domains",
+      "guardrails": "spam and paid-link risk",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-002",
+      "area": "External Authority and Earned Evidence",
+      "title": "Create a linkable reason",
+      "if": "outreach asks for attention without a concrete user benefit",
+      "then": "build or identify data, utility, evidence, correction, visualization, or unique reference value",
+      "else": "lead with the existing value",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major",
+        "Paradigm"
+      ],
+      "primary_metric": "placement rate",
+      "guardrails": "misleading claims",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-003",
+      "area": "External Authority and Earned Evidence",
+      "title": "Support difficult commercial targets",
+      "if": "the target commercial page is unlikely to earn independent citations",
+      "then": "earn links to a relevant useful asset and connect it to the target OR improve the target’s reference value",
+      "else": "promote the target directly",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "assisted target-page visibility",
+      "guardrails": "manipulative intermediary pages",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-004",
+      "area": "External Authority and Earned Evidence",
+      "title": "Reject manipulative placements",
+      "if": "a link requires deception, irrelevant insertion, undisclosed payment, or policy violation",
+      "then": "reject it",
+      "else": "proceed with transparent editorial or appropriately attributed placement",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "policy-compliant placement rate",
+      "guardrails": "manual actions, reputation",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-005",
+      "area": "External Authority and Earned Evidence",
+      "title": "Prefer unique relevant domains",
+      "if": "many links come repeatedly from the same source while relevant independent sources are available",
+      "then": "diversify outreach toward unique relevant domains",
+      "else": "deepen the useful relationship without treating every link as independent authority",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "qualified unique referring domains",
+      "guardrails": "diversity for its own sake",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-006",
+      "area": "External Authority and Earned Evidence",
+      "title": "Prefer contextual editorial placement",
+      "if": "a link can appear in a useful body context or only in a repeated footer/sidebar",
+      "then": "prefer the contextual editorial placement",
+      "else": "treat repeated placement as lower-confidence evidence",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "contextual placement share",
+      "guardrails": "sponsorship disclosure",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-007",
+      "area": "External Authority and Earned Evidence",
+      "title": "Use tool metrics as proxies",
+      "if": "DA, DR, UR, PA, traffic estimates, or difficulty scores are used",
+      "then": "treat them as vendor-specific diagnostics and compare within one system",
+      "else": "use direct observations where available",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "proxy-to-outcome calibration",
+      "guardrails": "cross-tool comparisons",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-008",
+      "area": "External Authority and Earned Evidence",
+      "title": "Investigate lost evidence",
+      "if": "a valuable relevant link or mention disappears",
+      "then": "classify cause and recover only when the source relationship and user value remain valid",
+      "else": "record normal churn",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "valuable-link recovery rate",
+      "guardrails": "harassing outreach",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-009",
+      "area": "External Authority and Earned Evidence",
+      "title": "Measure brand demand effects",
+      "if": "earned media or authoritative mentions may increase awareness without direct referral clicks",
+      "then": "track branded queries, direct visits, assisted conversions, and target visibility",
+      "else": "measure direct referral and link effects",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "incremental branded demand",
+      "guardrails": "campaign overlap",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-010",
+      "area": "External Authority and Earned Evidence",
+      "title": "Segment outreach by relationship",
+      "if": "prospects differ by audience, reason to care, or editorial context",
+      "then": "create distinct outreach propositions and evidence packages",
+      "else": "use one aligned proposition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "positive reply and placement rate by segment",
+      "guardrails": "automation quality",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-011",
+      "area": "External Authority and Earned Evidence",
+      "title": "Compound original research",
+      "if": "original data or a benchmark performs well",
+      "then": "refresh it, expose methodology, create reusable views, and connect related clusters",
+      "else": "treat it as a one-time asset",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "research-attributed links and value",
+      "guardrails": "methodology drift",
+      "rationale": ""
+    },
+    {
+      "id": "AUT-012",
+      "area": "External Authority and Earned Evidence",
+      "title": "Judge authority by target outcomes",
+      "if": "links or mentions increase but the target cluster does not improve",
+      "then": "inspect relevance, target selection, indexing, content fit, and time lag",
+      "else": "continue scaling the validated authority mechanism",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Major"
+      ],
+      "primary_metric": "incremental target-cluster visibility and value",
+      "guardrails": "over-attribution",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-001",
+      "area": "Technical Eligibility",
+      "title": "Require public accessibility",
+      "if": "a page is intended for search visibility",
+      "then": "ensure users and permitted crawlers can request its essential content",
+      "else": "exclude it intentionally",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "accessible-priority-URL rate",
+      "guardrails": "private or sensitive exposure",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-002",
+      "area": "Technical Eligibility",
+      "title": "Use correct response states",
+      "if": "a canonical page is healthy and available",
+      "then": "return a successful response; use redirects, not-found, or server errors only for their true states",
+      "else": "repair the response logic",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "correct-status rate",
+      "guardrails": "soft 404s",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-003",
+      "area": "Technical Eligibility",
+      "title": "Validate rendered main content",
+      "if": "essential content or links depend on JavaScript",
+      "then": "inspect rendered output and ensure resources are accessible",
+      "else": "use the server-delivered content",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "rendered-content parity",
+      "guardrails": "hydration and blocked-resource errors",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-004",
+      "area": "Technical Eligibility",
+      "title": "Separate crawling from indexing controls",
+      "if": "the goal is to keep a page out of search results",
+      "then": "use an appropriate noindex, authentication, removal, redirect, or deletion method",
+      "else": "use robots.txt only to manage crawler requests, not as a deindex guarantee",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "intended index-state accuracy",
+      "guardrails": "content leakage",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-005",
+      "area": "Technical Eligibility",
+      "title": "Maintain canonical coherence",
+      "if": "multiple URLs represent substantially the same content",
+      "then": "select a preferred URL and align canonical, redirects where appropriate, links, and sitemap signals",
+      "else": "self-canonicalize the unique asset where useful",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "canonical agreement",
+      "guardrails": "canonical chains",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-006",
+      "area": "Technical Eligibility",
+      "title": "Keep sitemaps canonical and current",
+      "if": "a URL is important, canonical, and intended for indexing",
+      "then": "include its clean URL and accurate modification state in the sitemap",
+      "else": "exclude noncanonical, redirected, error, or intentionally nonindexed URLs",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "valid canonical sitemap coverage",
+      "guardrails": "misleading lastmod",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-007",
+      "area": "Technical Eligibility",
+      "title": "Redirect to the closest valid successor",
+      "if": "a URL permanently moves or is consolidated",
+      "then": "redirect directly to the most relevant final destination and update internal references",
+      "else": "serve the existing URL",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "direct permanent-redirect accuracy",
+      "guardrails": "chains, loops, irrelevant redirects",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-008",
+      "area": "Technical Eligibility",
+      "title": "Treat not-found pages intentionally",
+      "if": "a resource no longer exists and has no valid replacement",
+      "then": "return a real not-found state with helpful navigation",
+      "else": "redirect only when a genuine equivalent exists",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "soft-404 rate",
+      "guardrails": "lost valuable links",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-009",
+      "area": "Technical Eligibility",
+      "title": "Control faceted and parameter volume",
+      "if": "filters, sorting, search, tracking, or session parameters create many near-duplicate URLs",
+      "then": "define crawl, canonical, link, and index rules by facet value",
+      "else": "allow unique valuable combinations",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "valuable-crawl share",
+      "guardrails": "index explosion",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-010",
+      "area": "Technical Eligibility",
+      "title": "Preserve content parity",
+      "if": "mobile, desktop, locale, or rendered versions differ",
+      "then": "ensure essential content, metadata, structured data, and links remain equivalent where they should",
+      "else": "document intentional differences",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "version parity",
+      "guardrails": "cloaking-like mismatches",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-011",
+      "area": "Technical Eligibility",
+      "title": "Prioritize real-user performance",
+      "if": "field performance or business outcomes show latency, instability, or interaction problems",
+      "then": "fix the highest-exposure causes and measure Core Web Vitals plus conversion/task outcomes",
+      "else": "repair only obvious low-cost issues and avoid score chasing",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "good-CWV exposure and task value",
+      "guardrails": "functionality regression",
+      "rationale": ""
+    },
+    {
+      "id": "TEC-012",
+      "area": "Technical Eligibility",
+      "title": "Scale crawl work to site size and change rate",
+      "if": "the site is very large, rapidly changing, or shows crawl/index waste",
+      "then": "invest in crawl-path, logs, facets, and index-quality optimization",
+      "else": "use a lighter periodic technical audit",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "valuable indexed URLs per crawl/resource unit",
+      "guardrails": "technical work without business case",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-001",
+      "area": "Conversion and Experience",
+      "title": "Complete the search task before selling",
+      "if": "the page asks for conversion before delivering the promised answer",
+      "then": "front-load useful task completion and place the offer at a logical transition",
+      "else": "retain the aligned conversion path",
+      "operators": [
+        "IF",
+        "BEFORE",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "task completion then conversion",
+      "guardrails": "reduced qualified action",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-002",
+      "area": "Conversion and Experience",
+      "title": "Match nudge to journey state",
+      "if": "the next action is not adjacent to the user’s current state",
+      "then": "choose a lower-friction or more relevant action",
+      "else": "measure the existing transition",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "next-state conversion rate",
+      "guardrails": "lead quality",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-003",
+      "area": "Conversion and Experience",
+      "title": "Optimize speed for outcomes",
+      "if": "slow or unstable experience correlates with abandonment or conversion loss",
+      "then": "fix the responsible bottleneck and validate field/user outcomes",
+      "else": "do not pursue a perfect tool score solely for ranking",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Structural"
+      ],
+      "primary_metric": "conversion and task completion by performance band",
+      "guardrails": "broken features",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-004",
+      "area": "Conversion and Experience",
+      "title": "Reduce form friction selectively",
+      "if": "form abandonment is high AND removed fields are not needed for qualification or routing",
+      "then": "shorten, stage, or clarify the form",
+      "else": "retain fields and improve explanation",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "qualified form completion",
+      "guardrails": "unqualified volume",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-005",
+      "area": "Conversion and Experience",
+      "title": "Optimize for lead quality",
+      "if": "lead count rises while acceptance, close rate, or margin falls",
+      "then": "tighten intent, promise, qualification, or routing",
+      "else": "scale the validated acquisition path",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "sales-accepted organic leads",
+      "guardrails": "total pipeline",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-006",
+      "area": "Conversion and Experience",
+      "title": "Test CTA propositions, not colors alone",
+      "if": "a CTA underperforms",
+      "then": "test task relevance, value, risk, evidence, commitment, placement, and wording before cosmetic variables",
+      "else": "retain and scale it",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "BEFORE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "qualified CTA conversion",
+      "guardrails": "misleading claims",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-007",
+      "area": "Conversion and Experience",
+      "title": "Place trust at the decision point",
+      "if": "users hesitate because scope, proof, identity, terms, price, or risk is unclear",
+      "then": "place relevant evidence and clarification near the decision",
+      "else": "avoid repetitive trust decoration",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "decision completion rate",
+      "guardrails": "privacy and disclosure",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-008",
+      "area": "Conversion and Experience",
+      "title": "Avoid premature hard selling",
+      "if": "the query is early-stage and commercial pressure harms task satisfaction",
+      "then": "use a useful soft transition such as a related guide, tool, save, or diagnostic",
+      "else": "present the proportional commercial action",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "assisted qualified progression",
+      "guardrails": "unsubscribe, bounce",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-009",
+      "area": "Conversion and Experience",
+      "title": "Design retention paths",
+      "if": "the organic visitor is an existing customer or user",
+      "then": "route to successful use, support, renewal, expansion, or advocacy",
+      "else": "route prospects toward acquisition",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "retention/expansion event value",
+      "guardrails": "support escalation",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-010",
+      "area": "Conversion and Experience",
+      "title": "Measure satisfaction with task-specific events",
+      "if": "generic engagement metrics cannot show whether the task was completed",
+      "then": "instrument meaningful events such as calculator completion, comparison use, download, copy, or successful route",
+      "else": "use the existing task event",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "task completion rate",
+      "guardrails": "event inflation",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-011",
+      "area": "Conversion and Experience",
+      "title": "Preserve message continuity",
+      "if": "the search promise, landing answer, CTA, and sales follow-up describe different outcomes",
+      "then": "align the chain around one user task and offer",
+      "else": "retain the coherent journey",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "promise-to-close continuity",
+      "guardrails": "overly narrow messaging",
+      "rationale": ""
+    },
+    {
+      "id": "CVR-012",
+      "area": "Conversion and Experience",
+      "title": "Protect user and brand guardrails",
+      "if": "a conversion intervention increases action but also complaints, refunds, low-quality leads, or distrust",
+      "then": "revert, constrain, or redesign the intervention",
+      "else": "continue while guardrails stay within tolerance",
+      "operators": [
+        "IF",
+        "AND",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major"
+      ],
+      "primary_metric": "guardrail-adjusted conversion value",
+      "guardrails": "dark patterns",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-001",
+      "area": "Measurement and Experimentation",
+      "title": "Require a mechanism hypothesis",
+      "if": "an intervention has no stated reason it should affect an outcome",
+      "then": "write an object → action → mechanism → outcome hypothesis",
+      "else": "execute the stated hypothesis",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "hypothesis completeness",
+      "guardrails": "post-hoc storytelling",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-002",
+      "area": "Measurement and Experimentation",
+      "title": "Capture a baseline",
+      "if": "a change is about to be implemented",
+      "then": "record pre-change performance, context, exposure, and data quality",
+      "else": "do not claim incremental effect",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "baseline completeness",
+      "guardrails": "seasonal distortion",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-003",
+      "area": "Measurement and Experimentation",
+      "title": "Use a change ledger",
+      "if": "any SEO-relevant production change occurs",
+      "then": "assign a change ID, owner, scope, time, expected mechanism, and rollback state",
+      "else": "retain the previous ledger",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "change attribution coverage",
+      "guardrails": "logging overhead",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-004",
+      "area": "Measurement and Experimentation",
+      "title": "Choose one primary metric",
+      "if": "an experiment has many possible success metrics",
+      "then": "select one primary decision metric and label others secondary or guardrail",
+      "else": "use the aligned primary metric",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "EXACTLY_ONE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "decision consistency",
+      "guardrails": "metric cherry-picking",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-005",
+      "area": "Measurement and Experimentation",
+      "title": "Set guardrails before launch",
+      "if": "a change can improve the primary metric while harming quality, accessibility, revenue, or trust",
+      "then": "define guardrail thresholds and rollback behavior",
+      "else": "use standard site guardrails",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "guardrail breach rate",
+      "guardrails": "unobserved harm",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-006",
+      "area": "Measurement and Experimentation",
+      "title": "Use controls when feasible",
+      "if": "comparable untreated pages, clusters, regions, or time periods exist",
+      "then": "use a control or difference-in-differences design",
+      "else": "use interrupted time series with explicit limitations",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "estimated incremental lift",
+      "guardrails": "control contamination",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-007",
+      "area": "Measurement and Experimentation",
+      "title": "Account for seasonality and external events",
+      "if": "demand, algorithms, campaigns, news, inventory, or holidays can affect the outcome",
+      "then": "annotate and model those factors before attributing change",
+      "else": "use the stable comparison",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "context-adjusted lift",
+      "guardrails": "overfitting",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-008",
+      "area": "Measurement and Experimentation",
+      "title": "Represent uncertainty",
+      "if": "sample size is small, variance is high, or exposure is incomplete",
+      "then": "report ranges, confidence, and directional evidence",
+      "else": "report the stable estimate",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "estimate uncertainty",
+      "guardrails": "false precision",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-009",
+      "area": "Measurement and Experimentation",
+      "title": "Allow processing and learning time",
+      "if": "a change has not had enough crawl, index, ranking, or behavioral exposure",
+      "then": "continue observation until the predefined minimum exposure or stop condition",
+      "else": "make the decision",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "UNTIL"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "minimum-exposure completion",
+      "guardrails": "indefinite waiting",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-010",
+      "area": "Measurement and Experimentation",
+      "title": "Distinguish single-variable and package tests",
+      "if": "several material variables change together",
+      "then": "classify the intervention as a package test OR separate variables for causal learning",
+      "else": "treat it as a focused test",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "attribution confidence",
+      "guardrails": "slow recovery",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-011",
+      "area": "Measurement and Experimentation",
+      "title": "Escalate by diagnosed mechanism",
+      "if": "a lower-level LAKA intervention fails",
+      "then": "re-diagnose and move to Major, Structural, or Paradigm only when the failure mechanism requires it",
+      "else": "retain or scale the successful level",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "OR"
+      ],
+      "laka_levels": [
+        "Minor",
+        "Major",
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "value gained per escalation",
+      "guardrails": "unnecessary redesign",
+      "rationale": ""
+    },
+    {
+      "id": "EXP-012",
+      "area": "Measurement and Experimentation",
+      "title": "Use explicit continue/revise/revert/retire decisions",
+      "if": "a review point is reached",
+      "then": "choose exactly one decision based on primary metric, guardrails, cost, and confidence",
+      "else": "continue observation only under a predefined uncertainty rule",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE",
+        "XOR"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "decision closure rate",
+      "guardrails": "zombie experiments",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-001",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Keep foundational SEO as the base",
+      "if": "the goal includes visibility in generative search experiences",
+      "then": "apply the same valuable-content, crawlability, indexability, and search-quality foundations",
+      "else": "apply normal search foundations",
+      "operators": [
+        "IF",
+        "AND",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "search and generative visibility value",
+      "guardrails": "channel-specific hacks",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-002",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Do not depend on llms.txt for Google Search",
+      "if": "a proposal claims a special AI text file is required for Google visibility",
+      "then": "reject the requirement and prioritize public crawlable indexable content",
+      "else": "maintain such a file only for a separate system that explicitly uses it",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline"
+      ],
+      "primary_metric": "eligible indexed coverage",
+      "guardrails": "maintenance distraction",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-003",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Do not chunk content mechanically",
+      "if": "content is being split only because an AI system is assumed to need tiny sections",
+      "then": "organize by human task, readability, and information structure",
+      "else": "retain useful natural sections",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "task completion and retrieval coverage",
+      "guardrails": "fragmentation",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-004",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Use query fan-out as a research map",
+      "if": "a broad request implies related information needs",
+      "then": "map prerequisite, comparison, evidence, and follow-up needs across the cluster graph",
+      "else": "use the direct task map",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major",
+        "Structural"
+      ],
+      "primary_metric": "fan-out information coverage",
+      "guardrails": "one-page-per-query expansion",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-005",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Block scaled content abuse",
+      "if": "content volume is generated primarily to manipulate rankings or AI responses without distinct user value",
+      "then": "stop publication and redesign the system",
+      "else": "continue only with row-level utility, accuracy, and governance",
+      "operators": [
+        "IF",
+        "AND",
+        "NOT",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "unique useful asset rate",
+      "guardrails": "spam-policy exposure",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-006",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Measure generative visibility directly",
+      "if": "Search Console or another first-party surface provides generative-search reporting",
+      "then": "track it as a distinct search appearance and connect it to downstream value",
+      "else": "use broader search and referral diagnostics with limitations",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "generative-search qualified value",
+      "guardrails": "reporting coverage",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-007",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Do not invent AI-specific schema",
+      "if": "a proposal adds unsupported structured data solely for generative visibility",
+      "then": "reject it; use supported structured data only when it matches visible content",
+      "else": "validate the applicable markup",
+      "operators": [
+        "IF",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Baseline",
+        "Structural"
+      ],
+      "primary_metric": "valid supported markup",
+      "guardrails": "markup abuse",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-008",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Prepare for agentic use through usability",
+      "if": "browser agents or assistive systems need to interpret and operate the site",
+      "then": "improve semantic controls, labels, accessible structure, clear states, and stable data",
+      "else": "retain the usable human-facing implementation",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural",
+        "Paradigm"
+      ],
+      "primary_metric": "successful task completion by automated/assistive clients",
+      "guardrails": "security and consent",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-009",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Expose freshness and provenance",
+      "if": "data may change or be reused in generated answers",
+      "then": "show dates, methodology, sources, ownership, and update state where useful",
+      "else": "omit unnecessary metadata",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Major"
+      ],
+      "primary_metric": "freshness/provenance completeness",
+      "guardrails": "false recency",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-010",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Constrain programmatic expansion",
+      "if": "candidate combinations exceed quality or maintenance capacity",
+      "then": "raise gates, consolidate, stage release, or automate verified data maintenance",
+      "else": "publish within capacity",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "maintained useful-page rate",
+      "guardrails": "index and maintenance debt",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-011",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Protect privacy, consent, and sensitive data",
+      "if": "volumetric generation or personalization uses personal, confidential, licensed, or restricted data",
+      "then": "minimize data, obtain rights/consent, secure access, and exclude unsafe outputs",
+      "else": "use public or owned permissible data",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Structural"
+      ],
+      "primary_metric": "governance compliance",
+      "guardrails": "privacy harm",
+      "rationale": ""
+    },
+    {
+      "id": "GOV-012",
+      "area": "Generative Search, Scale, and Governance",
+      "title": "Pursue paradigm assets selectively",
+      "if": "a new tool, dataset, benchmark, diagnostic, or agent can complete the task far better than existing result classes",
+      "then": "run a bounded paradigm experiment with a defensibility and maintenance plan",
+      "else": "improve the current asset class",
+      "operators": [
+        "IF",
+        "OR",
+        "THEN",
+        "ELSE",
+        "AND"
+      ],
+      "laka_levels": [
+        "Paradigm"
+      ],
+      "primary_metric": "new-demand and incremental value creation",
+      "guardrails": "build cost, adoption risk",
+      "rationale": ""
+    }
+  ]
+}

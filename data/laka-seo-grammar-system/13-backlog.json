@@ -1,0 +1,679 @@
+{
+  "title": "Implementation backlog",
+  "count": 11,
+  "phases": [
+    {
+      "id": "PHASE-0",
+      "number": 0,
+      "name": "Governance and workspace",
+      "tasks": [
+        "project owner;",
+        "site and offer scope;",
+        "source-of-truth repository;",
+        "change ledger;",
+        "access and privacy rules;",
+        "naming conventions;",
+        "rule-library version."
+      ],
+      "output": "",
+      "exit_gate": "owner\nAND scope\nAND permissions\nAND change control\nare defined.",
+      "sections": [
+        {
+          "heading": "Deliverables",
+          "prose": [
+            "- project owner;",
+            "- site and offer scope;",
+            "- source-of-truth repository;",
+            "- change ledger;",
+            "- access and privacy rules;",
+            "- naming conventions;",
+            "- rule-library version."
+          ],
+          "bullets": [
+            "project owner;",
+            "site and offer scope;",
+            "source-of-truth repository;",
+            "change ledger;",
+            "access and privacy rules;",
+            "naming conventions;",
+            "rule-library version."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Exit gate",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "owner\nAND scope\nAND permissions\nAND change control\nare defined."
+            }
+          ]
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 0 — Governance and workspace"
+      }
+    },
+    {
+      "id": "PHASE-1",
+      "number": 1,
+      "name": "Business and measurement baseline",
+      "tasks": [
+        "Define offers and audiences.",
+        "Define qualified value events.",
+        "Record margin or value bands.",
+        "verify Search Console and analytics.",
+        "connect CRM/commerce outcomes where feasible.",
+        "classify brand/non-brand.",
+        "create executive dashboard.",
+        "test the event chain.",
+        "document limitations.",
+        "capture baseline."
+      ],
+      "output": "`business-value-model` `event-dictionary` `baseline-scorecard`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Define offers and audiences.",
+            "2. Define qualified value events.",
+            "3. Record margin or value bands.",
+            "4. verify Search Console and analytics.",
+            "5. connect CRM/commerce outcomes where feasible.",
+            "6. classify brand/non-brand.",
+            "7. create executive dashboard.",
+            "8. test the event chain.",
+            "9. document limitations.",
+            "10. capture baseline."
+          ],
+          "bullets": [
+            "Define offers and audiences.",
+            "Define qualified value events.",
+            "Record margin or value bands.",
+            "verify Search Console and analytics.",
+            "connect CRM/commerce outcomes where feasible.",
+            "classify brand/non-brand.",
+            "create executive dashboard.",
+            "test the event chain.",
+            "document limitations.",
+            "capture baseline."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`business-value-model`",
+            "`event-dictionary`",
+            "`baseline-scorecard`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 1 — Business and measurement baseline"
+      }
+    },
+    {
+      "id": "PHASE-2",
+      "number": 2,
+      "name": "Technical eligibility baseline",
+      "tasks": [
+        "Inventory intended canonical URLs.",
+        "classify intended index state.",
+        "inspect status, robots, rendering, canonical, index, sitemap.",
+        "calculate eligible canonical coverage.",
+        "calculate canonical agreement.",
+        "identify orphan and depth issues.",
+        "inspect duplicate/facet volume.",
+        "inspect field performance by exposure.",
+        "rank issues by affected business value.",
+        "repair P0 blockers."
+      ],
+      "output": "`technical-state-table` `value-ranked-technical-backlog`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Inventory intended canonical URLs.",
+            "2. classify intended index state.",
+            "3. inspect status, robots, rendering, canonical, index, sitemap.",
+            "4. calculate eligible canonical coverage.",
+            "5. calculate canonical agreement.",
+            "6. identify orphan and depth issues.",
+            "7. inspect duplicate/facet volume.",
+            "8. inspect field performance by exposure.",
+            "9. rank issues by affected business value.",
+            "10. repair P0 blockers."
+          ],
+          "bullets": [
+            "Inventory intended canonical URLs.",
+            "classify intended index state.",
+            "inspect status, robots, rendering, canonical, index, sitemap.",
+            "calculate eligible canonical coverage.",
+            "calculate canonical agreement.",
+            "identify orphan and depth issues.",
+            "inspect duplicate/facet volume.",
+            "inspect field performance by exposure.",
+            "rank issues by affected business value.",
+            "repair P0 blockers."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`technical-state-table`",
+            "`value-ranked-technical-backlog`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 2 — Technical eligibility baseline"
+      }
+    },
+    {
+      "id": "PHASE-3",
+      "number": 3,
+      "name": "Existing opportunity recovery",
+      "tasks": [
+        "join queries, URLs, conversions, and value.",
+        "cluster current queries.",
+        "find strong pages with weak targeting.",
+        "find high-impression pages with low CTR residual.",
+        "find converting pages with weak visibility.",
+        "find ranking pages with poor qualification.",
+        "find cannibalizing clusters.",
+        "find pages with authority but no useful target.",
+        "score opportunities.",
+        "launch the first bounded Minor/Major cohort."
+      ],
+      "output": "`existing-opportunity-portfolio` `experiment-cards`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. join queries, URLs, conversions, and value.",
+            "2. cluster current queries.",
+            "3. find strong pages with weak targeting.",
+            "4. find high-impression pages with low CTR residual.",
+            "5. find converting pages with weak visibility.",
+            "6. find ranking pages with poor qualification.",
+            "7. find cannibalizing clusters.",
+            "8. find pages with authority but no useful target.",
+            "9. score opportunities.",
+            "10. launch the first bounded Minor/Major cohort."
+          ],
+          "bullets": [
+            "join queries, URLs, conversions, and value.",
+            "cluster current queries.",
+            "find strong pages with weak targeting.",
+            "find high-impression pages with low CTR residual.",
+            "find converting pages with weak visibility.",
+            "find ranking pages with poor qualification.",
+            "find cannibalizing clusters.",
+            "find pages with authority but no useful target.",
+            "score opportunities.",
+            "launch the first bounded Minor/Major cohort."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`existing-opportunity-portfolio`",
+            "`experiment-cards`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 3 — Existing opportunity recovery"
+      }
+    },
+    {
+      "id": "PHASE-4",
+      "number": 4,
+      "name": "Semantic and canonical architecture",
+      "tasks": [
+        "Build audience-task map.",
+        "build semantic graph.",
+        "collect query and customer language.",
+        "normalize synonyms and variants.",
+        "disambiguate senses.",
+        "cluster by task.",
+        "assign exactly one canonical owner.",
+        "map supporting assets.",
+        "flag missing, duplicate, and uncertain clusters.",
+        "approve priority cluster portfolio."
+      ],
+      "output": "`semantic-demand-inventory` `canonical-intent-registry` `cluster-boundary-log`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Build audience-task map.",
+            "2. build semantic graph.",
+            "3. collect query and customer language.",
+            "4. normalize synonyms and variants.",
+            "5. disambiguate senses.",
+            "6. cluster by task.",
+            "7. assign exactly one canonical owner.",
+            "8. map supporting assets.",
+            "9. flag missing, duplicate, and uncertain clusters.",
+            "10. approve priority cluster portfolio."
+          ],
+          "bullets": [
+            "Build audience-task map.",
+            "build semantic graph.",
+            "collect query and customer language.",
+            "normalize synonyms and variants.",
+            "disambiguate senses.",
+            "cluster by task.",
+            "assign exactly one canonical owner.",
+            "map supporting assets.",
+            "flag missing, duplicate, and uncertain clusters.",
+            "approve priority cluster portfolio."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`semantic-demand-inventory`",
+            "`canonical-intent-registry`",
+            "`cluster-boundary-log`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 4 — Semantic and canonical architecture"
+      }
+    },
+    {
+      "id": "PHASE-5",
+      "number": 5,
+      "name": "Core information products",
+      "tasks": [
+        "Select highest-value decision and commercial clusters.",
+        "create page specifications.",
+        "choose task-native formats.",
+        "add information advantage.",
+        "create evidence.",
+        "connect next actions.",
+        "implement technical requirements.",
+        "add measurement.",
+        "publish in cohorts.",
+        "review and update rule priors."
+      ],
+      "output": "`core-page-specifications` `published-core-assets`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Select highest-value decision and commercial clusters.",
+            "2. create page specifications.",
+            "3. choose task-native formats.",
+            "4. add information advantage.",
+            "5. create evidence.",
+            "6. connect next actions.",
+            "7. implement technical requirements.",
+            "8. add measurement.",
+            "9. publish in cohorts.",
+            "10. review and update rule priors."
+          ],
+          "bullets": [
+            "Select highest-value decision and commercial clusters.",
+            "create page specifications.",
+            "choose task-native formats.",
+            "add information advantage.",
+            "create evidence.",
+            "connect next actions.",
+            "implement technical requirements.",
+            "add measurement.",
+            "publish in cohorts.",
+            "review and update rule priors."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`core-page-specifications`",
+            "`published-core-assets`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 5 — Core information products"
+      }
+    },
+    {
+      "id": "PHASE-6",
+      "number": 6,
+      "name": "Supporting graph",
+      "tasks": [
+        "Identify prerequisite and adjacent tasks.",
+        "validate supporting asset distinctness.",
+        "create or improve hubs where useful.",
+        "add understanding, choice, journey, and authority edges.",
+        "repair orphans.",
+        "reduce excessive depth.",
+        "update links after migrations.",
+        "measure assisted value.",
+        "remove weak or redundant nodes.",
+        "refresh canonical registry."
+      ],
+      "output": "`internal-graph-map` `supporting-asset-backlog`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Identify prerequisite and adjacent tasks.",
+            "2. validate supporting asset distinctness.",
+            "3. create or improve hubs where useful.",
+            "4. add understanding, choice, journey, and authority edges.",
+            "5. repair orphans.",
+            "6. reduce excessive depth.",
+            "7. update links after migrations.",
+            "8. measure assisted value.",
+            "9. remove weak or redundant nodes.",
+            "10. refresh canonical registry."
+          ],
+          "bullets": [
+            "Identify prerequisite and adjacent tasks.",
+            "validate supporting asset distinctness.",
+            "create or improve hubs where useful.",
+            "add understanding, choice, journey, and authority edges.",
+            "repair orphans.",
+            "reduce excessive depth.",
+            "update links after migrations.",
+            "measure assisted value.",
+            "remove weak or redundant nodes.",
+            "refresh canonical registry."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`internal-graph-map`",
+            "`supporting-asset-backlog`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 6 — Supporting graph"
+      }
+    },
+    {
+      "id": "PHASE-7",
+      "number": 7,
+      "name": "Earned evidence and authority",
+      "tasks": [
+        "Diagnose target cluster authority gaps.",
+        "create linkable reasons.",
+        "prioritize original data, tools, benchmarks, case evidence, and visual references.",
+        "segment prospects.",
+        "launch transparent outreach.",
+        "track retained relevant placements.",
+        "measure target visibility and brand demand.",
+        "recover valid lost links.",
+        "compound successful evidence assets.",
+        "recalibrate authority proxies."
+      ],
+      "output": "`authority-campaigns` `evidence-asset-roadmap`",
+      "exit_gate": "",
+      "sections": [
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Diagnose target cluster authority gaps.",
+            "2. create linkable reasons.",
+            "3. prioritize original data, tools, benchmarks, case evidence, and visual references.",
+            "4. segment prospects.",
+            "5. launch transparent outreach.",
+            "6. track retained relevant placements.",
+            "7. measure target visibility and brand demand.",
+            "8. recover valid lost links.",
+            "9. compound successful evidence assets.",
+            "10. recalibrate authority proxies."
+          ],
+          "bullets": [
+            "Diagnose target cluster authority gaps.",
+            "create linkable reasons.",
+            "prioritize original data, tools, benchmarks, case evidence, and visual references.",
+            "segment prospects.",
+            "launch transparent outreach.",
+            "track retained relevant placements.",
+            "measure target visibility and brand demand.",
+            "recover valid lost links.",
+            "compound successful evidence assets.",
+            "recalibrate authority proxies."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`authority-campaigns`",
+            "`evidence-asset-roadmap`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 7 — Earned evidence and authority"
+      }
+    },
+    {
+      "id": "PHASE-8",
+      "number": 8,
+      "name": "Volumetric expansion",
+      "tasks": [
+        "Expand approved dimensions.",
+        "generate candidates.",
+        "normalize and cluster.",
+        "apply hard gates.",
+        "sample quality.",
+        "score survivors.",
+        "stage publication.",
+        "monitor duplicate, index, quality, and conversion behavior.",
+        "pause automatically on guardrail breach.",
+        "scale only validated cohorts."
+      ],
+      "output": "`volumetric-candidate-register` `staged-generation-plan`",
+      "exit_gate": "canonical model is stable\nAND templates are quality controlled\nAND data is accurate\nAND maintenance capacity exists\nAND measurement cohorts exist\nAND policy gates pass",
+      "sections": [
+        {
+          "heading": "Preconditions",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "canonical model is stable\nAND templates are quality controlled\nAND data is accurate\nAND maintenance capacity exists\nAND measurement cohorts exist\nAND policy gates pass"
+            }
+          ]
+        },
+        {
+          "heading": "Tasks",
+          "prose": [
+            "1. Expand approved dimensions.",
+            "2. generate candidates.",
+            "3. normalize and cluster.",
+            "4. apply hard gates.",
+            "5. sample quality.",
+            "6. score survivors.",
+            "7. stage publication.",
+            "8. monitor duplicate, index, quality, and conversion behavior.",
+            "9. pause automatically on guardrail breach.",
+            "10. scale only validated cohorts."
+          ],
+          "bullets": [
+            "Expand approved dimensions.",
+            "generate candidates.",
+            "normalize and cluster.",
+            "apply hard gates.",
+            "sample quality.",
+            "score survivors.",
+            "stage publication.",
+            "monitor duplicate, index, quality, and conversion behavior.",
+            "pause automatically on guardrail breach.",
+            "scale only validated cohorts."
+          ],
+          "blocks": []
+        },
+        {
+          "heading": "Output",
+          "prose": [
+            "`volumetric-candidate-register`",
+            "`staged-generation-plan`"
+          ],
+          "bullets": [],
+          "blocks": []
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 8 — Volumetric expansion"
+      }
+    },
+    {
+      "id": "PHASE-9",
+      "number": 9,
+      "name": "Structural improvements",
+      "tasks": [],
+      "output": "",
+      "exit_gate": "",
+      "sections": [],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 9 — Structural improvements"
+      }
+    },
+    {
+      "id": "PHASE-10",
+      "number": 10,
+      "name": "Paradigm experiments",
+      "tasks": [],
+      "output": "",
+      "exit_gate": "IF new solution class completes the task materially better\nAND creates defensible value\nAND has a maintenance model\nAND can be measured\nTHEN run a bounded paradigm experiment.",
+      "sections": [
+        {
+          "heading": "Gate",
+          "prose": [],
+          "bullets": [],
+          "blocks": [
+            {
+              "lang": "text",
+              "code": "IF new solution class completes the task materially better\nAND creates defensible value\nAND has a maintenance model\nAND can be measured\nTHEN run a bounded paradigm experiment."
+            }
+          ]
+        }
+      ],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Phase 10 — Paradigm experiments"
+      }
+    }
+  ],
+  "cadence": [
+    {
+      "name": "Weekly operating review",
+      "items": [
+        "P0 measurement/technical blockers;",
+        "live experiments;",
+        "data-quality failures;",
+        "major demand or value shifts;",
+        "guardrail breaches."
+      ],
+      "blocks": [],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Weekly operating review"
+      }
+    },
+    {
+      "name": "Monthly portfolio review",
+      "items": [
+        "contribution value;",
+        "qualified conversions;",
+        "cluster visibility;",
+        "canonical ownership;",
+        "technical eligibility;",
+        "authority and evidence;",
+        "refresh/retirement;",
+        "allocation."
+      ],
+      "blocks": [],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Monthly portfolio review"
+      }
+    },
+    {
+      "name": "Quarterly model review",
+      "items": [
+        "rule performance;",
+        "scoring calibration;",
+        "audience/offer changes;",
+        "semantic territory;",
+        "structural debt;",
+        "paradigm opportunities."
+      ],
+      "blocks": [],
+      "source": {
+        "document": "09",
+        "file": "09-IMPLEMENTATION-BACKLOG.md",
+        "heading": "Quarterly model review"
+      }
+    }
+  ],
+  "definition_of_done": "change is deployed\nAND change ID is recorded\nAND intended technical state is verified\nAND measurement is active\nAND owner is assigned\nAND review rule is scheduled\nAND documentation is updated",
+  "source": {
+    "document": "09",
+    "file": "09-IMPLEMENTATION-BACKLOG.md",
+    "heading": "whole document"
+  }
+}
