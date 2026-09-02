@@ -981,7 +981,7 @@ export function experimentPage ({ submitted, result, form, error }) {
   const field = (name, label, placeholder, { type = 'text' } = {}) => `
       <div class="field">
         <label for="x-${name}">${esc(label)}</label>
-        <input type="${type}" id="x-${name}" name="${name}" value="${attr(form[name] ?? '')}" placeholder="${attr(placeholder)}">
+        <input type="${type}" autocomplete="off" id="x-${name}" name="${name}" value="${attr(form[name] ?? '')}" placeholder="${attr(placeholder)}">
       </div>`
 
   const body = `
