@@ -116,7 +116,7 @@ function header () {
       </a>
       <div class="bar__right">
         <details class="menu" id="menu">
-          <summary class="pill" aria-label="Menu">
+          <summary class="pill" data-component="button" aria-label="Menu">
             <svg class="menu__icon menu__icon--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
             <svg class="menu__icon menu__icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
             <span>MENU</span>
@@ -126,7 +126,7 @@ function header () {
             </div>
           </nav>
         </details>
-        <a class="pill pill--solid" href="/evaluate">Evaluate a candidate</a>
+        <a class="pill pill--solid" data-component="cta" href="/evaluate">Evaluate a candidate</a>
       </div>
     </div>
   </header>`

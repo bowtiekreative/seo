@@ -35,13 +35,13 @@ ${section(`      ${pageHead({
 
 ${section(`      <div class="grid grid--3">
         ${(d.families ?? []).map((f) => `
-        <div class="card" id="${attr(f.id)}">
+        <div class="card" data-component="card" id="${attr(f.id)}">
           <strong class="ink t-18">${esc(f.name)}</strong>
           <p class="muted t-14 my-2">${f.values.length} values</p>
           <ul class="chips mt-4">${f.values.map((v) => `<li>${chip(v, { mark: '·' })}</li>`).join('')}</ul>
         </div>`).join('')}
       </div>
-      <div class="actions"><a class="pill pill--solid" href="/volume">Size a space</a></div>`)}
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/volume">Size a space</a></div>`)}
 
 ${section(`      <h2>Safe scale</h2>
       <ol class="steps">${(d.safe_scale ?? []).map((s) => `<li><div><p class="m-0 ink">${esc(s)}</p></div></li>`).join('')}</ol>`)}`
@@ -75,7 +75,7 @@ ${section(`      <h2>The outcome hierarchy</h2>
       <p class="muted t-15">Five levels, from business outcomes down to technical states. A metric at a lower level is only worth watching because of the level above it.</p>
       <div class="stack mt-6">
         ${(m.outcome_levels ?? []).map((l) => `
-        <article class="finding">
+        <article class="finding" data-component="card">
           <div class="finding__head">
             ${chip(`Level ${l.level}`, { mark: '#' })}
             <strong class="ink t-18">${esc(l.name)}</strong>
@@ -87,7 +87,7 @@ ${section(`      <h2>The outcome hierarchy</h2>
 ${section(`      <h2>The ${inv.formulas} formulas</h2>
       <div class="stack">
         ${(m.formulas ?? []).map((f) => `
-        <article class="finding" id="${attr(f.id)}">
+        <article class="finding" data-component="card" id="${attr(f.id)}">
           <div class="finding__head"><strong class="ink t-18">${esc(f.name)}</strong></div>
           ${codeBlock(f.expression)}
           ${f.notes?.length ? prose(f.notes) : ''}
@@ -123,7 +123,7 @@ ${section(`      ${pageHead({
 ${section(`      <h2>The hypothesis grammar</h2>
       ${(e.hypothesis_grammar ?? []).map((b) => codeBlock(b.code)).join('')}
       ${e.compact_grammar?.length ? codeBlock(e.compact_grammar.join('\n'), 'Compact form') : ''}
-      <div class="actions"><a class="pill pill--solid" href="/experiment">Build an experiment card</a></div>`)}
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/experiment">Build an experiment card</a></div>`)}
 
 ${(e.experiment_card ?? []).length ? section(`      <h2>The experiment card</h2>
       ${e.experiment_card.map((b) => codeBlock(b.code)).join('')}`) : ''}
@@ -132,7 +132,7 @@ ${section(`      <h2>Decision outcomes</h2>
       <p class="muted t-15">Seven outcomes, chosen in advance. "Keep going and see" is not one of them.</p>
       <div class="stack mt-6">
         ${(e.decisions ?? []).map((d) => `
-        <article class="finding" id="${attr(d.id)}">
+        <article class="finding" data-component="card" id="${attr(d.id)}">
           <div class="finding__head"><strong class="ink t-18">${esc(d.name)}</strong></div>
           ${d.prose?.length ? prose(d.prose) : ''}
           ${d.block ? codeBlock(d.block) : ''}
@@ -142,7 +142,7 @@ ${section(`      <h2>Decision outcomes</h2>
 ${section(`      <h2>Experiment types by LAKA level</h2>
       <div class="stack">
         ${(e.types ?? []).map((t) => `
-        <article class="finding">
+        <article class="finding" data-component="card">
           <div class="finding__head"><strong class="ink t-18">${esc(t.name)}</strong></div>
           ${t.prose?.length ? prose(t.prose) : ''}
           ${t.block ? codeBlock(t.block) : ''}
@@ -177,7 +177,7 @@ ${section(`      ${pageHead({
 
 ${section(`      <div class="grid grid--2">
         ${corpus.sops.map((s) => `
-        <a class="card feature plain" href="/sops/${attr(s.id)}">
+        <a class="card feature plain" data-component="card" href="/sops/${attr(s.id)}">
           <span class="feature__icon">${icon('sop')}</span>
           <span>
             <strong class="ink t-18 block">${esc(s.name)}</strong>
@@ -203,10 +203,10 @@ ${section(`      <p class="meta-id">${esc(sop.id)}</p>
 ${sop.sections.map((s) => section(`      <h2>${esc(s.heading)}</h2>
 ${sectionBody(s)}`)).join('\n')}
 
-${section(`      <div class="panel">
+${section(`      <div class="panel" data-component="panel">
         <p class="muted t-14 m-0">As JSON: <a href="/v1/sops/${attr(sop.id)}"><code>GET /v1/sops/${esc(sop.id)}</code></a></p>
       </div>
-      <div class="actions"><a class="pill" href="/sops">← All SOPs</a></div>`)}`
+      <div class="actions"><a class="pill" data-component="button" href="/sops">← All SOPs</a></div>`)}`
 
   return {
     title: sop.name,
@@ -235,7 +235,7 @@ ${section(`      ${pageHead({
     lede: 'A dependency-ordered rollout. Measurement and technical eligibility come before expansion, because an unmeasurable or ineligible asset cannot pay back what it costs.'
   })}`)}
 
-${section((b.phases ?? []).map((p) => `      <article class="finding" id="${attr(p.id)}">
+${section((b.phases ?? []).map((p) => `      <article class="finding" data-component="card" id="${attr(p.id)}">
         <div class="finding__head">
           ${chip(`Phase ${p.number}`, { mark: '#' })}
           <strong class="ink t-18">${esc(p.name)}</strong>
@@ -247,7 +247,7 @@ ${section((b.phases ?? []).map((p) => `      <article class="finding" id="${attr
 ${(b.cadence ?? []).length ? section(`      <h2>Ongoing cadence</h2>
       <div class="grid grid--3">
         ${b.cadence.map((c) => `
-        <div class="card">
+        <div class="card" data-component="card">
           <strong class="ink t-18">${esc(c.name)}</strong>
           ${c.items?.length ? `<ul class="finding__units">${c.items.map((i) => `<li>${inlineMarkdown(i)}</li>`).join('')}</ul>` : ''}
         </div>`).join('')}
@@ -275,7 +275,7 @@ ${section(`      ${pageHead({
 
 ${section(`      <div class="grid grid--3">
         ${all.map((t) => `
-        <a class="card feature plain" href="/templates/${attr(t.id)}">
+        <a class="card feature plain" data-component="card" href="/templates/${attr(t.id)}">
           <span class="feature__icon">${icon('template')}</span>
           <span>
             <strong class="ink t-16 block">${esc(t.name)}</strong>
@@ -302,7 +302,7 @@ ${section(`      ${tpl.body ? codeBlock(tpl.body) : ''}
       ${(tpl.blocks ?? []).slice(1).map((b) => codeBlock(b.code)).join('')}
       ${(tpl.tables ?? []).map(table).join('')}`)}
 
-${section(`      <div class="actions"><a class="pill" href="/templates">← All templates</a></div>`)}`
+${section(`      <div class="actions"><a class="pill" data-component="button" href="/templates">← All templates</a></div>`)}`
 
   return {
     title: tpl.name,
@@ -320,7 +320,7 @@ ${section(`      ${pageHead({
     lede: 'A compact notation for humans and agents. Not tied to any software package — a way of writing an instruction down so that every parameter it needs is visible.'
   })}`)}
 
-${section(corpus.commands.map((c) => `      <article class="finding" id="${attr(c.name.replace(/^\//, ''))}">
+${section(corpus.commands.map((c) => `      <article class="finding" data-component="card" id="${attr(c.name.replace(/^\//, ''))}">
         <div class="finding__head">
           <strong class="ink t-18"><code>${esc(c.name)}</code></strong>
           <span class="muted t-14">${esc(c.purpose)}</span>
@@ -350,7 +350,7 @@ ${section(`      ${pageHead({
 
 ${section(`      <div class="grid grid--2">
         ${corpus.documents.map((d) => `
-        <a class="card feature plain" href="/docs/${attr(d.slug)}">
+        <a class="card feature plain" data-component="card" href="/docs/${attr(d.slug)}">
           <span class="feature__icon">${icon('doc')}</span>
           <span>
             <strong class="ink t-18 block">${esc(d.title)}</strong>
@@ -363,6 +363,7 @@ ${section(`      <h2>The package, byte for byte</h2>
       <p class="muted t-15">Including the EBNF grammar, the YAML rule library, the JSON Schema and the combined guide.</p>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">The authored source files and their sizes</caption>
           <thead><tr><th scope="col">File</th><th scope="col">Size</th><th scope="col"></th></tr></thead>
           <tbody>${corpus.sourceFiles.map((f) => `<tr>
             <td><code>${esc(f.filename)}</code></td>
@@ -397,10 +398,10 @@ ${doc.sections.filter((s) => s.depth > 1).map((s) => {
 ${sectionBody(s)}`)
   }).join('\n')}
 
-${section(`      <div class="panel">
+${section(`      <div class="panel" data-component="panel">
         <p class="muted t-14 m-0">This document as JSON: <a href="/v1/documents/${attr(doc.slug)}"><code>GET /v1/documents/${esc(doc.slug)}</code></a> · <a href="/v1/source/${attr(doc.slug.replace(/^/, ''))}">raw markdown</a></p>
       </div>
-      <div class="actions"><a class="pill" href="/docs">← All documents</a></div>`)}`
+      <div class="actions"><a class="pill" data-component="button" href="/docs">← All documents</a></div>`)}`
 
   return {
     title: doc.title,
@@ -471,7 +472,7 @@ ${(c.corrections ?? []).length ? section(`      <h2>Terminology corrections</h2>
       <p class="muted t-15">Widely repeated claims the system does not accept.</p>
       <div class="stack mt-6">
         ${c.corrections.map((x) => `
-        <article class="finding" id="${attr(x.id)}">
+        <article class="finding" data-component="card" id="${attr(x.id)}">
           <div class="finding__head">
             ${chip('Correction', { mark: '!', cls: 'badge--default' })}
             <strong class="ink t-18">${esc(x.term)}</strong>
@@ -484,7 +485,7 @@ ${(c.corrections ?? []).length ? section(`      <h2>Terminology corrections</h2>
 ${(c.primary_sources ?? []).length ? section(`      <h2>Primary sources</h2>
       <div class="stack">
         ${c.primary_sources.map((s) => `
-        <article class="finding" id="${attr(s.id)}">
+        <article class="finding" data-component="card" id="${attr(s.id)}">
           <div class="finding__head"><strong class="ink t-18">${esc(s.name)}</strong></div>
           ${bullets(s.points)}
         </article>`).join('')}
@@ -513,7 +514,7 @@ ${section(`      ${pageHead({
     title: 'The agent operating prompt',
     lede: 'The system prompt for an SEO agent or agent team working inside this grammar. Reproduced verbatim so it can be copied without paraphrase.'
   })}
-      <div class="actions"><a class="pill" href="/v1/agent-prompt">As JSON</a> <a class="pill" href="${ORIGIN}/llms.txt">llms.txt</a></div>`)}
+      <div class="actions"><a class="pill" data-component="button" href="/v1/agent-prompt">As JSON</a> <a class="pill" data-component="button" href="${ORIGIN}/llms.txt">llms.txt</a></div>`)}
 
 ${(a.sections ?? []).filter((s) => s.depth > 1).map((s) => {
     const Tag = `h${Math.min(s.depth, 6)}`
@@ -560,9 +561,9 @@ ${section(`      ${pageHead({
     lede: `Every page on this site has a JSON equivalent. ${ENDPOINTS.length} endpoints, all public, no key required. GET endpoints are cacheable; POST endpoints run the engine and are never cached.`
   })}
       <div class="actions">
-        <a class="pill pill--solid" href="/v1/openapi.json">OpenAPI 3.1</a>
-        <a class="pill" href="/v1">Index</a>
-        <a class="pill" href="${ORIGIN}/llms.txt">llms.txt</a>
+        <a class="pill pill--solid" data-component="cta" href="/v1/openapi.json">OpenAPI 3.1</a>
+        <a class="pill" data-component="button" href="/v1">Index</a>
+        <a class="pill" data-component="button" href="${ORIGIN}/llms.txt">llms.txt</a>
       </div>`)}
 
 ${section(`      <h2>Base URL</h2>
@@ -572,6 +573,7 @@ ${section(`      <h2>Base URL</h2>
 ${order.filter((t) => byTag.has(t)).map((tag) => section(`      <h2 id="${attr(tag.toLowerCase())}">${esc(tag)}</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">API endpoints in this group</caption>
           <thead><tr><th scope="col">Method</th><th scope="col">Path</th><th scope="col">Summary</th></tr></thead>
           <tbody>${byTag.get(tag).map((e) => `<tr>
             <td><code>${esc(e.method)}</code></td>
@@ -628,15 +630,15 @@ ${section(`      ${pageHead({
     lede: 'Rules, gates, dimensions, SOPs, templates, phases, commands, formulas, terms and every section of the ten source documents.'
   })}
 
-      <form class="panel" method="get" action="/search">
+      <form class="panel" data-component="panel" method="get" action="/search">
         <div class="filters">
           <div class="field">
             <label for="q">Query</label>
-            <input type="search" id="q" name="q" value="${attr(q)}" placeholder="canonical conflict, contribution margin, cannibalization…" autofocus>
+            <input type="search" autocomplete="off" id="q" name="q" value="${attr(q)}" placeholder="canonical conflict, contribution margin, cannibalization…">
           </div>
           <div class="field">
             <label for="s-submit" class="visually-hidden">Search</label>
-            <button class="pill pill--solid" id="s-submit" type="submit">Search</button>
+            <button class="pill pill--solid" data-component="cta" id="s-submit" type="submit">Search</button>
           </div>
         </div>
       </form>`)}

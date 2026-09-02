@@ -75,7 +75,7 @@ export function jsonBlock (value, caption) {
 
 export function statGrid (stats, { columns = 4 } = {}) {
   return `<div class="grid grid--${columns}">${stats.map((s) => `
-    <div class="card stat">
+    <div class="card stat" data-component="card">
       <span class="stat__value">${esc(s.value)}</span>
       <span class="stat__label">${esc(s.label)}</span>
     </div>`).join('')}</div>`
@@ -89,15 +89,30 @@ export function featureCard ({ href, iconName, title, body }) {
       <span class="muted t-14 my-2 block">${esc(body)}</span>
     </span>`
   return href
-    ? `<a class="card feature plain" href="${attr(href)}">${inner}</a>`
-    : `<div class="card feature">${inner}</div>`
+    ? `<a class="card feature plain" data-component="card" href="${attr(href)}">${inner}</a>`
+    : `<div class="card feature" data-component="card">${inner}</div>`
+}
+
+/**
+ * A table caption.
+ *
+ * Every table needs one so a screen reader can announce what it holds before reading into
+ * it. Where the surrounding heading already names the table, the caption is hidden visually
+ * rather than duplicated on screen.
+ */
+export function caption (text, { visible = false } = {}) {
+  if (!text) return ''
+  return `<caption${visible ? '' : ' class="visually-hidden"'}>${esc(text)}</caption>`
 }
 
 /** A parsed markdown table, in a horizontally scrollable container. */
-export function table (t) {
+export function table (t, captionText) {
   if (!t?.headers?.length) return ''
+  // Fall back to naming the columns, so no table ever ships without a caption.
+  const text = captionText || `${t.headers.join(', ')} — ${t.rows.length} rows`
   return `<div class="table-scroll">
     <table>
+      ${caption(text)}
       <thead><tr>${t.headers.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
       <tbody>${t.rows.map((row) => `<tr>${row.map((c) => `<td>${inlineMarkdown(c)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table>
@@ -165,8 +180,8 @@ export function disclose (summary, body, { open = false } = {}) {
 export function pager ({ total, limit, offset, base }) {
   if (total <= limit) return ''
   const url = (o) => `${base}${base.includes('?') ? '&' : '?'}offset=${o}`
-  const prev = offset > 0 ? `<a class="pill" href="${attr(url(Math.max(0, offset - limit)))}">← Previous</a>` : '<span></span>'
-  const next = offset + limit < total ? `<a class="pill" href="${attr(url(offset + limit))}">Next →</a>` : '<span></span>'
+  const prev = offset > 0 ? `<a class="pill" data-component="button" href="${attr(url(Math.max(0, offset - limit)))}">← Previous</a>` : '<span></span>'
+  const next = offset + limit < total ? `<a class="pill" data-component="button" href="${attr(url(offset + limit))}">Next →</a>` : '<span></span>'
   return `<nav class="pager" aria-label="Pagination">
     ${prev}
     <span class="muted t-14">${offset + 1}–${Math.min(offset + limit, total)} of ${total}</span>

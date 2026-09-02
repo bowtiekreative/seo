@@ -42,9 +42,9 @@ export function home () {
       <h1 class="t-32">SEO as a language you can argue with</h1>
       <p class="lede narrow mt-6">${esc(corpus.manifest.purpose)} ${inv.rules} decision rules, ${inv.publication_gates} hard publication gates and an engine that runs them — and that tells you what it cannot know instead of guessing.</p>
       <div class="actions">
-        <a class="pill pill--solid" href="/evaluate">Evaluate a candidate</a>
-        <a class="pill" href="/gates">The eight gates</a>
-        <a class="pill" href="/api">API reference</a>
+        <a class="pill pill--solid" data-component="cta" href="/evaluate">Evaluate a candidate</a>
+        <a class="pill" data-component="button" href="/gates">The eight gates</a>
+        <a class="pill" data-component="button" href="/api">API reference</a>
       </div>
     </div>
   </section>
@@ -60,7 +60,7 @@ ${section(`      <h2>The governing equation</h2>
       <p class="lede narrow">SEO business value is a product, not a sum. Because the terms multiply, a near-zero factor neutralises everything else — a technically perfect page with no valuable demand is weak, and so is a ranking page that produces no business outcome.</p>
       <div class="grid grid--2 mt-6">
         ${codeBlock(equation.join('\n'), 'The ten factors')}
-        <div class="panel">
+        <div class="panel" data-component="panel">
           <p class="lead-statement">Work the weakest link.</p>
           <p class="muted t-15 my-3">Improving a strong factor while a near-zero factor stands changes almost nothing. <a href="/equation">Score the equation</a> to find which factor is actually holding the system down.</p>
           <p class="muted t-14 my-4">${esc(corpus.grammar.equation_note ?? '')}</p>
@@ -86,13 +86,13 @@ ${section(`      <h2>Start here</h2>
         ${featureCard({ href: '/measurement', iconName: 'metric', title: 'Measurement first', body: `${inv.formulas} formulas and five primary KPIs, all denominated in business value rather than rankings.` })}
       </div>`)}
 
-${section(`      <div class="panel">
+${section(`      <div class="panel" data-component="panel">
         <h2 class="t-20 m-0">Built for agents as much as people</h2>
         <p class="muted t-15 my-3">Every page here has a JSON equivalent. The API serves the whole corpus and runs the engine, and it names the facts it is missing rather than assuming them.</p>
         <div class="actions">
-          <a class="pill" href="/api">API reference</a>
-          <a class="pill" href="${ORIGIN}/v1/openapi.json">OpenAPI</a>
-          <a class="pill" href="${ORIGIN}/llms.txt">llms.txt</a>
+          <a class="pill" data-component="button" href="/api">API reference</a>
+          <a class="pill" data-component="button" href="${ORIGIN}/v1/openapi.json">OpenAPI</a>
+          <a class="pill" data-component="button" href="${ORIGIN}/llms.txt">llms.txt</a>
         </div>
       </div>`)}`
 
@@ -136,11 +136,12 @@ ${section(`      <h2>The governing equation</h2>
       <h3 class="mt-8">The ten factors</h3>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">The ten factors of the governing equation, and the remedy when each is the weakest link</caption>
           <thead><tr><th scope="col">Factor</th><th scope="col">When it is the weakest link</th></tr></thead>
           <tbody>${EQUATION_FACTORS.map((f) => `<tr><td><strong class="ink">${esc(f.name)}</strong><br><code>${esc(f.id)}</code></td><td>${esc(f.remedy)}</td></tr>`).join('')}</tbody>
         </table>
       </div>
-      <div class="actions"><a class="pill pill--solid" href="/equation">Score the equation</a></div>`)}
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/equation">Score the equation</a></div>`)}
 
 ${section(`      <h2>The governing sentence</h2>
       ${codeBlock((g.governing_sentence ?? []).join('\n'))}
@@ -156,7 +157,7 @@ ${(g.output_hierarchy ?? []).length ? section(`      <h2>The output hierarchy</h
 
 ${section(`      <h2>The one-page rule</h2>
       ${codeBlock((g.one_page_rule ?? []).join('\n'))}
-      <div class="actions"><a class="pill" href="/cluster">Run the cluster decision</a></div>`)}
+      <div class="actions"><a class="pill" data-component="button" href="/cluster">Run the cluster decision</a></div>`)}
 
 ${(g.validity ?? []).length ? section(`      <h2>Validity</h2>
       ${g.validity.map((b) => codeBlock(b.code)).join('')}`) : ''}`
@@ -181,7 +182,7 @@ ${section(`      ${pageHead({
 ${section(`      <h2>The five change levels</h2>
       <div class="stack">
         ${(m.levels ?? []).map((l) => `
-        <article class="finding" id="${attr(l.id)}">
+        <article class="finding" data-component="card" id="${attr(l.id)}">
           <div class="finding__head">
             ${levelBadge(l.name)}
             <strong class="ink t-18">${esc(l.name)}</strong>
@@ -193,7 +194,7 @@ ${section(`      <h2>The five change levels</h2>
         </article>`).join('')}
       </div>
       ${m.escalation_rule ? `<div class="mt-8">${codeBlock(m.escalation_rule, 'The escalation rule')}</div>` : ''}
-      <div class="actions"><a class="pill pill--solid" href="/change-matrix">Generate a change matrix</a></div>`)}
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/change-matrix">Generate a change matrix</a></div>`)}
 
 ${section(`      <h2>The ten internal variables</h2>
       <p class="muted t-15">A change is not fully described until all ten are named.</p>
@@ -231,7 +232,7 @@ ${section(`      <h2>Precedence</h2>
 ${section(`      <h2>The operators</h2>
       <div class="stack">
         ${(o.operators ?? []).map((op) => `
-        <article class="finding">
+        <article class="finding" data-component="card">
           <div class="finding__head"><strong class="ink t-18">${esc(op.name)}</strong></div>
           ${op.definition ? `<p class="m-0">${inlineMarkdown(op.definition)}</p>` : ''}
           ${op.example ? `<div class="mt-4">${codeBlock(op.example)}</div>` : ''}
@@ -241,6 +242,7 @@ ${section(`      <h2>The operators</h2>
 ${section(`      <h2>How often each operator is used</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">How often each Boolean operator is used across the 144 rules</caption>
           <thead><tr><th scope="col">Operator</th><th scope="col">Rules</th><th scope="col"></th></tr></thead>
           <tbody>${(o.operator_usage ?? []).map((u) => `<tr>
             <td><code>${esc(u.operator)}</code></td>
@@ -252,7 +254,7 @@ ${section(`      <h2>How often each operator is used</h2>
 
 ${o.hard_gate_pattern ? section(`      <h2>The hard-gate pattern</h2>
       ${codeBlock(o.hard_gate_pattern)}
-      <div class="actions"><a class="pill" href="/gates">The eight hard gates</a></div>`) : ''}`
+      <div class="actions"><a class="pill" data-component="button" href="/gates">The eight hard gates</a></div>`) : ''}`
 
   return {
     title: 'Operators and precedence',
@@ -274,6 +276,7 @@ ${section(`      ${pageHead({
 ${section((o.classes ?? []).map((c) => `      <h2 id="${attr(c.id)}">${esc(c.name)}</h2>
       ${c.members[0]?.meaning
         ? `<div class="table-scroll"><table>
+            <caption class="visually-hidden">The ${esc(c.name.toLowerCase())} of the SEO grammar and their required properties</caption>
             <thead><tr>${c.columns.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
             <tbody>${c.members.map((m) => `<tr>
               <td><code>${esc(m.primitive)}</code></td>
@@ -307,6 +310,7 @@ ${section(`      ${pageHead({
 
 ${section(`      <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">Each task type and the format it requires</caption>
           <thead><tr><th scope="col">Task</th><th scope="col">Task-native format</th></tr></thead>
           <tbody>${(f.task_formats ?? []).map((t) => `<tr><td><strong class="ink">${esc(t.task)}</strong></td><td>${esc(t.format)}</td></tr>`).join('')}</tbody>
         </table>
@@ -340,7 +344,7 @@ ${section(`      ${pageHead({
   })}
       ${codeBlock((g.approve_expression ?? []).join('\n'))}`)}
 
-${section((corpus.hardGates ?? []).map((gate) => `      <article class="finding" id="${attr(gate.id)}">
+${section((corpus.hardGates ?? []).map((gate) => `      <article class="finding" data-component="card" id="${attr(gate.id)}">
         <div class="finding__head">
           ${chip(`Gate ${gate.order}`, { mark: '#' })}
           <strong class="ink t-18">${esc(gate.name)}</strong>
@@ -357,19 +361,19 @@ ${section(`      <h2>The cluster gates</h2>
       <p class="lede narrow">${esc(g.cluster_gate_note ?? '')}</p>
       <div class="grid grid--3 mt-6">
         ${(g.cluster_gates ?? []).map((c) => `
-        <div class="card">
+        <div class="card" data-component="card">
           <strong class="ink t-18">${esc(c.id.toUpperCase())}</strong>
           <ul class="finding__units">${c.conditions.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
         </div>`).join('')}
       </div>
-      <div class="actions"><a class="pill pill--solid" href="/cluster">Run the cluster decision</a></div>`)}
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/cluster">Run the cluster decision</a></div>`)}
 
 ${section(`      <h2>Priority order</h2>
       <p class="muted t-15">When several things could be worked on, this is the order.</p>
       <ol class="steps mt-6">
         ${(g.priority_order ?? []).map((p) => `<li><div><p class="m-0 ink">${esc(p)}</p></div></li>`).join('')}
       </ol>
-      <div class="actions"><a class="pill pill--solid" href="/evaluate">Evaluate a candidate</a></div>`)}`
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/evaluate">Evaluate a candidate</a></div>`)}`
 
   return {
     title: 'The eight hard publication gates',
@@ -415,18 +419,18 @@ ${section(`      ${pageHead({
     lede: `Twelve areas, twelve rules each. Every rule is an IF / THEN / ELSE with a primary metric, a guardrail and the LAKA levels it operates at.`
   })}`)}
 
-${section(`      <form class="panel" method="get" action="/rules">
+${section(`      <form class="panel" data-component="panel" method="get" action="/rules">
         <div class="filters">
           <div class="field">
             <label for="f-q">Search</label>
-            <input type="search" id="f-q" name="q" value="${attr(query.q)}" placeholder="cannibalization, canonical, margin…">
+            <input type="search" autocomplete="off" id="f-q" name="q" value="${attr(query.q)}" placeholder="cannibalization, canonical, margin…">
           </div>
           ${options('area', corpus.areaFacets, query.area, (v) => v.value)}
           ${options('level', corpus.levelFacets, query.level, (v) => v.value)}
           ${options('operator', corpus.operatorFacets, query.operator, (v) => v.value)}
           <div class="field">
             <label for="f-submit" class="visually-hidden">Apply</label>
-            <button class="pill pill--solid" id="f-submit" type="submit">Filter</button>
+            <button class="pill pill--solid" data-component="cta" id="f-submit" type="submit">Filter</button>
           </div>
         </div>
       </form>
@@ -477,13 +481,22 @@ ${section(`      ${defList({
 ${section(`      <h2>The other eleven rules in ${esc(rule.area)}</h2>
       <ul class="rules">${neighbours.map(ruleRow).join('')}</ul>`)}
 
-${section(`      <div class="panel">
+${section(`      <div class="panel" data-component="panel">
         <p class="muted t-14 m-0">This rule as JSON: <a href="/v1/rules/${attr(rule.id)}"><code>GET /v1/rules/${esc(rule.id)}</code></a></p>
       </div>`)}`
 
+  // Short rules produce a description too thin to be useful in a result, so the area and the
+  // primary metric are appended until it carries enough to tell the pages apart.
+  const branches = `IF ${rule.if}, THEN ${rule.then}.`
+  const areaName = rule.area.toLowerCase()
+  const article = /^[aeiou]/.test(areaName) ? 'An' : 'A'
+  const description = branches.length >= 110
+    ? branches
+    : `${branches} ${article} ${areaName} rule, measured by ${rule.primary_metric}.`
+
   return {
     title: `${rule.id} — ${rule.title}`,
-    description: `IF ${rule.if} THEN ${rule.then}`,
+    description,
     path: `/rules/${rule.id}`,
     body,
     jsonLd: {
@@ -507,7 +520,7 @@ ${section(`      ${pageHead({
 
 ${section(`      <div class="grid grid--2">
         ${corpus.areas.map((a) => `
-        <a class="card feature plain" href="/rules?area=${attr(a.slug)}">
+        <a class="card feature plain" data-component="card" href="/rules?area=${attr(a.slug)}">
           <span class="feature__icon">${icon('rules')}</span>
           <span>
             <strong class="ink t-18 block">${esc(a.name)}</strong>
@@ -549,7 +562,7 @@ export function evaluatePage ({ submitted, result, form, error }) {
   const scoreField = (name, group) => `
       <div class="field">
         <label for="s-${name}">${esc(name.replace(/_/g, ' '))}</label>
-        <input type="text" inputmode="decimal" id="s-${name}" name="${group}_${name}" value="${attr(form[`${group}_${name}`] ?? '')}" placeholder="0–5">
+        <input type="text" autocomplete="off" inputmode="decimal" id="s-${name}" name="${group}_${name}" value="${attr(form[`${group}_${name}`] ?? '')}" placeholder="0–5">
       </div>`
 
   const body = `
@@ -579,17 +592,17 @@ ${section(`      <form class="panel stack" method="post" action="/evaluate">
         <div class="filters">
           <div class="field">
             <label for="c-evidence">Evidence</label>
-            <input type="text" inputmode="decimal" id="c-evidence" name="confidence_evidence" value="${attr(form.confidence_evidence ?? '')}" placeholder="1.0">
+            <input type="text" autocomplete="off" inputmode="decimal" id="c-evidence" name="confidence_evidence" value="${attr(form.confidence_evidence ?? '')}" placeholder="1.0">
           </div>
           <div class="field">
             <label for="c-measurement">Measurement</label>
-            <input type="text" inputmode="decimal" id="c-measurement" name="confidence_measurement" value="${attr(form.confidence_measurement ?? '')}" placeholder="1.0">
+            <input type="text" autocomplete="off" inputmode="decimal" id="c-measurement" name="confidence_measurement" value="${attr(form.confidence_measurement ?? '')}" placeholder="1.0">
           </div>
         </div>
 
         <div class="actions">
-          <button class="pill pill--solid" type="submit">Evaluate</button>
-          <button class="pill" type="submit" name="sample" value="1">Use the worked example</button>
+          <button class="pill pill--solid" data-component="cta" type="submit">Evaluate</button>
+          <button class="pill" data-component="button" type="submit" name="sample" value="1">Use the worked example</button>
         </div>
       </form>`)}
 
@@ -615,16 +628,16 @@ ${section(`      <h2>Result</h2>
         r.decision_meaning)}
 
       <div class="grid grid--4 mt-6">
-        <div class="card stat"><span class="stat__value">${esc(r.decision.replace(/_/g, ' '))}</span><span class="stat__label">Decision</span></div>
-        <div class="card stat"><span class="stat__value">${esc(r.adjusted_priority)}</span><span class="stat__label">Adjusted priority</span></div>
-        <div class="card stat"><span class="stat__value">${esc(r.value_index)}</span><span class="stat__label">Value index</span></div>
-        <div class="card stat"><span class="stat__value">${esc(r.cost_index)}</span><span class="stat__label">Cost index</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(r.decision.replace(/_/g, ' '))}</span><span class="stat__label">Decision</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(r.adjusted_priority)}</span><span class="stat__label">Adjusted priority</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(r.value_index)}</span><span class="stat__label">Value index</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(r.cost_index)}</span><span class="stat__label">Cost index</span></div>
       </div>`)}
 
 ${r.routing?.length ? section(`      <h2>What to do instead</h2>
       <div class="stack">
         ${r.routing.map((route) => `
-        <article class="finding">
+        <article class="finding" data-component="card">
           <div class="finding__head">
             ${chip('Failed', { mark: '✕', cls: 'badge--hard' })}
             <strong class="ink t-18">${esc(corpus.gatesById.get(route.gate.replace(/_/g, '-'))?.name ?? route.gate)}</strong>
@@ -636,6 +649,7 @@ ${r.routing?.length ? section(`      <h2>What to do instead</h2>
 ${section(`      <h2>Gate detail</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">Each hard gate, its result, its pass conditions and the rules that govern it</caption>
           <thead><tr><th scope="col">Gate</th><th scope="col">Result</th><th scope="col">Passes if</th><th scope="col">Rules</th></tr></thead>
           <tbody>${r.gate_detail.map((g) => `<tr>
             <td><strong class="ink">${esc(g.name)}</strong><br><code class="muted">${esc(g.field)}</code></td>
@@ -671,33 +685,33 @@ ${error ? section(`      <div class="verdict verdict--blocked">
 ${section(`      <form class="panel stack" method="post" action="/volume">
         <div class="field">
           <label for="v-dimensions">Dimensions</label>
-          <textarea id="v-dimensions" name="dimensions" rows="14" spellcheck="false">${esc(form.dimensions ?? JSON.stringify(corpus.examples.dimensions, null, 2))}</textarea>
+          <textarea autocomplete="off" id="v-dimensions" name="dimensions" rows="14" spellcheck="false">${esc(form.dimensions ?? JSON.stringify(corpus.examples.dimensions, null, 2))}</textarea>
           <span class="hint">A JSON object of dimension name to a non-empty array of values.</span>
         </div>
         <div class="filters">
           <div class="field">
             <label for="v-sample">Sample size</label>
-            <input type="text" inputmode="numeric" id="v-sample" name="sample" value="${attr(form.sample ?? '10')}" placeholder="0">
+            <input type="text" autocomplete="off" inputmode="numeric" id="v-sample" name="sample" value="${attr(form.sample ?? '10')}" placeholder="0">
             <span class="hint">0 to size only. Max ${MAX_SAMPLE.toLocaleString('en-US')}.</span>
           </div>
           <div class="field">
             <label for="v-seed">Seed</label>
-            <input type="text" inputmode="numeric" id="v-seed" name="seed" value="${attr(form.seed ?? '42')}">
+            <input type="text" autocomplete="off" inputmode="numeric" id="v-seed" name="seed" value="${attr(form.seed ?? '42')}">
             <span class="hint">The same seed returns the same sample.</span>
           </div>
         </div>
         <div class="actions">
-          <button class="pill pill--solid" type="submit">Size it</button>
-          <button class="pill" type="submit" name="published" value="1">Use the ${inv.dimension_families} published families</button>
+          <button class="pill pill--solid" data-component="cta" type="submit">Size it</button>
+          <button class="pill" data-component="button" type="submit" name="published" value="1">Use the ${inv.dimension_families} published families</button>
         </div>
       </form>`)}
 
 ${submitted && result ? `
 ${section(`      <h2>Result</h2>
       <div class="grid grid--3">
-        <div class="card stat"><span class="stat__value">${esc(BigInt(result.theoretical_volume.exact).toLocaleString('en-US'))}</span><span class="stat__label">Theoretical combinations</span></div>
-        <div class="card stat"><span class="stat__value">${result.dimension_count}</span><span class="stat__label">Dimensions</span></div>
-        <div class="card stat"><span class="stat__value">${result.sample?.length ?? 0}</span><span class="stat__label">Sampled</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(BigInt(result.theoretical_volume.exact).toLocaleString('en-US'))}</span><span class="stat__label">Theoretical combinations</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${result.dimension_count}</span><span class="stat__label">Dimensions</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${result.sample?.length ?? 0}</span><span class="stat__label">Sampled</span></div>
       </div>
       <div class="verdict mt-6">
         <span class="verdict__mark" aria-hidden="true">!</span>
@@ -707,6 +721,7 @@ ${section(`      <h2>Result</h2>
 ${section(`      <h2>Dimensions</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">Each dimension and the number of values it holds</caption>
           <thead><tr><th scope="col">Dimension</th><th scope="col">Values</th></tr></thead>
           <tbody>${Object.entries(result.dimensions).map(([k, v]) => `<tr><td><code>${esc(k)}</code></td><td>${v}</td></tr>`).join('')}</tbody>
         </table>
@@ -716,6 +731,7 @@ ${result.sample?.length ? section(`      <h2>Sample</h2>
       <p class="muted t-15">${esc(result.sample_note)}</p>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">Data table</caption>
           <thead><tr>${Object.keys(result.sample[0]).map((k) => `<th scope="col">${esc(k)}</th>`).join('')}</tr></thead>
           <tbody>${result.sample.map((row) => `<tr>${Object.values(row).map((v) => `<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody>
         </table>
@@ -768,11 +784,11 @@ ${section(`      <form class="panel stack" method="post" action="/cluster">
         <div class="filters">
           <div class="field">
             <label for="c-a">First candidate</label>
-            <input type="text" id="c-a" name="a" value="${attr(form.a ?? '')}" placeholder="web design cost calgary">
+            <input type="text" autocomplete="off" id="c-a" name="a" value="${attr(form.a ?? '')}" placeholder="web design cost calgary">
           </div>
           <div class="field">
             <label for="c-b">Second candidate</label>
-            <input type="text" id="c-b" name="b" value="${attr(form.b ?? '')}" placeholder="how much does a website cost">
+            <input type="text" autocomplete="off" id="c-b" name="b" value="${attr(form.b ?? '')}" placeholder="how much does a website cost">
           </div>
         </div>
 
@@ -794,7 +810,7 @@ ${section(`      <form class="panel stack" method="post" action="/cluster">
           </div>
         </div>
 
-        <div class="actions"><button class="pill pill--solid" type="submit">Decide</button></div>
+        <div class="actions"><button class="pill pill--solid" data-component="cta" type="submit">Decide</button></div>
       </form>`)}
 
 ${submitted && result ? `
@@ -807,6 +823,7 @@ ${section(`      <h2>Decision</h2>
 ${section(`      <h2>The conditions as evaluated</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">Each cluster condition, how it evaluated, and the question it answers</caption>
           <thead><tr><th scope="col">Condition</th><th scope="col">Value</th><th scope="col">Question</th></tr></thead>
           <tbody>${result.conditions.map((c) => `<tr>
             <td><code>${esc(c.id)}</code></td>
@@ -848,23 +865,23 @@ ${section(`      <form class="panel stack" method="post" action="/equation">
           ${EQUATION_FACTORS.map((f) => `
           <div class="field">
             <label for="e-${f.id}">${esc(f.name)}</label>
-            <input type="text" inputmode="decimal" id="e-${f.id}" name="${f.id}" value="${attr(form[f.id] ?? '')}" placeholder="0–1">
+            <input type="text" autocomplete="off" inputmode="decimal" id="e-${f.id}" name="${f.id}" value="${attr(form[f.id] ?? '')}" placeholder="0–1">
           </div>`).join('')}
         </div>
-        <div class="actions"><button class="pill pill--solid" type="submit">Score</button></div>
+        <div class="actions"><button class="pill pill--solid" data-component="cta" type="submit">Score</button></div>
       </form>`)}
 
 ${submitted && result ? `
 ${section(`      <h2>Result</h2>
       <div class="grid grid--3">
-        <div class="card stat"><span class="stat__value">${esc(result.product_of_scored)}</span><span class="stat__label">Product of scored factors</span></div>
-        <div class="card stat"><span class="stat__value">${result.scored_count}/${result.factor_count}</span><span class="stat__label">Factors supplied</span></div>
-        <div class="card stat"><span class="stat__value">${esc(result.weakest_link?.value ?? '—')}</span><span class="stat__label">Weakest factor</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(result.product_of_scored)}</span><span class="stat__label">Product of scored factors</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${result.scored_count}/${result.factor_count}</span><span class="stat__label">Factors supplied</span></div>
+        <div class="card stat" data-component="card"><span class="stat__value">${esc(result.weakest_link?.value ?? '—')}</span><span class="stat__label">Weakest factor</span></div>
       </div>
       <p class="muted t-15 mt-6">${esc(result.interpretation)}</p>`)}
 
 ${result.weakest_link ? section(`      <h2>Work this first</h2>
-      <div class="finding">
+      <div class="finding" data-component="card">
         <div class="finding__head">
           ${chip(String(result.weakest_link.value), { mark: '↓', cls: 'badge--hard' })}
           <strong class="ink t-18">${esc(result.weakest_link.name)}</strong>
@@ -876,6 +893,7 @@ ${result.weakest_link ? section(`      <h2>Work this first</h2>
 ${section(`      <h2>All ten factors</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">The ten factors of the governing equation, and the remedy when each is the weakest link</caption>
           <thead><tr><th scope="col">Factor</th><th scope="col">Score</th><th scope="col">If it is the weakest link</th></tr></thead>
           <tbody>${result.factors.map((f) => `<tr>
             <td><strong class="ink">${esc(f.name)}</strong></td>
@@ -915,14 +933,14 @@ ${section(`      <form class="panel stack" method="post" action="/change-matrix"
         <div class="filters">
           <div class="field">
             <label for="m-object">Object</label>
-            <input type="text" id="m-object" name="object" value="${attr(form.object ?? '')}" placeholder="/services/web-design" required>
+            <input type="text" autocomplete="off" id="m-object" name="object" value="${attr(form.object ?? '')}" placeholder="/services/web-design" required>
           </div>
           <div class="field">
             <label for="m-goal">Goal</label>
-            <input type="text" id="m-goal" name="goal" value="${attr(form.goal ?? '')}" placeholder="qualified organic conversions">
+            <input type="text" autocomplete="off" id="m-goal" name="goal" value="${attr(form.goal ?? '')}" placeholder="qualified organic conversions">
           </div>
         </div>
-        <div class="actions"><button class="pill pill--solid" type="submit">Generate</button></div>
+        <div class="actions"><button class="pill pill--solid" data-component="cta" type="submit">Generate</button></div>
       </form>`)}
 
 ${submitted && result ? `
@@ -930,7 +948,7 @@ ${section(`      <h2>Candidate changes for <code>${esc(result.object)}</code></h
       <p class="muted t-15">${esc(result.order)}</p>
       <div class="stack mt-6">
         ${result.levels.map((l) => `
-        <article class="finding">
+        <article class="finding" data-component="card">
           <div class="finding__head">
             ${levelBadge(l.level)}
             <strong class="ink t-18">${esc(l.level)}</strong>
@@ -944,7 +962,7 @@ ${section(`      <h2>Candidate changes for <code>${esc(result.object)}</code></h
 
 ${section(`      ${result.escalation_rule ? codeBlock(result.escalation_rule, 'The escalation rule') : ''}
       <p class="muted t-15 mt-6">${esc(result.note)}</p>
-      <div class="actions"><a class="pill pill--solid" href="/experiment">Turn one into an experiment</a></div>
+      <div class="actions"><a class="pill pill--solid" data-component="cta" href="/experiment">Turn one into an experiment</a></div>
       ${disclose('Full JSON response', jsonBlock(result))}`)}` : ''}`
 
   return {
@@ -1011,7 +1029,7 @@ ${section(`      <form class="panel stack" method="post" action="/experiment">
           ${field('change_id', 'Change ID', 'CHG-014')}
         </div>
 
-        <div class="actions"><button class="pill pill--solid" type="submit">Build the card</button></div>
+        <div class="actions"><button class="pill pill--solid" data-component="cta" type="submit">Build the card</button></div>
       </form>`)}
 
 ${submitted && result ? `
@@ -1062,12 +1080,12 @@ ${error ? section(`      <div class="verdict verdict--blocked">
 ${section(`      <form class="panel stack" method="post" action="/validate">
         <div class="field">
           <label for="p-document">Project document</label>
-          <textarea id="p-document" name="document" rows="18" spellcheck="false">${esc(form.document ?? '')}</textarea>
+          <textarea autocomplete="off" id="p-document" name="document" rows="18" spellcheck="false">${esc(form.document ?? '')}</textarea>
           <span class="hint">JSON conforming to <a href="/v1/schema">the project schema</a>.</span>
         </div>
         <div class="actions">
-          <button class="pill pill--solid" type="submit">Validate</button>
-          <button class="pill" type="submit" name="sample" value="1">Use the worked example</button>
+          <button class="pill pill--solid" data-component="cta" type="submit">Validate</button>
+          <button class="pill" data-component="button" type="submit" name="sample" value="1">Use the worked example</button>
         </div>
       </form>`)}
 
@@ -1077,12 +1095,13 @@ ${section(`      <h2>Result</h2>
         result.valid ? 'Schema-valid' : `${result.error_count} schema ${result.error_count === 1 ? 'error' : 'errors'}`,
         result.valid ? 'The document conforms to the LAKA SEO project schema.' : null)}
       <div class="grid grid--4 mt-6">
-        ${Object.entries(result.counts).map(([k, v]) => `<div class="card stat"><span class="stat__value">${v}</span><span class="stat__label">${esc(k.replace(/_/g, ' '))}</span></div>`).join('')}
+        ${Object.entries(result.counts).map(([k, v]) => `<div class="card stat" data-component="card"><span class="stat__value">${v}</span><span class="stat__label">${esc(k.replace(/_/g, ' '))}</span></div>`).join('')}
       </div>`)}
 
 ${result.errors.length ? section(`      <h2>Schema errors</h2>
       <div class="table-scroll">
         <table>
+          <caption class="visually-hidden">Schema errors by document path</caption>
           <thead><tr><th scope="col">Path</th><th scope="col">Problem</th></tr></thead>
           <tbody>${result.errors.map((e) => `<tr><td><code>${esc(e.path)}</code></td><td>${esc(e.message)}</td></tr>`).join('')}</tbody>
         </table>
@@ -1092,7 +1111,7 @@ ${result.advisories.length ? section(`      <h2>Completeness advisories</h2>
       <p class="muted t-15">${esc(result.advisory_note)}</p>
       <div class="stack mt-6">
         ${result.advisories.map((a) => `
-        <div class="finding">
+        <div class="finding" data-component="card">
           <div class="finding__head">
             ${chip(a.level, { mark: a.level === 'blocking' ? '✕' : '!', cls: a.level === 'blocking' ? 'badge--hard' : 'badge--default' })}
           </div>
