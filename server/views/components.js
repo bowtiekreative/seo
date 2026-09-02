@@ -32,7 +32,7 @@ export function verdict (passed, label, detail) {
     <span class="verdict__mark" aria-hidden="true">${passed ? '✓' : '✕'}</span>
     <span>
       <strong class="ink">${esc(label)}</strong>
-      ${detail ? `<span class="muted t-14 my-1" style="display:block">${esc(detail)}</span>` : ''}
+      ${detail ? `<span class="muted t-14 my-1 block">${esc(detail)}</span>` : ''}
     </span>
   </div>`
 }
@@ -85,8 +85,8 @@ export function featureCard ({ href, iconName, title, body }) {
   const inner = `
     <span class="feature__icon">${icon(iconName)}</span>
     <span>
-      <strong class="ink t-18" style="display:block">${esc(title)}</strong>
-      <span class="muted t-14 my-2" style="display:block">${esc(body)}</span>
+      <strong class="ink t-18 block">${esc(title)}</strong>
+      <span class="muted t-14 my-2 block">${esc(body)}</span>
     </span>`
   return href
     ? `<a class="card feature plain" href="${attr(href)}">${inner}</a>`

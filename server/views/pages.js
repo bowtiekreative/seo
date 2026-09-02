@@ -510,8 +510,8 @@ ${section(`      <div class="grid grid--2">
         <a class="card feature plain" href="/rules?area=${attr(a.slug)}">
           <span class="feature__icon">${icon('rules')}</span>
           <span>
-            <strong class="ink t-18" style="display:block">${esc(a.name)}</strong>
-            <span class="muted t-14 my-2" style="display:block">${a.count} rules · prefix <code>${esc(a.prefix)}</code></span>
+            <strong class="ink t-18 block">${esc(a.name)}</strong>
+            <span class="muted t-14 my-2 block">${a.count} rules · prefix <code>${esc(a.prefix)}</code></span>
           </span>
         </a>`).join('')}
       </div>`)}`

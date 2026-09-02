@@ -180,8 +180,8 @@ ${section(`      <div class="grid grid--2">
         <a class="card feature plain" href="/sops/${attr(s.id)}">
           <span class="feature__icon">${icon('sop')}</span>
           <span>
-            <strong class="ink t-18" style="display:block">${esc(s.name)}</strong>
-            <span class="muted t-14 my-2" style="display:block">${esc(s.goal || `${s.sections.length} steps`)}</span>
+            <strong class="ink t-18 block">${esc(s.name)}</strong>
+            <span class="muted t-14 my-2 block">${esc(s.goal || `${s.sections.length} steps`)}</span>
           </span>
         </a>`).join('')}
       </div>`)}`
@@ -278,8 +278,8 @@ ${section(`      <div class="grid grid--3">
         <a class="card feature plain" href="/templates/${attr(t.id)}">
           <span class="feature__icon">${icon('template')}</span>
           <span>
-            <strong class="ink t-16" style="display:block">${esc(t.name)}</strong>
-            <span class="muted t-13 my-2" style="display:block"><code>${esc(t.id)}</code></span>
+            <strong class="ink t-16 block">${esc(t.name)}</strong>
+            <span class="muted t-13 my-2 block"><code>${esc(t.id)}</code></span>
           </span>
         </a>`).join('')}
       </div>`)}`
@@ -353,8 +353,8 @@ ${section(`      <div class="grid grid--2">
         <a class="card feature plain" href="/docs/${attr(d.slug)}">
           <span class="feature__icon">${icon('doc')}</span>
           <span>
-            <strong class="ink t-18" style="display:block">${esc(d.title)}</strong>
-            <span class="muted t-14 my-2" style="display:block">${esc(d.purpose)} · ${d.section_count} sections</span>
+            <strong class="ink t-18 block">${esc(d.title)}</strong>
+            <span class="muted t-14 my-2 block">${esc(d.purpose)} · ${d.section_count} sections</span>
           </span>
         </a>`).join('')}
       </div>`)}

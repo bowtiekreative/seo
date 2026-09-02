@@ -468,3 +468,6 @@ details.disclose > div { padding: 0 var(--space-5) var(--space-5); }
 .narrow { max-width: 20ch; }
 .wide { max-width: 100ch; }
 .term { color: var(--rp-heading); text-transform: none; font-size: 16px; letter-spacing: 0; }
+
+/* A structural display utility, so no element needs an inline style attribute. */
+.block { display: block; }
