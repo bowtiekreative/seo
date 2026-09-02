@@ -129,6 +129,34 @@ also what makes them indexable.
 Colour is never the only signal — every badge and verdict carries a text label and a
 monospace mark alongside its colour.
 
+### Release-gate evidence
+
+`POST /v1/audit/site` against the LAKA full-site gate (WCAG 2.2 AA + technical SEO + OWASP
+headers), all 100 pages:
+
+| Audit | Findings | Blockers | Escalations |
+|---|---|---|---|
+| First | 285 | 0 | 0 |
+| After fixes | 216 | 0 | 0 |
+| Current | 205 | 0 | 0 |
+
+Cleared: table captions (18), autocomplete purpose (43), card and button component contracts
+(17), autofocus (1), meta-description quality (1).
+
+Two categories are left open **deliberately**, and both are decisions rather than oversights:
+
+- `design-system.shared-js-missing` (100) — the site loads its own 65-line script rather than
+  the shared LAKA bundle. The bundle is not needed for a site whose only client-side behaviour
+  is scroll reveal and menu handling.
+- `analytics.missing` (96) and `analytics.form-events` (9) — there is no analytics
+  instrumentation anywhere, which is exactly what the privacy page promises. Adding a hook to
+  satisfy the check would make that page untrue.
+
+The verdict is `REVIEW_REQUIRED` rather than `CLEAR` because the gate also requires signed
+evidence for 17 manual checks — keyboard traversal, screen-reader passes, rendered-state
+contrast, reflow at 200%, and legal review among them. Automated output alone never proves
+WCAG conformance, and this README does not claim it does.
+
 ## Privacy
 
 No cookies, no analytics, no third-party trackers. What you submit to an engine endpoint is
